@@ -1,0 +1,25 @@
+{
+  "package": "holdem-ai-phase5-agent-kit",
+  "base_commit_claimed": "a75b632",
+  "verified_against_repository": false,
+  "python_tested": "3.13.5",
+  "tests": "58 passed; 1 skipped (rlcard unavailable)",
+  "sha256": {
+    "PHASE5_README.txt": "d5c815e16ad2be53b56c77b5178453d2efcad62105585ba0bce29127fe9cca79",
+    "docs/PHASE5_AGENT_INTERFACE.md": "0928f9b0abf1b89b443a214a62e537ca2a54e25e9110d1439daf7dd7331478e3",
+    "holdem_agent_phase5/__init__.py": "e15cf7ae22d53bfd1f68f13309545ff88c84e7accbc9b5b021401ea054f37e32",
+    "holdem_agent_phase5/betting.py": "6c600326b6120109661d0f634fe46b43d6cfb24afad66ffe2361be27c080a5d9",
+    "holdem_agent_phase5/policy.py": "478d8f76eb2aeb47ac6f1804d0d8ce63de4171ff9cbd718ae0c22210f15b4efc",
+    "holdem_agent_phase5/rewards.py": "38a5d34eed44be2efd9201a9d16f09b894fb1eaf2ae1d64cc55250b8d04c62b1",
+    "holdem_agent_phase5/rlcard_adapter.py": "8540a13f2c3bf04e93edd6ba343f335ad6c41d0b66827c287d17aff4f4dc9686",
+    "holdem_agent_phase5/runner.py": "728b7c3cb0eab5b0d7af8b1e43b4c0f5b9f2c85e16a696262aa308bb7ae320ab",
+    "holdem_agent_phase5/schema.py": "7c2d7132582db42c754e83cdeb45e7f883a5394ff55bd58c8f66439190afd893",
+    "holdem_agent_phase5/snapshot.py": "948586c7901be18c0ce61a6471ad60e728cac1effb49bf7bf8ff440ba7f2c3b4",
+    "scripts/phase5_rlcard_smoke.py": "ad26d941f5fba81ff57bb137b076f07c0a683f738b96462b3023cd9cab65703d",
+    "tests/test_phase5_betting.py": "433a4d61788dbf176c75f9ee21d44a47d65e8e8d1ead5cacd9e81b758a573e30",
+    "tests/test_phase5_rewards.py": "59ac7260f6d6ed2284c109a34e58ce9ca4c4a129cd7c91b461c35fc2e0411ccc",
+    "tests/test_phase5_rlcard_adapter.py": "7eed956eeccd6bdf0a8773132cfa910daf8dc76f408e4d5fe90a28d3c48d5677",
+    "tests/test_phase5_schema_policy.py": "8899b4fe311eebe1e96ecab9873061617e3fac8bf3b1eea971d084f932fd4930",
+    "tests/test_phase5_self_play.py": "1f2701315467714b7eba35df92bf0ff1170eb6e2f2e08a198592cbb070066c84"
+  }
+}
