@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+
+# Build and IDE
+build/
+dist/
+.idea/
+.vscode/
+
+# Generated training artifacts
+data/hand_histories/*
+!data/hand_histories/.gitkeep
+data/checkpoints/*
+!data/checkpoints/.gitkeep

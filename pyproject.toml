@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "holdem-ai"
+version = "0.1.0"
+description = "No-Limit Hold'em simulation and reinforcement learning platform"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rlcard==1.2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
