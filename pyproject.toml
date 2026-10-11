@@ -15,9 +15,19 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8"]
+gpu = [
+    "torch==2.6.0 ; python_full_version < '3.14' and sys_platform == 'win32'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu118" }
