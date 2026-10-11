@@ -1,9 +1,7 @@
-"""Initial RLCard adapter for *one hand* of heads-up no-limit Hold'em.
+"""One-hand HUNL interface. Corrected RLCard adapter is the default.
 
-Scope: HUNL 2 players, the action abstraction and blinds defined by RLCard.
-Not yet a verified tournament or production poker-rules engine.
+Scope: heads-up only; this is not a six-player tournament engine.
 """
-
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -17,46 +15,53 @@ from holdem_ai.agents.base_agent import Agent
 class HandResult:
     payoffs_chips: tuple[float, float]
     payoffs_bb: tuple[float, float]
-    action_history: tuple[tuple[int, int], ...]  # (player_id, RLCard action_id)
+    action_history: tuple[tuple[int, int], ...]
 
 
 class HandEngine:
-    """RLCard HUNL wrapper with validation, observation, and payoff access."""
-
     def __init__(
         self,
         starting_stack: int = 200,
         seed: int | None = 42,
         allow_step_back: bool = False,
+        rules_mode: str = 'corrected',
+        button: int = 0,
     ) -> None:
         if starting_stack < 2:
             raise ValueError('starting_stack must be at least 2 chips.')
+        if button not in (0, 1):
+            raise ValueError('button must be 0 or 1')
+        if rules_mode not in ('corrected', 'upstream'):
+            raise ValueError('rules_mode must be corrected or upstream')
 
-        try:
+        if rules_mode == 'corrected':
+            from holdem_ai.environment.corrected_game import make_corrected_rlcard_env
+            self.env = make_corrected_rlcard_env(
+                starting_stack=starting_stack, seed=seed,
+                button=button, allow_step_back=allow_step_back,
+            )
+        else:
             import rlcard
-        except ImportError as exc:
-            raise ImportError(
-                'RLCard is required. Install the project with: python -m pip install -e ".[dev]"'
-            ) from exc
-
-        self.env = rlcard.make(
-            'no-limit-holdem',
-            config={
+            self.env = rlcard.make('no-limit-holdem', config={
                 'seed': seed,
                 'game_num_players': 2,
                 'chips_for_each': starting_stack,
+                'dealer_id': button,
                 'allow_step_back': allow_step_back,
-            },
-        )
+            })
+        self.rules_mode = rules_mode
         self.num_players = 2
         self.big_blind = int(self.env.game.big_blind)
+        self._next_button = button
         self._state: Mapping[str, Any] | None = None
         self._player_id: int | None = None
         self._history: list[tuple[int, int]] = []
 
     def reset(self) -> tuple[Mapping[str, Any], int]:
-        """Start a fresh hand (RLCard resets both stacks)."""
         self._history.clear()
+        # Rotate seats every hand; RLCard does not rotate a fixed dealer_id.
+        self.env.game.dealer_id = self._next_button
+        self._next_button = 1 - self._next_button
         self._state, self._player_id = self.env.reset()
         return self._state, self._player_id
 
@@ -76,53 +81,47 @@ class HandEngine:
     def legal_actions(self) -> tuple[int, ...]:
         if self.is_over():
             return ()
-        return tuple(int(action) for action in self.state['legal_actions'])
+        return tuple(int(a) for a in self.state['legal_actions'])
 
     def is_over(self) -> bool:
         return bool(self.env.is_over())
 
     def step(self, action_id: int) -> tuple[Mapping[str, Any], int]:
-        """Apply a legal action; reject illegal IDs instead of RLCard fallback."""
         if self._state is None:
             raise RuntimeError('Call reset() before step().')
         if self.is_over():
             raise RuntimeError('The hand has already finished.')
         if action_id not in self.legal_actions:
-            raise ValueError(
-                f'Illegal action_id={action_id}; legal actions are {self.legal_actions}'
-            )
+            raise ValueError(f'Illegal action_id={action_id}; legal actions are {self.legal_actions}')
         actor = self.current_player
-        next_state, next_id = self.env.step(int(action_id))
+        state, player = self.env.step(int(action_id))
         self._history.append((actor, int(action_id)))
-        self._state, self._player_id = next_state, next_id
+        self._state, self._player_id = state, player
         return self._state, self._player_id
 
     def get_result(self) -> HandResult:
         if not self.is_over():
             raise RuntimeError('The hand is not over yet.')
-        chips = tuple(float(value) for value in self.env.get_payoffs())
-        if len(chips) != self.num_players:
-            raise AssertionError('RLCard returned the wrong number of payoffs.')
-        if not isclose(sum(chips), 0.0, rel_tol=0.0, abs_tol=1e-6):
-            raise AssertionError(f'The hand is not zero-sum: {chips}')
+        payoffs = tuple(float(p) for p in self.env.get_payoffs())
+        if len(payoffs) != 2 or not isclose(sum(payoffs), 0.0, rel_tol=0, abs_tol=1e-6):
+            raise AssertionError(f'Invalid zero-sum payoff: {payoffs}')
         return HandResult(
-            payoffs_chips=(chips[0], chips[1]),
-            payoffs_bb=(chips[0] / self.big_blind, chips[1] / self.big_blind),
+            payoffs_chips=(payoffs[0], payoffs[1]),
+            payoffs_bb=(payoffs[0] / self.big_blind, payoffs[1] / self.big_blind),
             action_history=tuple(self._history),
         )
 
     def play_hand(self, agents: Sequence[Agent], max_actions: int = 500) -> HandResult:
-        """Play exactly one hand; the game engine and agents stay separate."""
-        if len(agents) != self.num_players:
+        if len(agents) != 2:
             raise ValueError('A HUNL hand needs exactly two agents.')
         if max_actions < 1:
             raise ValueError('max_actions must be positive.')
         state, player_id = self.reset()
-        actions_taken = 0
+        n = 0
         while not self.is_over():
-            if actions_taken >= max_actions:
+            if n >= max_actions:
                 raise RuntimeError('Hand exceeded max_actions; inspect engine/rules.')
             action_id = agents[player_id].select_action(state)
             state, player_id = self.step(action_id)
-            actions_taken += 1
+            n += 1
         return self.get_result()

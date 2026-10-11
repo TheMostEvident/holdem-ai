@@ -1,6 +1,4 @@
-"""Offline adapter unit tests using a small stand-in for RLCard."""
-
-import sys
+"""Offline tests for the public adapter API with a stand-in RLCard Env."""
 from types import SimpleNamespace
 
 import pytest
@@ -11,7 +9,7 @@ from holdem_ai.environment.hand_engine import HandEngine
 
 class FakeEnv:
     def __init__(self):
-        self.game = SimpleNamespace(big_blind=2)
+        self.game = SimpleNamespace(big_blind=2, dealer_id=0)
         self.actions = []
         self.counter = 0
 
@@ -36,9 +34,8 @@ class FakeEnv:
 
 @pytest.fixture
 def engine(monkeypatch):
-    fake_env = FakeEnv()
-    fake_module = SimpleNamespace(make=lambda name, config: fake_env)
-    monkeypatch.setitem(sys.modules, 'rlcard', fake_module)
+    from holdem_ai.environment import corrected_game
+    monkeypatch.setattr(corrected_game, 'make_corrected_rlcard_env', lambda **kwargs: FakeEnv())
     return HandEngine(starting_stack=200, seed=123)
 
 
@@ -67,3 +64,12 @@ def test_cannot_read_result_before_hand_finished(engine):
     engine.reset()
     with pytest.raises(RuntimeError, match='not over'):
         engine.get_result()
+
+
+def test_button_rotates_between_hands(engine):
+    engine.reset()
+    assert engine.env.game.dealer_id == 0
+    engine.reset()
+    assert engine.env.game.dealer_id == 1
+    engine.reset()
+    assert engine.env.game.dealer_id == 0
