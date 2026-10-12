@@ -37,7 +37,7 @@ $$
 $$
 
 $$
-L_{\mathrm{PPO}}=\mathbb E_t\left[\min\left(\rho_t\hat A_t,\;\operatorname{clip}(\rho_t,1-\epsilon,1+\epsilon)\hat A_t\right)\right].
+L_{\mathrm{PPO}}=\mathbb E_t\left[\min\left(\rho_t\hat A_t,\;\mathrm{clip}(\rho_t,1-\epsilon,1+\epsilon)\hat A_t\right)\right].
 $$
 
 Phase 10 Q-Boost는
@@ -95,7 +95,7 @@ $$
 $$
 
 $$
-\mathrm{SE}_{\mathrm{seed}}(\bar\Delta)=\frac{\operatorname{sd}(\hat\Delta_1,\ldots,\hat\Delta_S)}{\sqrt S}.
+\mathrm{SE}_{\mathrm{seed}}(\bar\Delta)=\frac{\mathrm{sd}(\hat\Delta_1,\ldots,\hat\Delta_S)}{\sqrt S}.
 $$
 
 $$

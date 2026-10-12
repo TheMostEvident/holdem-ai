@@ -39,7 +39,7 @@ $$
 한 업데이트에서 현재의 `completed_updates`를 $u$라고 하면 카드 RNG Seed는 기존 Phase 11/13과 동일하게
 
 $$
-\operatorname{seed}(u,k)=\mathrm{rollout\_seed}+uH+k,\quad 0\le k<H
+\mathrm{seed}(u,k)=\mathrm{rollout\_seed}+uH+k,\quad 0\le k<H
 $$
 
 다. Phase 14의 학습 카드 Seed 네임스페이스와 다르게 설정하여 카드 재사용을 피한다. **이미 진행된 Phase 14 핸드를 새 모델에 Replay하지 않는다.**

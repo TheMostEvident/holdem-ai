@@ -64,7 +64,7 @@ The 7-head index 4 **does not** mean the engine's all-in ID 4. These mappings MU
 At decision time, `abstract_bet_actions` uses the **post-call pot** for fractional raises:
 
 $$
-B_{\mathrm{raise\ to}}=c+k+\operatorname{round}\left[f(P+k)\right],\quad f\in\{0.5,1,2\}
+B_{\mathrm{raise\ to}}=c+k+\mathrm{round}\left[f(P+k)\right],\quad f\in\{0.5,1,2\}
 $$
 
 Min/max boundaries, deduplication, and short all-in cases are supplied or validated by the real engine.

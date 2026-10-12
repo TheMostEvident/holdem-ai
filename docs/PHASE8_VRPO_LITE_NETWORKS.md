@@ -39,17 +39,17 @@ $$
 Transformer Encoder:
 
 $$
-Z=\operatorname{Transformer}_{\mathrm{causal}}\left( E_{\mathrm{token}}(T_A)+E_{\mathrm{pos}}+W_v\operatorname{asinh}(V_A)\right)
+Z=\mathrm{Transformer}_{\mathrm{causal}}\left( E_{\mathrm{token}}(T_A)+E_{\mathrm{pos}}+W_v\mathrm{asinh}(V_A)\right)
 $$
 
 $$
-h_t=\operatorname{LayerNorm}(Z_{\mathrm{last\ valid}})
+h_t=\mathrm{LayerNorm}(Z_{\mathrm{last\ valid}})
 $$
 
 수치적 안정성을 위해 BB 단위 값은 다음과 같이 변환한다.
 
 $$
-\operatorname{asinh}(x)=\ln\left(x+\sqrt{x^2+1}\right)
+\mathrm{asinh}(x)=\ln\left(x+\sqrt{x^2+1}\right)
 $$
 
 Token 금액뿐 아니라 Actor/Critic의 Numeric Features에도 같은 함수를 적용한다. 200BB 스택처럼 큰 입력 때문에 초기 무작위 Logit이 지나치게 커지는 문제를 억제한다. 원본 VRPO 논문의 필수 정규화 방식이 아니라 **VRPO-Lite 고유의 구현 선택**이다.
@@ -57,7 +57,7 @@ Token 금액뿐 아니라 Actor/Critic의 Numeric Features에도 같은 함수�
 Actor Action Logits:
 
 $$
-z_\theta=\operatorname{MLP}_A\left([h_t,\operatorname{asinh}(F_A)]\right)\in\mathbb{R}^7
+z_\theta=\mathrm{MLP}_A\left([h_t,\mathrm{asinh}(F_A)]\right)\in\mathbb{R}^7
 $$
 
 $$
@@ -67,7 +67,7 @@ $$
 Critic:
 
 $$
-Q_{\phi,0}(s,a)=\operatorname{MLP}_Q\left([h^Q_t,\operatorname{asinh}(F_Q)]\right)_a
+Q_{\phi,0}(s,a)=\mathrm{MLP}_Q\left([h^Q_t,\mathrm{asinh}(F_Q)]\right)_a
 $$
 
 $$

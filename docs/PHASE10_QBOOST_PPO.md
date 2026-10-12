@@ -73,7 +73,7 @@ $$
 J_{\mathrm{QBoost}}(\theta)
 =\frac1N\sum_{t=1}^N \bigg[&
 \min\Big(r_t\widetilde\delta_t^{(\beta)},
-\operatorname{clip}(r_t,1-\epsilon,1+\epsilon)\widetilde\delta_t^{(\beta)}\Big)\\
+\mathrm{clip}(r_t,1-\epsilon,1+\epsilon)\widetilde\delta_t^{(\beta)}\Big)\\
 &+\frac\beta{\sigma_A}\sum_{a\in\mathcal A(I_t)}
 \left(\pi_\theta(a\mid I_t)-\pi_0(a\mid I_t)\right)
 \hat Q_{0,i_t}(s_t,a)\bigg].
@@ -83,7 +83,7 @@ $$
 The Actor minimizes $-J_{\mathrm{QBoost}}-c_H H(\pi_\theta)$, and the Critic continues to minimize observed-action Huber regression
 
 $$
-\mathcal L_Q=\mathbb E_t\left[\operatorname{Huber}\left(\hat Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t}\right)\right].
+\mathcal L_Q=\mathbb E_t\left[\mathrm{Huber}\left(\hat Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t}\right)\right].
 $$
 
 The analytic Q and old policy are **frozen before all epochs of the update**; the Critic changes only in its own optimizer and does not send privileged observations into Actor.forward.
