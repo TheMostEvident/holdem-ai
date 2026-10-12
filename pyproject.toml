@@ -19,6 +19,11 @@ dev = ["pytest>=8"]
 gpu = [
     "torch==2.6.0 ; python_full_version < '3.14' and sys_platform == 'win32'",
 ]
+gui = [
+    "fastapi>=0.115,<1",
+    "httpx>=0.27,<1",
+    "uvicorn>=0.30,<1",
+]
 
 [[tool.uv.index]]
 name = "pytorch-cu118"
