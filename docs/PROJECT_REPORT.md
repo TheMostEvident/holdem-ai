@@ -300,7 +300,7 @@ Approximate standard error and confidence interval:
 
 $$
 \mathrm{SE}(\hat J)=100\frac{s_X}{\sqrt K},\qquad
-\mathrm{CI}_{95\%}\approx\hat J\pm1.96\,\mathrm{SE}(\hat J).
+\mathrm{CI}_{0.95}\approx\hat J\pm1.96\,\mathrm{SE}(\hat J).
 $$
 
 To compare candidate A and control C against the **same opponent** under the **same seed blocks**:
