@@ -105,17 +105,23 @@ Training commands, checkpoint migration, paired evaluation, and run-specific opt
 
 ## Core mathematical conventions
 
-For player `i`, one hand's **big-blind-normalized payoff** is:
+For player `i` in hand `h`, define the **big-blind-normalized net chip payoff** by the change in chip stack. In a two-player, no-rake hand, the players' payoffs sum to zero.
 
-$$
-R_i = \frac{C_i^{\mathrm{final}} - C_i^{\mathrm{initial}}}{BB}, \qquad R_0 + R_1 = 0
-$$
+```math
+R_{i,h}^{\mathrm{BB}}
+=
+\frac{C_{i,h}^{\mathrm{final}}-C_{i,h}^{\mathrm{initial}}}{BB_h},
+\qquad
+R_{0,h}^{\mathrm{BB}}+R_{1,h}^{\mathrm{BB}}=0
+```
 
-The sample mean across `N` hands converts to **bb/100** as:
+For `N` evaluated hands, the average performance of player `i` in **bb/100** is
 
-$$
-\widehat J_{\mathrm{bb/100}} = \frac{100}{N}\sum_{h=1}^{N} R_h
-$$
+```math
+\widehat{J}_{i,\mathrm{bb/100}}
+=
+\frac{100}{N}\sum_{h=1}^{N}R_{i,h}^{\mathrm{BB}}
+```
 
 A **seed-blocked** evaluation balances both physical seats and button placements; the statistical unit is the independently shuffled deck seed, **not** each of its four games.
 
