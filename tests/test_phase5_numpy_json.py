@@ -4,7 +4,7 @@ import json
 
 import pytest
 
-from holdem_agent_phase5 import observe_rlcard_state
+from holdem_ai.environment.rlcard_adapter import observe_rlcard_state
 
 
 def _sample_state(raw_obs):

@@ -4,13 +4,12 @@ from __future__ import annotations
 import json
 import pytest
 
-from holdem_agent_phase5.schema import InformationState
-from holdem_agent_phase6.adapter import CriticState
-from holdem_agent_phase7 import (
-    encode_actor, encode_critic, encode_action, batch_actors, batch_critics,
-    masked_logits, masked_categorical,
-)
-from holdem_agent_phase7.vocabulary import PAD
+from holdem_ai.core.schema import InformationState
+from holdem_ai.environment.hunl200_adapter import CriticState
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.encoding.actions import encode_action, masked_logits, masked_categorical
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.encoding.vocabulary import PAD
 
 
 def _observation(history=(), mask=(True, False, True, True, True, False, True)):

@@ -2,9 +2,10 @@
 import pytest
 import torch
 
-from holdem_agent_phase14 import ComparisonConfig, run_study
-from holdem_agent_phase9 import create_session, save_checkpoint, PPOConfig
-from holdem_agent_phase8 import NetworkConfig
+from holdem_ai.experiments.controlled_study import ComparisonConfig, run_study
+from holdem_ai.training.ppo_session import create_session, save_checkpoint
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.models.transformer import NetworkConfig
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='requires CUDA')

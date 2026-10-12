@@ -5,9 +5,10 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase9 import PPOConfig, collect_self_play
-from holdem_agent_phase11 import collect_batched_self_play, evaluate_balanced
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.training.ppo import PPOConfig, collect_self_play
+from holdem_ai.training.batched_collector import collect_batched_self_play
+from holdem_ai.evaluation.balanced import evaluate_balanced
 
 
 @pytest.fixture

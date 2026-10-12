@@ -4,8 +4,9 @@ from __future__ import annotations
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import PPOConfig, create_session, train_updates
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.ppo_session import create_session, train_updates
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='CUDA not available here')

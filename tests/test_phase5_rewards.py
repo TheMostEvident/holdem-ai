@@ -2,7 +2,7 @@ import math
 
 import pytest
 
-from holdem_agent_phase5 import ChipDeltaReward, WinnerTakeAllReward
+from holdem_ai.training.reward_models import ChipDeltaReward, WinnerTakeAllReward
 
 
 def test_cash_zero_sum_in_bb_units():

@@ -15,8 +15,8 @@ from __future__ import annotations
 import argparse
 import json
 
-from holdem_agent_phase11 import ExperimentConfig, run_experiment
-from holdem_agent_phase11.progress import TrainingProgress
+from holdem_ai.experiments.time_budget import ExperimentConfig, run_experiment
+from holdem_ai.utils.progress import TrainingProgress
 
 
 def build_parser() -> argparse.ArgumentParser:

@@ -12,9 +12,9 @@ import time
 
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import (PPOConfig, create_session, evaluate_vs_random,
-                                 load_checkpoint, train_updates)
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig, evaluate_vs_random
+from holdem_ai.training.ppo_session import create_session, load_checkpoint, train_updates
 
 
 def build_parser() -> argparse.ArgumentParser:

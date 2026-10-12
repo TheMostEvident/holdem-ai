@@ -4,9 +4,8 @@ import random
 
 import pytest
 
-from holdem_agent_phase16.opponents import (BUILTIN_OPPONENTS, OpponentSpec,
-                                            build_builtin)
-from holdem_agent_phase5.schema import InformationState
+from holdem_ai.agents.diagnostic_opponents import BUILTIN_OPPONENTS, OpponentSpec, build_builtin
+from holdem_ai.core.schema import InformationState
 
 
 def obs(legal):

@@ -5,9 +5,10 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase16 import OpponentSpec, PoolEvaluationConfig, evaluate_opponent_pool
-from holdem_agent_phase12.evaluation import model_fingerprint
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.agents.diagnostic_opponents import OpponentSpec
+from holdem_ai.evaluation.opponent_pool import PoolEvaluationConfig, evaluate_opponent_pool
+from holdem_ai.evaluation.seed_blocked import model_fingerprint
 
 
 @pytest.fixture(scope='module')

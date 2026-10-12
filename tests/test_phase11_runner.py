@@ -6,8 +6,8 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase11 import ExperimentConfig, run_experiment
-from holdem_agent_phase11.runner import _budget_remaining
+from holdem_ai.experiments.time_budget import ExperimentConfig, run_experiment
+from holdem_ai.experiments.time_budget import _budget_remaining
 from scripts.phase11_compare import compare_logs
 
 
@@ -82,9 +82,9 @@ def test_resume_requires_original_log_dir(tmp_path):
 
 
 def test_import_phase10_checkpoint(tmp_path):
-    from holdem_agent_phase10 import create_qboost_session, save_qboost_checkpoint
-    from holdem_agent_phase8 import NetworkConfig
-    from holdem_agent_phase9 import PPOConfig
+    from holdem_ai.training.qboost_session import create_qboost_session, save_qboost_checkpoint
+    from holdem_ai.models.transformer import NetworkConfig
+    from holdem_ai.training.ppo import PPOConfig
     prior = create_qboost_session(
         device='cpu', network_config=NetworkConfig(
             embed_dim=32, attention_heads=2, transformer_layers=1,

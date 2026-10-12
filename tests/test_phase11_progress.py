@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 import pytest
 
-from holdem_agent_phase11.progress import TrainingProgress, format_duration
+from holdem_ai.utils.progress import TrainingProgress, format_duration
 from scripts.phase11_train import build_parser, run
 
 
@@ -132,7 +132,7 @@ def test_cli_show_progress_integrates_existing_runner_emit(tmp_path, capsys):
 def test_progress_display_no_policy_side_effect():
     # Progress observer owns no torch/policy/engine resources.
     import inspect
-    from holdem_agent_phase11 import progress
+    from holdem_ai.utils import progress
     source = inspect.getsource(progress)
     assert 'torch.' not in source
     assert 'collect_self_play' not in source

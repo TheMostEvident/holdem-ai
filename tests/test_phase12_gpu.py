@@ -4,8 +4,8 @@ from __future__ import annotations
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase12 import EvaluationConfig, evaluate_seed_blocks
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.evaluation.seed_blocked import EvaluationConfig, evaluate_seed_blocks
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='CUDA not available')

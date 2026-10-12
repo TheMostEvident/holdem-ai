@@ -4,13 +4,8 @@ import random
 
 import pytest
 
-from holdem_agent_phase5 import (
-    CFRTablePolicy,
-    EpsilonGreedyPolicy,
-    InformationState,
-    RandomLegalPolicy,
-    masked_distribution,
-)
+from holdem_ai.agents.policies import CFRTablePolicy, EpsilonGreedyPolicy, RandomLegalPolicy, masked_distribution
+from holdem_ai.core.schema import InformationState
 
 
 def obs(*, seat=0, mask=(True, False, True), hand=("SA", "SK"), history=("0:call",)):

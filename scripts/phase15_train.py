@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 
-from holdem_agent_phase15 import LongRunConfig, run_longrun
+from holdem_ai.experiments.longrun import LongRunConfig, run_longrun
 
 
 def build_parser():

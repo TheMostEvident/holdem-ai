@@ -8,12 +8,12 @@ import argparse
 import json
 import time
 
-from holdem_agent_phase5.policy import RandomLegalPolicy
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
-from holdem_agent_phase7 import (
-    batch_actors, batch_critics, encode_actor, encode_critic, encode_action,
-    masked_categorical,
-)
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.encoding.actions import encode_action, masked_categorical
 
 
 def run(hands: int = 100, device: str = 'cpu', seed: int = 42) -> dict:

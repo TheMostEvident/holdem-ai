@@ -4,7 +4,7 @@ from __future__ import annotations
 import pytest
 import torch
 
-from holdem_agent_phase13 import BatchExperimentConfig, run_batch_experiment
+from holdem_ai.experiments.batch_scaling import BatchExperimentConfig, run_batch_experiment
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='CUDA not available')

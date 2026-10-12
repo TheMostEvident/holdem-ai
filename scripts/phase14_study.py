@@ -8,7 +8,7 @@ from __future__ import annotations
 import argparse
 import json
 
-from holdem_agent_phase14 import ComparisonConfig, run_study
+from holdem_ai.experiments.controlled_study import ComparisonConfig, run_study
 
 
 def parse_seeds(value: str) -> tuple[int, ...]:

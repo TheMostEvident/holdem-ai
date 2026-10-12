@@ -8,10 +8,11 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import PPOConfig, create_session, save_checkpoint
-from holdem_agent_phase15 import LongRunConfig, run_longrun, finalize_longrun
-from holdem_agent_phase15.longrun import _spec, _match_resume, _summary
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.ppo_session import create_session, save_checkpoint
+from holdem_ai.experiments.longrun import LongRunConfig, run_longrun, finalize_longrun
+from holdem_ai.experiments.longrun import _spec, _match_resume, _summary
 from scripts.phase15_train import build_parser
 
 
@@ -88,7 +89,7 @@ def test_finalize_seals_and_does_not_retest(tmp_path,monkeypatch):
     cfg=_config(tmp_path,source)
     run_longrun(cfg)
     root=tmp_path/'longrun'
-    from holdem_agent_phase15 import longrun as m
+    from holdem_ai.experiments import longrun as m
     original=m._evaluation
     seen=[]
     def spy(*args,**kw):
@@ -122,7 +123,7 @@ def test_source_and_checkpoint_tampering_rejected(tmp_path):
 
 def test_keyboard_interrupt_mid_update_does_not_commit(tmp_path,monkeypatch):
     source=_source(tmp_path)
-    from holdem_agent_phase15 import longrun as m
+    from holdem_ai.experiments import longrun as m
     def interrupt(*args,**kw): raise KeyboardInterrupt
     with monkeypatch.context() as p:
         p.setattr(m,'_one_update',interrupt)
@@ -136,7 +137,7 @@ def test_keyboard_interrupt_mid_update_does_not_commit(tmp_path,monkeypatch):
 
 def test_safety_stop_after_persistent_warning(tmp_path,monkeypatch):
     source=_source(tmp_path)
-    from holdem_agent_phase15 import longrun as m
+    from holdem_ai.experiments import longrun as m
     original=m._one_update
     def always_warn(sess,cfg):
         event=original(sess,cfg)
@@ -176,8 +177,8 @@ def test_source_matches_phase14_best_format(tmp_path):
 
 
 def test_qboost_from_phase14_format_and_beta_guard(tmp_path):
-    from holdem_agent_phase10 import (from_phase9_checkpoint,save_qboost_checkpoint)
-    from holdem_agent_phase10 import QBoostConfig
+    from holdem_ai.training.qboost_session import from_phase9_checkpoint, save_qboost_checkpoint
+    from holdem_ai.training.qboost import QBoostConfig
     source=_source(tmp_path)
     qs=from_phase9_checkpoint(source,device='cpu',qconfig=QBoostConfig(beta=1.0))
     checkpoint=tmp_path/'phase14_qboost_best.pt'
@@ -193,7 +194,7 @@ def test_qboost_from_phase14_format_and_beta_guard(tmp_path):
 
 
 def test_exclusive_run_lock_refuses_parallel_job(tmp_path):
-    from holdem_agent_phase15.longrun import _exclusive_lock
+    from holdem_ai.experiments.longrun import _exclusive_lock
     root=tmp_path/'shared'
     with _exclusive_lock(root):
         with pytest.raises(RuntimeError,match='another Phase15'):

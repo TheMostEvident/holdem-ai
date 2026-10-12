@@ -7,10 +7,10 @@ import json
 import os
 from pathlib import Path
 
-from holdem_agent_phase12.checkpoint import load_actor
-from holdem_agent_phase16 import (BUILTIN_OPPONENTS, OpponentSpec,
-                                   PoolEvaluationConfig, evaluate_opponent_pool)
-from holdem_agent_phase16.report import markdown_report
+from holdem_ai.evaluation.checkpoint_loader import load_actor
+from holdem_ai.agents.diagnostic_opponents import BUILTIN_OPPONENTS, OpponentSpec
+from holdem_ai.evaluation.opponent_pool import PoolEvaluationConfig, evaluate_opponent_pool
+from holdem_ai.evaluation.strategy_report import markdown_report
 
 
 def parser() -> argparse.ArgumentParser:

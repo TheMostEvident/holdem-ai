@@ -8,18 +8,17 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase5.policy import RandomLegalPolicy
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
-from holdem_agent_phase7 import batch_actors, batch_critics, encode_actor, encode_critic
-from holdem_agent_phase8 import CentralizedQCritic, NetworkConfig, TransformerActor
-from holdem_agent_phase9 import (PPOConfig, collect_self_play, create_session,
-                                 freeze_old_policy_data)
-from holdem_agent_phase10 import (QBoostConfig, create_qboost_session,
-                                  freeze_qboost_data, optimize_qboost,
-                                  qboost_diagnostics, qboost_surrogate,
-                                  save_qboost_checkpoint, load_qboost_checkpoint,
-                                  from_phase9_checkpoint, train_qboost_updates)
-from holdem_agent_phase9 import save_checkpoint
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.models.transformer import CentralizedQCritic, NetworkConfig, TransformerActor
+from holdem_ai.training.ppo import PPOConfig, collect_self_play, freeze_old_policy_data
+from holdem_ai.training.ppo_session import create_session
+from holdem_ai.training.qboost import QBoostConfig, freeze_qboost_data, optimize_qboost, qboost_diagnostics, qboost_surrogate
+from holdem_ai.training.qboost_session import create_qboost_session, save_qboost_checkpoint, load_qboost_checkpoint, from_phase9_checkpoint, train_qboost_updates
+from holdem_ai.training.ppo_session import save_checkpoint
 
 
 @pytest.fixture(scope='module')
@@ -75,7 +74,7 @@ def test_beta0_identical_to_old_ppo_surrogate(sample):
     # Importance ratio differs from one to test proper PPO clipping.
     new_log = old_log + torch.linspace(-0.3, 0.4, n)
     new_probs = p.clone()
-    from holdem_agent_phase9.ppo import clipped_surrogate
+    from holdem_ai.training.ppo import clipped_surrogate
     standard = clipped_surrogate(new_log, old_log,
                                  (frozen.raw_advantages[:n] - frozen.center) / frozen.scale,
                                  0.2)

@@ -7,11 +7,13 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import TransformerActor, NetworkConfig
-from holdem_agent_phase9 import PPOConfig, create_session
-from holdem_agent_phase10 import create_qboost_session
-from holdem_agent_phase11 import collect_batched_self_play
-from holdem_agent_phase13 import BatchExperimentConfig, action_diagnostics, run_batch_experiment
+from holdem_ai.models.transformer import TransformerActor, NetworkConfig
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.ppo_session import create_session
+from holdem_ai.training.qboost_session import create_qboost_session
+from holdem_ai.training.batched_collector import collect_batched_self_play
+from holdem_ai.experiments.batch_scaling import BatchExperimentConfig, run_batch_experiment
+from holdem_ai.evaluation.action_diagnostics import action_diagnostics
 from scripts.phase13_benchmark import parse_sizes
 from scripts.phase13_train import build_parser
 

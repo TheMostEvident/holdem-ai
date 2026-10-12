@@ -13,8 +13,8 @@ import json
 from pathlib import Path
 from contextlib import nullcontext
 
-from holdem_agent_phase12 import (EvaluationConfig, compare_results,
-                                  evaluate_seed_blocks, load_actor)
+from holdem_ai.evaluation.seed_blocked import EvaluationConfig, compare_results, evaluate_seed_blocks
+from holdem_ai.evaluation.checkpoint_loader import load_actor
 
 SEED_PARTITIONS = {'validation': 12_000_000, 'test': 15_000_000}
 

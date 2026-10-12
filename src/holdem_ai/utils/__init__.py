@@ -1,0 +1,1 @@
+"""Consolidated functional package."""

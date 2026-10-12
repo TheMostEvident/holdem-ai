@@ -1,9 +1,9 @@
 """GTX1070 smoke; skipped in environments without PyTorch CUDA."""
 import pytest
 import torch
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import PPOConfig
-from holdem_agent_phase10 import create_qboost_session, train_qboost_updates
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.qboost_session import create_qboost_session, train_qboost_updates
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='CUDA GPU not available here')
