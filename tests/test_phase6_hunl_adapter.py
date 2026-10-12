@@ -5,8 +5,11 @@ import json
 
 import pytest
 
-from holdem_agent_phase5 import RandomLegalPolicy, Terminal, Turn, run_self_play
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.core.schema import Terminal, Turn
+from holdem_ai.training.episode_runner import run_self_play
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
 
 
 def test_hunl200_blinds_and_seat_order_and_actor_privacy():

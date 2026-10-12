@@ -10,14 +10,11 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import (
-    PPOConfig, create_session, collect_self_play, freeze_old_policy_data,
-    clipped_surrogate, optimize_ppo, evaluate_vs_random, save_checkpoint,
-    load_checkpoint, train_updates,
-)
-from holdem_agent_phase7 import batch_actors, batch_critics
-from holdem_agent_phase8 import chosen_q
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig, collect_self_play, freeze_old_policy_data, clipped_surrogate, optimize_ppo, evaluate_vs_random
+from holdem_ai.training.ppo_session import create_session, save_checkpoint, load_checkpoint, train_updates
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.models.transformer import chosen_q
 
 
 @pytest.fixture(scope='module', autouse=True)

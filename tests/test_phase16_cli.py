@@ -5,7 +5,7 @@ import json
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
 from scripts.phase16_evaluate import parser, run, _specs
 
 

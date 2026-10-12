@@ -8,9 +8,11 @@ from dataclasses import replace
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import PPOConfig, create_session, save_checkpoint
-from holdem_agent_phase14 import ComparisonConfig, run_study, seed_level_summary
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.ppo_session import create_session, save_checkpoint
+from holdem_ai.experiments.controlled_study import ComparisonConfig, run_study
+from holdem_ai.evaluation.seed_statistics import seed_level_summary
 from scripts.phase14_study import build_parser, parse_seeds
 
 
@@ -70,7 +72,7 @@ def test_end_to_end_matched_start_and_no_test_leakage(tmp_path, monkeypatch):
     source = _source(tmp_path)
     digest = hashlib.sha256(source.read_bytes()).hexdigest()
     cfg = _config(tmp_path,source)
-    from holdem_agent_phase14 import study as module
+    from holdem_ai.experiments import controlled_study as module
     original_eval = module._eval
     seen=[]
     def spy(actor,opponent,config,*,partition):
@@ -115,7 +117,7 @@ def test_resume_rejects_seed_and_source_change(tmp_path):
 def test_resumable_partial_study(tmp_path, monkeypatch):
     source = _source(tmp_path)
     cfg = _config(tmp_path,source, updates=2)
-    from holdem_agent_phase14 import study as m
+    from holdem_ai.experiments import controlled_study as m
     original_one=m._one_update
     calls={'n':0}
     def stop_after_first(sess, config):

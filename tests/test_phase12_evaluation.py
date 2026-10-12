@@ -7,12 +7,8 @@ import random
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase12 import (
-    DealGroup, EvaluationConfig, EvaluationResult,
-    action_counts, compare_results, evaluate_seed_blocks,
-    model_fingerprint, summarize_block_scores,
-)
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.evaluation.seed_blocked import DealGroup, EvaluationConfig, EvaluationResult, action_counts, compare_results, evaluate_seed_blocks, model_fingerprint, summarize_block_scores
 
 
 @pytest.fixture(scope='module')

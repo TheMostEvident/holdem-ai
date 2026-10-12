@@ -8,9 +8,9 @@ from dataclasses import replace
 
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase9 import PPOConfig
-from holdem_agent_phase11 import collect_batched_self_play
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.batched_collector import collect_batched_self_play
 
 
 def run(*, device='cpu', hands=100, batch_sizes=(1, 4, 8, 16), seed=42,

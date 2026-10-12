@@ -12,13 +12,11 @@ from pathlib import Path
 
 import torch
 
-from holdem_agent_phase8 import NetworkConfig
-from holdem_agent_phase9 import (PPOConfig, collect_self_play, create_session,
-                                 evaluate_vs_random, freeze_old_policy_data,
-                                 optimize_ppo, save_checkpoint)
-from holdem_agent_phase10 import (QBoostConfig, create_qboost_session,
-                                  from_phase9_checkpoint, load_qboost_checkpoint,
-                                  train_qboost_updates)
+from holdem_ai.models.transformer import NetworkConfig
+from holdem_ai.training.ppo import PPOConfig, collect_self_play, evaluate_vs_random, freeze_old_policy_data, optimize_ppo
+from holdem_ai.training.ppo_session import create_session, save_checkpoint
+from holdem_ai.training.qboost import QBoostConfig
+from holdem_ai.training.qboost_session import create_qboost_session, from_phase9_checkpoint, load_qboost_checkpoint, train_qboost_updates
 
 
 def build_parser() -> argparse.ArgumentParser:

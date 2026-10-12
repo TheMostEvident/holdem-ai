@@ -2,9 +2,7 @@ from dataclasses import replace
 
 import pytest
 
-from holdem_agent_phase5 import (
-    BET_ACTION_LABELS, EngineBetAction, NoLimitBetContext, abstract_bet_actions,
-)
+from holdem_ai.environment.bet_abstraction import BET_ACTION_LABELS, EngineBetAction, NoLimitBetContext, abstract_bet_actions
 
 
 def ctx(**kwargs):

@@ -15,12 +15,14 @@ import time
 
 import torch
 
-from holdem_agent_phase5 import RandomLegalPolicy, run_self_play
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
-from holdem_agent_phase7 import batch_actors, batch_critics, encode_actor, encode_critic
-from holdem_agent_phase8 import (
-    CentralizedQCritic, NetworkConfig, NeuralActorPolicy, TransformerActor, chosen_q,
-)
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.training.episode_runner import run_self_play
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.models.transformer import CentralizedQCritic, NetworkConfig, TransformerActor, chosen_q
+from holdem_ai.agents.neural_policy import NeuralActorPolicy
 
 
 def run(*, hands: int = 10, device: str = 'cpu', batch_size: int = 16, seed: int = 42) -> dict:

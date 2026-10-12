@@ -6,14 +6,14 @@ import random
 import pytest
 import torch
 
-from holdem_agent_phase5.policy import RandomLegalPolicy
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
-from holdem_agent_phase7 import batch_actors, batch_critics, encode_actor, encode_critic
-from holdem_agent_phase7.vocabulary import VOCAB_SIZE
-from holdem_agent_phase8 import (
-    CausalTokenEncoder, CentralizedQCritic, NetworkConfig,
-    NeuralActorPolicy, TransformerActor, chosen_q,
-)
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.encoding.vocabulary import VOCAB_SIZE
+from holdem_ai.models.transformer import CausalTokenEncoder, CentralizedQCritic, NetworkConfig, TransformerActor, chosen_q
+from holdem_ai.agents.neural_policy import NeuralActorPolicy
 
 
 @pytest.fixture(scope='module')

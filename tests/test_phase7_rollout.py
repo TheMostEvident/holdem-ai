@@ -6,12 +6,12 @@ from __future__ import annotations
 
 import pytest
 
-from holdem_agent_phase5.policy import RandomLegalPolicy
-from holdem_agent_phase6 import HUNL200Adapter, collect_global_episode
-from holdem_agent_phase7 import (
-    encode_actor, encode_critic, encode_action, batch_actors, batch_critics,
-    masked_categorical,
-)
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.training.global_rollout import collect_global_episode
+from holdem_ai.encoding.observation import encode_actor, encode_critic
+from holdem_ai.encoding.actions import encode_action, masked_categorical
+from holdem_ai.encoding.tensors import batch_actors, batch_critics
 
 
 def test_phase7_global_rollout_all_decisions_encode():

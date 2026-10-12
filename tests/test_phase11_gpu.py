@@ -4,9 +4,9 @@ from __future__ import annotations
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase9 import PPOConfig
-from holdem_agent_phase11 import collect_batched_self_play
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.training.ppo import PPOConfig
+from holdem_ai.training.batched_collector import collect_batched_self_play
 
 
 @pytest.mark.skipif(not torch.cuda.is_available(), reason='CUDA is not installed on this runner')

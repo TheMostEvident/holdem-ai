@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import rlcard
-from holdem_agent_phase5 import RLCardTurnDriver, RandomLegalPolicy, run_self_play
+from holdem_ai.environment.rlcard_adapter import RLCardTurnDriver
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.training.episode_runner import run_self_play
 
 
 def main() -> None:

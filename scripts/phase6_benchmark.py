@@ -11,9 +11,9 @@ import concurrent.futures
 import json
 import time
 
-from holdem_agent_phase5.policy import RandomLegalPolicy
-from holdem_agent_phase5.runner import run_self_play
-from holdem_agent_phase6 import HUNL200Adapter
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.training.episode_runner import run_self_play
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
 
 
 def _run_one(hand_index: int, seed: int, max_decisions: int) -> tuple[float, int]:

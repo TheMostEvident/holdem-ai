@@ -6,13 +6,12 @@ import json
 
 import pytest
 
-from holdem_agent_phase5.schema import InformationState, Turn
-from holdem_agent_phase6 import HUNL200Adapter
-from holdem_agent_phase6.adapter import CriticState
-from holdem_agent_phase7 import (
-    ACTOR_FEATURE_DIM, CRITIC_FEATURE_DIM, VOCAB_SIZE, encode_actor, encode_critic,
-)
-from holdem_agent_phase7 import vocabulary as v
+from holdem_ai.core.schema import InformationState, Turn
+from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
+from holdem_ai.environment.hunl200_adapter import CriticState
+from holdem_ai.encoding.observation import ACTOR_FEATURE_DIM, CRITIC_FEATURE_DIM, encode_actor, encode_critic
+from holdem_ai.encoding.vocabulary import VOCAB_SIZE
+from holdem_ai.encoding import vocabulary as v
 
 
 def _actor(**kw):

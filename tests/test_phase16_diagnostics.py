@@ -3,9 +3,9 @@ from __future__ import annotations
 import pytest
 import torch
 
-from holdem_agent_phase5.schema import InformationState
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase16 import ActionProfile, spr_bucket
+from holdem_ai.core.schema import InformationState
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.evaluation.strategy_diagnostics import ActionProfile, spr_bucket
 
 
 def obs(*, mask=(True, False, True, True, True, True, True), street='preflop',
@@ -60,7 +60,7 @@ def test_entropy_uses_only_actor_information():
     model = TransformerActor(NetworkConfig(embed_dim=32, attention_heads=2,
                             transformer_layers=1, ff_dim=64, hidden_dim=48, max_tokens=256))
     profile = ActionProfile()
-    from holdem_agent_phase6 import HUNL200Adapter
+    from holdem_ai.environment.hunl200_adapter import HUNL200Adapter
     real_obs = HUNL200Adapter().reset(seed=16).observation
     profile.record(real_obs, real_obs.legal_actions[0])
     profile.record(real_obs, real_obs.legal_actions[-1])

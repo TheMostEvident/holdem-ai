@@ -7,8 +7,8 @@ from pathlib import Path
 import pytest
 import torch
 
-from holdem_agent_phase8 import NetworkConfig, TransformerActor
-from holdem_agent_phase12 import load_actor
+from holdem_ai.models.transformer import NetworkConfig, TransformerActor
+from holdem_ai.evaluation.checkpoint_loader import load_actor
 from scripts.phase12_evaluate import build_parser, run
 
 

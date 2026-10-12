@@ -1,6 +1,9 @@
 import pytest
 
-from holdem_agent_phase5 import RLCardTurnDriver, RandomLegalPolicy, observe_rlcard_state, run_self_play, snapshot
+from holdem_ai.environment.rlcard_adapter import RLCardTurnDriver, observe_rlcard_state
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.training.episode_runner import run_self_play
+from holdem_ai.utils.snapshot import snapshot
 
 
 class FakeRawState:

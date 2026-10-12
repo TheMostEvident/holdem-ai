@@ -2,9 +2,10 @@ import random
 
 import pytest
 
-from holdem_agent_phase5 import (
-    InformationState, RandomLegalPolicy, Terminal, Turn, run_self_play, snapshot,
-)
+from holdem_ai.core.schema import InformationState, Terminal, Turn
+from holdem_ai.agents.policies import RandomLegalPolicy
+from holdem_ai.training.episode_runner import run_self_play
+from holdem_ai.utils.snapshot import snapshot
 
 
 def state(seat, step, num_actions=5):
