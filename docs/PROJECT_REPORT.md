@@ -24,7 +24,7 @@ s_{t+1}\sim P(\cdot\mid s_t,a_t),\quad
 r_{t+1}^i=R_i(s_t,a_t,s_{t+1}).
 $$
 
-Here \(s_t\) includes private game-engine state, whereas \(I_t^i\) is limited to player \(i\)'s permissible information. The Environment work expanded from heads-up no-limit Hold'em (HUNL) to 2–6-player hands and a six-player elimination tournament. The neural-learning track subsequently refocused on two-player **HUNL200**, with 200 big blinds of starting stack.
+Here $s_t$ includes private game-engine state, whereas $I_t^i$ is limited to player $i$'s permissible information. The Environment work expanded from heads-up no-limit Hold'em (HUNL) to 2–6-player hands and a six-player elimination tournament. The neural-learning track subsequently refocused on two-player **HUNL200**, with 200 big blinds of starting stack.
 
 ## 2. System architecture
 
@@ -93,7 +93,7 @@ uv run --extra dev python -m pytest -q
 
 A two-player `HandEngine` wrapper exposed `reset`, `state`, `current_player`, `legal_actions`, `step`, `is_over`, `get_result`, and `play_hand`. A `RandomAgent` selected among available actions. RLCard's original abstraction used five action indices, not arbitrary continuous bets. The initial experiment used 200-chip stacks and a 2-chip big blind.
 
-Five observed hands yielded \(-50\) bb/100 for player 0:
+Five observed hands yielded $-50$ bb/100 for player 0:
 
 $$
 \widehat J_0=\frac{100}{5}(-0.5-0.5+1-2-0.5)=-50.
@@ -111,7 +111,7 @@ $$
 \mathrm{FirstActor}_{\mathrm{postflop}}=\mathrm{BB}.
 $$
 
-For a player's street contribution \(c\), the current street maximum \(h\), previous full-raise increment \(r\), and remaining stack \(S\), the main legality reference is
+For a player's street contribution $c$, the current street maximum $h$, previous full-raise increment $r$, and remaining stack $S$, the main legality reference is
 
 $$
 \mathrm{ToCall}=\min(S,\max(0,h-c)),\qquad
@@ -119,7 +119,7 @@ $$
 \mathrm{MaxRaiseTo}=c+S.
 $$
 
-A raise below the minimum is only permitted in defined short all-in conditions, and such an all-in need not reopen raising. Side pots use sorted positive contribution levels \(0=u_0<u_1<\dots<u_m\):
+A raise below the minimum is only permitted in defined short all-in conditions, and such an all-in need not reopen raising. Side pots use sorted positive contribution levels $0=u_0<u_1<\dots<u_m$:
 
 $$
 P_k=(u_k-u_{k-1})\left|\{i:c_i\ge u_k\}\right|.
@@ -151,7 +151,7 @@ Phase 5 introduced the immutable `InformationState` record, `Turn`/`Terminal` re
 
 The information-state contract stores acting player, scalar features, legal action mask, own private cards, visible board, stage, public state, and observable history. A serialized key alone **does not prove perfect recall**.
 
-For legal-action indicator \(m_a\) and nonnegative proposed weights \(w_a\), the policy distribution is
+For legal-action indicator $m_a$ and nonnegative proposed weights $w_a$, the policy distribution is
 
 $$
 \pi(a\mid I)=\begin{cases}
@@ -160,7 +160,7 @@ $$
 \end{cases}
 $$
 
-The seven abstract action heads are: fold, check, call, half-pot raise, pot raise, double-pot raise, and all-in. For pot \(P\), street contribution \(c\), call amount \(k\), and multiplier \(f\in\{1/2,1,2\}\):
+The seven abstract action heads are: fold, check, call, half-pot raise, pot raise, double-pot raise, and all-in. For pot $P$, street contribution $c$, call amount $k$, and multiplier $f\in\{1/2,1,2\}$:
 
 $$
 B_{\mathrm{raise\ to}}^{(f)}=c+k+\operatorname{round}_{\mathrm{chip}}\left[f(P+k)\right].
@@ -213,13 +213,13 @@ $$
 
 The reported initial network configuration uses two Transformer layers, embedding width 64, two attention heads, feed-forward width 128, and maximum length 256. The Actor has **99,975 parameters**, Critic **100,487**, Actor output `[B,7]`, and Critic output `[B,2,7]`.
 
-The Critic enforces two-seat zero-sum values \(Q_{\phi,1}(s,a)=-Q_{\phi,0}(s,a)\) and terminal bootstrap values of zero. These constraints would need reconsideration for tournament/ICM objectives. Phase 8 validates forward/backward and tensor contracts; it does **not** by itself perform policy optimization.
+The Critic enforces two-seat zero-sum values $Q_{\phi,1}(s,a)=-Q_{\phi,0}(s,a)$ and terminal bootstrap values of zero. These constraints would need reconsideration for tournament/ICM objectives. Phase 8 validates forward/backward and tensor contracts; it does **not** by itself perform policy optimization.
 
 ## 13. Phase 9 — On-policy Monte-Carlo PPO
 
-The same decentralized Actor acts in both seats during self-play; a privileged centralized Critic is a training-time estimator, not an information channel to the playing Actor. Returns are terminal hand payoffs in BB, with \(\gamma=1\), **no GAE** and **no TD(0)**.
+The same decentralized Actor acts in both seats during self-play; a privileged centralized Critic is a training-time estimator, not an information channel to the playing Actor. Returns are terminal hand payoffs in BB, with $\gamma=1$, **no GAE** and **no TD(0)**.
 
-For acting seat \(i_t\):
+For acting seat $i_t$:
 
 $$
 G_t^{i_t}=R_{i_t},\qquad
@@ -231,7 +231,7 @@ $$
 \hat A_t=G_t^{i_t}-V_{\mathrm{old}}^{i_t}(s_t,I_t).
 $$
 
-After standardizing advantage and defining \(\rho_t(\theta)=\pi_\theta(a_t\mid I_t)/\pi_{\mathrm{old}}(a_t\mid I_t)\), the PPO objective maximizes
+After standardizing advantage and defining $\rho_t(\theta)=\pi_\theta(a_t\mid I_t)/\pi_{\mathrm{old}}(a_t\mid I_t)$, the PPO objective maximizes
 
 $$
 L^{\mathrm{CLIP}}
@@ -252,7 +252,7 @@ It does **not** obtain supervised labels for every unplayed counterfactual actio
 
 ## 14. Phase 10 — Experimental Q-Boost control variate
 
-Naively substituting \(G-Q(s,a)\) in a policy-gradient surrogate omits an action-dependent gradient component. Phase 10 adds an analytic sum over all seven actions. With \(\beta\in[0,1]\), frozen old policy \(\pi_0\), and frozen old critic \(\hat Q_0\):
+Naively substituting $G-Q(s,a)$ in a policy-gradient surrogate omits an action-dependent gradient component. Phase 10 adds an analytic sum over all seven actions. With $\beta\in[0,1]$, frozen old policy $\pi_0$, and frozen old critic $\hat Q_0$:
 
 $$
 \hat V_0=\sum_a\pi_0(a\mid I)\hat Q_0(s,a)
@@ -273,11 +273,11 @@ J_{\mathrm{QB}}(\theta)=\frac1N\sum_t\Big[&
 \end{aligned}
 $$
 
-At \(\beta=0\), the objective reduces to the PPO baseline. The phase documents an old-policy gradient identity, but PPO clipping away from the old policy introduces surrogate bias. A reported logit-gradient **proxy** variance ratio is not a variance guarantee for the full network gradient. Whether Q-Boost improves real poker performance must be established empirically.
+At $\beta=0$, the objective reduces to the PPO baseline. The phase documents an old-policy gradient identity, but PPO clipping away from the old policy introduces surrogate bias. A reported logit-gradient **proxy** variance ratio is not a variance guarantee for the full network gradient. Whether Q-Boost improves real poker performance must be established empirically.
 
 ## 15. Phase 11 — Batched on-policy self-play
 
-Multiple independent HUNL200 games are held active within one process. At each scheduling step, the current decision from each active game is batched for neural Actor inference. All data for update \(k\) is collected using the frozen current policy \(\theta_k\); only then are optimizer steps performed.
+Multiple independent HUNL200 games are held active within one process. At each scheduling step, the current decision from each active game is batched for neural Actor inference. All data for update $k$ is collected using the frozen current policy $\theta_k$; only then are optimizer steps performed.
 
 $$
 D_k\sim\pi_{\theta_k},\qquad\theta_{k+1}=\mathrm{Update}(\theta_k,D_k).
@@ -289,7 +289,7 @@ The approximately **30–45 neural hands/s** cited in that documentation, the Ph
 
 ## 16. Phase 12 — Seed-blocked reproducible evaluation
 
-For each independently shuffled deck seed \(k\), evaluate the candidate in all four seat/button combinations. Each seed block is the statistical unit:
+For each independently shuffled deck seed $k$, evaluate the candidate in all four seat/button combinations. Each seed block is the statistical unit:
 
 $$
 X_k=\frac14\sum_{b=0}^{1}\sum_{s=0}^{1}R(k,b,s),\qquad
@@ -310,11 +310,11 @@ D_k=X_k^A-X_k^C,\qquad
 \widehat{\Delta J}=100\bar D.
 $$
 
-The interval must use the variation in \(D_k\), not a subtraction of independent confidence intervals. The evaluator separates validation and held-out test card seeds, greedy versus sampled policies, action counts and weight fingerprints. This is seed-matched and seat-swapped, but **not** a complete counterfactual duplicate-poker estimator.
+The interval must use the variation in $D_k$, not a subtraction of independent confidence intervals. The evaluator separates validation and held-out test card seeds, greedy versus sampled policies, action counts and weight fingerprints. This is seed-matched and seat-swapped, but **not** a complete counterfactual duplicate-poker estimator.
 
 ## 17. Phase 13 — Batch scaling
 
-The key controlled parameters are update hands \(H\), simultaneously active environments \(B\), minibatch decisions \(M\), and PPO epochs \(E\). For \(N_k\) collected decisions, the optimizer performs approximately
+The key controlled parameters are update hands $H$, simultaneously active environments $B$, minibatch decisions $M$, and PPO epochs $E$. For $N_k$ collected decisions, the optimizer performs approximately
 
 $$
 N_{\mathrm{mini},k}=E\left\lceil\frac{N_k}{M}\right\rceil
@@ -327,7 +327,7 @@ $$
 \frac{\sum_t\mathbf1[a_t=a]}{\sum_t\mathbf1[a\in\mathcal A(I_t)]}.
 $$
 
-This is an aggregated descriptive rate, not one fixed information-state probability. A later Phase 14 document cites **91.77 end-to-end training hands/s** for \(H=64\), \(B=32\) on the GTX 1070, based on only two observations for that case. It is a useful provisional configuration, not a proven globally optimal batch setting.
+This is an aggregated descriptive rate, not one fixed information-state probability. A later Phase 14 document cites **91.77 end-to-end training hands/s** for $H=64$, $B=32$ on the GTX 1070, based on only two observations for that case. It is a useful provisional configuration, not a proven globally optimal batch setting.
 
 ## 18. Phase 14 — Multi-seed controlled PPO vs. Q-Boost experiment
 
@@ -337,18 +337,18 @@ $$
 N_{\mathrm{train}}=S\times2\times U\times H,
 $$
 
-where \(S\) is number of training seeds, \(U\) is updates per algorithm, and \(H\) is hands per update.
+where $S$ is number of training seeds, $U$ is updates per algorithm, and $H$ is hands per update.
 
 The best model in each arm is selected on a fixed validation opponent, including the original untrained-from-stage checkpoint as an eligible candidate. Held-out test is run only after all arms finish, and must not be reused to tune hyperparameters.
 
-For the paired effect per training seed \(s\), aggregate deck-block differences:
+For the paired effect per training seed $s$, aggregate deck-block differences:
 
 $$
 \hat\Delta_s=\frac{100}{K}\sum_{k=1}^K
 \left(X_{s,\mathrm{QB},k}-X_{s,\mathrm{PPO},k}\right).
 $$
 
-Cross-seed standard error uses \(\mathrm{sd}(\hat\Delta_s)/\sqrt S\); a small \(S=3\) yields low power. A later Phase 15 document quotes PPO's **best validation** scores for seeds 51/52/53 as **809.50 / 858.125 / 456.75 bb/100**. These are not final held-out effect estimates. The supplied evidence does not justify a definitive claim that either algorithm is statistically superior.
+Cross-seed standard error uses $\mathrm{sd}(\hat\Delta_s)/\sqrt S$; a small $S=3$ yields low power. A later Phase 15 document quotes PPO's **best validation** scores for seeds 51/52/53 as **809.50 / 858.125 / 456.75 bb/100**. These are not final held-out effect estimates. The supplied evidence does not justify a definitive claim that either algorithm is statistically superior.
 
 ## 19. Phase 15 — Long-run training and checkpoint selection
 
@@ -379,7 +379,7 @@ Phase 16 is **evaluation only**. It does not update Phase 15 models or learn an 
 | PotPressure | Prefer pot-sized aggression | Aggression response |
 | Frozen checkpoint | Prior trained Actor | Snapshot comparison |
 
-For opponent \(o\), estimate:
+For opponent $o$, estimate:
 
 $$
 X_{o,k}=\frac14\sum_{b,s\in\{0,1\}}R_{o,k,b,s},\qquad
@@ -412,7 +412,7 @@ Reports can be exported to JSON, CSV and Markdown without raw hole cards or Crit
 1. **Privacy:** the acting Actor cannot receive the other player's hole cards or deck order.
 2. **Legality:** the environment enforces minimum raise, all-in, reopening and side-pot eligibility; a policy mask is a representation of its admissible moves.
 3. **Chip conservation:** for no-rake hands, total chips before and after equal.
-4. **Zero-sum terminal returns:** for HUNL chip objectives, \(R_0+R_1=0\).
+4. **Zero-sum terminal returns:** for HUNL chip objectives, $R_0+R_1=0$.
 5. **On-policy training:** each optimization update uses decisions sampled by the current old policy, not replay from a diverged behavior policy.
 6. **Units:** per-hand BB return and **bb/100** are different quantities:
 
