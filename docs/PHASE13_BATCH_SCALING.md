@@ -32,7 +32,7 @@ All samples are **on-policy** for the previous Actor weights $\theta_k$, collect
 
 $$
 D_k\sim\pi_{\theta_k},\qquad
-\theta_{k+1}=\operatorname{Update}(\theta_k,D_k).
+\theta_{k+1}=\mathrm{Update}(\theta_k,D_k).
 $$
 
 Throughput for training updates (including collection, diagnostics and optimization, excluding evaluation and checkpoint I/O):

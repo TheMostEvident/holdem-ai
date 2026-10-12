@@ -34,11 +34,11 @@ $$
 
 $$
 \hat\sigma_X^2=\frac{1}{K-1}\sum_{k=1}^K(X_k^A-\bar X^A)^2,
-\qquad \operatorname{SE}(\hat J_A)=100\sqrt{\frac{\hat\sigma_X^2}{K}}.
+\qquad \mathrm{SE}(\hat J_A)=100\sqrt{\frac{\hat\sigma_X^2}{K}}.
 $$
 
 $$
-\operatorname{CI}_{95\%}(J_A)\approx \hat J_A\pm1.96\operatorname{SE}(\hat J_A).
+\mathrm{CI}_{95\%}(J_A)\approx \hat J_A\pm1.96\mathrm{SE}(\hat J_A).
 $$
 
 For two agents A and C evaluated against **the same fixed opponent B**, using **the same shuffled-deck seeds** and modes:

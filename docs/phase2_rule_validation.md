@@ -41,7 +41,7 @@ For no rake:
 
 For side pots, including unmatched returns:
 
-\[\sum_j \operatorname{Pot}_j + \sum_i U_i = \sum_i c_i\]
+\[\sum_j \mathrm{Pot}_j + \sum_i U_i = \sum_i c_i\]
 
 When the acting player has already put in `c`, current highest bet is `h`,
 last full raise increment is `r`, and remaining stack is `s`:

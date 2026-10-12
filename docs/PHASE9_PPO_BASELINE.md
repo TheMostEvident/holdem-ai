@@ -64,7 +64,7 @@ $$
 L^{\mathrm{CLIP}}(\theta)
 =\mathbb E_t\left[\min\left(
  r_t(\theta)\widetilde A_t,
- \operatorname{clip}(r_t(\theta),1-\epsilon,1+\epsilon)\widetilde A_t
+ \mathrm{clip}(r_t(\theta),1-\epsilon,1+\epsilon)\widetilde A_t
 \right)\right].
 $$
 
@@ -78,7 +78,7 @@ Critic is trained on the **observed action only**, using terminal Monte-Carlo ta
 
 $$
 \mathcal L_Q=\mathbb E_t\left[
-\operatorname{Huber}\left(Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t}\right)
+\mathrm{Huber}\left(Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t}\right)
 \right].
 $$
 

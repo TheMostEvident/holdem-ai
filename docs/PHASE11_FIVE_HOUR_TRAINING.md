@@ -19,12 +19,12 @@
 동시에 활성화된 게임의 집합을 $\mathcal{E}_t$라고 할 때, 게임 $e$의 행동 플레이어 $i_e$가 관측한 $I_{e,t}^{i_e}$만 묶는다.
 
 $$
-X_t=\operatorname{Batch}\left(E_A(I_{e,t}^{i_e}):e\in\mathcal{E}_t\right)
+X_t=\mathrm{Batch}\left(E_A(I_{e,t}^{i_e}):e\in\mathcal{E}_t\right)
 $$
 
 $$
 \pi_{\theta_{k}}(a\mid I_{e,t}^{i_e})
-=\operatorname{MaskedSoftmax}\left(f_{\theta_k}(X_t)_e\right)_a
+=\mathrm{MaskedSoftmax}\left(f_{\theta_k}(X_t)_e\right)_a
 $$
 
 동일한 업데이트 $k$가 끝날 때까지 정책 $\theta_k$를 고정한 다음, 모든 게임을 종료하고 최종 bb 수익을 귀속한다.
@@ -53,7 +53,7 @@ $$
 $$
 
 $$
-L^{\mathrm{CLIP}}=\mathbb E_t\left[\min\left(\rho_t\widehat A_t,\operatorname{clip}(\rho_t,1-\epsilon,1+\epsilon)\widehat A_t\right)\right]
+L^{\mathrm{CLIP}}=\mathbb E_t\left[\min\left(\rho_t\widehat A_t,\mathrm{clip}(\rho_t,1-\epsilon,1+\epsilon)\widehat A_t\right)\right]
 $$
 
 Phase 10에서는 관측 행동에 대한 Q 오차 보정과 $\sum_a\pi_\theta(a\mid I)Q_{\mathrm{old}}(s,a)$ 해석적 항을 결합한다. Phase 10 결과에서 `logit_variance_ratio \approx 1`이었으므로 **분산 감소와 전략 성능 향상은 검증 목표**이다.

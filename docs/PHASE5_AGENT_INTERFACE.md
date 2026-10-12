@@ -129,7 +129,7 @@ BET_ACTION_LABELS = (
 현재 스트리트에 이미 낸 금액을 `c`, 이번에 콜해야 할 추가 금액을 `k`, 행동 직전 pot을 `P`, 포트 배수를 `f`라 하면 후보 총 베팅 목표값은
 
 $$
- B_{\mathrm{to}}^{(f)}=c+k+\operatorname{round}_{\mathrm{chip}}\bigl(f(P+k)\bigr),\qquad f\in\{0.5,1,2\}.
+ B_{\mathrm{to}}^{(f)}=c+k+\mathrm{round}_{\mathrm{chip}}\bigl(f(P+k)\bigr),\qquad f\in\{0.5,1,2\}.
 $$
 
 이 수식은 **일관적인 raise 크기 후보**를 생성한다. 포커의 최소 레이즈/올인/재레이즈 개방 여부를 판정하는 수식으로 대체하지 않는다.

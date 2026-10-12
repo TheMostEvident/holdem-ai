@@ -163,7 +163,7 @@ $$
 The seven abstract action heads are: fold, check, call, half-pot raise, pot raise, double-pot raise, and all-in. For pot $P$, street contribution $c$, call amount $k$, and multiplier $f\in\{1/2,1,2\}$:
 
 $$
-B_{\mathrm{raise\ to}}^{(f)}=c+k+\operatorname{round}_{\mathrm{chip}}\left[f(P+k)\right].
+B_{\mathrm{raise\ to}}^{(f)}=c+k+\mathrm{round}_{\mathrm{chip}}\left[f(P+k)\right].
 $$
 
 The engine supplies the actual minimum/maximum raise, re-opening, all-in and side-pot rules. A separate reward interface includes chip delta and a zero-sum tournament winner indicator:
@@ -203,7 +203,7 @@ Phase 8 implements a causal-token Transformer Actor and a separate centralized Q
 
 $$
 Z=\mathrm{Transformer}_{\mathrm{causal}}
-\left(E_{\mathrm{token}}(T)+E_{\mathrm{pos}}+W_v\operatorname{asinh}(V)\right)
+\left(E_{\mathrm{token}}(T)+E_{\mathrm{pos}}+W_v\mathrm{asinh}(V)\right)
 $$
 
 $$
@@ -236,7 +236,7 @@ After standardizing advantage and defining $\rho_t(\theta)=\pi_\theta(a_t\mid I_
 $$
 L^{\mathrm{CLIP}}
 =\mathbb E_t\left[
-\min\left(\rho_t\tilde A_t,\operatorname{clip}(\rho_t,1-\epsilon,1+\epsilon)\tilde A_t\right)
+\min\left(\rho_t\tilde A_t,\mathrm{clip}(\rho_t,1-\epsilon,1+\epsilon)\tilde A_t\right)
 \right].
 $$
 
@@ -244,7 +244,7 @@ The Q-Critic minimizes the observed-action Huber loss against Monte-Carlo return
 
 $$
 \mathcal L_Q=\mathbb E_t\left[
-\operatorname{Huber}(Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t})
+\mathrm{Huber}(Q_{\phi,i_t}(s_t,a_t)-G_t^{i_t})
 \right].
 $$
 
@@ -268,7 +268,7 @@ Standardization uses the **same fixed mean and scale computed from the unboosted
 $$
 \begin{aligned}
 J_{\mathrm{QB}}(\theta)=\frac1N\sum_t\Big[&
-\min\{\rho_t\tilde\delta_t,\operatorname{clip}(\rho_t,1-\epsilon,1+\epsilon)\tilde\delta_t\}\\
+\min\{\rho_t\tilde\delta_t,\mathrm{clip}(\rho_t,1-\epsilon,1+\epsilon)\tilde\delta_t\}\\
 &+\frac\beta{\sigma_A}\sum_a\big(\pi_\theta(a\mid I_t)-\pi_0(a\mid I_t)\big)\hat Q_0(s_t,a)\Big].
 \end{aligned}
 $$
