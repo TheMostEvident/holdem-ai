@@ -25,6 +25,18 @@ function Resolve-TrustedCheckpoint {
     )
     $configured = [Environment]::GetEnvironmentVariable($EnvironmentName, "Process")
     $value = if ($Provided) { $Provided } elseif ($configured) { $configured } else { "" }
+    # Legacy launches sometimes pin last.pt/latest.pt in a PowerShell env var.
+    # Return to the best.pt from the SAME run; never silently select a different run.
+    if ($value -and ((Split-Path -Leaf $value).ToLowerInvariant() -in @("last.pt", "latest.pt"))) {
+        $parent = Split-Path -Parent $value
+        if (-not $parent) { $parent = "." }
+        $best = Join-Path -Path $parent -ChildPath "best.pt"
+        if (-not (Test-Path -LiteralPath $best -PathType Leaf)) {
+            throw "$EnvironmentName points to last.pt/latest.pt, but its sibling best.pt is missing: $best. Supply an existing -...Checkpoint best.pt path."
+        }
+        Write-Host "$EnvironmentName: switching last/latest checkpoint to sibling best.pt."
+        $value = $best
+    }
     if ($value) {
         $file = Get-Item -LiteralPath $value -ErrorAction Stop
         if ($file.PSIsContainer -or $file.Extension -ne ".pt") {
@@ -60,11 +72,11 @@ $env:HOLDEM_AI_GUI_POLICY_MODE = $PolicyMode
 $env:HOLDEM_AI_TOURNAMENT_DEVICE = $Device
 $env:HOLDEM_AI_TOURNAMENT_POLICY_MODE = $PolicyMode
 
-Write-Host "HUNL PPO checkpoint: $(if ($ppo) { Split-Path -Leaf $ppo } else { 'not found - model can be selected but cannot start' })"
-Write-Host "HUNL Q-Boost checkpoint: $(if ($qboost) { Split-Path -Leaf $qboost } else { 'not found - model can be selected but cannot start' })"
-Write-Host "Tournament PPO checkpoint: $(if ($tournament) { Split-Path -Leaf $tournament } else { 'not found - model can be selected but cannot start' })"
+Write-Host "HUNL PPO checkpoint: $(if ($ppo) {  $ppo  } else { 'not found - model can be selected but cannot start' })"
+Write-Host "HUNL Q-Boost checkpoint: $(if ($qboost) {  $qboost  } else { 'not found - model can be selected but cannot start' })"
+Write-Host "Tournament PPO checkpoint: $(if ($tournament) {  $tournament  } else { 'not found - model can be selected but cannot start' })"
 Write-Host "Mode: $PolicyMode / Device: $Device"
 Write-Host "Checkpoint existence does not guarantee compatibility. Real weights are checked only when a trained game starts."
-Write-Host "To use a different checkpoint, stop the server and relaunch with the appropriate *Checkpoint argument."
+Write-Host "To use a different checkpoint, stop the server and relaunch with the appropriate *Checkpoint argument. last.pt/latest.pt inputs are redirected to sibling best.pt."
 uv run --extra gui --extra gpu python -m backend.main
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
