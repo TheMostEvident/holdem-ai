@@ -553,23 +553,6 @@ This English integrated report is a **consolidated technical rendition** of the 
 > [!info] Track 분리
 > 아래는 `docs/EXPAND_PHASE01_TO_07_INTEGRATED_TECHNICAL_REPORT.md`의 전체 기술 내용을 보존한 것이다. 별도의 2~6인 Dynamic Table, Information Encoding, Multi-Agent PPO, MCCFR, Search, Opponent Modeling, Integration 단계가 설명된다. 이 옛 문서의 “아직 Git Push하지 않았다” 또는 테스트 환경 상태 문장은 **작성 당시의 상태**다. 현재 GitHub `main`에는 `src/holdem_ai/expand/` 하위 소스가 포함되어 있다. 옛 문서의 격리 Test `164 passed, 7 skipped`를 현재 Windows/GPU 전체 회귀 성공으로 오인하지 않는다.
 
----
-title: "Dynamic 6-Max NLHE AI — Expand Phase 1~7 통합 기술 보고서"
-aliases:
-  - "Expanded 6-Max Technical Report"
-  - "Expand Phase 1-7 Integration"
-tags:
-  - poker-ai/6max
-  - reinforcement-learning
-  - mccfr
-  - subgame-search
-  - opponent-modeling
-  - architecture
-created: 2026-10-12
-version: "1.0-unified-prototype"
-status: "Integrated package built and isolated tests passed; Windows/real-engine/CUDA acceptance pending"
-repository: "https://github.com/TheMostEvident/holdem-ai"
----
 
 ## Expand Phase 1~7 — Dynamic 6-Max No-Limit Hold'em AI 통합 기술 보고서
 
