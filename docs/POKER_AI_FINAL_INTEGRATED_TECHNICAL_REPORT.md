@@ -8,6 +8,9 @@ tags: [HUNL, tournament, PPO, MCCFR, game-engine, reinforcement-learning]
 
 # Poker AI — Final Integrated Technical Report
 
+> [!note] Verified implementation excerpts
+> The [Phase-verified Python code reference](PHASE_VERIFIED_PYTHON_CODE_REFERENCE.md) contains **literal GitHub source excerpts** for the native multiplayer engine, PPO trainer, MCCFR prototype, Tournament actor bridge, HUNL session manager and GPU retrain scheduler. Conceptual execution sketches in this document are separately labeled pseudocode.
+
 > [!important] Evidence and coverage
 > This report synthesizes the checked-in \`AGENT_DEVELOPMENT_TECHNICAL_REPORT_2026-10-13.md\`, \`TOURNAMENT_ENV_PHASE1_FULL_TECHNICAL_REPORT.md\`, \`PROJECT_REPORT.md\`, Expand E1–E7 documentation and GUI / P15–17 research notes. It is a **navigable engineering synthesis, not a verbatim replacement of every historical source file**. Historical logs and detailed code remain in version control. A phase being documented is not proof of a trained strong or GTO-equivalent agent. Source code excerpts below are deliberately short and labeled by path or API; pseudocode is expressly identified.
 
