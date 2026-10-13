@@ -52,10 +52,12 @@ function Resolve-TrustedCheckpoint {
     return ""
 }
 
+# Prefer the Phase17 longer PPO retrain when no checkpoint is explicitly pinned.
+# An explicit -PpoCheckpoint or inherited HOLDEM_AI_PPO_CHECKPOINT still takes priority.
 $ppo = Resolve-TrustedCheckpoint -Provided $PpoCheckpoint -EnvironmentName "HOLDEM_AI_PPO_CHECKPOINT" -Candidates @(
+    ".\runs\phase17_ppo_5h_seed_01\best.pt",
     ".\runs\phase14_main\seed_52\ppo\best.pt",
-    ".\runs\phase14_pilot\seed_41\ppo\best.pt",
-    ".\runs\phase17_ppo_5h_seed_01\best.pt"
+    ".\runs\phase14_pilot\seed_41\ppo\best.pt"
 )
 $qboost = Resolve-TrustedCheckpoint -Provided $QBoostCheckpoint -EnvironmentName "HOLDEM_AI_QBOOST_CHECKPOINT" -Candidates @(
     ".\runs\phase14_pilot\seed_41\qboost\best.pt"

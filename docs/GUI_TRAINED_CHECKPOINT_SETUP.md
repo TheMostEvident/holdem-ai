@@ -25,7 +25,7 @@ uv sync --extra gui --extra gpu
 
 By default it checks these **exact conventional local paths** in order:
 
-- HUNL PPO: `runs/phase14_main/seed_52/ppo/best.pt`, `runs/phase14_pilot/seed_41/ppo/best.pt`, `runs/phase17_ppo_5h_seed_01/best.pt`.
+- HUNL PPO: **`runs/phase17_ppo_5h_seed_01/best.pt` first**, then `runs/phase14_main/seed_52/ppo/best.pt`, then `runs/phase14_pilot/seed_41/ppo/best.pt` if no Phase17 file exists.
 - HUNL Q-Boost: `runs/phase14_pilot/seed_41/qboost/best.pt`.
 - Tournament: `runs/expand_phase03_pilot/best.pt`.
 
@@ -59,6 +59,16 @@ Invoke-RestMethod http://127.0.0.1:8000/api/v1/tournament/agent-status | Format-
 
 HUNL `available: true` and Tournament `file_found: true` indicate **file presence, not model compatibility**. The loader validates the trusted local model **on game creation**. An incompatible checkpoint produces an explicit error. No training occurs in the GUI.
 
+**Agent Phase17 distinction:** The Phase17 five-hour PPO retrain starts from the Phase14 checkpoint, but its new model output is a separate `runs/phase17_ppo_5h_seed_01/best.pt`. An existing `HOLDEM_AI_PPO_CHECKPOINT` environment variable still overrides discovery; for a guaranteed Phase17 selection, pass `-PpoCheckpoint` explicitly and confirm the launcher prints the expected full path. The default run name is only the documented convention: inspect the *actual* training run root if you chose a different one. Whether the five-hour run completed and whether its `best.pt` actually improves on Phase14 require local `summary.json`, `progress.json` and separate final evaluation; mere file presence does not establish this.
+
+```powershell
+# Examine the local Phase17 run before selecting its weights:
+Get-ChildItem ".\runs\phase17_ppo_5h_seed_01" -Filter "*.pt"
+Get-Content ".\runs\phase17_ppo_5h_seed_01\summary.json" -Raw
+# Stop the existing Backend and launch a NEW server using this checkpoint:
+.\scripts\start_gui_with_models.ps1 -PpoCheckpoint ".\runs\phase17_ppo_5h_seed_01\best.pt"
+```
+
 ## Revert a GUI bot from last.pt/latest.pt to best.pt
 
 The GUI backend reads its model path from a PowerShell environment variable at **server start**, not from the browser. Stop the existing FastAPI server first. The launcher now recognizes an old environment variable or argument ending in `last.pt` or `latest.pt` and redirects to the **sibling** `best.pt` in that SAME run directory. If that sibling is missing, it aborts instead of silently loading last or a different run.
@@ -67,7 +77,7 @@ To set a specific known-good best model explicitly:
 
 ```powershell
 .\scripts\start_gui_with_models.ps1 `
-  -PpoCheckpoint ".\runs\phase14_main\seed_52\ppo\best.pt" `
+  -PpoCheckpoint ".\runs\phase17_ppo_5h_seed_01\best.pt" `
   -TournamentCheckpoint ".\runs\expand_phase03_pilot\best.pt"
 ```
 
