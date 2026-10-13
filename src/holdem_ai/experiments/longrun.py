@@ -20,6 +20,7 @@ from typing import Callable
 import torch
 
 from holdem_ai.utils.progress import TrainingProgress
+from holdem_ai.experiments.ppo_safety import safety_assessment
 from holdem_ai.evaluation.seed_blocked import EvaluationConfig, evaluate_seed_blocks
 from holdem_ai.evaluation.checkpoint_loader import load_actor
 from holdem_ai.experiments.batch_scaling import BatchExperimentConfig, _base, _load_from_path, _one_update, _save
@@ -377,25 +378,25 @@ def _run_longrun_impl(cfg: LongRunConfig, *, emit: Callable[[dict],None] | None 
                 updates_this_run+=1
                 last_update_seconds = float(item['elapsed_seconds'])
                 if bar: bar.on_event(item)
-                # Entropy is diagnostic: decisive poker strategies may have low H.
-                # Preserve KL monitoring independently, including when entropy is low.
-                low_entropy = item.get('entropy',100) < spec['entropy_alert_threshold']
-                high_kl = item.get('approx_kl',0) > spec['max_approx_kl']
-                if low_entropy:
+                safety = safety_assessment(
+                    entropy=item.get('entropy', 100.0),
+                    approx_kl=item.get('approx_kl', 0.0),
+                    entropy_threshold=spec['entropy_alert_threshold'],
+                    max_approx_kl=spec['max_approx_kl'],
+                    entropy_stop_enabled=spec['entropy_stop_enabled'],
+                    consecutive=state['consecutive_safety_warnings'],
+                )
+                if safety['low_entropy']:
                     state['entropy_warnings'] += 1
                     _event(paths['events'], {'kind':'entropy_warning',
                                            'update':base.completed_updates,
                                            'entropy':item['entropy']})
-                if high_kl:
+                if safety['high_kl']:
                     state['kl_warnings'] += 1
                     _event(paths['events'], {'kind':'kl_warning',
                                            'update':base.completed_updates,
                                            'approx_kl':item['approx_kl']})
-                # Existing runs retain their historical behavior when resuming.
-                safety_violation = high_kl or (low_entropy and spec['entropy_stop_enabled'])
-                state['consecutive_safety_warnings'] = (
-                    state['consecutive_safety_warnings'] + 1 if safety_violation else 0
-                )
+                state['consecutive_safety_warnings'] = safety['consecutive_safety_warnings']
                 _atomic_json(paths['state'],state)
                 if base.completed_updates % spec['eval_every'] == 0:
                     if time.perf_counter() < deadline:
