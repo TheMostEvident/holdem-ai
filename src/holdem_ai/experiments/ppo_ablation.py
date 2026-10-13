@@ -25,6 +25,8 @@ import torch.nn.functional as F
 
 from holdem_ai.encoding.tensors import batch_actors, batch_critics
 from holdem_ai.evaluation.checkpoint_loader import load_actor
+from holdem_ai.evaluation.terminal_reward_audit import summarize_terminal_distribution
+from holdem_ai.evaluation.initial_policy_comparison import _action_counts_on_rows
 from holdem_ai.evaluation.seed_blocked import (
     EvaluationConfig, compare_results, evaluate_seed_blocks,
 )
@@ -471,11 +473,26 @@ def run_ablation(config: AblationConfig) -> dict:
             session.actor, critic, holdout, variant=variant,
             scale=config.target_scale, device=config.device,
         )
+        terminal_stats = summarize_terminal_distribution(holdout)
+        action_stats = _action_counts_on_rows(holdout)
+        on_policy_behavior = {
+            "hands": holdout.hands,
+            "preflop_explicit_allin_fraction": round(
+                terminal_stats["preflop"]["explicit_all_in_hand_count"] / holdout.hands, 6),
+            "preflop_allin_selected_given_legal": action_stats["preflop"]["all_in_rate_given_legal"],
+            "preflop_fold_ended_fraction": round(
+                terminal_stats["preflop"]["fold_ended_count"] / holdout.hands, 6),
+            "postflop_decision_hand_fraction": round(
+                terminal_stats["decision_coverage"]["flop_hands"] / holdout.hands, 6),
+            "near_full_stack_fraction": terminal_stats["seat0_hand_weighted_reward"]["near_full_stack_fraction"],
+            "reward_std_bb": terminal_stats["seat0_hand_weighted_reward"]["std_bb"],
+        }
         evaluation = _eval(session.actor, source_actor, config=eval_cfg, control=control)
         _actor_save(session.actor, arm_root / "final_actor.pt")
         data = {
             "variant": variant, "label": LABELS[variant],
             "updates": updates, "critic_holdout": critic_stats,
+            "on_policy_behavior": on_policy_behavior,
             "evaluation": evaluation,
             "rejected_updates": sum(row["step_rejected"] for row in updates),
             "post_kl_max": round(max(row["post_update_exact_kl"] for row in updates), 7),
@@ -487,6 +504,7 @@ def run_ablation(config: AblationConfig) -> dict:
         _put_json(arm_root / "result.json", data)
         report["variants"][variant] = {
             "label": data["label"], "critic_holdout": data["critic_holdout"],
+            "on_policy_behavior": data["on_policy_behavior"],
             "evaluation": data["evaluation"],
             "rejected_updates": data["rejected_updates"],
             "post_kl_max": data["post_kl_max"], "checkpoint": data["checkpoint"],
