@@ -153,15 +153,15 @@ export function TournamentApp() {
         <div className="t-settings-fields">
           <span className="section-label">SEATING / PHASE 1.6.1</span>
           <div className="t-lineup"><strong>SEAT 1 · HUMAN</strong><small>YOU · 1 AI SLOT · 4 IMPROVED BOTS</small></div>
-          <p className="t-muted">Seat 2: choose the trained Expand Phase3 multi-seat PPO (experimental cash-to-tournament transfer) or an explicitly UNTRAINED placeholder. Seats 3–6 remain four heuristic bots.</p>
+          <p className="t-muted">Seat 2: choose Trained PPO with other Improved Bots or the untrained heuristic placeholder. The trained PPO was developed for 2–6-seat cash games; tournament transfer is experimental. Seats 3–6 remain four improved heuristic bots.</p>
           <label className="form-label" htmlFor="t-agent-lineup">SEAT 2 / TOURNAMENT AGENT</label>
           <select className="seed-input" id="t-agent-lineup" value={agentLineup} onChange={e => setAgentLineup(e.target.value as 'improved_4' | 'trained_1_improved_4')} disabled={working}>
             <option value="improved_4">Untrained heuristic placeholder</option>
-            <option value="trained_1_improved_4" disabled={!agentStatus?.file_found}>Expand Phase3 · Trained Multi-seat PPO</option>
+            <option value="trained_1_improved_4">Trained PPO with other Improved Bots</option>
           </select>
           <p className="t-muted" aria-live="polite">{agentStatus?.file_found
             ? `Checkpoint configured: ${agentStatus.checkpoint_name} · ${agentStatus.mode} · ${agentStatus.device}. Format validated when session starts.`
-            : 'Trained model unavailable. Set HOLDEM_AI_TOURNAMENT_CHECKPOINT before starting Backend. No silent Random Bot fallback.'}</p>
+            : 'Trained PPO can be selected, but playing requires a valid local checkpoint. Set HOLDEM_AI_TOURNAMENT_CHECKPOINT and restart FastAPI. A missing or incompatible checkpoint causes an explicit error; no Random Bot fallback.'}</p>
           <label className="form-label" htmlFor="t-seed">DECK SEED <span>OPTIONAL</span></label>
           <input className="seed-input" id="t-seed" value={seed} onChange={e => setSeed(e.target.value)} disabled={working} placeholder="Random" />
           <label className="form-label" htmlFor="t-stack">STARTING CHIPS / SEAT</label>
