@@ -1,147 +1,134 @@
 # holdem-ai
 
-**No-Limit Texas Hold'em environments, self-play agents, and reproducible reinforcement-learning experiments.**
+**Research software for Heads-Up No-Limit Hold'em (HUNL), dynamic 2–6-player cash poker, and 6-max tournament play.**
 
-This repository develops poker game environments and an experimental heads-up no-limit Hold'em (HUNL) learning stack. Its two core workstreams are **Environment** (game rules, state transitions, payoffs, and evaluation infrastructure) and **Agent** (policy models, self-play, optimization, and strategy diagnostics).
+This repository separates two responsibilities:
 
-> **Research status:** This is an experimental implementation, not a solved HUNL bot or a verified GTO strategy. VRPO-Lite and Q-Boosting are project-specific experimental implementations, not a faithful reproduction of all algorithms and results in the original VRPO paper.
+- **Environment:** cards, legal actions, positions, bets, side pots, showdown, chip accounting, tournament progression, and GUI-facing state.
+- **Agent:** information-state encoding, masked decisions, on-policy PPO, experimental QBoost, multi-seat PPO, MCCFR/search prototypes, diagnostics, and evaluation.
 
-**[Read the Phase 0–16 Technical Report](docs/PROJECT_REPORT.md)**
+> **Research status:** Experimental systems and test infrastructure; **not a solved HUNL game, verified GTO agent, replicated Pluribus, or a proven tournament-optimal policy**.
 
-## Objectives
+## Read first
 
-1. **Environment:** Simulate legal poker decisions, privately dealt cards, public histories, side pots, chip transfers, and tournament progression.
-2. **Agent:** Learn legal-action policies from self-play while keeping player-visible observations distinct from privileged training-only critic states.
-3. **Research:** Compare PPO with experimental Q-Boost PPO using controlled checkpoints, seeded evaluations, and diagnostics that distinguish empirical win rates from equilibrium properties.
+**[Final integrated technical report — equations, purpose and technical operation of every Phase](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md)**
 
-## System architecture
+The technical report is the primary overview. Original granular development documents remain in \`docs/\` while their source-level evidence is preserved. A concise synthesis is not permission to delete the original reports before full lossless archiving.
 
-```mermaid
-flowchart TD
-    E["Poker Environment<br/>Hand engine / HUNL200"] --> O["Acting player's InformationState"]
-    O --> F["Actor encoding<br/>tokens / features / legal mask"]
-    F --> A["Transformer Actor<br/>7 masked actions"]
-    A --> E
-    E --> P["Privileged CriticState<br/>training only"]
-    P --> Q["Centralized Q-Critic"]
-    A --> T["On-policy self-play trajectories"]
-    Q --> T
-    T --> L["Monte-Carlo PPO / Q-Boost PPO"]
-    L --> A
-    L --> Q
-    E --> V["Seed-blocked evaluation / opponent pool"]
-```
+## The mathematical contract
 
-The **Actor** receives only its own private cards and public information. The **Critic** may receive both players' hole cards during training through an explicit privileged interface; it must never supply those private features to the acting policy.
+Let the complete hand state be $s_t$, legal action $a_t$, and randomized chance event $\omega_t$:
 
-## Development phases
+$$
+s_{t+1}=T(s_t,a_t,\omega_t),\qquad a_t\in\mathcal A_{\rm legal}(s_t).
+$$
 
-| Phase | Main deliverable |
-| --- | --- |
-| 0 | Project setup, Git/GitHub, Python 3.11, `uv`, reproducible workflow |
-| 1 | RLCard heads-up baseline |
-| 2 / 2.1 | Heads-up blind/order audits and corrected local RLCard rules |
-| 3 | Independent 2–6-player hand engine with betting and side pots |
-| 4 | Six-player single-table tournament environment |
-| 5 | Common Agent interface, legal masks, seven-action abstraction, self-play |
-| 6 | HUNL200 adapter, actor/critic privacy boundary, CPU rollouts |
-| 7 | Tokenized observation and action encoding |
-| 8 | Transformer Actor and centralized zero-sum Q-Critic |
-| 9 | On-policy Monte-Carlo PPO baseline |
-| 10 | Experimental Q-Boost PPO control-variate objective |
-| 11 | Batched neural self-play, time budgets, checkpoints, progress reporting |
-| 12 | Seed-blocked, seat/button-balanced evaluation |
-| 13 | Batch-scaling experiments and action diagnostics |
-| 14 | Multi-seed, matched-start PPO vs. Q-Boost study |
-| 15 | Long-run training management and held-out finalization |
-| 16 | Frozen opponent-pool evaluation and street/position/SPR diagnostics |
+The actor uses its own information state $I_{i,t}$ rather than the omniscient engine state:
 
-The phase numbers identify development milestones, **not** independent certifications of strategy strength. Details on tested results, documented reports, and unresolved validation are in the [technical report](docs/PROJECT_REPORT.md).
+$$
+\pi_\theta(a\mid I_{i,t})=
+\frac{\mathbf1[a\in\mathcal A(I_{i,t})]e^{\ell_\theta(I_{i,t},a)}}
+{\sum_{b\in\mathcal A(I_{i,t})}e^{\ell_\theta(I_{i,t},b)}}.
+$$
 
-## Game configurations
+Chip conservation and return, assuming no rake and no mid-hand external funding:
 
-- **Corrected RLCard HUNL:** baseline heads-up adapter with fixed abstract actions.
-- **Independent 2–6-player hands:** a Python betting/showdown engine with explicit raise-to amounts and side pots.
-- **6-max tournament:** hand-to-hand stacks, elimination, position rotation, and blind levels.
-- **HUNL200 research environment:** two players, 200 big-blind effective starting stacks, seven abstract actions (fold, check, call, half-pot raise, pot raise, double-pot raise, all-in).
+$$
+\sum_iS_{i,t}^{behind}+P_t=C_t,\qquad
+R_{i,h}^{BB}=\frac{S_{i,h}^{final}-S_{i,h}^{initial}}{BB_h},\qquad
+\widehat{bb/100}=\frac{100}{H}\sum_h R_{i,h}^{BB}.
+$$
 
-The current HUNL200 neural policy head is **discrete** and is not the paper's base-16, multi-step action encoding.
+## Project map
 
-## Installation
+| Workstream | Phases | Deliverable |
+|---|---|---|
+| Base Environment | 0–4 | RLCard baseline/corrections; 2–6-player native engine; tournament game rules |
+| HUNL Agent | 5–14 | Seven-action HUNL200 neural Actor, PPO/QBoost, batching and seeded evaluation |
+| HUNL research | 15–17 | Critic/collapse diagnostics, stability ablation, continuous-stack evaluation, GPU retraining |
+| Expand | E1–E7 | Dynamic cash table, multi-seat encoding/PPO, research MCCFR/search/opponent adaptation |
+| HUNL GUI | 1.0–1.6 | Human interaction, FastAPI/React, checkpoint inference, match analytics and stack carry |
+| Tournament ENV | 1.1–1.7 | Six-seat UI, improved opponents, E3 PPO inference bridge, SQLite/replay, showdown reveal |
 
-Use Python 3.11 and [uv](https://docs.astral.sh/uv/). Run the commands from the repository root:
+**Important distinctions:** P17 continuous-stack evaluation and P17 five-hour PPO retraining are different experiments. Base P17 HUNL weights and Expand E3 multi-seat weights are incompatible by default. Expand E3 is cash-game trained infrastructure; Tournament-specific PPO is a future training track.
 
-```powershell
+## Install and test
+
+Python 3.11 and [uv](https://docs.astral.sh/uv/) are the reference package workflow.
+
+\`\`\`powershell
 git clone https://github.com/TheMostEvident/holdem-ai.git
 cd holdem-ai
 uv sync --extra dev
 uv run --extra dev python -m pytest -q
-```
+\`\`\`
 
-For GPU-dependent experiments, install the project's `gpu` extra and verify a CUDA-compatible PyTorch environment:
+For GUI/GPU dependencies on an appropriate CUDA host:
 
-```powershell
-uv sync --extra dev --extra gpu
-uv run --extra dev --extra gpu python -m pytest -q
-```
+\`\`\`powershell
+uv sync --extra dev --extra gui --extra gpu
+uv run --extra dev --extra gui --extra gpu python -m pytest -q
+cd frontend
+npm.cmd ci
+npm.cmd test
+npm.cmd run build
+npm.cmd run dev
+\`\`\`
 
-The GPU development target documented in this project is Windows, GTX 1070 (8 GB), and PyTorch CUDA. GPU support is hardware/driver dependent and is not guaranteed by installing an extra alone.
+These are execution instructions rather than newly certified passing tests. GPU device and driver compatibility must be verified locally.
 
-## Quick start
+Run a corrected HUNL baseline from the repository root:
 
-Run the corrected heads-up baseline:
-
-```powershell
+\`\`\`powershell
 uv run python main.py --hands 100 --seed 42
-```
+\`\`\`
 
-Inspect a neural policy and its opponents (requires a **locally available trusted** compatible checkpoint):
+### Trained GUI checkpoints
 
-```powershell
-uv run --extra gpu python -m scripts.phase16_evaluate --candidate runs/phase14_main/seed_52/ppo/best.pt --opponents random,calling_station,tight,pot_pressure --groups 100 --seed 16010000 --mode sampled --device cuda --output-json runs/phase16/evaluation.json
-```
+HUNL trained PPO, experimental QBoost, and Expand E3 multi-seat PPO are **different model families** with different files and action contracts. A real locally available, trusted and compatible \`best.pt\` is required for trained-policy inference. Files inside \`runs/\` are generally excluded from Git. Use [checkpoint setup](docs/GUI_TRAINED_CHECKPOINT_SETUP.md) for local paths and \`scripts/start_gui_with_models.ps1\`; ensure the backend restarts and creates a fresh session after changing weights.
 
-Training commands, checkpoint migration, paired evaluation, and run-specific options are documented in the [full report](docs/PROJECT_REPORT.md) and phase-specific implementation documents in `docs/`. Training checkpoints and experimental outputs are not included in the repository by default.
+## Evaluation standards
 
-## Core mathematical conventions
+Use paired seed-blocked seat/button configurations and statistical uncertainty, not a single high score:
 
-For player `i` in hand `h`, define the **big-blind-normalized net chip payoff** by the change in chip stack. In a two-player, no-rake hand, the players' payoffs sum to zero.
+$$
+X_k=\frac14\sum_{j=1}^{4}R_{k,j}^{BB},\qquad
+\widehat J_{bb/100}=\frac{100}{K}\sum_{k=1}^K X_k.
+$$
 
-```math
-R_{i,h}^{\mathrm{BB}}
-=
-\frac{C_{i,h}^{\mathrm{final}}-C_{i,h}^{\mathrm{initial}}}{BB_h},
-\qquad
-R_{0,h}^{\mathrm{BB}}+R_{1,h}^{\mathrm{BB}}=0
-```
+Deck seed groups, not the four games within each group, are independent replicates. Keep validation checkpoint selection separate from a sealed held-out final test.
 
-For `N` evaluated hands, the average performance of player `i` in **bb/100** is
+## Recorded milestone and limitations
 
-```math
-\widehat{J}_{i,\mathrm{bb/100}}
-=
-\frac{100}{N}\sum_{h=1}^{N}R_{i,h}^{\mathrm{BB}}
-```
+The historical Phase17 PPO retrain recorded **5,000 accepted updates and 640,000 training hands**. It stopped at **12,743.274 active seconds**, before its 18,000-second target (\`complete=false\`, \`max_updates_ceiling\`). A repeated-validation best score does **not** prove independent game strength. Phase15/16 preflop and critic calibration issues and Expand native-engine/search acceptance remain research tasks.
 
-A **seed-blocked** evaluation balances both physical seats and button placements; the statistical unit is the independently shuffled deck seed, **not** each of its four games.
+## Repository structure
 
-## Evaluation and limitations
+\`\`\`text
+src/holdem_ai/
+  environment/       # Hand engine, game rules, HUNL200, tournaments
+  core/              # InformationState and policy contracts
+  encoding/          # Tokenization, masks, tensors
+  models/            # Transformer Actor / Q Critic
+  training/          # PPO, QBoost, batched self-play
+  experiments/       # Reproducible studies and long runs
+  evaluation/        # Seed blocked, opponent pool, diagnostics
+  expand/            # Dynamic 2-6 player research stack
+  game_service/      # HUNL human GUI services
+  tournament_service/# Six-seat tournament services
+backend/             # FastAPI HTTP contract
+frontend/            # React interface
+scripts/             # Audits, smoke tests, train/evaluate CLI
+tests/               # Regression, privacy and behavior tests
+docs/                # Canonical report + original phase reports
+\`\`\`
 
-- Positive return against RandomLegalPolicy, CallingStation, Tight, or PotPressure establishes performance **against those selected baselines**, not GTO strength.
-- Q-Boost's logit-gradient variance proxy is **not** full-network gradient variance.
-- Multi-seed comparisons, checkpoint selection, and final held-out tests must be reported separately to avoid selection bias.
-- Some historical call/all-in amounts are not represented exactly in earlier observation histories; perfect recall is therefore **not established**.
-- Comprehensive poker rules certification, Nash exploitability estimates, and statistically conclusive superiority of Q-Boost over PPO remain open research tasks.
+## Engineering priorities
 
-## Documentation
+1. Prove poker rule invariants and actor privacy with real-engine end-to-end tests.
+2. Investigate preflop policy concentration and critic calibration before interpreting training duration as improvement.
+3. Reproduce independent, position-balanced, multi-seed validation and held-out results.
+4. Verify Expand E3 checkpoint compatibility and train a **tournament-specific PPO** separately.
+5. Preserve original phase reports until an exact-content archived copy has been checked against every original Git blob.
 
-The two primary entry points are:
-
-- **[README.md](README.md)** — project overview and reproducible starting point.
-- **[docs/PROJECT_REPORT.md](docs/PROJECT_REPORT.md)** — integrated Phase 0–16 research and engineering report.
-
-Other files inside `docs/` are historical phase-level engineering notes and implementation references. They are not additional project README files.
-
-## Repository
-
-[TheMostEvident/holdem-ai](https://github.com/TheMostEvident/holdem-ai)
+See the [integrated technical report](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md) for the phase-by-phase mathematical treatment, implementation map, evidence boundaries and original references.
