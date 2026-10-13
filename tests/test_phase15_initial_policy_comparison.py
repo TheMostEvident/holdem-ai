@@ -138,13 +138,14 @@ def test_bad_sampling_configuration_rejected(kwargs):
 
 def test_end_to_end_three_policy_comparison_two_real_hands_cpu(tmp_path):
     """Tiny integration run: real existing Collector, masks, engine and fixed audit."""
+    from dataclasses import replace
     from holdem_ai.training.ppo import PPOConfig
     from holdem_ai.training.ppo_session import create_session, save_checkpoint
 
     path = tmp_path / "seeded_phase14_shape.pt"
     session = create_session(
         seed=52,
-        network_config=_net(),
+        network_config=replace(_net(), max_tokens=256),
         ppo_config=PPOConfig(seed=52, hands_per_update=2),
     )
     save_checkpoint(session, path)
