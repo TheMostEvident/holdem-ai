@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import math
 from collections import Counter
-from dataclasses import replace
 from pathlib import Path
 
 from holdem_ai.evaluation.checkpoint_loader import load_actor
@@ -141,6 +140,20 @@ def summarize_terminal_distribution(rows: TrajectoryRows, *,
     preflop_nonfold = [h for h in preflop if h["termination"] == "nonfold_showdown"]
     full_stack = [h for h in hands if h["abs_payoff_bb"] >= stack_bb - 1e-5]
 
+    payoff_by_exit_group = {}
+    for group, subset in (
+        ("preflop:fold", [h for h in preflop if h["termination"] == "fold"]),
+        ("preflop:showdown", preflop_nonfold),
+        ("postflop:fold", [h for h in hands if h["last_decision_street"] != "preflop"
+                           and h["termination"] == "fold"]),
+        ("postflop:showdown", [h for h in hands if h["last_decision_street"] != "preflop"
+                               and h["termination"] == "nonfold_showdown"]),
+    ):
+        payoff_by_exit_group[group] = (
+            _distribution([h["seat0_payoff_bb"] for h in subset], stack_bb=stack_bb)
+            if subset else None
+        )
+
     return {
         "protocol": "phase15_on_policy_terminal_hand_audit",
         "hands": n,
@@ -152,6 +165,7 @@ def summarize_terminal_distribution(rows: TrajectoryRows, *,
         "last_decision_street_counts": {
             key: stage[key] for key in STREETS
         },
+        "payoff_by_exit_group": payoff_by_exit_group,
         "last_decision_street_x_termination": {
             f"{street}:{reason}": stage_term[f"{street}:{reason}"]
             for street in STREETS for reason in ("fold", "nonfold_showdown")
@@ -161,6 +175,10 @@ def summarize_terminal_distribution(rows: TrajectoryRows, *,
             "last_decision_hand_fraction": round(len(preflop) / n, 6),
             "fold_ended_count": sum(h["termination"] == "fold" for h in preflop),
             "nonfold_showdown_count": len(preflop_nonfold),
+            "last_action_counts": {
+                name: sum(h["terminal_action"] == name for h in preflop)
+                for name in ACTION_NAMES
+            },
             "explicit_all_in_hand_count": sum(h["explicit_preflop_all_in"] for h in hands),
             "explicit_all_in_and_nonfold_last_preflop": sum(
                 h["explicit_preflop_all_in"] for h in preflop_nonfold),
