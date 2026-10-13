@@ -148,6 +148,8 @@ def _checkpoint_payload(session, *, manifest_hash: str,
         "actor_optimizer": session.actor_optimizer.state_dict(),
         "critic_optimizer": session.critic_optimizer.state_dict(),
         "torch_rng_state": torch.get_rng_state(),
+        "cuda_rng_states": (torch.cuda.get_rng_state_all()
+                             if torch.cuda.is_available() else []),
         "stress": {
             "protocol": "phase16_a0_a3_stress_v1",
             "manifest_sha256": manifest_hash,
@@ -429,6 +431,8 @@ def run_stress(cfg: StressConfig) -> dict:
                 raw, manifest_hash, manifest["start_update"], cfg,
             )
             session = load_checkpoint(latest, device=cfg.device)
+            if cfg.device == "cuda" and raw.get("cuda_rng_states"):
+                torch.cuda.set_rng_state_all(raw["cuda_rng_states"])
             start_update = manifest["start_update"]
             baseline = manifest["source_baseline"]
         else:
