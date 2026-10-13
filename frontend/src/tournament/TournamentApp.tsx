@@ -183,7 +183,7 @@ export function TournamentApp() {
         </div>
         <div className="settings-footer"><span>ENGINE</span><strong>PHASE 4 · 6-SEAT KNOCKOUT</strong><small>Single-table · no rebuy · local only</small></div>
       </aside>
-      <div className="t-center"><TournamentTable state={state}/>
+      <div className="t-center"><div className="t-control-dock" aria-label="Tournament controls above table"><TournamentBetting state={state} working={working} onAction={doAction} onRaise={doRaise}/></div><TournamentTable state={state}/>
         <div className={`session-notice ${error ? 't-error' : ''}`} role="status" aria-live="polite"><span className="notice-symbol">{error ? '!' : 'i'}</span><span>{error ?? notice}</span></div>
         {accounting && !accounting.valid && <p className="t-error-banner" role="alert">Chip conservation mismatch. Do not continue this session: {accounting.accounted} vs {accounting.total}.</p>}
         {last && <section className="t-last-hand panel"><div className="t-side-heading"><span className="eyebrow">MOST RECENT SETTLEMENT</span><strong>HAND #{last.hand_number}</strong></div>
@@ -203,12 +203,11 @@ export function TournamentApp() {
         </section>
         <TournamentArchive refreshToken={archiveRefresh + (state?.hands_completed ?? 0)} />
       </div>
-      <aside className="t-inspector panel"><div className="panel-heading"><div><span className="eyebrow">03 / ACTIONS & DATA</span><h2>Game inspector</h2></div><span className="panel-heading-icon">◎</span></div>
+      <aside className="t-inspector panel"><div className="panel-heading"><div><span className="eyebrow">03 / LIVE GAME DATA</span><h2>Game inspector</h2></div><span className="panel-heading-icon">◎</span></div>
         <div className="t-side-section"><span className="section-label">CURRENT HAND</span>
           <div className="t-sidebar-stat"><span>Street</span><strong>{state?.street ?? '—'}</strong></div><div className="t-sidebar-stat"><span>Pot</span><strong>{state ? formatChips(state.pot) : '—'}</strong></div><div className="t-sidebar-stat"><span>To call</span><strong>{state?.to_call != null ? formatChips(state.to_call) : '—'}</strong></div><div className="t-sidebar-stat"><span>To act</span><strong>{state?.to_act != null ? seatLabel(state.to_act, state) : state?.tournament_over ? 'WINNER DETERMINED' : '—'}</strong></div>
           <span className="section-label t-activity-title">LIVE ACTIONS</span><div className="t-live-actions">{state?.action_log.length ? state.action_log.slice(-10).map((a,i)=><div key={`${state.revision}-${i}`}><strong>{seatLabel(a.seat, state)}</strong> {eventText(a)}</div>) : <p className="t-muted">No live actions this hand (completed hands are in the journal).</p>}</div>
         </div>
-        <TournamentBetting state={state} working={working} onAction={doAction} onRaise={doRaise}/>
       </aside>
     </div>
     <footer className="global-footer"><span>HOLD'EM AI ◇ TOURNAMENT ENV</span><span>ENVIRONMENT ONLY · FROZEN ACTOR · NO RL TRAINING · 1.6.1</span></footer>
