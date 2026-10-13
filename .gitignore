@@ -19,3 +19,19 @@ data/hand_histories/*
 !data/hand_histories/.gitkeep
 data/checkpoints/*
 !data/checkpoints/.gitkeep
+
+# Tournament ENV 1.7 - local checkpoints, exports and journals
+.local/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.jsonl
+*.ndjson
+.env.*
+!.env.example

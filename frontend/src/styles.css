@@ -140,3 +140,152 @@ button:focus-visible,select:focus-visible,input:focus-visible { outline:2px soli
 .stack-status small { font-size: 9px; letter-spacing: .1em; color: #85a892; }
 .stack-status strong { font-size: 14px; color: #f5e3b4; }
 .stack-status span { font-size: 11px; color: #9aafa2; }
+
+/* Tournament ENV Phase 1.2 / completely namespaced to preserve HUNL 1.6 styles. */
+.environment-switcher{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:8px;padding:9px max(16px,3vw);background:#080f0deF;border-bottom:1px solid #314639;min-height:51px;box-shadow:0 10px 30px #0004}
+.environment-switch-label{color:#81978a;font-size:10px;font-weight:700;letter-spacing:.14em;margin-right:10px}
+.environment-switcher button{background:#17261e;border:1px solid #375143;border-radius:7px;color:#aebfaf;padding:9px 16px;font:700 11px 'Space Grotesk',sans-serif;letter-spacing:.03em}
+.environment-switcher button:hover{border-color:#c0ac7c;color:#efe7d1}
+.environment-switcher button.environment-selected{background:#3d4e31;border-color:#baad77;color:#f6e8bd}
+.t-app{min-height:calc(100vh - 52px)}
+.t-app .global-header{background:#0d1611}
+.t-workspace{width:100%;max-width:1920px;margin:auto;flex:1;display:grid;grid-template-columns:minmax(230px,255px) minmax(520px,1fr) minmax(270px,305px);gap:17px;padding:23px 26px}
+.t-settings,.t-inspector{align-self:stretch;display:flex;flex-direction:column}
+.t-settings-fields{padding:20px 17px;flex:1}
+.t-settings-fields .form-label{margin-top:18px;margin-bottom:8px}
+.t-settings-fields .seed-input{width:100%;display:block}
+.t-lineup{display:flex;flex-direction:column;gap:6px;padding:14px;border:1px solid #52704f;background:linear-gradient(100deg,#253b29,#1c2e22);border-radius:9px}
+.t-lineup strong{font-size:12px;color:#e4deb4}
+.t-lineup small{font-size:10px;color:#a0bea5}
+.t-muted{margin:10px 0;color:#90a799;font-size:11px;line-height:1.65}
+.t-sidebar-stat{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 2px;border-bottom:1px solid #2b4034}
+.t-sidebar-stat span{font-size:11px;color:#91a89c}.t-sidebar-stat strong{font-size:11px;color:#f1eddb;text-align:right;overflow-wrap:anywhere}
+.t-center{display:flex;flex-direction:column;gap:13px;min-width:0}
+.t-heading{padding-bottom:20px}
+.t-arena{height:670px;min-width:0;position:relative;border-radius:16px;background:radial-gradient(ellipse at 50% 52%,#243b30,#101c17 74%);border:1px solid #34533e;overflow:hidden;isolation:isolate}
+.t-arena::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#e9d6aa .65px,transparent .85px);background-size:12px 12px}
+.t-felt{position:absolute;top:17.5%;bottom:18%;left:8%;right:8%;padding:12px;border-radius:48%/49%;background:linear-gradient(145deg,#b19360,#423929 18%,#ac945e 38%,#443b2a 60%,#af9561 83%,#574934);box-shadow:0 12px 38px #0009,0 0 0 5px #192921,0 0 0 8px #5d6145}
+.t-felt-inner{position:relative;width:100%;height:100%;border-radius:48%/49%;border:7px solid #0b2b1f;overflow:hidden;background:radial-gradient(ellipse at 46% 44%,#2d7150 0%,#164331 50%,#08271b 100%);box-shadow:inset 0 0 40px #0008}
+.t-felt-inner:after{content:'';position:absolute;inset:8%;border:1px solid #a5dbbe38;border-radius:48%/49%}
+.t-felt-watermark{position:absolute;top:21%;left:0;right:0;text-align:center;color:#cad59a6b;letter-spacing:.2em;font:700 clamp(10px,1.2vw,17px) 'Space Grotesk',sans-serif;white-space:nowrap}
+.t-street{position:absolute;top:34%;width:100%;text-align:center;letter-spacing:.16em;font-weight:800;font-size:10px;color:#a7d4b0}
+.t-pot{position:absolute;top:42%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;flex-direction:column;z-index:2;white-space:nowrap}
+.t-pot small{font-size:8px;color:#d2d7bf;letter-spacing:.13em}.t-pot strong{font:700 clamp(20px,2.7vw,34px) 'Space Grotesk',sans-serif;color:#f4e5bd}.t-chip-icon{color:#d6aa6a;font-size:18px}
+.t-board{display:flex;gap:4px;position:absolute;top:73%;left:50%;transform:translateX(-50%);z-index:2}
+.t-board .playing-card{width:clamp(34px,3vw,50px);height:clamp(50px,4.5vw,68px)}
+.t-board .card-center{font-size:18px}.t-board .card-corner strong{font-size:9px}.t-board .card-corner small{font-size:8px}
+.t-seat{position:absolute;z-index:4;width:clamp(137px,18%,173px);min-height:107px;padding:10px 10px 7px;border:1px solid #63846e;border-radius:11px;background:linear-gradient(150deg,#1e3227ee,#12231ced);box-shadow:0 10px 18px #0009;color:#eaf2e8;display:flex;flex-direction:column;gap:6px;transform:translate(-50%,-50%)}
+.t-seat-0{left:50%;top:88%}.t-seat-1{left:20%;top:77%}.t-seat-2{left:14%;top:27%}.t-seat-3{left:50%;top:10%}.t-seat-4{left:86%;top:27%}.t-seat-5{left:80%;top:77%}
+.t-seat-human{background:linear-gradient(150deg,#284b39,#153323);border-color:#b7b27b;box-shadow:0 0 0 1px #bbad7b55,0 14px 26px #000b}
+.t-seat-acting{border-color:#9de4a0;box-shadow:0 0 0 2px #c5eb8a80,0 0 16px #a5f7a14d}
+.t-seat-out{opacity:.5;filter:grayscale(.8)}
+.t-seat-head{display:flex;align-items:center;gap:7px}.t-seat-avatar{flex-shrink:0;display:grid;place-items:center;width:25px;height:25px;border:1px solid #8cac83;border-radius:7px;background:#385d40;color:#dcebb6;font:700 13px 'Space Grotesk',sans-serif}
+.t-seat-title{min-width:0}.t-seat-title strong{display:block;font:700 10px 'Space Grotesk',sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.t-seat-title small{display:block;font-size:8px;letter-spacing:.05em;color:#9fbba4;margin-top:2px}
+.t-seat-chips{font:700 13px 'Space Grotesk',sans-serif;color:#f5e5bd}.t-seat-chips small{font-size:8px;color:#aebbaa}
+.t-seat-badges{display:flex;flex-wrap:wrap;gap:3px;min-height:16px}.t-seat-position{font-weight:700;font-size:8px;color:#172418;background:#d2bd7d;padding:3px 5px;border-radius:4px}.t-seat-rank{background:#90b5a4}.t-seat-contribution{font-size:8px;color:#f2d697;white-space:nowrap}
+.t-seat-cards{position:absolute;display:flex;gap:2px;left:50%;transform:translateX(-50%);top:100%;margin-top:-4px;z-index:-1}.t-seat-cards .playing-card{width:28px;height:38px}.t-seat-cards .card-center{font-size:12px}.t-seat-cards .card-corner{display:none}
+.t-empty{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);z-index:10;text-align:center;display:flex;flex-direction:column;gap:7px;padding:19px;border-radius:9px;background:#12241ce0;border:1px solid #56785f;font:700 14px 'Space Grotesk',sans-serif;white-space:nowrap}.t-empty span{font:400 11px 'DM Sans',sans-serif;color:#9eb3a7}
+.t-table-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid #293c33;border-top:0;background:#17251e;border-radius:0 0 10px 10px;overflow:hidden}
+.t-table-stats>div{border-right:1px solid #344c3a;padding:13px 10px}.t-table-stats>div:last-child{border:0}
+.t-table-stats small{display:block;font-size:8px;color:#a1baa8;letter-spacing:.08em}.t-table-stats strong{font:700 12px 'Space Grotesk',sans-serif;color:#e5e9db;display:block;margin-top:6px;overflow-wrap:anywhere}
+.t-danger{color:#eeb0a1!important}.t-profit{color:#addaa9!important}.t-error{border-color:#a85d4d!important;color:#f4b3a5!important}
+.t-error-banner{background:#4a2523;border:1px solid #a96858;border-radius:7px;padding:12px;color:#ffd1c2;font-size:12px}
+.t-finish-banner{padding:14px;color:#eedaab;border:1px solid #a99359;background:#2b291c;border-radius:9px;font:700 12px 'Space Grotesk',sans-serif;line-height:1.7}
+.t-last-hand,.t-history{padding:18px 20px}.t-side-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.t-side-heading h2{font:700 20px 'Space Grotesk',sans-serif;margin:8px 0}.t-side-heading>strong{font:700 12px 'Space Grotesk',sans-serif;color:#d8c28f}
+.t-last-result{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0 0}.t-last-result>span{font-size:11px;color:#9bb5a2}.t-last-result strong{color:#efebd7;margin-left:5px}
+.t-history-items{display:flex;flex-direction:column;gap:7px;max-height:440px;overflow:auto}.t-history-entry{border:1px solid #324b3a;border-radius:8px;overflow:hidden}.t-history-entry>button{border:0;background:#203228;color:#e8efe3;width:100%;display:flex;align-items:center;gap:12px;padding:12px;text-align:left}.t-history-entry>button span:first-child{font-weight:700;font-size:11px}.t-history-entry>button strong{font-size:11px;margin-left:auto}.t-history-entry>button small{font-size:8px;color:#8fa99d}.t-history-detail{padding:13px 15px;border-top:1px solid #425945;background:#0e2117;color:#b1c7b6;font-size:11px;overflow-wrap:anywhere}.t-history-detail p{margin:6px 0}.t-history-detail ol{padding-left:18px;max-height:170px;overflow:auto;line-height:1.65}
+.t-side-section{padding:17px}.t-activity-title{margin-top:25px}.t-live-actions{max-height:145px;overflow:auto}.t-live-actions>div{font-size:10px;color:#a9bdb0;padding:6px 1px;border-bottom:1px solid #294333}.t-live-actions strong{color:#ddcb9e}
+.t-betting{margin-top:auto;border-top:1px solid #334a3b;padding:16px}.t-hint{font-size:10px;line-height:1.7;color:#b2c5b5;margin:14px 0}.t-action-grid{display:grid;grid-template-columns:1fr 1.35fr 1fr;gap:5px;margin-bottom:6px}.t-action-grid-two{grid-template-columns:1fr 1fr}
+.t-betting .bet-button{padding:9px 3px;min-height:41px;font-size:10px}.t-raise-area{border:1px solid #38533d;background:#12231a;border-radius:8px;padding:10px;margin-top:13px}.t-raise-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}.t-raise-head label{font-size:9px;font-weight:800;color:#d1d8bd}.t-raise-head small{font-size:9px;color:#9fb0a3}.t-raise-controls{display:grid;grid-template-columns:1.2fr .8fr;gap:6px;margin-top:10px}.t-raise-controls input{width:100%;min-width:0;padding:9px;background:#091910;border:1px solid #58745b;color:#f6ead4;border-radius:5px}.t-raise-controls button{border:0;background:#cfb97b;color:#17251c;font-size:10px;font-weight:800;border-radius:5px;padding:9px 5px}.t-raise-area .bet-slider{margin-top:12px}.t-raise-presets{display:flex;gap:6px;margin-top:5px}.t-raise-presets button{flex:1;background:#2b4432;border:1px solid #557455;color:#e4e8d9;font-size:10px;padding:7px;border-radius:4px}.t-validation{display:block;margin-top:9px;color:#ecb1a5;font-size:10px}.t-turn-on{font-size:9px;padding:6px 8px;background:#98caa7;border-radius:5px;color:#1b3927}.t-turn-off{font-size:9px;color:#8aa494}
+@media(max-width:1450px){.t-workspace{grid-template-columns:220px minmax(450px,1fr) 250px;gap:10px;padding:14px}.t-seat{width:140px}.t-settings-fields{padding:13px}.t-arena{height:645px}}
+@media(max-width:1120px){.t-workspace{grid-template-columns:minmax(0,1fr) 290px}.t-settings{grid-column:1 / -1}.t-settings-fields{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;align-items:center}.t-settings-fields>.section-label,.t-settings-fields>.t-lineup,.t-settings-fields>.t-muted,.t-settings-fields>.section-divider{grid-column:1/-1}.t-settings-fields>.form-label{margin:6px 0 0}.t-settings-fields>.primary-button,.t-settings-fields>.inline-actions{grid-column:1/3;margin-top:0}.t-settings-fields>.t-sidebar-stat{display:none}.t-center{min-width:0}.t-inspector{min-width:0}}
+@media(max-width:850px){.environment-switch-label{display:none}.t-workspace{display:flex;flex-direction:column;padding:10px}.t-settings{order:2}.t-center{order:1}.t-inspector{order:3}.t-settings-fields{display:block}.t-settings-fields>.t-sidebar-stat{display:flex}.t-settings-fields .form-label{margin-top:13px}.t-settings-fields .primary-button{margin-top:16px}.t-arena{height:600px}.t-seat{width:clamp(120px,23%,165px)}.t-seat-1{left:17%}.t-seat-2{left:17%}.t-seat-4{left:83%}.t-seat-5{left:83%}.t-felt{left:4%;right:4%}}
+@media(max-width:530px){.environment-switcher{padding:8px}.environment-switcher button{padding:9px;font-size:10px}.t-arena{height:570px}.t-seat{min-height:95px;width:116px;padding:6px;gap:5px}.t-seat-title strong{font-size:8px}.t-seat-title small{font-size:7px}.t-seat-avatar{width:19px;height:19px;font-size:10px}.t-seat-chips{font-size:11px}.t-seat-1{left:19%;top:75%}.t-seat-2{left:19%;top:26%}.t-seat-4{left:81%;top:26%}.t-seat-5{left:81%;top:75%}.t-seat-0{top:87%}.t-seat-3{top:11%}.t-seat-cards .playing-card{width:22px;height:33px}.t-felt{top:20%;bottom:20%;left:7%;right:7%}.t-board .playing-card{width:32px;height:45px}.t-board .card-center{font-size:12px}.t-felt-watermark{font-size:9px}.t-empty{font-size:10px;white-space:normal;width:180px}.t-table-stats{grid-template-columns:1fr 1fr}.t-table-stats>div:nth-child(2){border-right:0}.t-table-stats>div:nth-child(-n+2){border-bottom:1px solid #304a39}.t-history-entry>button{gap:5px}}
+
+/* Tournament ENV 1.2.1: human cards show both rank and suit and remain inside the arena. */
+.t-seat-0{top:92%;min-height:90px}
+.t-seat-human .t-seat-cards{top:auto;bottom:calc(100% + 8px);margin-top:0;z-index:6;gap:6px}
+.t-seat-human .t-seat-cards .playing-card{width:44px;height:62px}
+.t-seat-human .t-seat-cards .card-corner{display:flex}
+.t-seat-human .t-seat-cards .card-corner strong{font-size:13px}
+.t-seat-human .t-seat-cards .card-corner small{font-size:10px}
+.t-seat-human .t-seat-cards .card-center{font-size:21px;transform:translateY(4px)}
+@media(max-width:850px){
+  .t-seat-0{top:91%}
+  .t-seat-human .t-seat-cards .playing-card{width:42px;height:59px}
+}
+@media(max-width:530px){
+  .t-seat-0{top:90%}
+  .t-seat-human .t-seat-cards{bottom:calc(100% + 5px);gap:4px}
+  .t-seat-human .t-seat-cards .playing-card{width:35px;height:51px}
+  .t-seat-human .t-seat-cards .card-corner strong{font-size:11px}
+  .t-seat-human .t-seat-cards .card-corner small{font-size:8px}
+  .t-seat-human .t-seat-cards .card-center{font-size:17px}
+}
+
+/* Tournament ENV 1.3: expose policy identities without covering cards. */
+.t-seat-policy { display:block; margin: 2px 0; color:#9ebbac; font-size:8px; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
+/* Tournament ENV Phase 1.5: official placements vs provisional chip ranks. */
+.t-progress-panel{padding:14px 15px;border-top:1px solid #38533f;display:flex;flex-direction:column;gap:10px}
+.t-progress-head,.t-blind-heading{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.t-progress-head>strong,.t-blind-heading>strong{font:700 9px 'Space Grotesk',sans-serif;color:#e4d39b;white-space:nowrap}
+.t-progress-panel>.t-muted{margin:0;font-size:9px;line-height:1.55;color:#9dbca6}
+.t-standings{display:flex;flex-direction:column;gap:4px;overflow:visible}
+.t-standing-row{display:grid;grid-template-columns:28px minmax(0,1fr) 55px;gap:7px;align-items:center;background:#22392a;border:1px solid #46604b;border-radius:7px;padding:6px}
+.t-standing-human{border-color:#aea16a;background:#34432a}
+.t-standing-out{opacity:.62;background:#242b27}
+.t-standing-position{font:800 11px 'Space Grotesk',sans-serif;min-width:26px;color:#d6dcb5;text-align:center}
+.t-champion-position{color:#ffe09b;font-size:16px}
+.t-standing-identity{min-width:0;overflow:hidden}
+.t-standing-identity strong{display:block;color:#ecf2e8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font:700 9px 'Space Grotesk',sans-serif}
+.t-standing-identity small{display:block;color:#a4bcaa;font-size:7px;margin-top:3px;letter-spacing:.03em}
+.t-standing-stack{text-align:right;color:#f0ddb1;font:700 10px 'Space Grotesk',sans-serif;font-variant-numeric:tabular-nums}
+.t-blind-panel{padding:11px;background:#13291e;border:1px solid #526d4b;border-radius:8px;display:flex;flex-direction:column;gap:7px}
+.t-blind-current{font:700 18px 'Space Grotesk',sans-serif;color:#f3db97}.t-blind-current small{font-size:9px;color:#a3b7a5}
+.t-blind-next{color:#d7e6cb;font-size:10px;margin:0;line-height:1.55}
+.t-level-track{height:7px;border-radius:9px;background:#2b4935;overflow:hidden}.t-level-track>span{height:100%;display:block;background:#a9cc88;transition:width .2s}
+.t-level-count{font-size:9px;color:#9fbbaa}
+.t-leading-info{color:#e9d7ab;font-size:10px;font-weight:700;margin:0;line-height:1.5}
+.t-knockout-list{border-top:1px solid #36503a;padding-top:9px;display:flex;flex-direction:column;gap:5px}
+.t-knockout-list>div{color:#b3c6b5;font-size:9px}.t-knockout-list strong{color:#d3e3ce}
+.t-champion-banner{display:flex;gap:15px;align-items:center}.t-champion-banner .t-champion-trophy{color:#ffe09b;font-size:38px}
+.t-champion-banner div{display:flex;flex-direction:column;gap:5px}.t-champion-banner div small{font-size:9px;letter-spacing:.09em}
+.t-champion-banner div strong{font:800 17px 'Space Grotesk',sans-serif}.t-champion-banner div span{font-size:11px;color:#d4cdb4}
+@media(max-width:1120px){.t-progress-panel{padding:13px 15px}.t-standing-row{grid-template-columns:28px minmax(0,1fr) 75px}}
+@media(max-width:530px){.t-champion-banner div strong{font-size:13px}}
+
+.t-settings-fields>.t-progress-panel{margin-top:14px;padding:14px 0;border-top:1px solid #38533f;grid-column:1/-1}
+
+/* Tournament ENV 1.6: read-only local hand archive and replay timeline. */
+.t-archive { margin-top: 15px; padding: 18px; }
+.t-archive-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; margin-top: 15px; }
+.t-archive-entry { display: flex; flex-direction: column; gap: 5px; width: 100%; text-align: left; background: transparent; color: inherit; padding: 10px; border: 1px solid var(--border, #435459); border-radius: 7px; margin-top: 7px; cursor: pointer; }
+.t-archive-entry small { opacity: .72; }
+.t-archive-selected { border-color: #43ab8e; }
+.t-archive-hands { display: flex; flex-direction: column; gap: 6px; margin-top: 7px; max-height: 250px; overflow-y: auto; }
+.t-archive-hands button, .t-replay-controls button, .t-archive .t-side-heading button { border: 1px solid #6e8b86; background: transparent; border-radius: 6px; color: inherit; cursor: pointer; padding: 7px 9px; }
+.t-archive-export { display: inline-block; margin-top: 12px; color: #63dbbc; text-decoration: underline; }
+.t-replay { margin-top: 16px; border-top: 1px solid #59736f; padding-top: 14px; }
+.t-replay-controls { display: flex; align-items: center; gap: 12px; margin: 13px 0; }
+.t-replay-controls input { flex: 1; min-width: 40px; }
+.t-replay-controls button:disabled { opacity: .35; cursor: default; }
+.t-replay-data p { margin: 9px 0; }
+.t-replay-seats { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 9px; }
+.t-replay-seats > div { display: flex; flex-direction: column; gap: 3px; padding: 9px; border-radius: 7px; border: 1px solid #50766b; }
+.t-replay-seats small { opacity: .75; }
+@media (max-width: 760px) { .t-archive-grid { grid-template-columns: 1fr; } .t-replay-seats { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+
+/* Tournament ENV 1.6.1: final-result hole cards, never live opponent seats. */
+.t-showdown { margin: 14px 0; padding: 14px; border: 1px solid #537b68; background: #10251d; border-radius: 10px; }
+.t-showdown-heading { color: #dbd5a6; font-weight: 750; font-size: 11px; letter-spacing: .08em; margin-bottom: 12px; }
+.t-showdown-board { display: flex; flex-direction: column; gap: 8px; }
+.t-showdown-board > span { color: #b4cdbb; font-size: 10px; }
+.t-showdown-players { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
+.t-showdown-player { border: 1px solid #3b6656; background: #1a3529; padding: 10px; border-radius: 9px; min-width: 122px; }
+.t-showdown-label { display: flex; flex-direction: column; gap: 3px; margin-bottom: 10px; color: #f3edce; font-size: 11px; }
+.t-showdown-label small { color: #a7c8b3; font-size: 10px; }
+.t-showdown-cards { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+/* Restore rank AND suit for revealed cards regardless of any table-specific card rules. */
+.t-showdown-cards .card-corner { display: flex; }
+.t-showdown-cards .playing-card { flex-shrink: 0; }

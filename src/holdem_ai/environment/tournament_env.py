@@ -29,6 +29,8 @@ class TournamentHandRecord:
     stacks_after: tuple[int, ...]
     eliminated: tuple[int, ...]
     hand_result: MultiPlayerHandResult
+    # Cards are available only after a multiway showdown; never include folds.
+    showdown_hole_cards: tuple[tuple[str, ...], ...] = ()
 
 
 @dataclass(frozen=True)
@@ -130,6 +132,14 @@ class TournamentEnv:
         assert self._hand is not None and self._hand.is_over()
         result = self._hand.get_result()
         before = self.players.stacks
+        # Capture at settlement before the next hand overwrites the live engine.
+        # 0 or 1 non-folded contenders = uncontested pot (no showdown reveal).
+        contenders = [i for i, folded in enumerate(result.folded) if not folded]
+        showdown_hole_cards = (
+            tuple(tuple(self._hand.hole_cards[i]) if i in contenders else ()
+                  for i in range(self.num_players))
+            if len(contenders) >= 2 and len(result.board) == 5 else ()
+        )
         busts = self.players.update(result.final_stacks, self._hand_number)
         self.hand_history.append(TournamentHandRecord(
             hand_number=self._hand_number,
@@ -140,6 +150,7 @@ class TournamentEnv:
             stacks_after=self.players.stacks,
             eliminated=busts,
             hand_result=result,
+            showdown_hole_cards=showdown_hole_cards,
         ))
         if self.players.winner is not None:
             self._done = True
