@@ -307,6 +307,7 @@ def run_five_hour(cfg: FiveHourConfig) -> dict:
     if cfg.resume and not (root / "run.json").is_file():
         raise FileNotFoundError("resume requires an existing run.json")
     with _exclusive_lock(root):
+        startup_at = time.perf_counter()
         latest, manifest_path = root / "latest.pt", root / "run.json"
         if cfg.resume:
             if (root / "hard_stop.json").is_file():
@@ -368,7 +369,8 @@ def run_five_hour(cfg: FiveHourConfig) -> dict:
             manifest_sha = _sha(manifest_path)
             _commit(
                 latest, session, manifest_sha=manifest_sha,
-                start_update=start_update, elapsed_seconds=0.,
+                start_update=start_update,
+                elapsed_seconds=time.perf_counter() - startup_at,
                 rows=[], validations=[], best_update=start_update, best_score=0.,
             )
             _copy_atomic(latest, root / "best.pt")
@@ -425,8 +427,24 @@ def run_five_hour(cfg: FiveHourConfig) -> dict:
                 flush=True,
             )
 
-        # Resume interrupted evaluation boundary without repeating a rollout.
-        if rows and len(rows) % cfg.eval_every == 0 and not any(
+        # If the process died after committing a validation and before
+        # publishing best.pt, restore it from the authoritative latest.pt.
+        if (best_update == session.completed_updates and validations
+                and validations[-1]["attempted"] == len(rows)):
+            best_path = root / "best.pt"
+            if (not best_path.is_file()
+                    or int(torch.load(best_path, map_location="cpu",
+                                      weights_only=True)["completed_updates"]) != best_update):
+                _copy_atomic(latest, best_path)
+        # Recover a missing scheduled OR final evaluation without drawing
+        # another training rollout and without relying on a JSON mirror.
+        at_end = bool(rows) and (
+            len(rows) % cfg.eval_every == 0
+            or len(rows) >= cfg.max_updates
+            or (ledger["elapsed_active_seconds"] +
+                rows[-1]["elapsed_seconds"] * 1.1 >= cfg.duration_hours * 3600.)
+        )
+        if at_end and not any(
             v["attempted"] == len(rows) for v in validations
         ):
             evaluate_current(len(rows))
