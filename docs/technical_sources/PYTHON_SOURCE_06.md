@@ -6,7 +6,7 @@ Exact full .py sources from baseline commit `6a8ae368ddc02f814140d3770bc5993eaf9
 
 Original Git blob SHA: `5cf12807f331a109f29539a9ae0d1b1e57a687ee` (40 bytes).
 
-<a id="py-061"></a>
+<a name="py-061"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/__init__.py" sha="5cf12807f331a109f29539a9ae0d1b1e57a687ee" -->
 
@@ -21,7 +21,7 @@ Original Git blob SHA: `5cf12807f331a109f29539a9ae0d1b1e57a687ee` (40 bytes).
 
 Original Git blob SHA: `a07fe762ef949ec625f9bec934e5da236c9f13b7` (460 bytes).
 
-<a id="py-062"></a>
+<a name="py-062"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/base_agent.py" sha="a07fe762ef949ec625f9bec934e5da236c9f13b7" -->
 
@@ -50,7 +50,7 @@ class Agent(Protocol):
 
 Original Git blob SHA: `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
-<a id="py-063"></a>
+<a name="py-063"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/cfr_agent.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
@@ -64,7 +64,7 @@ Original Git blob SHA: `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
 Original Git blob SHA: `ac3e65a257942b2303a34feffb75e497ac85edf8` (2418 bytes).
 
-<a id="py-064"></a>
+<a name="py-064"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/diagnostic_opponents.py" sha="ac3e65a257942b2303a34feffb75e497ac85edf8" -->
 
@@ -146,7 +146,7 @@ class OpponentSpec:
 
 Original Git blob SHA: `e969f8ed3f76ff73265cfcee9de8dbfd31714806` (1680 bytes).
 
-<a id="py-065"></a>
+<a name="py-065"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/neural_policy.py" sha="e969f8ed3f76ff73265cfcee9de8dbfd31714806" -->
 
@@ -200,7 +200,7 @@ class NeuralActorPolicy:
 
 Original Git blob SHA: `862a4fd5cf52f9d8aaab456e683a97aefa7538f8` (3504 bytes).
 
-<a id="py-066"></a>
+<a name="py-066"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/policies.py" sha="862a4fd5cf52f9d8aaab456e683a97aefa7538f8" -->
 
@@ -302,7 +302,7 @@ class EpsilonGreedyPolicy:
 
 Original Git blob SHA: `e2f00722a39a86e9a4b66e9edb576d8a9675a551` (518 bytes).
 
-<a id="py-067"></a>
+<a name="py-067"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/random_agent.py" sha="e2f00722a39a86e9a4b66e9edb576d8a9675a551" -->
 
@@ -331,7 +331,7 @@ class RandomAgent:
 
 Original Git blob SHA: `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
-<a id="py-068"></a>
+<a name="py-068"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/agents/rl_agent.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
@@ -345,7 +345,7 @@ Original Git blob SHA: `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
 Original Git blob SHA: `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
-<a id="py-069"></a>
+<a name="py-069"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/core/__init__.py" sha="c45dbcdd525a3fadb2abb368e5264f09bb51e773" -->
 
@@ -360,7 +360,7 @@ Original Git blob SHA: `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
 Original Git blob SHA: `a0f99927c6d91b36893b5e72451c0c93a88f01fa` (3547 bytes).
 
-<a id="py-070"></a>
+<a name="py-070"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/core/schema.py" sha="a0f99927c6d91b36893b5e72451c0c93a88f01fa" -->
 
@@ -468,7 +468,7 @@ class TurnBasedEnvironment(Protocol):
 
 Original Git blob SHA: `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
-<a id="py-071"></a>
+<a name="py-071"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/encoding/__init__.py" sha="c45dbcdd525a3fadb2abb368e5264f09bb51e773" -->
 
@@ -483,7 +483,7 @@ Original Git blob SHA: `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
 Original Git blob SHA: `772da4ab52aba2dab7b8105cb2dcf45670ad6637` (1632 bytes).
 
-<a id="py-072"></a>
+<a name="py-072"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/encoding/actions.py" sha="772da4ab52aba2dab7b8105cb2dcf45670ad6637" -->
 

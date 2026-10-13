@@ -6,7 +6,7 @@
 
 Original SHA `cdd5daec6e134258c373b61508198ef703b4080f` (20388 bytes).
 
-<a id="md-021"></a>
+<a name="md-021"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE07_INTEGRATION_TOURNAMENT_BENCHMARK.md" sha="cdd5daec6e134258c373b61508198ef703b4080f" -->
 
@@ -413,7 +413,7 @@ Note: Tournament CLI evaluates the default **registration-closed, single-entry**
 
 Original SHA `6fa6c26cf6b9d442ef4943e1bc6ae1b00196e506` (7076 bytes).
 
-<a id="md-022"></a>
+<a name="md-022"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_0_HUNL_CONTRACT.md" sha="6fa6c26cf6b9d442ef4943e1bc6ae1b00196e506" -->
 
@@ -576,7 +576,7 @@ The project remains **HUNL only** for this GUI effort. The existing 6-Max and to
 
 Original SHA `0b4ede0298912e8676fd35b7c3ad6fd3bdd85474` (6246 bytes).
 
-<a id="md-023"></a>
+<a name="md-023"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_1_FASTAPI.md" sha="0b4ede0298912e8676fd35b7c3ad6fd3bdd85474" -->
 
@@ -703,7 +703,7 @@ This example chooses Check/Call **only when the server offers it**. The state ma
 
 Original SHA `5e340db3319e2b97059a1e0c6519a848801a4751` (4148 bytes).
 
-<a id="md-024"></a>
+<a name="md-024"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_2_REACT_TABLE.md" sha="5e340db3319e2b97059a1e0c6519a848801a4751" -->
 
@@ -793,7 +793,7 @@ Next: GUI-1.3 betting controls use `GameView.actions` (index 0..6), POST `/api/v
 
 Original SHA `971b06d6e7bba302b0bd2092e4c079ea3e603a57` (6003 bytes).
 
-<a id="md-025"></a>
+<a name="md-025"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_3_INTERACTIVE_BETTING.md" sha="971b06d6e7bba302b0bd2092e4c079ea3e603a57" -->
 
@@ -925,7 +925,7 @@ $$
 
 Original SHA `8ecf0335053978f7e17c29b68801dbbf46d8b540` (6531 bytes).
 
-<a id="md-026"></a>
+<a name="md-026"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_4_TRAINED_AGENT.md" sha="8ecf0335053978f7e17c29b68801dbbf46d8b540" -->
 
@@ -1085,7 +1085,7 @@ GUI-1.5: result display, hand histories, opponent selection metadata in saved ou
 
 Original SHA `46f69c44b511bed24e9dc0e4b9bbb3408d14fd2c` (6040 bytes).
 
-<a id="md-027"></a>
+<a name="md-027"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_5_PERFORMANCE_DASHBOARD.md" sha="46f69c44b511bed24e9dc0e4b9bbb3408d14fd2c" -->
 
@@ -1238,7 +1238,7 @@ npm run dev
 
 Original SHA `a2e8a890fa6e07ba327b2e1b9575bba3e278b288` (7436 bytes).
 
-<a id="md-028"></a>
+<a name="md-028"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_1_6_CONTINUOUS_STACK.md" sha="a2e8a890fa6e07ba327b2e1b9575bba3e278b288" -->
 
@@ -1400,7 +1400,7 @@ Navigate to `http://127.0.0.1:5173`. Select **Play Mode** (default), choose a bo
 
 Original SHA `b5c6cdd16391bd4508572f01fbd5e4e15ab07074` (5914 bytes).
 
-<a id="md-029"></a>
+<a name="md-029"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/GUI_TRAINED_CHECKPOINT_SETUP.md" sha="b5c6cdd16391bd4508572f01fbd5e4e15ab07074" -->
 
@@ -1505,7 +1505,7 @@ If it was your Q-Boost slot using last.pt, supply `-QBoostCheckpoint "ACTUAL_RUN
 
 Original SHA `3ede1ff95bf622264d3be0b6c296bbf7bbe9eabf` (14753 bytes).
 
-<a id="md-053"></a>
+<a name="md-053"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE_VERIFIED_PYTHON_CODE_REFERENCE.md" sha="3ede1ff95bf622264d3be0b6c296bbf7bbe9eabf" -->
 
@@ -1888,7 +1888,7 @@ class FiveHourConfig:
 
 Original SHA `3f606d9b89d0616cfbe00361e3f2d5a414e58691` (1393 bytes).
 
-<a id="md-072"></a>
+<a name="md-072"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/phase1_rlcard.md" sha="3f606d9b89d0616cfbe00361e3f2d5a414e58691" -->
 

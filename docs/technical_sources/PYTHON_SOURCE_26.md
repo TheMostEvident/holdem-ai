@@ -6,7 +6,7 @@
 
 Original blob `dfc15b89f0ce9a0cc2290cf845316b207b6deb32` (3631 bytes).
 
-<a id="py-301"></a>
+<a name="py-301"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_schema_policy.py" sha="dfc15b89f0ce9a0cc2290cf845316b207b6deb32" -->
 
@@ -130,7 +130,7 @@ def test_equal_q_tie_breaker_is_lowest_legal_action():
 
 Original blob `4749c0e868a95dacdd924ca05161ef34b7e2b27f` (3544 bytes).
 
-<a id="py-302"></a>
+<a name="py-302"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_self_play.py" sha="4749c0e868a95dacdd924ca05161ef34b7e2b27f" -->
 
@@ -250,7 +250,7 @@ def test_returned_transition_has_frozen_observation():
 
 Original blob `51da1f9d7eacfc94e4152432cd2ed05f54f5c59b` (640 bytes).
 
-<a id="py-303"></a>
+<a name="py-303"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase6_benchmark.py" sha="51da1f9d7eacfc94e4152432cd2ed05f54f5c59b" -->
 
@@ -280,7 +280,7 @@ def test_cpu_benchmark_small_run():
 
 Original blob `00c6ec681a0cba9fff1a286a85e77151628098c6` (6125 bytes).
 
-<a id="py-304"></a>
+<a name="py-304"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase6_hunl_adapter.py" sha="00c6ec681a0cba9fff1a286a85e77151628098c6" -->
 
@@ -438,7 +438,7 @@ def test_observation_serialization_is_public():
 
 Original blob `43670306f3d1c5aff325e96594131171ae9718dc` (6764 bytes).
 
-<a id="py-305"></a>
+<a name="py-305"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase7_encoding.py" sha="43670306f3d1c5aff325e96594131171ae9718dc" -->
 
@@ -629,7 +629,7 @@ def test_history_after_phase6_action_matches():
 
 Original blob `6a721709872d5d970b46cf244d598057a5782cec` (1772 bytes).
 
-<a id="py-306"></a>
+<a name="py-306"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase7_rollout.py" sha="6a721709872d5d970b46cf244d598057a5782cec" -->
 
@@ -681,7 +681,7 @@ def test_phase7_global_rollout_all_decisions_encode():
 
 Original blob `2645d2e166d890ff6cfbbc9580340c45339ddbfa` (3709 bytes).
 
-<a id="py-307"></a>
+<a name="py-307"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase7_tensors_actions.py" sha="2645d2e166d890ff6cfbbc9580340c45339ddbfa" -->
 
@@ -790,7 +790,7 @@ def test_empty_batch_rejected():
 
 Original blob `57cc87145356b3191515ac42a8a48ecc7b3a3eb9` (1530 bytes).
 
-<a id="py-308"></a>
+<a name="py-308"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase8_gpu.py" sha="57cc87145356b3191515ac42a8a48ecc7b3a3eb9" -->
 
@@ -833,7 +833,7 @@ def test_phase8_cuda_forward_backward():
 
 Original blob `fb362ac9e506fa1668e3bb94d816b8d8fbd5203b` (9837 bytes).
 
-<a id="py-309"></a>
+<a name="py-309"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase8_networks.py" sha="fb362ac9e506fa1668e3bb94d816b8d8fbd5203b" -->
 

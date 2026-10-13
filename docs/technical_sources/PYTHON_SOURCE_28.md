@@ -6,7 +6,7 @@
 
 Original blob `64898cf766c4023f1268c14686e7af8952e993a3` (2720 bytes).
 
-<a id="py-319"></a>
+<a name="py-319"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env131_aggression.py" sha="64898cf766c4023f1268c14686e7af8952e993a3" -->
 
@@ -87,7 +87,7 @@ def test_no_raise_if_engine_does_not_offer_any_raise_action():
 
 Original blob `17824f1e1f225e4a96b44209b6ca456be26550a3` (5331 bytes).
 
-<a id="py-320"></a>
+<a name="py-320"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env13_improved_bots.py" sha="17824f1e1f225e4a96b44209b6ca456be26550a3" -->
 
@@ -219,7 +219,7 @@ def test_policy_only_sees_the_given_legal_observation():
 
 Original blob `39b95826af5e6e1d3fbb5fadb1b0b8c93bc7df65` (7407 bytes).
 
-<a id="py-321"></a>
+<a name="py-321"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env14_trained_actor.py" sha="39b95826af5e6e1d3fbb5fadb1b0b8c93bc7df65" -->
 
@@ -389,7 +389,7 @@ def test_wrong_format_checkpoint_is_rejected(monkeypatch,tmp_path):
 
 Original blob `680a2eca93be0d1b8317d8a8e1984a4b0c121e07` (4064 bytes).
 
-<a id="py-322"></a>
+<a name="py-322"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env15_progress.py" sha="680a2eca93be0d1b8317d8a8e1984a4b0c121e07" -->
 
@@ -484,7 +484,7 @@ def test_http_roundtrip_and_elimination_placement_are_consistent():
 
 Original blob `d7c8c1e343f1c46b541a29def1668b58feb36dbe` (7741 bytes).
 
-<a id="py-323"></a>
+<a name="py-323"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env161_showdown.py" sha="d7c8c1e343f1c46b541a29def1668b58feb36dbe" -->
 
@@ -655,7 +655,7 @@ def test_legacy_archive_without_showdown_cards_remains_readable(tmp_path):
 
 Original blob `f0655533d21cd7fa537b46f7e20756328c58f41c` (6901 bytes).
 
-<a id="py-324"></a>
+<a name="py-324"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env16_persistence.py" sha="f0655533d21cd7fa537b46f7e20756328c58f41c" -->
 
@@ -809,7 +809,7 @@ def test_no_privileged_tables_or_fields(tmp_path):
 
 Original blob `8b2d67739f8b9a9d047967e9167a8a0c2f954a3a` (4731 bytes).
 
-<a id="py-325"></a>
+<a name="py-325"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env17_integration.py" sha="8b2d67739f8b9a9d047967e9167a8a0c2f954a3a" -->
 
@@ -914,7 +914,7 @@ def test_journal_replay_settlement_and_export_survive_app_restart(tmp_path):
 
 Original blob `b43f19dd17020a68391721429e3dc5185b0863e0` (2253 bytes).
 
-<a id="py-326"></a>
+<a name="py-326"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env17_release_audit.py" sha="b43f19dd17020a68391721429e3dc5185b0863e0" -->
 
@@ -983,7 +983,7 @@ def test_audit_blocks_explicitly_force_staged_checkpoint(tmp_path):
 
 Original blob `342cd89e5a4dd719d99a5a1ff0f5d897ae6a6d30` (10183 bytes).
 
-<a id="py-327"></a>
+<a name="py-327"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env1_api.py" sha="342cd89e5a4dd719d99a5a1ff0f5d897ae6a6d30" -->
 

@@ -6,7 +6,7 @@
 
 Original blob `092bb6933159ea3c0ac650e5ff9635a046642b8b` (11045 bytes).
 
-<a id="py-265"></a>
+<a name="py-265"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_multi_player_engine.py" sha="092bb6933159ea3c0ac650e5ff9635a046642b8b" -->
 
@@ -316,7 +316,7 @@ def test_small_stacks_stress_and_total_chips_at_every_action():
 
 Original blob `3d0c353687e1181fae44f068fc7aceed8033d8e3` (1202 bytes).
 
-<a id="py-266"></a>
+<a name="py-266"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_multi_player_seats.py" sha="3d0c353687e1181fae44f068fc7aceed8033d8e3" -->
 
@@ -359,7 +359,7 @@ def test_invalid_seats(stacks, button):
 
 Original blob `58d51ca07621a7954e3b7e5b3466cfc4c79b3c08` (2073 bytes).
 
-<a id="py-267"></a>
+<a name="py-267"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase10_cli.py" sha="58d51ca07621a7954e3b7e5b3466cfc4c79b3c08" -->
 
@@ -425,7 +425,7 @@ def test_phase10_rejects_invalid_beta():
 
 Original blob `1efad2978b9371a5c941c8b9e2ff7c20f4576051` (907 bytes).
 
-<a id="py-268"></a>
+<a name="py-268"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase10_gpu.py" sha="1efad2978b9371a5c941c8b9e2ff7c20f4576051" -->
 
@@ -456,7 +456,7 @@ def test_phase10_cuda_actual_optimizer():
 
 Original blob `04c6432ef788d7c68f3b0a2779b0c485a5b089e2` (11558 bytes).
 
-<a id="py-269"></a>
+<a name="py-269"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase10_qboost.py" sha="04c6432ef788d7c68f3b0a2779b0c485a5b089e2" -->
 
@@ -712,7 +712,7 @@ def test_config_cannot_be_modified_mid_resume(tmp_path):
 
 Original blob `03a1fc44be3f4e58251c9e63f69f48f0dae5cc03` (3130 bytes).
 
-<a id="py-270"></a>
+<a name="py-270"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase11_batched.py" sha="03a1fc44be3f4e58251c9e63f69f48f0dae5cc03" -->
 
@@ -804,7 +804,7 @@ def test_balanced_eval_against_random_and_frozen_anchor(actor):
 
 Original blob `b555a5a86336b1b5ca2286087a27cf07366e5a52` (863 bytes).
 
-<a id="py-271"></a>
+<a name="py-271"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase11_gpu.py" sha="b555a5a86336b1b5ca2286087a27cf07366e5a52" -->
 
@@ -839,7 +839,7 @@ def test_phase11_batched_forward_on_cuda_and_legal_actions():
 
 Original blob `be20c35f67e6a3f0173ec0b7d1573fe2acfe3271` (5397 bytes).
 
-<a id="py-272"></a>
+<a name="py-272"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase11_progress.py" sha="be20c35f67e6a3f0173ec0b7d1573fe2acfe3271" -->
 
@@ -991,7 +991,7 @@ def test_progress_display_no_policy_side_effect():
 
 Original blob `a148f322edd01907598778bcab496c69dea4395a` (4381 bytes).
 
-<a id="py-273"></a>
+<a name="py-273"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase11_runner.py" sha="a148f322edd01907598778bcab496c69dea4395a" -->
 
@@ -1107,7 +1107,7 @@ def test_import_phase10_checkpoint(tmp_path):
 
 Original blob `68f53e62663b18e82a15607f54bea51e537a9597` (2673 bytes).
 
-<a id="py-274"></a>
+<a name="py-274"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase12_cli.py" sha="68f53e62663b18e82a15607f54bea51e537a9597" -->
 
@@ -1197,7 +1197,7 @@ def test_reject_bad_checkpoint(tmp_path):
 
 Original blob `25ed721094e6970f97bd2fe63c34784502c2228f` (5558 bytes).
 
-<a id="py-275"></a>
+<a name="py-275"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase12_evaluation.py" sha="25ed721094e6970f97bd2fe63c34784502c2228f" -->
 
@@ -1355,7 +1355,7 @@ def test_dropout_forbidden():
 
 Original blob `a11264ca66c51d273ea70cee5ff41b097cafab32` (667 bytes).
 
-<a id="py-276"></a>
+<a name="py-276"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase12_gpu.py" sha="a11264ca66c51d273ea70cee5ff41b097cafab32" -->
 

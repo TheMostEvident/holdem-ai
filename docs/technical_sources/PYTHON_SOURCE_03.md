@@ -6,7 +6,7 @@ Exact full .py sources from baseline commit `6a8ae368ddc02f814140d3770bc5993eaf9
 
 Original Git blob SHA: `bf28285a1a270aaec53825368f0fa3c9a67cf08b` (3671 bytes).
 
-<a id="py-025"></a>
+<a name="py-025"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/gui15_smoke.py" sha="bf28285a1a270aaec53825368f0fa3c9a67cf08b" -->
 
@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `698b824bc59b0c9ca9eeca2f3dfbe1d249204b25` (2543 bytes).
 
-<a id="py-026"></a>
+<a name="py-026"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/gui16_smoke.py" sha="698b824bc59b0c9ca9eeca2f3dfbe1d249204b25" -->
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `1bff9b10282a0dc301cb73aff8f953e111344b45` (8433 bytes).
 
-<a id="py-027"></a>
+<a name="py-027"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase10_train.py" sha="1bff9b10282a0dc301cb73aff8f953e111344b45" -->
 
@@ -348,7 +348,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `89766f73f3df1043889b728cec6994418c975ce0` (2925 bytes).
 
-<a id="py-028"></a>
+<a name="py-028"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase11_benchmark.py" sha="89766f73f3df1043889b728cec6994418c975ce0" -->
 
@@ -432,7 +432,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `bc400682ee0a9f99af2b185fbeee9034646a0942` (4163 bytes).
 
-<a id="py-029"></a>
+<a name="py-029"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase11_compare.py" sha="bc400682ee0a9f99af2b185fbeee9034646a0942" -->
 
@@ -533,7 +533,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `296b330148c5765b110980cb3a471d7b003e25ee` (4449 bytes).
 
-<a id="py-030"></a>
+<a name="py-030"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase11_train.py" sha="296b330148c5765b110980cb3a471d7b003e25ee" -->
 
@@ -639,7 +639,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `451bc3f8abed3c239464251601ae1f2b8cc0eed2` (5139 bytes).
 
-<a id="py-031"></a>
+<a name="py-031"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase12_evaluate.py" sha="451bc3f8abed3c239464251601ae1f2b8cc0eed2" -->
 
@@ -748,7 +748,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `67fcd569e1e15cce30b345139a5bce6f6accbac8` (4229 bytes).
 
-<a id="py-032"></a>
+<a name="py-032"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase13_benchmark.py" sha="67fcd569e1e15cce30b345139a5bce6f6accbac8" -->
 
@@ -855,7 +855,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `0efa2bb403ecc22f627c1f946e323c2b5f719758` (4027 bytes).
 
-<a id="py-033"></a>
+<a name="py-033"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase13_compare.py" sha="0efa2bb403ecc22f627c1f946e323c2b5f719758" -->
 
@@ -950,7 +950,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `fde50a27a8585828ec663cefa82080e24a4b6468` (4257 bytes).
 
-<a id="py-034"></a>
+<a name="py-034"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase13_train.py" sha="fde50a27a8585828ec663cefa82080e24a4b6468" -->
 
@@ -1048,7 +1048,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `174f15d82750584d8dd65e1a6cb1a92f8346c364` (3502 bytes).
 
-<a id="py-035"></a>
+<a name="py-035"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase14_study.py" sha="174f15d82750584d8dd65e1a6cb1a92f8346c364" -->
 
@@ -1138,7 +1138,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `58c19a5675658d879e3c0adae0b1b543befaa334` (3142 bytes).
 
-<a id="py-036"></a>
+<a name="py-036"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase15_critic_audit.py" sha="58c19a5675658d879e3c0adae0b1b543befaa334" -->
 

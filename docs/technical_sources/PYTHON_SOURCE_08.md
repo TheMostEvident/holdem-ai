@@ -6,7 +6,7 @@ Part of [integrated report](../POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md). I
 
 Blob `e786c0a6a60f56db7fa605512c45b5bdb833952c` · 8695 bytes.
 
-<a id="py-085"></a>
+<a name="py-085"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/hunl200_adapter.py" sha="e786c0a6a60f56db7fa605512c45b5bdb833952c" -->
 
@@ -227,7 +227,7 @@ class HUNL200Adapter:
 
 Blob `70253ad3fea77a03f11b7f200905c91ea5bb9931` · 17555 bytes.
 
-<a id="py-086"></a>
+<a name="py-086"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/multi_player_engine.py" sha="70253ad3fea77a03f11b7f200905c91ea5bb9931" -->
 
@@ -639,7 +639,7 @@ class MultiPlayerHandEngine:
 
 Blob `867ef2000e2b1cc41d00fcefe048cc3cf40ad82e` · 2113 bytes.
 
-<a id="py-087"></a>
+<a name="py-087"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/multi_player_seats.py" sha="867ef2000e2b1cc41d00fcefe048cc3cf40ad82e" -->
 
@@ -714,7 +714,7 @@ def rotate_button(stacks: Sequence[int], button: int) -> int:
 
 Blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` · 0 bytes.
 
-<a id="py-088"></a>
+<a name="py-088"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/observation.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
@@ -728,7 +728,7 @@ Blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` · 0 bytes.
 
 Blob `50d9a973ae3bd97958f4f04c745ec4cfd6125965` · 2666 bytes.
 
-<a id="py-089"></a>
+<a name="py-089"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/player_manager.py" sha="50d9a973ae3bd97958f4f04c745ec4cfd6125965" -->
 
@@ -801,7 +801,7 @@ class PlayerManager:
 
 Blob `06e907b563bedb422d7603d4d24a8d77513a3eaa` · 3297 bytes.
 
-<a id="py-090"></a>
+<a name="py-090"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/pot_manager.py" sha="06e907b563bedb422d7603d4d24a8d77513a3eaa" -->
 
@@ -899,7 +899,7 @@ def settle_pots(
 
 Blob `619a7aa20e520d22366c7230b561d02571123d8a` · 1789 bytes.
 
-<a id="py-091"></a>
+<a name="py-091"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/rewards.py" sha="619a7aa20e520d22366c7230b561d02571123d8a" -->
 
@@ -955,7 +955,7 @@ def placement_rewards(
 
 Blob `cbec3206783ce0cf4e68b3da8decc00f6a6a337a` · 7021 bytes.
 
-<a id="py-092"></a>
+<a name="py-092"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/rlcard_adapter.py" sha="cbec3206783ce0cf4e68b3da8decc00f6a6a337a" -->
 
@@ -1139,7 +1139,7 @@ class RLCardTurnDriver:
 
 Blob `e500dfab80e69f6899225e4b9914507987aabd36` · 1782 bytes.
 
-<a id="py-093"></a>
+<a name="py-093"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/rules_audit.py" sha="e500dfab80e69f6899225e4b9914507987aabd36" -->
 
@@ -1200,7 +1200,7 @@ def summarize(checks: tuple[AuditCheck, ...] | list[AuditCheck]) -> str:
 
 Blob `5948268e0ddfbaa07f35f1c6aa1732321cd97ef6` · 1643 bytes.
 
-<a id="py-094"></a>
+<a name="py-094"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/seat_manager.py" sha="5948268e0ddfbaa07f35f1c6aa1732321cd97ef6" -->
 
@@ -1265,7 +1265,7 @@ def post_blinds(stacks: tuple[int, int], button: int, sb: int, bb: int) -> tuple
 
 Blob `7c0c70a541c65da07a04c999793937fba1fe74ad` · 10191 bytes.
 
-<a id="py-095"></a>
+<a name="py-095"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/tournament_env.py" sha="7c0c70a541c65da07a04c999793937fba1fe74ad" -->
 
@@ -1519,7 +1519,7 @@ class TournamentEnv:
 
 Blob `429b0243634014c4f23357990ca6962a3d7cb2df` · 38 bytes.
 
-<a id="py-096"></a>
+<a name="py-096"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/__init__.py" sha="429b0243634014c4f23357990ca6962a3d7cb2df" -->
 

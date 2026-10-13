@@ -6,7 +6,7 @@
 
 Original blob `586220dbb5a22e32dd8bbe88cfed78841621f513` (2718 bytes).
 
-<a id="py-145"></a>
+<a name="py-145"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/abstraction/cards.py" sha="586220dbb5a22e32dd8bbe88cfed78841621f513" -->
 
@@ -83,7 +83,7 @@ def holdem_infoset_key(raw: dict, actions: tuple[str, ...], config: AbstractionC
 
 Original blob `88683de2746b43859b6c3aae7ce0ec88bc8d8e60` (380 bytes).
 
-<a id="py-146"></a>
+<a name="py-146"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/__init__.py" sha="88683de2746b43859b6c3aae7ce0ec88bc8d8e60" -->
 
@@ -103,7 +103,7 @@ __all__ = ['MCCFRSolver', 'MCCFRConfig', 'InfosetStore', 'SearchBudgetExceeded',
 
 Original blob `5d93c88573c56f5e3be21194713b9dbbd8eea8f0` (3419 bytes).
 
-<a id="py-147"></a>
+<a name="py-147"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/checkpoint.py" sha="5d93c88573c56f5e3be21194713b9dbbd8eea8f0" -->
 
@@ -192,7 +192,7 @@ def load_checkpoint(path, engine_factory=None):
 
 Original blob `f67ea0836c1bba88f15c0cdafdbef8a255c0cafd` (2020 bytes).
 
-<a id="py-148"></a>
+<a name="py-148"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/evaluate.py" sha="f67ea0836c1bba88f15c0cdafdbef8a255c0cafd" -->
 
@@ -249,7 +249,7 @@ def evaluate_vs_uniform(solver: MCCFRSolver, *, hands: int = 100, seed: int = 44
 
 Original blob `dd4b3bfa01d662fc76bcc402745710b9a310866e` (4709 bytes).
 
-<a id="py-149"></a>
+<a name="py-149"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/holdem.py" sha="dd4b3bfa01d662fc76bcc402745710b9a310866e" -->
 
@@ -380,7 +380,7 @@ class HoldemGame:
 
 Original blob `e74109b06dc74e54a5190cb862afa4db1599c349` (2042 bytes).
 
-<a id="py-150"></a>
+<a name="py-150"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/kuhn_reference.py" sha="e74109b06dc74e54a5190cb862afa4db1599c349" -->
 
@@ -449,7 +449,7 @@ def kuhn_nash_conv(store):
 
 Original blob `e2a901bbb981a355290561ce785f92cc6fd9be69` (10626 bytes).
 
-<a id="py-151"></a>
+<a name="py-151"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/mccfr.py" sha="e2a901bbb981a355290561ce785f92cc6fd9be69" -->
 
@@ -685,7 +685,7 @@ class MCCFRSolver:
 
 Original blob `df2d91eeef7b1b60e052a7625f50bda6839be058` (6048 bytes).
 
-<a id="py-152"></a>
+<a name="py-152"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/blueprint/toy_games.py" sha="df2d91eeef7b1b60e052a7625f50bda6839be058" -->
 
@@ -842,7 +842,7 @@ class LeducGame:
 
 Original blob `9c8bae37c7c80e19da874217fcc1d6f84fe89327` (558 bytes).
 
-<a id="py-153"></a>
+<a name="py-153"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/search/__init__.py" sha="9c8bae37c7c80e19da874217fcc1d6f84fe89327" -->
 
@@ -864,7 +864,7 @@ __all__=['BlueprintPolicy','SearchBudget','SearchResult','SubgameSolver',
 
 Original blob `6c1bc570c2ff08d18a26cae8ed58e47d39525ceb` (8095 bytes).
 
-<a id="py-154"></a>
+<a name="py-154"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/search/belief.py" sha="6c1bc570c2ff08d18a26cae8ed58e47d39525ceb" -->
 
@@ -1039,7 +1039,7 @@ class HoldemObservationBelief:
 
 Original blob `f7ab3eae453f8228bf67909f0a20c3a0b5a72230` (1934 bytes).
 
-<a id="py-155"></a>
+<a name="py-155"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/search/continuations.py" sha="f7ab3eae453f8228bf67909f0a20c3a0b5a72230" -->
 
@@ -1095,7 +1095,7 @@ def continuation_policy(actions: tuple[str,...], blueprint, variant: str, bias: 
 
 Original blob `a26758b034671f99b132e51533c90d9333d561cd` (1862 bytes).
 
-<a id="py-156"></a>
+<a name="py-156"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/search/nested.py" sha="a26758b034671f99b132e51533c90d9333d561cd" -->
 

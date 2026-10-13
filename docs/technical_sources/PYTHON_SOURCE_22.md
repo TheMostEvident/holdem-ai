@@ -6,7 +6,7 @@
 
 Original blob `a710c3749c15b9752fdbf52ab2776c9b15b78f1d` (2716 bytes).
 
-<a id="py-253"></a>
+<a name="py-253"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_tournament.py" sha="a710c3749c15b9752fdbf52ab2776c9b15b78f1d" -->
 
@@ -98,7 +98,7 @@ def test_e07_raise_mapping_short_call():
 
 Original blob `880eab0d7c27e9f91be99f6c4a1933c05d8d5932` (1089 bytes).
 
-<a id="py-254"></a>
+<a name="py-254"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_blind_manager.py" sha="880eab0d7c27e9f91be99f6c4a1933c05d8d5932" -->
 
@@ -140,7 +140,7 @@ def test_blind_hand_number_validation():
 
 Original blob `0c26823cc52601fe3bbf81ea2b8ea18644fd9190` (2786 bytes).
 
-<a id="py-255"></a>
+<a name="py-255"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_corrected_rlcard_integration.py" sha="0c26823cc52601fe3bbf81ea2b8ea18644fd9190" -->
 
@@ -233,7 +233,7 @@ def test_step_back_after_a_fold():
 
 Original blob `d97b74c499c3f4c15d1a7dea69e29b581bb1f5d2` (3360 bytes).
 
-<a id="py-256"></a>
+<a name="py-256"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_corrected_round.py" sha="d97b74c499c3f4c15d1a7dea69e29b581bb1f5d2" -->
 
@@ -350,7 +350,7 @@ def test_cannot_raise_once_opponent_is_all_in():
 
 Original blob `29d751b3311c6677f5338f8a2f455e3486249b44` (7544 bytes).
 
-<a id="py-257"></a>
+<a name="py-257"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui10_hunl_contract.py" sha="29d751b3311c6677f5338f8a2f455e3486249b44" -->
 
@@ -551,7 +551,7 @@ def test_config_validation():
 
 Original blob `79f70fa36d6529161acca76feb49fff80806da32` (9066 bytes).
 
-<a id="py-258"></a>
+<a name="py-258"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui11_http_api.py" sha="79f70fa36d6529161acca76feb49fff80806da32" -->
 
@@ -780,7 +780,7 @@ def test_builtin_bot_variants(client):
 
 Original blob `adb3185d531a768577d1426a78859964d4b536e3` (2754 bytes).
 
-<a id="py-259"></a>
+<a name="py-259"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui12_readonly_api.py" sha="adb3185d531a768577d1426a78859964d4b536e3" -->
 
@@ -853,7 +853,7 @@ def test_contract_hides_bot_cards_on_fold_finish():
 
 Original blob `b41a06a22c2563a883923c4d7d2b2f81c69b64ed` (4882 bytes).
 
-<a id="py-260"></a>
+<a name="py-260"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui13_interactive_betting.py" sha="b41a06a22c2563a883923c4d7d2b2f81c69b64ed" -->
 
@@ -974,7 +974,7 @@ def test_fold_check_call_loop_and_chip_conservation(client):
 
 Original blob `99322ca9844b54d2c9f4336f0f9b605931253bb9` (7689 bytes).
 
-<a id="py-261"></a>
+<a name="py-261"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui14_trained_agents.py" sha="99322ca9844b54d2c9f4336f0f9b605931253bb9" -->
 
@@ -1160,7 +1160,7 @@ def test_checkpoint_reloaded_when_file_changes(tmp_path, monkeypatch):
 
 Original blob `eb5a5b2b170d24d501a283e71d8892b309637595` (8219 bytes).
 
-<a id="py-262"></a>
+<a name="py-262"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui15_session_analytics.py" sha="eb5a5b2b170d24d501a283e71d8892b309637595" -->
 
@@ -1344,7 +1344,7 @@ def test_statistics_do_not_update_mid_hand_or_on_invalid_action():
 
 Original blob `2d3084bd922382e0307bb8f12e7f3be32416bc5f` (6973 bytes).
 
-<a id="py-263"></a>
+<a name="py-263"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_gui16_continuous_stack.py" sha="2d3084bd922382e0307bb8f12e7f3be32416bc5f" -->
 
@@ -1508,7 +1508,7 @@ def test_automatic_short_blind_terminal_counts_and_finishes_match():
 
 Original blob `d2a4ee6842bd0b51b9cee49db68317266b97de6f` (2191 bytes).
 
-<a id="py-264"></a>
+<a name="py-264"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_hand_engine.py" sha="d2a4ee6842bd0b51b9cee49db68317266b97de6f" -->
 

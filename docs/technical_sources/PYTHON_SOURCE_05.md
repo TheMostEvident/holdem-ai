@@ -6,7 +6,7 @@ Exact full .py sources from baseline commit `6a8ae368ddc02f814140d3770bc5993eaf9
 
 Original Git blob SHA: `4a633fdc219c78a1ad10ba667c4d81d06e499a0a` (3422 bytes).
 
-<a id="py-049"></a>
+<a name="py-049"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase6_benchmark.py" sha="4a633fdc219c78a1ad10ba667c4d81d06e499a0a" -->
 
@@ -98,7 +98,7 @@ if __name__ == "__main__":
 
 Original Git blob SHA: `d8ba8655d715d9799e1e22d390ecff9fb2ae95d7` (1664 bytes).
 
-<a id="py-050"></a>
+<a name="py-050"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase6_hardware_probe.py" sha="d8ba8655d715d9799e1e22d390ecff9fb2ae95d7" -->
 
@@ -157,7 +157,7 @@ if __name__ == "__main__":
 
 Original Git blob SHA: `ca4efa3f92b1d8e8994b9007561576728f56198a` (4254 bytes).
 
-<a id="py-051"></a>
+<a name="py-051"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase7_smoke.py" sha="ca4efa3f92b1d8e8994b9007561576728f56198a" -->
 
@@ -261,7 +261,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `10814a36ab96ef0295124bdd7a2dd4bad46b6bf0` (6235 bytes).
 
-<a id="py-052"></a>
+<a name="py-052"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase8_smoke.py" sha="10814a36ab96ef0295124bdd7a2dd4bad46b6bf0" -->
 
@@ -416,7 +416,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `70ae3ada85f7700f92ca680093c0ac1f46c08daa` (4240 bytes).
 
-<a id="py-053"></a>
+<a name="py-053"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/phase9_train.py" sha="70ae3ada85f7700f92ca680093c0ac1f46c08daa" -->
 
@@ -517,7 +517,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `a62f710111e25e43ab7f3f0a94587bf1ca132222` (1534 bytes).
 
-<a id="py-054"></a>
+<a name="py-054"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/run_tournament.py" sha="a62f710111e25e43ab7f3f0a94587bf1ca132222" -->
 
@@ -566,7 +566,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `2db589c928eb440d5ccf8bc0a046f4b4895ba027` (1891 bytes).
 
-<a id="py-059"></a>
+<a name="py-059"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/tournament_env1_smoke.py" sha="2db589c928eb440d5ccf8bc0a046f4b4895ba027" -->
 
@@ -625,7 +625,7 @@ if __name__ == "__main__":
 
 Original Git blob SHA: `0533fa41e8d9080b170dd65184e03604875b75fa` (1499 bytes).
 
-<a id="py-056"></a>
+<a name="py-056"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/tournament_env13_smoke.py" sha="0533fa41e8d9080b170dd65184e03604875b75fa" -->
 
@@ -677,7 +677,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `91f1f830fd0974bb595626d8ce9e3f8779ab2d0f` (1557 bytes).
 
-<a id="py-055"></a>
+<a name="py-055"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/tournament_env131_diagnose.py" sha="91f1f830fd0974bb595626d8ce9e3f8779ab2d0f" -->
 
@@ -727,7 +727,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `8a98b6230d1144ebdbe108b80fba5fc71c76b87f` (1760 bytes).
 
-<a id="py-057"></a>
+<a name="py-057"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/tournament_env14_smoke.py" sha="8a98b6230d1144ebdbe108b80fba5fc71c76b87f" -->
 
@@ -780,7 +780,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `c96316da5e205ceea6a6f6685d6d6d4a49ee8b2f` (5498 bytes).
 
-<a id="py-058"></a>
+<a name="py-058"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/tournament_env17_release_audit.py" sha="c96316da5e205ceea6a6f6685d6d6d4a49ee8b2f" -->
 
@@ -920,7 +920,7 @@ if __name__ == '__main__':
 
 Original Git blob SHA: `203de1be16785e861c512ce99819dc0396384229` (65 bytes).
 
-<a id="py-060"></a>
+<a name="py-060"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/__init__.py" sha="203de1be16785e861c512ce99819dc0396384229" -->
 

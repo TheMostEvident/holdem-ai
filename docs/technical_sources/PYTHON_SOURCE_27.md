@@ -6,7 +6,7 @@
 
 Original blob `7bdaaea529975e624fce569893e411e032b94ef3` (1112 bytes).
 
-<a id="py-310"></a>
+<a name="py-310"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase9_cli.py" sha="7bdaaea529975e624fce569893e411e032b94ef3" -->
 
@@ -53,7 +53,7 @@ def test_phase9_cli_smoke_and_resume(tmp_path):
 
 Original blob `dfb598cd5b7c92cabd55a4bd63b2f326ce131a54` (1296 bytes).
 
-<a id="py-311"></a>
+<a name="py-311"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase9_gpu.py" sha="dfb598cd5b7c92cabd55a4bd63b2f326ce131a54" -->
 
@@ -96,7 +96,7 @@ def test_phase9_actual_cuda_optimizer_step():
 
 Original blob `5b01675a9713dfa9d591f61d1f31f1d2b2fd99bf` (8613 bytes).
 
-<a id="py-312"></a>
+<a name="py-312"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase9_ppo.py" sha="5b01675a9713dfa9d591f61d1f31f1d2b2fd99bf" -->
 
@@ -312,7 +312,7 @@ def test_no_history_truncation_large_max_decisions(sample):
 
 Original blob `d896603affbea9ede8c6a95dead9554051e975cb` (1675 bytes).
 
-<a id="py-313"></a>
+<a name="py-313"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_player_manager.py" sha="d896603affbea9ede8c6a95dead9554051e975cb" -->
 
@@ -376,7 +376,7 @@ def test_invalid_starting_stacks(stacks):
 
 Original blob `c14482c7de7aea35e85e22fd7fab240974a282d0` (836 bytes).
 
-<a id="py-314"></a>
+<a name="py-314"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_rewards_tournament.py" sha="c14482c7de7aea35e85e22fd7fab240974a282d0" -->
 
@@ -417,7 +417,7 @@ def test_invalid_payouts():
 
 Original blob `da63c2efad6610101967f83772ec80162f13133e` (543 bytes).
 
-<a id="py-315"></a>
+<a name="py-315"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_rlcard_integration.py" sha="da63c2efad6610101967f83772ec80162f13133e" -->
 
@@ -447,7 +447,7 @@ def test_real_rlcard_random_hand():
 
 Original blob `6f96b54a7210d04d7cef04f2ae6e9aba05148f24` (1036 bytes).
 
-<a id="py-316"></a>
+<a name="py-316"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_rlcard_rules_integration.py" sha="6f96b54a7210d04d7cef04f2ae6e9aba05148f24" -->
 
@@ -494,7 +494,7 @@ def test_rlcard_current_hunl_position_is_not_yet_compliant():
 
 Original blob `f6849bbdf5a054d099e640b3aac5a8b529f010da` (881 bytes).
 
-<a id="py-317"></a>
+<a name="py-317"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_rules_audit.py" sha="f6849bbdf5a054d099e640b3aac5a8b529f010da" -->
 
@@ -535,7 +535,7 @@ def test_audit_detects_a_reversed_blind_and_first_actor():
 
 Original blob `b0595166a158b3ed35e6906e45379e2dc9a369ed` (8761 bytes).
 
-<a id="py-318"></a>
+<a name="py-318"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_tournament_env.py" sha="b0595166a158b3ed35e6906e45379e2dc9a369ed" -->
 

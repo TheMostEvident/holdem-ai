@@ -6,7 +6,7 @@
 
 Original SHA `33af7d36ca10b9e7e4a88de17ec9001bd24b703f` (4003 bytes).
 
-<a id="py-097"></a>
+<a name="py-097"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/action_diagnostics.py" sha="33af7d36ca10b9e7e4a88de17ec9001bd24b703f" -->
 
@@ -109,7 +109,7 @@ def action_diagnostics(rows: TrajectoryRows, actor, *, device: str = 'cpu',
 
 Original SHA `09e9e3b70f5f3d74e143f0a7156ef51480a61ca3` (3092 bytes).
 
-<a id="py-098"></a>
+<a name="py-098"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/balanced.py" sha="09e9e3b70f5f3d74e143f0a7156ef51480a61ca3" -->
 
@@ -191,7 +191,7 @@ def evaluate_balanced(
 
 Original SHA `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
-<a id="py-099"></a>
+<a name="py-099"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/benchmark.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
@@ -205,7 +205,7 @@ Original SHA `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
 Original SHA `19053de0286dacb391d1e42eff1d1c5234f20c37` (950 bytes).
 
-<a id="py-100"></a>
+<a name="py-100"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/checkpoint_loader.py" sha="19053de0286dacb391d1e42eff1d1c5234f20c37" -->
 
@@ -238,7 +238,7 @@ def load_actor(path: str | Path, *, device: str = 'cpu') -> TransformerActor:
 
 Original SHA `cfa61781c80c9acbf0694acd0e716166fd2e0bf7` (14714 bytes).
 
-<a id="py-101"></a>
+<a name="py-101"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/continuous_stack.py" sha="cfa61781c80c9acbf0694acd0e716166fd2e0bf7" -->
 
@@ -571,7 +571,7 @@ def evaluate_continuous_stacks(
 
 Original SHA `1edc6be08bc4d8849ff149c363c0c075df8d330d` (11696 bytes).
 
-<a id="py-102"></a>
+<a name="py-102"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/critic_diagnostics.py" sha="1edc6be08bc4d8849ff149c363c0c075df8d330d" -->
 
@@ -824,7 +824,7 @@ def run_critic_audit(*, reference_checkpoint: str | Path,
 
 Original SHA `78429cbfde96d5995f7e3d71f369dde1e03069ed` (6773 bytes).
 
-<a id="py-103"></a>
+<a name="py-103"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/fixed_state_policy_audit.py" sha="78429cbfde96d5995f7e3d71f369dde1e03069ed" -->
 
@@ -976,7 +976,7 @@ def compare_checkpoints(checkpoints: dict[str, str | Path], *,
 
 Original SHA `00479ac04ed08062e09bdb3f2bf3d58e902f2cd9` (9620 bytes).
 
-<a id="py-104"></a>
+<a name="py-104"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/initial_policy_comparison.py" sha="00479ac04ed08062e09bdb3f2bf3d58e902f2cd9" -->
 
@@ -1202,7 +1202,7 @@ def compare_three_agent_policies(*, trained_checkpoint: str | Path,
 
 Original SHA `78369a6dfad4b548a397dcf6ec9e6e6e8a890ec5` (6852 bytes).
 
-<a id="py-105"></a>
+<a name="py-105"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/opponent_pool.py" sha="78369a6dfad4b548a397dcf6ec9e6e6e8a890ec5" -->
 
@@ -1361,7 +1361,7 @@ def evaluate_opponent_pool(candidate: TransformerActor, opponents: tuple[Opponen
 
 Original SHA `52428f68b0ad1d10917836daca2af57032c8ac9c` (1906 bytes).
 
-<a id="py-106"></a>
+<a name="py-106"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/ppo_metric_audit.py" sha="52428f68b0ad1d10917836daca2af57032c8ac9c" -->
 
@@ -1421,7 +1421,7 @@ def audit_metrics(path: str | Path) -> dict:
 
 Original SHA `ff7685384d1d7d88afdb4237011316e474fe8274` (11220 bytes).
 
-<a id="py-107"></a>
+<a name="py-107"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/preflop_sequence_audit.py" sha="ff7685384d1d7d88afdb4237011316e474fe8274" -->
 
@@ -1673,7 +1673,7 @@ def compare_preflop_sequences(*, trained_checkpoint: str | Path,
 
 Original SHA `8a2f27abc14d6e25d462385efae15cb2e05c64f6` (1717 bytes).
 
-<a id="py-108"></a>
+<a name="py-108"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/reward_diagnostics.py" sha="8a2f27abc14d6e25d462385efae15cb2e05c64f6" -->
 

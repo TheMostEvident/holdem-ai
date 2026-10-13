@@ -6,7 +6,7 @@
 
 Original blob `89bd50d93587ac4dc2831a388a52a4fd77315d2f` (4653 bytes).
 
-<a id="py-181"></a>
+<a name="py-181"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/state_projection.py" sha="89bd50d93587ac4dc2831a388a52a4fd77315d2f" -->
 
@@ -121,7 +121,7 @@ def project_human_view(
 
 Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
-<a id="py-182"></a>
+<a name="py-182"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/models/__init__.py" sha="c45dbcdd525a3fadb2abb368e5264f09bb51e773" -->
 
@@ -136,7 +136,7 @@ Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
 Original blob `9d16728ef844cd0b3e5c59ed9855237ccdbfbafe` (8612 bytes).
 
-<a id="py-183"></a>
+<a name="py-183"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/models/transformer.py" sha="9d16728ef844cd0b3e5c59ed9855237ccdbfbafe" -->
 
@@ -323,7 +323,7 @@ def chosen_q(q_values: Tensor, acting_seats: Tensor, actions: Tensor) -> Tensor:
 
 Original blob `8f32b7a86dae0351f40a7e7b4ecdd9741795e0bb` (217 bytes).
 
-<a id="py-184"></a>
+<a name="py-184"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/__init__.py" sha="8f32b7a86dae0351f40a7e7b4ecdd9741795e0bb" -->
 
@@ -342,7 +342,7 @@ __all__ = ["TournamentGameSession", "TournamentSessionRegistry"]
 
 Original blob `c97ba3b8a729c1636a00d6153f82d99443ea7a84` (1345 bytes).
 
-<a id="py-185"></a>
+<a name="py-185"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/baseline.py" sha="c97ba3b8a729c1636a00d6153f82d99443ea7a84" -->
 
@@ -392,7 +392,7 @@ class TournamentBaseline:
 
 Original blob `1eff74765a1e295c8e164de964494ee105c6d11d` (5676 bytes).
 
-<a id="py-186"></a>
+<a name="py-186"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/improved_bot.py" sha="1eff74765a1e295c8e164de964494ee105c6d11d" -->
 
@@ -536,7 +536,7 @@ class ImprovedTournamentBot:
 
 Original blob `f04f1242f476e94fe10ab32a4d8736b84c3d598c` (10830 bytes).
 
-<a id="py-187"></a>
+<a name="py-187"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/journal.py" sha="f04f1242f476e94fe10ab32a4d8736b84c3d598c" -->
 
@@ -737,7 +737,7 @@ class TournamentJournal:
 
 Original blob `57b906cad8bfe2a3724d6da7c5a880035fbf03ab` (20805 bytes).
 
-<a id="py-188"></a>
+<a name="py-188"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/session.py" sha="57b906cad8bfe2a3724d6da7c5a880035fbf03ab" -->
 
@@ -1174,7 +1174,7 @@ class TournamentSessionRegistry:
 
 Original blob `910b29ab575076918fefc4ae11fec020524de22a` (9173 bytes).
 
-<a id="py-189"></a>
+<a name="py-189"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/tournament_service/trained_actor.py" sha="910b29ab575076918fefc4ae11fec020524de22a" -->
 
@@ -1388,7 +1388,7 @@ class TrainedTournamentActor:
 
 Original blob `4eac3fc82dded49e40f2471913810949e63ee45d` (40 bytes).
 
-<a id="py-190"></a>
+<a name="py-190"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/__init__.py" sha="4eac3fc82dded49e40f2471913810949e63ee45d" -->
 
@@ -1403,7 +1403,7 @@ Original blob `4eac3fc82dded49e40f2471913810949e63ee45d` (40 bytes).
 
 Original blob `0e1e2241022b55e549130eb5edd19076a47bb08a` (5632 bytes).
 
-<a id="py-191"></a>
+<a name="py-191"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/batched_collector.py" sha="0e1e2241022b55e549130eb5edd19076a47bb08a" -->
 
@@ -1539,7 +1539,7 @@ def collect_batched_self_play(
 
 Original blob `6f08af4094349bcaf0d3a6b5c87b73ded774dcf8` (2963 bytes).
 
-<a id="py-192"></a>
+<a name="py-192"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/episode_runner.py" sha="6f08af4094349bcaf0d3a6b5c87b73ded774dcf8" -->
 

@@ -7,7 +7,7 @@ Part of [Poker AI final integrated technical report](../POKER_AI_FINAL_INTEGRATE
 
 **Blob SHA:** `236c61b492556b4a4db7dae15fb72737c9140c75` · **Original bytes:** 67
 
-<a id="py-001"></a>
+<a name="py-001"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/__init__.py" sha="236c61b492556b4a4db7dae15fb72737c9140c75" -->
 
@@ -23,7 +23,7 @@ Part of [Poker AI final integrated technical report](../POKER_AI_FINAL_INTEGRATE
 
 **Blob SHA:** `ee2818d119f15e725da15485244ad043fba054fc` · **Original bytes:** 6122
 
-<a id="py-002"></a>
+<a name="py-002"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/game_router.py" sha="ee2818d119f15e725da15485244ad043fba054fc" -->
 
@@ -170,7 +170,7 @@ def build_router(registry: HUNLSessionRegistry, catalog: CheckpointCatalog | Non
 
 **Blob SHA:** `23cb998aa1217f728023fc1707e1790fba919685` · **Original bytes:** 2189
 
-<a id="py-003"></a>
+<a name="py-003"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/main.py" sha="23cb998aa1217f728023fc1707e1790fba919685" -->
 
@@ -247,7 +247,7 @@ if __name__ == "__main__":
 
 **Blob SHA:** `6e4aaf2faba752d85bb1e215bc6383f9603ce436` · **Original bytes:** 4556
 
-<a id="py-004"></a>
+<a name="py-004"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/schemas.py" sha="6e4aaf2faba752d85bb1e215bc6383f9603ce436" -->
 
@@ -435,7 +435,7 @@ class SessionStatsResponse(StrictModel):
 
 **Blob SHA:** `19464b0639069d89cd72eebde3010eaaf98fa11e` · **Original bytes:** 6543
 
-<a id="py-005"></a>
+<a name="py-005"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/tournament_router.py" sha="19464b0639069d89cd72eebde3010eaaf98fa11e" -->
 
@@ -589,7 +589,7 @@ def build_tournament_router(registry: TournamentSessionRegistry) -> APIRouter:
 
 **Blob SHA:** `5c5c424cac8d1a25aba117ac5f7a310e15cc4171` · **Original bytes:** 4253
 
-<a id="py-006"></a>
+<a name="py-006"></a>
 
 <!-- BEGIN_PY_SOURCE path="backend/tournament_schemas.py" sha="5c5c424cac8d1a25aba117ac5f7a310e15cc4171" -->
 
@@ -756,7 +756,7 @@ class TournamentHealthResponse(StrictModel):
 
 **Blob SHA:** `2c3e05d604c3ad2adc8dd869a7a58a11a0f2e555` · **Original bytes:** 1480
 
-<a id="py-007"></a>
+<a name="py-007"></a>
 
 <!-- BEGIN_PY_SOURCE path="main.py" sha="2c3e05d604c3ad2adc8dd869a7a58a11a0f2e555" -->
 
@@ -802,7 +802,7 @@ if __name__ == '__main__':
 
 **Blob SHA:** `5632af29cb4567963a69d0b3b54e50b5e3468c2f` · **Original bytes:** 1903
 
-<a id="py-008"></a>
+<a name="py-008"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/audit_corrected.py" sha="5632af29cb4567963a69d0b3b54e50b5e3468c2f" -->
 
@@ -864,7 +864,7 @@ if __name__ == '__main__':
 
 **Blob SHA:** `e8a309997f28705d4f9b3545de1512ee8134a214` · **Original bytes:** 1888
 
-<a id="py-009"></a>
+<a name="py-009"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/audit_multiplayer.py" sha="e8a309997f28705d4f9b3545de1512ee8134a214" -->
 
@@ -923,7 +923,7 @@ if __name__ == '__main__':
 
 **Blob SHA:** `86c772c7a70206d9830cf41b41ece905c5f0bf6a` · **Original bytes:** 1978
 
-<a id="py-010"></a>
+<a name="py-010"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/audit_rlcard.py" sha="86c772c7a70206d9830cf41b41ece905c5f0bf6a" -->
 
@@ -990,7 +990,7 @@ if __name__ == '__main__':
 
 **Blob SHA:** `7f36522cc6b27bd9bd10b91647a753e29dbb5262` · **Original bytes:** 2399
 
-<a id="py-011"></a>
+<a name="py-011"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/audit_tournament.py" sha="7f36522cc6b27bd9bd10b91647a753e29dbb5262" -->
 
@@ -1053,7 +1053,7 @@ if __name__ == '__main__':
 
 **Blob SHA:** `baa7aeeca906dd9e3799e46dbdf4819260093f8f` · **Original bytes:** 5137
 
-<a id="py-012"></a>
+<a name="py-012"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase01_smoke.py" sha="baa7aeeca906dd9e3799e46dbdf4819260093f8f" -->
 
