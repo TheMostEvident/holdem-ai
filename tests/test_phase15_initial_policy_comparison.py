@@ -134,3 +134,33 @@ def test_initial_checkpoint_architecture_mismatch_rejected(monkeypatch):
 def test_bad_sampling_configuration_rejected(kwargs):
     with pytest.raises(ValueError):
         audit.compare_three_agent_policies(trained_checkpoint="x", **kwargs)
+
+
+def test_end_to_end_three_policy_comparison_two_real_hands_cpu(tmp_path):
+    """Tiny integration run: real existing Collector, masks, engine and fixed audit."""
+    from holdem_ai.training.ppo import PPOConfig
+    from holdem_ai.training.ppo_session import create_session, save_checkpoint
+
+    path = tmp_path / "seeded_phase14_shape.pt"
+    session = create_session(
+        seed=52,
+        network_config=_net(),
+        ppo_config=PPOConfig(seed=52, hands_per_update=2),
+    )
+    save_checkpoint(session, path)
+    result = audit.compare_three_agent_policies(
+        trained_checkpoint=path,
+        hands=2,
+        seed=590001000,
+        env_batch_size=2,
+        device="cpu",
+        init_seed=53,
+    )
+    assert result["fixed_phase14_states"]["states"] > 0
+    assert set(result["on_policy"]) == {
+        "uniform_legal", "random_init", "trained_phase14",
+    }
+    for entry in result["on_policy"].values():
+        assert entry["terminal"]["hands"] == 2
+        assert entry["actions"]["overall"]["decisions"] >= 2
+        assert 0 <= entry["actions"]["per_hand"]["hands_with_explicit_all_in"] <= 2
