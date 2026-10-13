@@ -302,9 +302,15 @@ class AblationConfig:
             x = getattr(self, key)
             if type(x) is not int or x < 0:
                 raise ValueError(f"{key} must be nonnegative int")
-        if (len({self.rollout_seed, self.validation_seed, self.critic_seed}) != 3
-                or not self.validation_seed + self.eval_groups < self.critic_seed
-                or not self.rollout_seed + self.hands_per_update * self.updates < self.critic_seed):
+        ranges = (
+            (self.rollout_seed,
+             self.rollout_seed + self.hands_per_update * self.updates),
+            (self.validation_seed, self.validation_seed + self.eval_groups),
+            (self.critic_seed, self.critic_seed + self.critic_eval_hands),
+        )
+        if any(max(a0, b0) < min(a1, b1)
+               for i, (a0, a1) in enumerate(ranges)
+               for b0, b1 in ranges[i + 1:]):
             raise ValueError("diagnostic/evaluation seed ranges overlap")
         if not (math.isfinite(self.target_scale) and self.target_scale > 0
                 and math.isfinite(self.max_post_kl) and self.max_post_kl > 0):
