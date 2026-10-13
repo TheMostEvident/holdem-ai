@@ -466,6 +466,20 @@ def run_stress(cfg: StressConfig) -> dict:
             raise ValueError("source checkpoint changed")
         _mirrors(root, records=records, validations=validations,
                  start_update=start_update, target_updates=cfg.updates)
+        # If power was lost after committing the update checkpoint but
+        # before the scheduled evaluation, complete THAT evaluation first.
+        # No rollout iteration is repeated.
+        if records:
+            n = len(records)
+            eval_due = n % cfg.eval_every == 0 or n == cfg.updates
+            if eval_due and not any(v["attempted"] == n for v in validations):
+                val = _validation(session, cfg, baseline, n)
+                validations.append(val)
+                _save_full(latest, session, manifest_hash=manifest_hash,
+                           start_update=start_update, records=records,
+                           validations=validations)
+                _mirrors(root, records=records, validations=validations,
+                         start_update=start_update, target_updates=cfg.updates)
         if len(records) >= cfg.updates:
             return _finish(root, records, validations, cfg)
         started = time.perf_counter()
