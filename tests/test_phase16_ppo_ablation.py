@@ -164,3 +164,42 @@ def test_pilot_one_update_real_env_and_evaluation_cpu(tmp_path):
     assert (root / "a1" / "final_actor.pt").is_file()
     with pytest.raises(FileExistsError):
         a.run_ablation(cfg)
+
+
+
+def test_a3_rejected_update_restores_actor_and_keeps_source(tmp_path, monkeypatch):
+    """A3 must rollback a deliberately mutated Actor when post-update KL fails."""
+    from holdem_ai.evaluation.checkpoint_loader import load_actor
+
+    path = tmp_path / "source.pt"
+    session = create_session(
+        seed=77, network_config=_net(),
+        ppo_config=PPOConfig(hands_per_update=2, epochs=1, minibatch_size=2),
+    )
+    save_checkpoint(session, path)
+    original_bytes = path.read_bytes()
+    saved_actor = load_actor(path, device="cpu")
+
+    def fake_optim(actor, critic, ao, co, frozen, config, *, device, shuffle_seed):
+        with torch.no_grad():
+            actor.policy_head[-1].bias[6].add_(25.)
+            critic.q_head[-1].bias[6].add_(25.)
+        return {"critic_loss": 1.0, "minibatches": 1,
+                "decisions": len(frozen.rows.actions)}
+
+    monkeypatch.setattr(a, "optimize_ppo", fake_optim)
+    monkeypatch.setattr(a, "exact_policy_kl",
+                        lambda actor, rows, *, old_probs, device: 10.)
+    root = tmp_path / "a3_reject"
+    cfg = a.AblationConfig(
+        source_checkpoint=str(path), root=str(root),
+        variants=("a3",), hands_per_update=2, updates=1,
+        minibatch_size=2, env_batch_size=2, eval_groups=2,
+        critic_eval_hands=2,
+    )
+    report = a.run_ablation(cfg)
+    after = load_actor(root / "a3" / "final_actor.pt", device="cpu")
+    assert report["variants"]["a3"]["rejected_updates"] == 1
+    assert all(torch.equal(saved_actor.state_dict()[key], after.state_dict()[key])
+               for key in saved_actor.state_dict())
+    assert path.read_bytes() == original_bytes
