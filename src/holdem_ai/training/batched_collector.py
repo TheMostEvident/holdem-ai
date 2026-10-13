@@ -53,6 +53,8 @@ def collect_batched_self_play(
     actor = actor.to(device).eval()
     all_actors, all_critics, all_actions, all_seats, all_returns = [], [], [], [], []
     all_hand_rewards = []
+    terminal_actions = []
+    decisions_per_hand = []
     for offset in range(0, config.hands_per_update, env_batch_size):
         hands: list[_Hand] = []
         for k in range(offset, min(offset + env_batch_size, config.hands_per_update)):
@@ -110,8 +112,11 @@ def collect_batched_self_play(
             all_seats.extend(hand.seats)
             all_returns.extend(hand.rewards[seat] for seat in hand.seats)
             all_hand_rewards.append(hand.rewards)
+            terminal_actions.append(hand.actions[-1])
+            decisions_per_hand.append(len(hand.actions))
     return TrajectoryRows(
         tuple(all_actors), tuple(all_critics), tuple(all_actions),
         tuple(all_seats), tuple(all_returns), config.hands_per_update,
         tuple(all_hand_rewards),
+        tuple(terminal_actions), tuple(decisions_per_hand),
     )

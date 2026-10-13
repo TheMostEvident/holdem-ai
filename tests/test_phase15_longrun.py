@@ -145,11 +145,30 @@ def test_safety_stop_after_persistent_warning(tmp_path,monkeypatch):
         return event
     monkeypatch.setattr(m,'_one_update',always_warn)
     cfg=_config(tmp_path,source,max_updates=5,entropy_stop_patience=2,
-                entropy_alert_threshold=0.2,eval_every=99)
+                entropy_alert_threshold=0.2,entropy_stop_enabled=True,eval_every=99)
     result=run_longrun(cfg)
     assert result['stop_reason']=='safety_stop'
     assert result['updates_this_run']==2
     assert result['entropy_warnings']==2
+
+
+
+def test_low_entropy_warning_only_for_new_runs(tmp_path,monkeypatch):
+    source=_source(tmp_path)
+    from holdem_ai.experiments import longrun as m
+    original=m._one_update
+    def always_warn(sess,cfg):
+        event=original(sess,cfg)
+        event['entropy']=0.01
+        return event
+    monkeypatch.setattr(m,'_one_update',always_warn)
+    cfg=_config(tmp_path,source,max_updates=5,entropy_stop_patience=2,
+                entropy_alert_threshold=0.2,eval_every=99)
+    result=run_longrun(cfg)
+    assert result['stop_reason']=='update_limit'
+    assert result['updates_this_run']==5
+    assert result['entropy_warnings']==5
+    assert result['kl_warnings']==0
 
 
 def test_recover_checkpoint_one_update_ahead_of_state(tmp_path,monkeypatch):

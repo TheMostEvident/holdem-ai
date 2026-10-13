@@ -24,6 +24,7 @@ from holdem_ai.training.qboost_session import create_qboost_session, load_qboost
 from holdem_ai.training.batched_collector import collect_batched_self_play
 from holdem_ai.evaluation.seed_blocked import EvaluationConfig, evaluate_seed_blocks
 from holdem_ai.evaluation.action_diagnostics import action_diagnostics
+from holdem_ai.evaluation.reward_diagnostics import summarize_rollout_rewards
 
 
 @dataclass(frozen=True)
@@ -182,6 +183,7 @@ def _one_update(session, config: BatchExperimentConfig) -> dict:
                                      env_batch_size=config.env_batch_size)
     diagnostics = action_diagnostics(rows, base.actor, device=base.device,
                                      chunk_size=base.ppo_config.inference_batch_size)
+    reward_diagnostics = summarize_rollout_rewards(rows)
     if config.algorithm == 'ppo':
         frozen = freeze_old_policy_data(base.actor, base.critic, rows,
                                         device=base.device,
@@ -210,7 +212,8 @@ def _one_update(session, config: BatchExperimentConfig) -> dict:
             'env_batch_size': config.env_batch_size,
             'minibatch_size': base.ppo_config.minibatch_size,
             'ppo_epochs': base.ppo_config.epochs,
-            'action_diagnostics': diagnostics, **stats}
+            'action_diagnostics': diagnostics,
+            'reward_diagnostics': reward_diagnostics, **stats}
 
 
 def run_batch_experiment(config: BatchExperimentConfig, *,

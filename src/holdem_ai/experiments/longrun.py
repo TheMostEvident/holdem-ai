@@ -20,6 +20,7 @@ from typing import Callable
 import torch
 
 from holdem_ai.utils.progress import TrainingProgress
+from holdem_ai.experiments.ppo_safety import safety_assessment
 from holdem_ai.evaluation.seed_blocked import EvaluationConfig, evaluate_seed_blocks
 from holdem_ai.evaluation.checkpoint_loader import load_actor
 from holdem_ai.experiments.batch_scaling import BatchExperimentConfig, _base, _load_from_path, _one_update, _save
@@ -67,6 +68,7 @@ DEFAULTS = {
     'final_groups': 400, 'final_seed': 25_000_000,
     'entropy_alert_threshold': 0.45, 'entropy_stop_patience': 12,
     'max_approx_kl': 0.10, 'beta': 1.0,
+    'entropy_stop_enabled': False,
 }
 
 
@@ -93,6 +95,7 @@ class LongRunConfig:
     final_seed: int | None = None
     entropy_alert_threshold: float | None = None
     entropy_stop_patience: int | None = None
+    entropy_stop_enabled: bool | None = None
     max_approx_kl: float | None = None
     beta: float | None = None
 
@@ -159,6 +162,8 @@ def _spec(cfg: LongRunConfig) -> dict:
         raise ValueError('env_batch_size cannot exceed hands_per_update')
     if spec['eval_mode'] not in ('sampled','greedy'):
         raise ValueError('eval_mode must be sampled/greedy')
+    if type(spec['entropy_stop_enabled']) is not bool:
+        raise ValueError('entropy_stop_enabled must be boolean')
     for name in ('entropy_alert_threshold','max_approx_kl','beta'):
         value = spec[name]
         if (not isinstance(value, (float,int)) or isinstance(value,bool)
@@ -198,7 +203,7 @@ def _match_resume(cfg: LongRunConfig, manifest: dict) -> dict:
         raise ValueError('resume algorithm differs')
     for name in DEFAULTS:
         value = getattr(cfg, name)
-        if value is not None and value != spec[name]:
+        if value is not None and value != spec.get(name, True if name == 'entropy_stop_enabled' else DEFAULTS[name]):
             raise ValueError(f'resume configuration mismatch: {name}')
     if _sha256(Path(manifest['source'])) != manifest['source_sha256']:
         raise ValueError('source checkpoint bytes changed since experiment initialization')
@@ -270,6 +275,10 @@ def _run_longrun_impl(cfg: LongRunConfig, *, emit: Callable[[dict],None] | None 
     if cfg.resume:
         manifest,state,paths = _read(root)
         spec = _match_resume(cfg, manifest)
+        # Historical manifests precede the warning-only entropy flag.
+        # Keep old behavior rather than silently changing resumed experiments.
+        if 'entropy_stop_enabled' not in spec:
+            spec = dict(spec, entropy_stop_enabled=True)
         if paths['final'].exists():
             raise RuntimeError('run is sealed by final evaluation; cannot resume training')
         algorithm = manifest['algorithm']
@@ -369,18 +378,25 @@ def _run_longrun_impl(cfg: LongRunConfig, *, emit: Callable[[dict],None] | None 
                 updates_this_run+=1
                 last_update_seconds = float(item['elapsed_seconds'])
                 if bar: bar.on_event(item)
-                if item.get('entropy',100) < spec['entropy_alert_threshold']:
+                safety = safety_assessment(
+                    entropy=item.get('entropy', 100.0),
+                    approx_kl=item.get('approx_kl', 0.0),
+                    entropy_threshold=spec['entropy_alert_threshold'],
+                    max_approx_kl=spec['max_approx_kl'],
+                    entropy_stop_enabled=spec['entropy_stop_enabled'],
+                    consecutive=state['consecutive_safety_warnings'],
+                )
+                if safety['low_entropy']:
                     state['entropy_warnings'] += 1
-                    state['consecutive_safety_warnings'] += 1
-                    _event(paths['events'],{'kind':'entropy_warning','update':base.completed_updates,
-                                            'entropy':item['entropy']})
-                elif item.get('approx_kl',0) > spec['max_approx_kl']:
+                    _event(paths['events'], {'kind':'entropy_warning',
+                                           'update':base.completed_updates,
+                                           'entropy':item['entropy']})
+                if safety['high_kl']:
                     state['kl_warnings'] += 1
-                    state['consecutive_safety_warnings'] += 1
-                    _event(paths['events'],{'kind':'kl_warning','update':base.completed_updates,
-                                            'approx_kl':item['approx_kl']})
-                else:
-                    state['consecutive_safety_warnings'] = 0
+                    _event(paths['events'], {'kind':'kl_warning',
+                                           'update':base.completed_updates,
+                                           'approx_kl':item['approx_kl']})
+                state['consecutive_safety_warnings'] = safety['consecutive_safety_warnings']
                 _atomic_json(paths['state'],state)
                 if base.completed_updates % spec['eval_every'] == 0:
                     if time.perf_counter() < deadline:

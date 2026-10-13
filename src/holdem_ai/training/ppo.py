@@ -69,12 +69,19 @@ class TrajectoryRows:
     returns_bb: tuple[float, ...]
     hands: int
     hand_rewards: tuple[tuple[float, float], ...]
+    terminal_actions: tuple[int, ...] = ()  # one final action per hand, if collected
+    decisions_per_hand: tuple[int, ...] = ()
 
     def __post_init__(self) -> None:
         n = len(self.actions)
         if n == 0 or not all(len(x) == n for x in (
                 self.actors, self.critics, self.acting_seats, self.returns_bb)):
             raise ValueError('trajectory rows must be nonempty and aligned')
+        if self.terminal_actions and len(self.terminal_actions) != self.hands:
+            raise ValueError('terminal actions must align with hands')
+        if self.decisions_per_hand and (len(self.decisions_per_hand) != self.hands
+                                        or sum(self.decisions_per_hand) != n):
+            raise ValueError('hand decision counts must align')
         if self.hands != len(self.hand_rewards):
             raise ValueError('hand rewards must align')
         if any(i not in (0, 1) for i in self.acting_seats):
