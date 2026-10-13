@@ -427,10 +427,9 @@ def run_five_hour(cfg: FiveHourConfig) -> dict:
                 flush=True,
             )
 
-        # If the process died after committing a validation and before
-        # publishing best.pt, restore it from the authoritative latest.pt.
-        if (best_update == session.completed_updates and validations
-                and validations[-1]["attempted"] == len(rows)):
+        # If the process died after committing an initial/latest best but
+        # before publishing best.pt, restore from the atomic latest.pt.
+        if best_update == session.completed_updates:
             best_path = root / "best.pt"
             if (not best_path.is_file()
                     or int(torch.load(best_path, map_location="cpu",
