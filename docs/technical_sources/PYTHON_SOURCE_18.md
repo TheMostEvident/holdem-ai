@@ -6,6 +6,8 @@
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
+<a id="py-205"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/agents/__init__.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -18,6 +20,8 @@ Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
+<a id="py-206"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/environment/__init__.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -29,6 +33,8 @@ Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 ## tests/environment/test_betting.py
 
 Original blob `f487b67984a09ae27645e028cdc42a4558db5fd9` (1888 bytes).
+
+<a id="py-207"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/environment/test_betting.py" sha="f487b67984a09ae27645e028cdc42a4558db5fd9" -->
 
@@ -86,6 +92,8 @@ def test_short_call_forces_all_in_not_raise():
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
+<a id="py-208"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/environment/test_elimination.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -97,6 +105,8 @@ Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 ## tests/environment/test_hand_evaluator.py
 
 Original blob `3525e30ed6a42068db3ea868363edcf2485a0171` (1708 bytes).
+
+<a id="py-209"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/environment/test_hand_evaluator.py" sha="3525e30ed6a42068db3ea868363edcf2485a0171" -->
 
@@ -156,6 +166,8 @@ def test_invalid_duplicate_or_bad_card():
 
 Original blob `0b18b09ca4bd46d12d12e74521c5885a4700037a` (942 bytes).
 
+<a id="py-210"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/environment/test_position.py" sha="0b18b09ca4bd46d12d12e74521c5885a4700037a" -->
 
 ````````python
@@ -195,6 +207,8 @@ def test_invalid_button_is_rejected(button):
 ## tests/environment/test_side_pot.py
 
 Original blob `5339700d71c80b20b9cbea8c2a2389dc5fec6af3` (1850 bytes).
+
+<a id="py-211"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/environment/test_side_pot.py" sha="5339700d71c80b20b9cbea8c2a2389dc5fec6af3" -->
 
@@ -251,6 +265,8 @@ def test_conservation_and_reject_invalid_states():
 ## tests/expand/conftest.py
 
 Original blob `f35659850cedf50a9fef7afe6fea7a1f93028eaa` (2814 bytes).
+
+<a id="py-212"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/conftest.py" sha="f35659850cedf50a9fef7afe6fea7a1f93028eaa" -->
 
@@ -339,6 +355,8 @@ class BustHandEngine(FakeHandEngine):
 
 Original blob `a6b089d01ec085d50d81cc2607d9bae799401cfb` (3340 bytes).
 
+<a id="py-213"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/e03_fake_engine.py" sha="a6b089d01ec085d50d81cc2607d9bae799401cfb" -->
 
 ````````python
@@ -425,6 +443,8 @@ except ModuleNotFoundError:
 
 Original blob `90b9901f572b978db1404a5f9f172ed60fafbb29` (2004 bytes).
 
+<a id="py-214"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/e07_fake_tournament.py" sha="90b9901f572b978db1404a5f9f172ed60fafbb29" -->
 
 ````````python
@@ -480,6 +500,8 @@ class KnockoutEngine:
 ## tests/expand/test_e01_real_engine.py
 
 Original blob `08febe74e010fb26b91358749a0dfb400b612fb4` (3209 bytes).
+
+<a id="py-215"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e01_real_engine.py" sha="08febe74e010fb26b91358749a0dfb400b612fb4" -->
 
@@ -572,6 +594,8 @@ def test_e01_real_engine_replay_deterministic(tmp_path):
 ## tests/expand/test_e01_smoke_unit.py
 
 Original blob `33648e36aa11203ff0bcaddf17a73e2782cc059a` (1308 bytes).
+
+<a id="py-216"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e01_smoke_unit.py" sha="33648e36aa11203ff0bcaddf17a73e2782cc059a" -->
 

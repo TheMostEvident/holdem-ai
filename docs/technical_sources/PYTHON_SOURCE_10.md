@@ -6,6 +6,8 @@
 
 Original SHA `4a30e1e22ee87830e1059176db3a20c31e2a55f4` (10961 bytes).
 
+<a id="py-109"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/seed_blocked.py" sha="4a30e1e22ee87830e1059176db3a20c31e2a55f4" -->
 
 ````````python
@@ -267,6 +269,8 @@ def compare_results(candidate: EvaluationResult, control: EvaluationResult) -> d
 
 Original SHA `8c650e3e3b0c366a7d91013696f2cf125f98e428` (1889 bytes).
 
+<a id="py-110"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/seed_statistics.py" sha="8c650e3e3b0c366a7d91013696f2cf125f98e428" -->
 
 ````````python
@@ -319,6 +323,8 @@ def seed_level_summary(values: list[float] | tuple[float, ...]) -> dict:
 ## src/holdem_ai/evaluation/strategy_diagnostics.py
 
 Original SHA `d098e73ff576b48388927920fdbb1829df0b5203` (5641 bytes).
+
+<a id="py-111"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/strategy_diagnostics.py" sha="d098e73ff576b48388927920fdbb1829df0b5203" -->
 
@@ -452,6 +458,8 @@ class ActionProfile:
 
 Original SHA `ead06dce6233b21f3c469e9f8f32a72e28a9a342` (4153 bytes).
 
+<a id="py-112"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/strategy_report.py" sha="ead06dce6233b21f3c469e9f8f32a72e28a9a342" -->
 
 ````````python
@@ -539,6 +547,8 @@ def markdown_report(result: dict) -> str:
 ## src/holdem_ai/evaluation/terminal_reward_audit.py
 
 Original SHA `d9d2152728ebbe93f8091dc4c9c27c7058185d50` (12130 bytes).
+
+<a id="py-113"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/terminal_reward_audit.py" sha="d9d2152728ebbe93f8091dc4c9c27c7058185d50" -->
 
@@ -803,6 +813,8 @@ def run_terminal_reward_audit(*, checkpoints: dict[str, str | Path],
 
 Original SHA `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
+<a id="py-114"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/evaluation/tournament_eval.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -814,6 +826,8 @@ Original SHA `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 ## src/holdem_ai/expand/__init__.py
 
 Original SHA `ef54dfeb01d3748ef313eed9e4f2a4222ab73c5c` (77 bytes).
+
+<a id="py-115"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/__init__.py" sha="ef54dfeb01d3748ef313eed9e4f2a4222ab73c5c" -->
 
@@ -827,6 +841,8 @@ Original SHA `ef54dfeb01d3748ef313eed9e4f2a4222ab73c5c` (77 bytes).
 ## src/holdem_ai/expand/environment/__init__.py
 
 Original SHA `ef5a2d4a73f8bfe28fbc50e2ce9d10fb74419cda` (561 bytes).
+
+<a id="py-116"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/__init__.py" sha="ef5a2d4a73f8bfe28fbc50e2ce9d10fb74419cda" -->
 
@@ -852,6 +868,8 @@ __all__ = [
 ## src/holdem_ai/expand/environment/cash_rules.py
 
 Original SHA `209cdbebeba28c20636ccf191deb1597dd572e1b` (1073 bytes).
+
+<a id="py-117"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/cash_rules.py" sha="209cdbebeba28c20636ccf191deb1597dd572e1b" -->
 
@@ -893,6 +911,8 @@ class CashRuleSet:
 ## src/holdem_ai/expand/environment/event_ledger.py
 
 Original SHA `a46f71f4ab874a700fdd5b6e31c5b755f7441e23` (1623 bytes).
+
+<a id="py-118"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/event_ledger.py" sha="a46f71f4ab874a700fdd5b6e31c5b755f7441e23" -->
 
@@ -944,6 +964,8 @@ class EventLedger:
 
 Original SHA `08b59672f57dae15c709595b2d82731da4680043` (943 bytes).
 
+<a id="py-119"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/multiway_adapter.py" sha="08b59672f57dae15c709595b2d82731da4680043" -->
 
 ````````python
@@ -981,6 +1003,8 @@ def blind_seats(button: int, active: tuple[int, ...]) -> tuple[int, int]:
 ## src/holdem_ai/expand/environment/table_manager.py
 
 Original SHA `934e587e718047ef8c8e361cd7609a640c8dfd06` (22864 bytes).
+
+<a id="py-120"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/table_manager.py" sha="934e587e718047ef8c8e361cd7609a640c8dfd06" -->
 

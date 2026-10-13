@@ -6,6 +6,8 @@
 
 Original blob `b1065e420f128a699e9e60bc04b90dd7b9dfeafa` (9865 bytes).
 
+<a id="py-157"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/search/solver.py" sha="b1065e420f128a699e9e60bc04b90dd7b9dfeafa" -->
 
 ````````python
@@ -233,6 +235,8 @@ class SubgameSolver:
 
 Original blob `b3b852ff22834154779e3ce70017712dadbdd4e3` (782 bytes).
 
+<a id="py-158"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/__init__.py" sha="b3b852ff22834154779e3ce70017712dadbdd4e3" -->
 
 ````````python
@@ -256,6 +260,8 @@ __all__.extend(['TrainConfig','build_model','train','evaluate_checkpoint','load_
 ## src/holdem_ai/expand/rl/collector.py
 
 Original blob `ad20c8894db0db2c17aac828c511ef3003681117` (10450 bytes).
+
+<a id="py-159"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/collector.py" sha="ad20c8894db0db2c17aac828c511ef3003681117" -->
 
@@ -482,6 +488,8 @@ def _sample_action(probs: list[float],rng: random.Random) -> int:
 
 Original blob `44b46e2be61aa7c2c62760b9e2a4d36b0c749a85` (2440 bytes).
 
+<a id="py-160"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/model.py" sha="44b46e2be61aa7c2c62760b9e2a4d36b0c749a85" -->
 
 ````````python
@@ -540,6 +548,8 @@ class ActorCritic(nn.Module):
 ## src/holdem_ai/expand/rl/population.py
 
 Original blob `d6dac794a39a593a780ed66c3638d1135ab32f5c` (2015 bytes).
+
+<a id="py-161"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/population.py" sha="d6dac794a39a593a780ed66c3638d1135ab32f5c" -->
 
@@ -600,6 +610,8 @@ def choose_role(rng: random.Random, mix: OpponentMix, *, has_snapshots: bool) ->
 ## src/holdem_ai/expand/rl/ppo.py
 
 Original blob `c7db716af6555a88edb2017fd7722de33a8e369c` (3780 bytes).
+
+<a id="py-162"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/ppo.py" sha="c7db716af6555a88edb2017fd7722de33a8e369c" -->
 
@@ -692,6 +704,8 @@ def optimize_ppo(model: ActorCritic, optimizer: torch.optim.Optimizer,
 
 Original blob `f7b7a098691bcd9e8afe4103160187784efeb8e9` (2513 bytes).
 
+<a id="py-163"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/returns.py" sha="f7b7a098691bcd9e8afe4103160187784efeb8e9" -->
 
 ````````python
@@ -766,6 +780,8 @@ def prepare_gae(transitions: Sequence[MultiAgentTransition], *, gamma: float = 1
 ## src/holdem_ai/expand/rl/trainer.py
 
 Original blob `5cf2a43277fc964448ae67b840dd450fe473f6e8` (16291 bytes).
+
+<a id="py-164"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/rl/trainer.py" sha="5cf2a43277fc964448ae67b840dd450fe473f6e8" -->
 
@@ -1122,6 +1138,8 @@ def train(root: str | Path, *, config: TrainConfig | None = None, resume: bool =
 
 Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
+<a id="py-165"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/__init__.py" sha="c45dbcdd525a3fadb2abb368e5264f09bb51e773" -->
 
 ````````python
@@ -1134,6 +1152,8 @@ Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 ## src/holdem_ai/experiments/batch_scaling.py
 
 Original blob `b96c28cb5aa54c5ffece2b871b509f489da70ad8` (17194 bytes).
+
+<a id="py-166"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/batch_scaling.py" sha="b96c28cb5aa54c5ffece2b871b509f489da70ad8" -->
 
@@ -1479,6 +1499,8 @@ def run_batch_experiment(config: BatchExperimentConfig, *,
 ## src/holdem_ai/experiments/controlled_study.py
 
 Original blob `0d35bf8ef140b3f268c0a2716b30580d3b6773c7` (21714 bytes).
+
+<a id="py-167"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/controlled_study.py" sha="0d35bf8ef140b3f268c0a2716b30580d3b6773c7" -->
 
@@ -1918,6 +1940,8 @@ def run_study(cfg: ComparisonConfig, *, emit: Callable[[dict], None] | None = No
 ## src/holdem_ai/experiments/longrun.py
 
 Original blob `50e3f7afacf2e97651df73e3ca1525e73fdbae3a` (26085 bytes).
+
+<a id="py-168"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/longrun.py" sha="50e3f7afacf2e97651df73e3ca1525e73fdbae3a" -->
 

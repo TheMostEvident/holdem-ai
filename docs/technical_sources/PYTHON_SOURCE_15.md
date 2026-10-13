@@ -6,6 +6,8 @@
 
 Original blob `dd2b4f6bbbb962d9d6cec5df09d6114ab46cc547` (25669 bytes).
 
+<a id="py-169"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/ppo_ablation.py" sha="dd2b4f6bbbb962d9d6cec5df09d6114ab46cc547" -->
 
 ````````python
@@ -538,6 +540,8 @@ def run_ablation(config: AblationConfig) -> dict:
 ## src/holdem_ai/experiments/ppo_five_hour.py
 
 Original blob `429308c67e536476a05f4d10c817e0fcbb09b5d7` (24123 bytes).
+
+<a id="py-170"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/ppo_five_hour.py" sha="429308c67e536476a05f4d10c817e0fcbb09b5d7" -->
 
@@ -1075,6 +1079,8 @@ def run_five_hour(cfg: FiveHourConfig) -> dict:
 
 Original blob `56b2d6b81f74feef8967c51d5925ae6f7e88985e` (944 bytes).
 
+<a id="py-171"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/ppo_safety.py" sha="56b2d6b81f74feef8967c51d5925ae6f7e88985e" -->
 
 ````````python
@@ -1108,6 +1114,8 @@ def safety_assessment(*, entropy: float, approx_kl: float,
 ## src/holdem_ai/experiments/ppo_stress.py
 
 Original blob `681320433c840a19bf87d0bb45fe61ab1c32d844` (30107 bytes).
+
+<a id="py-172"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/ppo_stress.py" sha="681320433c840a19bf87d0bb45fe61ab1c32d844" -->
 
@@ -1756,6 +1764,8 @@ def compare_stress_runs(root_a0: str | Path, root_a3: str | Path) -> dict:
 
 Original blob `3d70921f43f9e02cc578f1f1c5987b40d6986bbb` (15737 bytes).
 
+<a id="py-173"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/experiments/time_budget.py" sha="3d70921f43f9e02cc578f1f1c5987b40d6986bbb" -->
 
 ````````python
@@ -2092,6 +2102,8 @@ def run_experiment(config: ExperimentConfig, *,
 
 Original blob `dc375ea04dd77f2a577c11893d7edcf20339a732` (182 bytes).
 
+<a id="py-174"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/__init__.py" sha="dc375ea04dd77f2a577c11893d7edcf20339a732" -->
 
 ````````python
@@ -2108,6 +2120,8 @@ __all__ = ["HUNLGameSession", "HUNLSessionRegistry"]
 ## src/holdem_ai/game_service/action_adapter.py
 
 Original blob `366dc8f00cc55b8f2d3054b8e98df019e96cfc6c` (2708 bytes).
+
+<a id="py-175"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/action_adapter.py" sha="366dc8f00cc55b8f2d3054b8e98df019e96cfc6c" -->
 
@@ -2190,6 +2204,8 @@ def validate_human_action(observation: InformationState, action_index: int) -> i
 
 Original blob `85a324cd1d84cd5dbb4d1402095dffeccd72b0da` (787 bytes).
 
+<a id="py-176"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/bot_adapter.py" sha="85a324cd1d84cd5dbb4d1402095dffeccd72b0da" -->
 
 ````````python
@@ -2228,6 +2244,8 @@ class BotActionAdapter:
 ## src/holdem_ai/game_service/checkpoint_catalog.py
 
 Original blob `73de908a356ba415106f72b1ecd722b9749dafe6` (4986 bytes).
+
+<a id="py-177"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/checkpoint_catalog.py" sha="73de908a356ba415106f72b1ecd722b9749dafe6" -->
 
@@ -2355,6 +2373,8 @@ class CheckpointCatalog:
 
 Original blob `00e4ad6ba74d2f2eedd1031bf8b22078a5337281` (2755 bytes).
 
+<a id="py-178"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/interactive_adapter.py" sha="00e4ad6ba74d2f2eedd1031bf8b22078a5337281" -->
 
 ````````python
@@ -2421,6 +2441,8 @@ class InteractiveHUNLAdapter(HUNL200Adapter):
 ## src/holdem_ai/game_service/session_analytics.py
 
 Original blob `fdfe71bc594e8d344af4f1731cbfb7ddfd76ed8e` (5496 bytes).
+
+<a id="py-179"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/session_analytics.py" sha="fdfe71bc594e8d344af4f1731cbfb7ddfd76ed8e" -->
 
@@ -2552,6 +2574,8 @@ class SessionAnalytics:
 ## src/holdem_ai/game_service/session_manager.py
 
 Original blob `4df2f8bc73feeed3e8c6922e5bff5caaa8278512` (11214 bytes).
+
+<a id="py-180"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/game_service/session_manager.py" sha="4df2f8bc73feeed3e8c6922e5bff5caaa8278512" -->
 

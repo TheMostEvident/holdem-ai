@@ -6,6 +6,8 @@
 
 Original SHA `4cf6a06aa529540ee8b19d34c1aebc3413ef1e57` (9382 bytes).
 
+<a id="md-030"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE10_QBOOST_PPO.md" sha="4cf6a06aa529540ee8b19d34c1aebc3413ef1e57" -->
 
 ````````markdown
@@ -206,6 +208,8 @@ Other open limitations: unoptimized per-decision inference, no exact per-action 
 
 Original SHA `301c3c879039e52d7d9bacbf318441c73f9b34f9` (11162 bytes).
 
+<a id="md-031"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE11_FIVE_HOUR_TRAINING.md" sha="301c3c879039e52d7d9bacbf318441c73f9b34f9" -->
 
 ````````markdown
@@ -397,6 +401,8 @@ git push origin main
 
 Original SHA `332852a9115e9283137c226466f0862b30115990` (3865 bytes).
 
+<a id="md-032"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE11_PROGRESS.md" sha="332852a9115e9283137c226466f0862b30115990" -->
 
 ````````markdown
@@ -463,6 +469,8 @@ The progress display refreshes each second even while an individual update/evalu
 ## docs/PHASE12_EVALUATION.md
 
 Original SHA `aff99548aa3ab2c1794ac4c793b4345c1586c3b3` (8509 bytes).
+
+<a id="md-033"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE12_EVALUATION.md" sha="aff99548aa3ab2c1794ac4c793b4345c1586c3b3" -->
 
@@ -617,6 +625,8 @@ Do not `git add .` or put raw `runs/`, training `.pt` checkpoints, or extracted 
 ## docs/PHASE13_BATCH_SCALING.md
 
 Original SHA `20147311636b06e0132923466bec69f3cae4e71e` (9451 bytes).
+
+<a id="md-034"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE13_BATCH_SCALING.md" sha="20147311636b06e0132923466bec69f3cae4e71e" -->
 
@@ -786,6 +796,8 @@ The `tqdm` display shows updates, hands/s, ETA and wall-clock budget. The detail
 ## docs/PHASE14_CONTROLLED_STUDY.md
 
 Original SHA `3a0fd210542ddb109dcb5c082b9d1e318cab7723` (9315 bytes).
+
+<a id="md-035"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE14_CONTROLLED_STUDY.md" sha="3a0fd210542ddb109dcb5c082b9d1e318cab7723" -->
 
@@ -975,6 +987,8 @@ runs/phase14_main/
 
 Original SHA `1fda4dcb7a19748df71426459b31e43da74bbccd` (4914 bytes).
 
+<a id="md-036"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_CRITIC_DIAGNOSIS.md" sha="1fda4dcb7a19748df71426459b31e43da74bbccd" -->
 
 ````````markdown
@@ -1082,6 +1096,8 @@ Output uses exclusive creation: an existing JSON report is **not overwritten**. 
 ## docs/PHASE15_EXPERIMENT_REPORT_2026-10-13.md
 
 Original SHA `d231a20f52cd109a752451524a9891a771780011` (16335 bytes).
+
+<a id="md-037"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_EXPERIMENT_REPORT_2026-10-13.md" sha="d231a20f52cd109a752451524a9891a771780011" -->
 
@@ -1487,6 +1503,8 @@ Test-Path .\runs\phase15_ppo_stability_pilot\latest.pt
 
 Original SHA `f950834d4fd8ae0f61007cd2ac77b09e00abbf6c` (11248 bytes).
 
+<a id="md-038"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_LONG_RUN_TRAINING.md" sha="f950834d4fd8ae0f61007cd2ac77b09e00abbf6c" -->
 
 ````````markdown
@@ -1670,6 +1688,8 @@ runs/phase15_ppo_main/
 
 Original SHA `2d8cefa707ca49e2007d1e524bf2280be85f6f75` (3626 bytes).
 
+<a id="md-039"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_PHASE3_SAFETY_TELEMETRY.md" sha="2d8cefa707ca49e2007d1e524bf2280be85f6f75" -->
 
 ````````markdown
@@ -1741,6 +1761,8 @@ Before claiming Policy Collapse is *resolved*, extend fixed-state sampling beyon
 ## docs/PHASE15_PREFLOP_SEQUENCE_AUDIT.md
 
 Original SHA `df3c4d6044d174788975c5a9ada10f1b1e778e2e` (3345 bytes).
+
+<a id="md-040"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_PREFLOP_SEQUENCE_AUDIT.md" sha="df3c4d6044d174788975c5a9ada10f1b1e778e2e" -->
 

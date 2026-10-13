@@ -6,6 +6,8 @@
 
 Original SHA `3db9e6111750f7de67d545433d134915527b35cf` (3204 bytes).
 
+<a id="py-121"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/table_state.py" sha="3db9e6111750f7de67d545433d134915527b35cf" -->
 
 ````````python
@@ -120,6 +122,8 @@ class Settlement:
 
 Original SHA `472d24273ddf933a7233c8757b318f2d7680ef4a` (589 bytes).
 
+<a id="py-122"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/environment/tournament_rules.py" sha="472d24273ddf933a7233c8757b318f2d7680ef4a" -->
 
 ````````python
@@ -148,6 +152,8 @@ class TournamentRuleSet:
 ## src/holdem_ai/expand/information/__init__.py
 
 Original SHA `8e514d720d57c6303812fbd1f4dee1fefc48ba8f` (1010 bytes).
+
+<a id="py-123"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/__init__.py" sha="8e514d720d57c6303812fbd1f4dee1fefc48ba8f" -->
 
@@ -183,6 +189,8 @@ def __getattr__(name: str):
 ## src/holdem_ai/expand/information/actions.py
 
 Original SHA `bb8cc8a5352cace8b9c6e736ab0bbfb428c8c1a0` (3375 bytes).
+
+<a id="py-124"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/actions.py" sha="bb8cc8a5352cace8b9c6e736ab0bbfb428c8c1a0" -->
 
@@ -264,6 +272,8 @@ def to_table_action(spec: LegalActionSpec, name: str) -> Action:
 ## src/holdem_ai/expand/information/adapter.py
 
 Original SHA `33b71451e421baaa7b5ea78ce728bf9f395d3655` (3795 bytes).
+
+<a id="py-125"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/adapter.py" sha="33b71451e421baaa7b5ea78ce728bf9f395d3655" -->
 
@@ -363,6 +373,8 @@ class Phase2TableAdapter:
 ## src/holdem_ai/expand/information/builder.py
 
 Original SHA `3793e2d33596785131062b870bbf7afa97552e9b` (6109 bytes).
+
+<a id="py-126"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/builder.py" sha="3793e2d33596785131062b870bbf7afa97552e9b" -->
 
@@ -487,6 +499,8 @@ def make_information_state(
 
 Original SHA `21c581fd18c80dcbc16b9f1ff419306fb975d78a` (3985 bytes).
 
+<a id="py-127"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/encoder.py" sha="21c581fd18c80dcbc16b9f1ff419306fb975d78a" -->
 
 ````````python
@@ -591,6 +605,8 @@ def encode_observation(state: InformationState) -> EncodedObservation:
 
 Original SHA `59448a2d53329f90c9e6d812999d4b884c324890` (4370 bytes).
 
+<a id="py-128"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/policy_v2.py" sha="59448a2d53329f90c9e6d812999d4b884c324890" -->
 
 ````````python
@@ -678,6 +694,8 @@ class PolicyV2(nn.Module):
 ## src/holdem_ai/expand/information/schema.py
 
 Original SHA `53cb3a912725871e88f44d063066828a139ffa71` (2902 bytes).
+
+<a id="py-129"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/information/schema.py" sha="53cb3a912725871e88f44d063066828a139ffa71" -->
 
@@ -782,6 +800,8 @@ class TrainingOnlyCriticState:
 
 Original SHA `db3bc99ab924faafdf224b3e3b1d48428f304869` (703 bytes).
 
+<a id="py-130"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/__init__.py" sha="db3bc99ab924faafdf224b3e3b1d48428f304869" -->
 
 ````````python
@@ -801,6 +821,8 @@ __all__=['IntegratedPokerAgent','RoutedDecision','RoutingConfig','from_e03_check
 ## src/holdem_ai/expand/integration/agent.py
 
 Original SHA `d9c6df49b690b12df82eba45d188a6105134ef71` (7108 bytes).
+
+<a id="py-131"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/agent.py" sha="d9c6df49b690b12df82eba45d188a6105134ef71" -->
 
@@ -965,6 +987,8 @@ def from_e03_checkpoint(path: str, *, device: str='cpu') -> PolicySource:
 ## src/holdem_ai/expand/integration/benchmark.py
 
 Original SHA `1215d12d60ff1069f21f9c33a46a01391e6f800d` (11947 bytes).
+
+<a id="py-132"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/benchmark.py" sha="1215d12d60ff1069f21f9c33a46a01391e6f800d" -->
 

@@ -1,0 +1,3321 @@
+{
+  "schema_version": 1,
+  "source_commit": "6a8ae368ddc02f814140d3770bc5993eaf9a15e4",
+  "main_base_commit": "e796afefaf5f44dfa8fa8fe8bf8ad0fae436547e",
+  "coverage": {
+    "python_files": 327,
+    "markdown_files": 76,
+    "python_bytes": 1400837,
+    "markdown_bytes": 1049564,
+    "python_physical_volumes": 29,
+    "markdown_physical_volumes": 8
+  },
+  "separator_rule": "One LF between exact source bytes and closing fence; excluded from Git blob bytes.",
+  "verification": "Each original Git blob SHA-1 and byte length matched; each original path occurs exactly once.",
+  "retained_canonical_markdown": [
+    "README.md",
+    "docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md",
+    "docs/TECH_REPORT.md"
+  ],
+  "removed_original_markdown": [
+    "README_TOURNAMENT_ENV_1_3_1.md",
+    "README_TOURNAMENT_ENV_PHASE_1_2_1.md",
+    "README_TOURNAMENT_ENV_PHASE_1_3.md",
+    "README_TOURNAMENT_ENV_PHASE_1_4.md",
+    "README_TOURNAMENT_ENV_PHASE_1_5.md",
+    "README_TOURNAMENT_ENV_PHASE_1_6.md",
+    "README_TOURNAMENT_ENV_PHASE_1_6_1.md",
+    "TOURNAMENT_ENV_PHASE_1_1_README.md",
+    "TOURNAMENT_ENV_PHASE_1_2_README.md",
+    "TOURNAMENT_ENV_PHASE_1_7_README.md",
+    "docs/AGENT_DEVELOPMENT_TECHNICAL_REPORT_2026-10-13.md",
+    "docs/EXPAND_MASTER_DESIGN_6MAX_v1_0.md",
+    "docs/EXPAND_PHASE01_DESIGN.md",
+    "docs/EXPAND_PHASE01_TO_07_INTEGRATED_TECHNICAL_REPORT.md",
+    "docs/EXPAND_PHASE02_INFORMATION_AND_ENCODING.md",
+    "docs/EXPAND_PHASE03_MULTIAGENT_PPO.md",
+    "docs/EXPAND_PHASE04_MCCFR_BLUEPRINT.md",
+    "docs/EXPAND_PHASE05_SUBGAME_SEARCH.md",
+    "docs/EXPAND_PHASE06_OPPONENT_MODELING.md",
+    "docs/EXPAND_PHASE07_INTEGRATION_TOURNAMENT_BENCHMARK.md",
+    "docs/GUI_1_0_HUNL_CONTRACT.md",
+    "docs/GUI_1_1_FASTAPI.md",
+    "docs/GUI_1_2_REACT_TABLE.md",
+    "docs/GUI_1_3_INTERACTIVE_BETTING.md",
+    "docs/GUI_1_4_TRAINED_AGENT.md",
+    "docs/GUI_1_5_PERFORMANCE_DASHBOARD.md",
+    "docs/GUI_1_6_CONTINUOUS_STACK.md",
+    "docs/GUI_TRAINED_CHECKPOINT_SETUP.md",
+    "docs/PHASE10_QBOOST_PPO.md",
+    "docs/PHASE11_FIVE_HOUR_TRAINING.md",
+    "docs/PHASE11_PROGRESS.md",
+    "docs/PHASE12_EVALUATION.md",
+    "docs/PHASE13_BATCH_SCALING.md",
+    "docs/PHASE14_CONTROLLED_STUDY.md",
+    "docs/PHASE15_CRITIC_DIAGNOSIS.md",
+    "docs/PHASE15_EXPERIMENT_REPORT_2026-10-13.md",
+    "docs/PHASE15_LONG_RUN_TRAINING.md",
+    "docs/PHASE15_PHASE3_SAFETY_TELEMETRY.md",
+    "docs/PHASE15_PREFLOP_SEQUENCE_AUDIT.md",
+    "docs/PHASE15_TERMINAL_REWARD_AUDIT.md",
+    "docs/PHASE15_THREE_POLICY_COMPARISON.md",
+    "docs/PHASE16_LONG_STRESS_TEST.md",
+    "docs/PHASE16_OPPONENT_POOL_AND_STRATEGY.md",
+    "docs/PHASE16_PPO_ABLATION.md",
+    "docs/PHASE17_CONTINUOUS_STACK_EVALUATION.md",
+    "docs/PHASE17_FIVE_HOUR_GPU_RETRAIN.md",
+    "docs/PHASE5_AGENT_INTERFACE.md",
+    "docs/PHASE6_HUNL200_INTEGRATION.md",
+    "docs/PHASE7_VRPO_LITE_ENCODING.md",
+    "docs/PHASE8_VRPO_LITE_NETWORKS.md",
+    "docs/PHASE9_PPO_BASELINE.md",
+    "docs/PHASE_VERIFIED_PYTHON_CODE_REFERENCE.md",
+    "docs/PROJECT_PROGRESS_GUI16_PHASE17.md",
+    "docs/PROJECT_REPORT.md",
+    "docs/ROADMAP_PHASE12_TO_16.md",
+    "docs/TOURNAMENT_ENV_PHASE1_FULL_TECHNICAL_REPORT.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_1.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_1_KO.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_2.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_3.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_3_1_AGGRESSION_FIX.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_4.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_5.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_6.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_6_1_SHOWDOWN.md",
+    "docs/TOURNAMENT_ENV_PHASE_1_7_FINAL.md",
+    "docs/architecture.md",
+    "docs/archive/INTEGRATED_SOURCE_SNAPSHOT_01.md",
+    "docs/phase1_rlcard.md",
+    "docs/phase2_1_correction.md",
+    "docs/phase2_rule_validation.md",
+    "docs/phase3_multiplayer.md",
+    "docs/phase4_tournament.md"
+  ],
+  "entries": [
+    {
+      "path": "backend/__init__.py",
+      "sha": "236c61b492556b4a4db7dae15fb72737c9140c75",
+      "size": 67,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-001"
+    },
+    {
+      "path": "backend/game_router.py",
+      "sha": "ee2818d119f15e725da15485244ad043fba054fc",
+      "size": 6122,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-002"
+    },
+    {
+      "path": "backend/main.py",
+      "sha": "23cb998aa1217f728023fc1707e1790fba919685",
+      "size": 2189,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-003"
+    },
+    {
+      "path": "backend/schemas.py",
+      "sha": "6e4aaf2faba752d85bb1e215bc6383f9603ce436",
+      "size": 4556,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-004"
+    },
+    {
+      "path": "backend/tournament_router.py",
+      "sha": "19464b0639069d89cd72eebde3010eaaf98fa11e",
+      "size": 6543,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-005"
+    },
+    {
+      "path": "backend/tournament_schemas.py",
+      "sha": "5c5c424cac8d1a25aba117ac5f7a310e15cc4171",
+      "size": 4253,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-006"
+    },
+    {
+      "path": "main.py",
+      "sha": "2c3e05d604c3ad2adc8dd869a7a58a11a0f2e555",
+      "size": 1480,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-007"
+    },
+    {
+      "path": "scripts/audit_corrected.py",
+      "sha": "5632af29cb4567963a69d0b3b54e50b5e3468c2f",
+      "size": 1903,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-008"
+    },
+    {
+      "path": "scripts/audit_multiplayer.py",
+      "sha": "e8a309997f28705d4f9b3545de1512ee8134a214",
+      "size": 1888,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-009"
+    },
+    {
+      "path": "scripts/audit_rlcard.py",
+      "sha": "86c772c7a70206d9830cf41b41ece905c5f0bf6a",
+      "size": 1978,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-010"
+    },
+    {
+      "path": "scripts/audit_tournament.py",
+      "sha": "7f36522cc6b27bd9bd10b91647a753e29dbb5262",
+      "size": 2399,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-011"
+    },
+    {
+      "path": "scripts/expand_phase01_smoke.py",
+      "sha": "baa7aeeca906dd9e3799e46dbdf4819260093f8f",
+      "size": 5137,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_01.md",
+      "anchor": "py-012"
+    },
+    {
+      "path": "scripts/expand_phase02_smoke.py",
+      "sha": "f688e356adf933519d8000191757cae61adfff99",
+      "size": 4124,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-013"
+    },
+    {
+      "path": "scripts/expand_phase03_evaluate.py",
+      "sha": "faec9d885323bfd171b50a01f15be468999272cd",
+      "size": 1497,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-014"
+    },
+    {
+      "path": "scripts/expand_phase03_train.py",
+      "sha": "431bc859a0904230b4e443b291b811b9305285eb",
+      "size": 4063,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-015"
+    },
+    {
+      "path": "scripts/expand_phase04_evaluate.py",
+      "sha": "5b5354690b37121c1a4d76c5879aeb1f836e84b4",
+      "size": 1280,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-016"
+    },
+    {
+      "path": "scripts/expand_phase04_mccfr.py",
+      "sha": "a95f2d2b51fc74fab52472a385f11b145b7a8054",
+      "size": 5062,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-017"
+    },
+    {
+      "path": "scripts/expand_phase05_evaluate.py",
+      "sha": "e0e25f10bf9f204cf0b2211ba8395147d9410eef",
+      "size": 4121,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-018"
+    },
+    {
+      "path": "scripts/expand_phase05_search.py",
+      "sha": "3b8b3f9924ac01c42fbefc595fe8609567e331c5",
+      "size": 3918,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-019"
+    },
+    {
+      "path": "scripts/expand_phase06_benchmark.py",
+      "sha": "c8c542d15b20b4c022ca10ddebd6f6ad10f12764",
+      "size": 6571,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-020"
+    },
+    {
+      "path": "scripts/expand_phase07_benchmark.py",
+      "sha": "6dd304f84ed92463211fa38ef53dceda6c0bdd2c",
+      "size": 5102,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-021"
+    },
+    {
+      "path": "scripts/gui10_smoke.py",
+      "sha": "05cd34d3902fafa95336ffe078b70e4e74301a0c",
+      "size": 1820,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-022"
+    },
+    {
+      "path": "scripts/gui11_smoke.py",
+      "sha": "d85e3a52faf3baf37588f7b3a6f69fa858bfcb41",
+      "size": 2129,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-023"
+    },
+    {
+      "path": "scripts/gui14_smoke.py",
+      "sha": "16be506b341abd2ab0d86aab8adede228057b5a7",
+      "size": 2785,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_02.md",
+      "anchor": "py-024"
+    },
+    {
+      "path": "scripts/gui15_smoke.py",
+      "sha": "bf28285a1a270aaec53825368f0fa3c9a67cf08b",
+      "size": 3671,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-025"
+    },
+    {
+      "path": "scripts/gui16_smoke.py",
+      "sha": "698b824bc59b0c9ca9eeca2f3dfbe1d249204b25",
+      "size": 2543,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-026"
+    },
+    {
+      "path": "scripts/phase10_train.py",
+      "sha": "1bff9b10282a0dc301cb73aff8f953e111344b45",
+      "size": 8433,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-027"
+    },
+    {
+      "path": "scripts/phase11_benchmark.py",
+      "sha": "89766f73f3df1043889b728cec6994418c975ce0",
+      "size": 2925,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-028"
+    },
+    {
+      "path": "scripts/phase11_compare.py",
+      "sha": "bc400682ee0a9f99af2b185fbeee9034646a0942",
+      "size": 4163,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-029"
+    },
+    {
+      "path": "scripts/phase11_train.py",
+      "sha": "296b330148c5765b110980cb3a471d7b003e25ee",
+      "size": 4449,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-030"
+    },
+    {
+      "path": "scripts/phase12_evaluate.py",
+      "sha": "451bc3f8abed3c239464251601ae1f2b8cc0eed2",
+      "size": 5139,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-031"
+    },
+    {
+      "path": "scripts/phase13_benchmark.py",
+      "sha": "67fcd569e1e15cce30b345139a5bce6f6accbac8",
+      "size": 4229,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-032"
+    },
+    {
+      "path": "scripts/phase13_compare.py",
+      "sha": "0efa2bb403ecc22f627c1f946e323c2b5f719758",
+      "size": 4027,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-033"
+    },
+    {
+      "path": "scripts/phase13_train.py",
+      "sha": "fde50a27a8585828ec663cefa82080e24a4b6468",
+      "size": 4257,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-034"
+    },
+    {
+      "path": "scripts/phase14_study.py",
+      "sha": "174f15d82750584d8dd65e1a6cb1a92f8346c364",
+      "size": 3502,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-035"
+    },
+    {
+      "path": "scripts/phase15_critic_audit.py",
+      "sha": "58c19a5675658d879e3c0adae0b1b543befaa334",
+      "size": 3142,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_03.md",
+      "anchor": "py-036"
+    },
+    {
+      "path": "scripts/phase15_finalize.py",
+      "sha": "dedc8c74a631e6a541379ff17a507f03a44f137d",
+      "size": 639,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-037"
+    },
+    {
+      "path": "scripts/phase15_initial_policy_comparison.py",
+      "sha": "7b87e08b4b9c76c054e9de78b125b8e580999019",
+      "size": 3227,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-038"
+    },
+    {
+      "path": "scripts/phase15_policy_audit.py",
+      "sha": "9785d075192f770364bc8f1c62b8c151fcda3b17",
+      "size": 2491,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-039"
+    },
+    {
+      "path": "scripts/phase15_preflop_sequence_audit.py",
+      "sha": "d54717d50e012b8261aaf720859c5245ee701bc1",
+      "size": 2636,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-040"
+    },
+    {
+      "path": "scripts/phase15_terminal_reward_audit.py",
+      "sha": "e3214f569214051bd30b8bb1d4308814ea30dd82",
+      "size": 2694,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-041"
+    },
+    {
+      "path": "scripts/phase15_train.py",
+      "sha": "e2e58d6600bb85d48c113bd212eb5dbe6ad1e6f9",
+      "size": 2089,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-042"
+    },
+    {
+      "path": "scripts/phase16_evaluate.py",
+      "sha": "168ba0b04bb392390c8bf1534730a5783b6d4d5b",
+      "size": 6132,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-043"
+    },
+    {
+      "path": "scripts/phase16_ppo_ablation.py",
+      "sha": "e8974af0585e765651af579628d92748db6648b1",
+      "size": 3897,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-044"
+    },
+    {
+      "path": "scripts/phase16_ppo_stress.py",
+      "sha": "e7deff678fe99096022703357df2e1abbe66ba27",
+      "size": 6453,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-045"
+    },
+    {
+      "path": "scripts/phase17_evaluate.py",
+      "sha": "ddc4788e1d16225c0a14dc9b7166186ffb8d0115",
+      "size": 10446,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-046"
+    },
+    {
+      "path": "scripts/phase17_gpu_retrain.py",
+      "sha": "5dbfef8eaea66e0d9fa44dc592cb6378f41ef868",
+      "size": 3573,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-047"
+    },
+    {
+      "path": "scripts/phase5_rlcard_smoke.py",
+      "sha": "dbcd804c51636f80d9836e1407f7bd654216a619",
+      "size": 880,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_04.md",
+      "anchor": "py-048"
+    },
+    {
+      "path": "scripts/phase6_benchmark.py",
+      "sha": "4a633fdc219c78a1ad10ba667c4d81d06e499a0a",
+      "size": 3422,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-049"
+    },
+    {
+      "path": "scripts/phase6_hardware_probe.py",
+      "sha": "d8ba8655d715d9799e1e22d390ecff9fb2ae95d7",
+      "size": 1664,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-050"
+    },
+    {
+      "path": "scripts/phase7_smoke.py",
+      "sha": "ca4efa3f92b1d8e8994b9007561576728f56198a",
+      "size": 4254,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-051"
+    },
+    {
+      "path": "scripts/phase8_smoke.py",
+      "sha": "10814a36ab96ef0295124bdd7a2dd4bad46b6bf0",
+      "size": 6235,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-052"
+    },
+    {
+      "path": "scripts/phase9_train.py",
+      "sha": "70ae3ada85f7700f92ca680093c0ac1f46c08daa",
+      "size": 4240,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-053"
+    },
+    {
+      "path": "scripts/run_tournament.py",
+      "sha": "a62f710111e25e43ab7f3f0a94587bf1ca132222",
+      "size": 1534,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-054"
+    },
+    {
+      "path": "scripts/tournament_env131_diagnose.py",
+      "sha": "91f1f830fd0974bb595626d8ce9e3f8779ab2d0f",
+      "size": 1557,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-055"
+    },
+    {
+      "path": "scripts/tournament_env13_smoke.py",
+      "sha": "0533fa41e8d9080b170dd65184e03604875b75fa",
+      "size": 1499,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-056"
+    },
+    {
+      "path": "scripts/tournament_env14_smoke.py",
+      "sha": "8a98b6230d1144ebdbe108b80fba5fc71c76b87f",
+      "size": 1760,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-057"
+    },
+    {
+      "path": "scripts/tournament_env17_release_audit.py",
+      "sha": "c96316da5e205ceea6a6f6685d6d6d4a49ee8b2f",
+      "size": 5498,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-058"
+    },
+    {
+      "path": "scripts/tournament_env1_smoke.py",
+      "sha": "2db589c928eb440d5ccf8bc0a046f4b4895ba027",
+      "size": 1891,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-059"
+    },
+    {
+      "path": "src/holdem_ai/__init__.py",
+      "sha": "203de1be16785e861c512ce99819dc0396384229",
+      "size": 65,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_05.md",
+      "anchor": "py-060"
+    },
+    {
+      "path": "src/holdem_ai/agents/__init__.py",
+      "sha": "5cf12807f331a109f29539a9ae0d1b1e57a687ee",
+      "size": 40,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-061"
+    },
+    {
+      "path": "src/holdem_ai/agents/base_agent.py",
+      "sha": "a07fe762ef949ec625f9bec934e5da236c9f13b7",
+      "size": 460,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-062"
+    },
+    {
+      "path": "src/holdem_ai/agents/cfr_agent.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-063"
+    },
+    {
+      "path": "src/holdem_ai/agents/diagnostic_opponents.py",
+      "sha": "ac3e65a257942b2303a34feffb75e497ac85edf8",
+      "size": 2418,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-064"
+    },
+    {
+      "path": "src/holdem_ai/agents/neural_policy.py",
+      "sha": "e969f8ed3f76ff73265cfcee9de8dbfd31714806",
+      "size": 1680,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-065"
+    },
+    {
+      "path": "src/holdem_ai/agents/policies.py",
+      "sha": "862a4fd5cf52f9d8aaab456e683a97aefa7538f8",
+      "size": 3504,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-066"
+    },
+    {
+      "path": "src/holdem_ai/agents/random_agent.py",
+      "sha": "e2f00722a39a86e9a4b66e9edb576d8a9675a551",
+      "size": 518,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-067"
+    },
+    {
+      "path": "src/holdem_ai/agents/rl_agent.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-068"
+    },
+    {
+      "path": "src/holdem_ai/core/__init__.py",
+      "sha": "c45dbcdd525a3fadb2abb368e5264f09bb51e773",
+      "size": 39,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-069"
+    },
+    {
+      "path": "src/holdem_ai/core/schema.py",
+      "sha": "a0f99927c6d91b36893b5e72451c0c93a88f01fa",
+      "size": 3547,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-070"
+    },
+    {
+      "path": "src/holdem_ai/encoding/__init__.py",
+      "sha": "c45dbcdd525a3fadb2abb368e5264f09bb51e773",
+      "size": 39,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-071"
+    },
+    {
+      "path": "src/holdem_ai/encoding/actions.py",
+      "sha": "772da4ab52aba2dab7b8105cb2dcf45670ad6637",
+      "size": 1632,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_06.md",
+      "anchor": "py-072"
+    },
+    {
+      "path": "src/holdem_ai/encoding/observation.py",
+      "sha": "1f9bd6f584feadde7710ce8e4c2f767daba960b0",
+      "size": 8671,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-073"
+    },
+    {
+      "path": "src/holdem_ai/encoding/tensors.py",
+      "sha": "c49183bfc82b32709ef4a333150f0339dbab4c04",
+      "size": 2352,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-074"
+    },
+    {
+      "path": "src/holdem_ai/encoding/vocabulary.py",
+      "sha": "24ebedf3aaa273b53eff63fc70f110748e0d9ac9",
+      "size": 1074,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-075"
+    },
+    {
+      "path": "src/holdem_ai/environment/__init__.py",
+      "sha": "d3cec59006cfffd5a6fdf42f3080c9102bc7788c",
+      "size": 46,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-076"
+    },
+    {
+      "path": "src/holdem_ai/environment/actions.py",
+      "sha": "a9081ef6a3c46c7c186f09801a004be4a880e827",
+      "size": 3395,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-077"
+    },
+    {
+      "path": "src/holdem_ai/environment/bet_abstraction.py",
+      "sha": "732e91e5c725553f6c71ba42d593df6e16e48273",
+      "size": 5821,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-078"
+    },
+    {
+      "path": "src/holdem_ai/environment/blind_manager.py",
+      "sha": "1cfc0bffb3a2c9411296d5a85d32930ecc8ff586",
+      "size": 2482,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-079"
+    },
+    {
+      "path": "src/holdem_ai/environment/corrected_game.py",
+      "sha": "a3dcc0506cafc433f4d4b97e0e039213f2403fdb",
+      "size": 5690,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-080"
+    },
+    {
+      "path": "src/holdem_ai/environment/corrected_round.py",
+      "sha": "cfa15eaf85fdc2f240a7df349e804b21188538ed",
+      "size": 5593,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-081"
+    },
+    {
+      "path": "src/holdem_ai/environment/game_state.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-082"
+    },
+    {
+      "path": "src/holdem_ai/environment/hand_engine.py",
+      "sha": "c03e1ac3f67a9782f7c805a44c08e412faaa544f",
+      "size": 4869,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-083"
+    },
+    {
+      "path": "src/holdem_ai/environment/hand_evaluator.py",
+      "sha": "10c593213a90c118dab2e6a8666cf5431843be40",
+      "size": 3274,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_07.md",
+      "anchor": "py-084"
+    },
+    {
+      "path": "src/holdem_ai/environment/hunl200_adapter.py",
+      "sha": "e786c0a6a60f56db7fa605512c45b5bdb833952c",
+      "size": 8695,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-085"
+    },
+    {
+      "path": "src/holdem_ai/environment/multi_player_engine.py",
+      "sha": "70253ad3fea77a03f11b7f200905c91ea5bb9931",
+      "size": 17555,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-086"
+    },
+    {
+      "path": "src/holdem_ai/environment/multi_player_seats.py",
+      "sha": "867ef2000e2b1cc41d00fcefe048cc3cf40ad82e",
+      "size": 2113,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-087"
+    },
+    {
+      "path": "src/holdem_ai/environment/observation.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-088"
+    },
+    {
+      "path": "src/holdem_ai/environment/player_manager.py",
+      "sha": "50d9a973ae3bd97958f4f04c745ec4cfd6125965",
+      "size": 2666,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-089"
+    },
+    {
+      "path": "src/holdem_ai/environment/pot_manager.py",
+      "sha": "06e907b563bedb422d7603d4d24a8d77513a3eaa",
+      "size": 3297,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-090"
+    },
+    {
+      "path": "src/holdem_ai/environment/rewards.py",
+      "sha": "619a7aa20e520d22366c7230b561d02571123d8a",
+      "size": 1789,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-091"
+    },
+    {
+      "path": "src/holdem_ai/environment/rlcard_adapter.py",
+      "sha": "cbec3206783ce0cf4e68b3da8decc00f6a6a337a",
+      "size": 7021,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-092"
+    },
+    {
+      "path": "src/holdem_ai/environment/rules_audit.py",
+      "sha": "e500dfab80e69f6899225e4b9914507987aabd36",
+      "size": 1782,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-093"
+    },
+    {
+      "path": "src/holdem_ai/environment/seat_manager.py",
+      "sha": "5948268e0ddfbaa07f35f1c6aa1732321cd97ef6",
+      "size": 1643,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-094"
+    },
+    {
+      "path": "src/holdem_ai/environment/tournament_env.py",
+      "sha": "7c0c70a541c65da07a04c999793937fba1fe74ad",
+      "size": 10191,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-095"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/__init__.py",
+      "sha": "429b0243634014c4f23357990ca6962a3d7cb2df",
+      "size": 38,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_08.md",
+      "anchor": "py-096"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/action_diagnostics.py",
+      "sha": "33af7d36ca10b9e7e4a88de17ec9001bd24b703f",
+      "size": 4003,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-097"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/balanced.py",
+      "sha": "09e9e3b70f5f3d74e143f0a7156ef51480a61ca3",
+      "size": 3092,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-098"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/benchmark.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-099"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/checkpoint_loader.py",
+      "sha": "19053de0286dacb391d1e42eff1d1c5234f20c37",
+      "size": 950,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-100"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/continuous_stack.py",
+      "sha": "cfa61781c80c9acbf0694acd0e716166fd2e0bf7",
+      "size": 14714,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-101"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/critic_diagnostics.py",
+      "sha": "1edc6be08bc4d8849ff149c363c0c075df8d330d",
+      "size": 11696,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-102"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/fixed_state_policy_audit.py",
+      "sha": "78429cbfde96d5995f7e3d71f369dde1e03069ed",
+      "size": 6773,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-103"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/initial_policy_comparison.py",
+      "sha": "00479ac04ed08062e09bdb3f2bf3d58e902f2cd9",
+      "size": 9620,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-104"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/opponent_pool.py",
+      "sha": "78369a6dfad4b548a397dcf6ec9e6e6e8a890ec5",
+      "size": 6852,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-105"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/ppo_metric_audit.py",
+      "sha": "52428f68b0ad1d10917836daca2af57032c8ac9c",
+      "size": 1906,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-106"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/preflop_sequence_audit.py",
+      "sha": "ff7685384d1d7d88afdb4237011316e474fe8274",
+      "size": 11220,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-107"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/reward_diagnostics.py",
+      "sha": "8a2f27abc14d6e25d462385efae15cb2e05c64f6",
+      "size": 1717,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_09.md",
+      "anchor": "py-108"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/seed_blocked.py",
+      "sha": "4a30e1e22ee87830e1059176db3a20c31e2a55f4",
+      "size": 10961,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-109"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/seed_statistics.py",
+      "sha": "8c650e3e3b0c366a7d91013696f2cf125f98e428",
+      "size": 1889,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-110"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/strategy_diagnostics.py",
+      "sha": "d098e73ff576b48388927920fdbb1829df0b5203",
+      "size": 5641,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-111"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/strategy_report.py",
+      "sha": "ead06dce6233b21f3c469e9f8f32a72e28a9a342",
+      "size": 4153,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-112"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/terminal_reward_audit.py",
+      "sha": "d9d2152728ebbe93f8091dc4c9c27c7058185d50",
+      "size": 12130,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-113"
+    },
+    {
+      "path": "src/holdem_ai/evaluation/tournament_eval.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-114"
+    },
+    {
+      "path": "src/holdem_ai/expand/__init__.py",
+      "sha": "ef54dfeb01d3748ef313eed9e4f2a4222ab73c5c",
+      "size": 77,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-115"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/__init__.py",
+      "sha": "ef5a2d4a73f8bfe28fbc50e2ce9d10fb74419cda",
+      "size": 561,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-116"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/cash_rules.py",
+      "sha": "209cdbebeba28c20636ccf191deb1597dd572e1b",
+      "size": 1073,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-117"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/event_ledger.py",
+      "sha": "a46f71f4ab874a700fdd5b6e31c5b755f7441e23",
+      "size": 1623,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-118"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/multiway_adapter.py",
+      "sha": "08b59672f57dae15c709595b2d82731da4680043",
+      "size": 943,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-119"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/table_manager.py",
+      "sha": "934e587e718047ef8c8e361cd7609a640c8dfd06",
+      "size": 22864,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_10.md",
+      "anchor": "py-120"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/table_state.py",
+      "sha": "3db9e6111750f7de67d545433d134915527b35cf",
+      "size": 3204,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-121"
+    },
+    {
+      "path": "src/holdem_ai/expand/environment/tournament_rules.py",
+      "sha": "472d24273ddf933a7233c8757b318f2d7680ef4a",
+      "size": 589,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-122"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/__init__.py",
+      "sha": "8e514d720d57c6303812fbd1f4dee1fefc48ba8f",
+      "size": 1010,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-123"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/actions.py",
+      "sha": "bb8cc8a5352cace8b9c6e736ab0bbfb428c8c1a0",
+      "size": 3375,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-124"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/adapter.py",
+      "sha": "33b71451e421baaa7b5ea78ce728bf9f395d3655",
+      "size": 3795,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-125"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/builder.py",
+      "sha": "3793e2d33596785131062b870bbf7afa97552e9b",
+      "size": 6109,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-126"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/encoder.py",
+      "sha": "21c581fd18c80dcbc16b9f1ff419306fb975d78a",
+      "size": 3985,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-127"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/policy_v2.py",
+      "sha": "59448a2d53329f90c9e6d812999d4b884c324890",
+      "size": 4370,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-128"
+    },
+    {
+      "path": "src/holdem_ai/expand/information/schema.py",
+      "sha": "53cb3a912725871e88f44d063066828a139ffa71",
+      "size": 2902,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-129"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/__init__.py",
+      "sha": "db3bc99ab924faafdf224b3e3b1d48428f304869",
+      "size": 703,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-130"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/agent.py",
+      "sha": "d9c6df49b690b12df82eba45d188a6105134ef71",
+      "size": 7108,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-131"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/benchmark.py",
+      "sha": "1215d12d60ff1069f21f9c33a46a01391e6f800d",
+      "size": 11947,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_11.md",
+      "anchor": "py-132"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/manifest.py",
+      "sha": "4350626ed7f40434e89fb59101b34a9afd004dbe",
+      "size": 2055,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-133"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/source_bridges.py",
+      "sha": "889f28dd20f20843e255fbdf84624eb4d76a2819",
+      "size": 2477,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-134"
+    },
+    {
+      "path": "src/holdem_ai/expand/integration/tournament.py",
+      "sha": "40ba6c58a98e71246bb4009056cf34549e877959",
+      "size": 12012,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-135"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/__init__.py",
+      "sha": "0781f89737e471d844d38978b8b5c066e8266799",
+      "size": 948,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-136"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/adaptive.py",
+      "sha": "3051fef7434e35b8e11b9aa5aaa7e8b38733a661",
+      "size": 5634,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-137"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/bridge.py",
+      "sha": "4b2526201ee399b4013557420e8e797fee2c1742",
+      "size": 4284,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-138"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/model.py",
+      "sha": "058f1f471dc675c56cd74aee29784015ca6dab2c",
+      "size": 9149,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-139"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/persistence.py",
+      "sha": "f57069dbc8a2abdb18729f26203ddf18f6a5a6e8",
+      "size": 5976,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-140"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/router.py",
+      "sha": "712aebfe46d84e8854a56ddc7d20aa188339face",
+      "size": 2247,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-141"
+    },
+    {
+      "path": "src/holdem_ai/expand/opponent/schema.py",
+      "sha": "670e6e55f25527d02b601548caaace7d49b66a76",
+      "size": 4004,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-142"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/__init__.py",
+      "sha": "5edd06d348b06035af6eaccb95c812469f2491df",
+      "size": 73,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-143"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/abstraction/__init__.py",
+      "sha": "eff43e43b9ff875c6ff887d87cd530b56b28add7",
+      "size": 111,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_12.md",
+      "anchor": "py-144"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/abstraction/cards.py",
+      "sha": "586220dbb5a22e32dd8bbe88cfed78841621f513",
+      "size": 2718,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-145"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/__init__.py",
+      "sha": "88683de2746b43859b6c3aae7ce0ec88bc8d8e60",
+      "size": 380,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-146"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/checkpoint.py",
+      "sha": "5d93c88573c56f5e3be21194713b9dbbd8eea8f0",
+      "size": 3419,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-147"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/evaluate.py",
+      "sha": "f67ea0836c1bba88f15c0cdafdbef8a255c0cafd",
+      "size": 2020,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-148"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/holdem.py",
+      "sha": "dd4b3bfa01d662fc76bcc402745710b9a310866e",
+      "size": 4709,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-149"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/kuhn_reference.py",
+      "sha": "e74109b06dc74e54a5190cb862afa4db1599c349",
+      "size": 2042,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-150"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/mccfr.py",
+      "sha": "e2a901bbb981a355290561ce785f92cc6fd9be69",
+      "size": 10626,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-151"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/blueprint/toy_games.py",
+      "sha": "df2d91eeef7b1b60e052a7625f50bda6839be058",
+      "size": 6048,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-152"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/search/__init__.py",
+      "sha": "9c8bae37c7c80e19da874217fcc1d6f84fe89327",
+      "size": 558,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-153"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/search/belief.py",
+      "sha": "6c1bc570c2ff08d18a26cae8ed58e47d39525ceb",
+      "size": 8095,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-154"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/search/continuations.py",
+      "sha": "f7ab3eae453f8228bf67909f0a20c3a0b5a72230",
+      "size": 1934,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-155"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/search/nested.py",
+      "sha": "a26758b034671f99b132e51533c90d9333d561cd",
+      "size": 1862,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_13.md",
+      "anchor": "py-156"
+    },
+    {
+      "path": "src/holdem_ai/expand/pluribus/search/solver.py",
+      "sha": "b1065e420f128a699e9e60bc04b90dd7b9dfeafa",
+      "size": 9865,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-157"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/__init__.py",
+      "sha": "b3b852ff22834154779e3ce70017712dadbdd4e3",
+      "size": 782,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-158"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/collector.py",
+      "sha": "ad20c8894db0db2c17aac828c511ef3003681117",
+      "size": 10450,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-159"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/model.py",
+      "sha": "44b46e2be61aa7c2c62760b9e2a4d36b0c749a85",
+      "size": 2440,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-160"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/population.py",
+      "sha": "d6dac794a39a593a780ed66c3638d1135ab32f5c",
+      "size": 2015,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-161"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/ppo.py",
+      "sha": "c7db716af6555a88edb2017fd7722de33a8e369c",
+      "size": 3780,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-162"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/returns.py",
+      "sha": "f7b7a098691bcd9e8afe4103160187784efeb8e9",
+      "size": 2513,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-163"
+    },
+    {
+      "path": "src/holdem_ai/expand/rl/trainer.py",
+      "sha": "5cf2a43277fc964448ae67b840dd450fe473f6e8",
+      "size": 16291,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-164"
+    },
+    {
+      "path": "src/holdem_ai/experiments/__init__.py",
+      "sha": "c45dbcdd525a3fadb2abb368e5264f09bb51e773",
+      "size": 39,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-165"
+    },
+    {
+      "path": "src/holdem_ai/experiments/batch_scaling.py",
+      "sha": "b96c28cb5aa54c5ffece2b871b509f489da70ad8",
+      "size": 17194,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-166"
+    },
+    {
+      "path": "src/holdem_ai/experiments/controlled_study.py",
+      "sha": "0d35bf8ef140b3f268c0a2716b30580d3b6773c7",
+      "size": 21714,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-167"
+    },
+    {
+      "path": "src/holdem_ai/experiments/longrun.py",
+      "sha": "50e3f7afacf2e97651df73e3ca1525e73fdbae3a",
+      "size": 26085,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_14.md",
+      "anchor": "py-168"
+    },
+    {
+      "path": "src/holdem_ai/experiments/ppo_ablation.py",
+      "sha": "dd2b4f6bbbb962d9d6cec5df09d6114ab46cc547",
+      "size": 25669,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-169"
+    },
+    {
+      "path": "src/holdem_ai/experiments/ppo_five_hour.py",
+      "sha": "429308c67e536476a05f4d10c817e0fcbb09b5d7",
+      "size": 24123,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-170"
+    },
+    {
+      "path": "src/holdem_ai/experiments/ppo_safety.py",
+      "sha": "56b2d6b81f74feef8967c51d5925ae6f7e88985e",
+      "size": 944,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-171"
+    },
+    {
+      "path": "src/holdem_ai/experiments/ppo_stress.py",
+      "sha": "681320433c840a19bf87d0bb45fe61ab1c32d844",
+      "size": 30107,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-172"
+    },
+    {
+      "path": "src/holdem_ai/experiments/time_budget.py",
+      "sha": "3d70921f43f9e02cc578f1f1c5987b40d6986bbb",
+      "size": 15737,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-173"
+    },
+    {
+      "path": "src/holdem_ai/game_service/__init__.py",
+      "sha": "dc375ea04dd77f2a577c11893d7edcf20339a732",
+      "size": 182,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-174"
+    },
+    {
+      "path": "src/holdem_ai/game_service/action_adapter.py",
+      "sha": "366dc8f00cc55b8f2d3054b8e98df019e96cfc6c",
+      "size": 2708,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-175"
+    },
+    {
+      "path": "src/holdem_ai/game_service/bot_adapter.py",
+      "sha": "85a324cd1d84cd5dbb4d1402095dffeccd72b0da",
+      "size": 787,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-176"
+    },
+    {
+      "path": "src/holdem_ai/game_service/checkpoint_catalog.py",
+      "sha": "73de908a356ba415106f72b1ecd722b9749dafe6",
+      "size": 4986,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-177"
+    },
+    {
+      "path": "src/holdem_ai/game_service/interactive_adapter.py",
+      "sha": "00e4ad6ba74d2f2eedd1031bf8b22078a5337281",
+      "size": 2755,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-178"
+    },
+    {
+      "path": "src/holdem_ai/game_service/session_analytics.py",
+      "sha": "fdfe71bc594e8d344af4f1731cbfb7ddfd76ed8e",
+      "size": 5496,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-179"
+    },
+    {
+      "path": "src/holdem_ai/game_service/session_manager.py",
+      "sha": "4df2f8bc73feeed3e8c6922e5bff5caaa8278512",
+      "size": 11214,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_15.md",
+      "anchor": "py-180"
+    },
+    {
+      "path": "src/holdem_ai/game_service/state_projection.py",
+      "sha": "89bd50d93587ac4dc2831a388a52a4fd77315d2f",
+      "size": 4653,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-181"
+    },
+    {
+      "path": "src/holdem_ai/models/__init__.py",
+      "sha": "c45dbcdd525a3fadb2abb368e5264f09bb51e773",
+      "size": 39,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-182"
+    },
+    {
+      "path": "src/holdem_ai/models/transformer.py",
+      "sha": "9d16728ef844cd0b3e5c59ed9855237ccdbfbafe",
+      "size": 8612,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-183"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/__init__.py",
+      "sha": "8f32b7a86dae0351f40a7e7b4ecdd9741795e0bb",
+      "size": 217,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-184"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/baseline.py",
+      "sha": "c97ba3b8a729c1636a00d6153f82d99443ea7a84",
+      "size": 1345,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-185"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/improved_bot.py",
+      "sha": "1eff74765a1e295c8e164de964494ee105c6d11d",
+      "size": 5676,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-186"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/journal.py",
+      "sha": "f04f1242f476e94fe10ab32a4d8736b84c3d598c",
+      "size": 10830,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-187"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/session.py",
+      "sha": "57b906cad8bfe2a3724d6da7c5a880035fbf03ab",
+      "size": 20805,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-188"
+    },
+    {
+      "path": "src/holdem_ai/tournament_service/trained_actor.py",
+      "sha": "910b29ab575076918fefc4ae11fec020524de22a",
+      "size": 9173,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-189"
+    },
+    {
+      "path": "src/holdem_ai/training/__init__.py",
+      "sha": "4eac3fc82dded49e40f2471913810949e63ee45d",
+      "size": 40,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-190"
+    },
+    {
+      "path": "src/holdem_ai/training/batched_collector.py",
+      "sha": "0e1e2241022b55e549130eb5edd19076a47bb08a",
+      "size": 5632,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-191"
+    },
+    {
+      "path": "src/holdem_ai/training/episode_runner.py",
+      "sha": "6f08af4094349bcaf0d3a6b5c87b73ded774dcf8",
+      "size": 2963,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_16.md",
+      "anchor": "py-192"
+    },
+    {
+      "path": "src/holdem_ai/training/global_rollout.py",
+      "sha": "9e264e857fe9f5c8bbe45f7c8a46b6e76a9df4f6",
+      "size": 3127,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-193"
+    },
+    {
+      "path": "src/holdem_ai/training/ppo.py",
+      "sha": "bf6cc749ca20183b507adbc1df8687dc2b41f142",
+      "size": 15577,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-194"
+    },
+    {
+      "path": "src/holdem_ai/training/ppo_session.py",
+      "sha": "2fc6468a18acd81ef604c12929f00992c43080d9",
+      "size": 5241,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-195"
+    },
+    {
+      "path": "src/holdem_ai/training/qboost.py",
+      "sha": "be748dd8a609718276646aa2fc2595a3f56ab39a",
+      "size": 11179,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-196"
+    },
+    {
+      "path": "src/holdem_ai/training/qboost_session.py",
+      "sha": "0cca5ab85493a816374d491c0bd41aa26d3702b4",
+      "size": 5741,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-197"
+    },
+    {
+      "path": "src/holdem_ai/training/reward_models.py",
+      "sha": "7216d7bbce7dc495cc7acc9636350aa5e5cd8917",
+      "size": 1937,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-198"
+    },
+    {
+      "path": "src/holdem_ai/training/self_play.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-199"
+    },
+    {
+      "path": "src/holdem_ai/training/trainer.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-200"
+    },
+    {
+      "path": "src/holdem_ai/utils/__init__.py",
+      "sha": "c45dbcdd525a3fadb2abb368e5264f09bb51e773",
+      "size": 39,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-201"
+    },
+    {
+      "path": "src/holdem_ai/utils/progress.py",
+      "sha": "00dbb59f0a6153bc3acce146fe30eed7c5176775",
+      "size": 9411,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-202"
+    },
+    {
+      "path": "src/holdem_ai/utils/snapshot.py",
+      "sha": "9e359decefae168acdc4f76606dbc141f674c20b",
+      "size": 776,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-203"
+    },
+    {
+      "path": "tests/__init__.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_17.md",
+      "anchor": "py-204"
+    },
+    {
+      "path": "tests/agents/__init__.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-205"
+    },
+    {
+      "path": "tests/environment/__init__.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-206"
+    },
+    {
+      "path": "tests/environment/test_betting.py",
+      "sha": "f487b67984a09ae27645e028cdc42a4558db5fd9",
+      "size": 1888,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-207"
+    },
+    {
+      "path": "tests/environment/test_elimination.py",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-208"
+    },
+    {
+      "path": "tests/environment/test_hand_evaluator.py",
+      "sha": "3525e30ed6a42068db3ea868363edcf2485a0171",
+      "size": 1708,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-209"
+    },
+    {
+      "path": "tests/environment/test_position.py",
+      "sha": "0b18b09ca4bd46d12d12e74521c5885a4700037a",
+      "size": 942,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-210"
+    },
+    {
+      "path": "tests/environment/test_side_pot.py",
+      "sha": "5339700d71c80b20b9cbea8c2a2389dc5fec6af3",
+      "size": 1850,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-211"
+    },
+    {
+      "path": "tests/expand/conftest.py",
+      "sha": "f35659850cedf50a9fef7afe6fea7a1f93028eaa",
+      "size": 2814,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-212"
+    },
+    {
+      "path": "tests/expand/e03_fake_engine.py",
+      "sha": "a6b089d01ec085d50d81cc2607d9bae799401cfb",
+      "size": 3340,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-213"
+    },
+    {
+      "path": "tests/expand/e07_fake_tournament.py",
+      "sha": "90b9901f572b978db1404a5f9f172ed60fafbb29",
+      "size": 2004,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-214"
+    },
+    {
+      "path": "tests/expand/test_e01_real_engine.py",
+      "sha": "08febe74e010fb26b91358749a0dfb400b612fb4",
+      "size": 3209,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-215"
+    },
+    {
+      "path": "tests/expand/test_e01_smoke_unit.py",
+      "sha": "33648e36aa11203ff0bcaddf17a73e2782cc059a",
+      "size": 1308,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_18.md",
+      "anchor": "py-216"
+    },
+    {
+      "path": "tests/expand/test_e01_table_unit.py",
+      "sha": "db06a5084523584c1ccad775f0854a246e7200d1",
+      "size": 9209,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-217"
+    },
+    {
+      "path": "tests/expand/test_e02_adapter_fake.py",
+      "sha": "ad72a612293b51780854faef45df1b785b5b484d",
+      "size": 3925,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-218"
+    },
+    {
+      "path": "tests/expand/test_e02_policy.py",
+      "sha": "76f96314b3ebbbefafddc48f57f24e6730e5c68c",
+      "size": 2999,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-219"
+    },
+    {
+      "path": "tests/expand/test_e02_real_engine.py",
+      "sha": "d423a12726bde3afcdc68930c833c109c68bf890",
+      "size": 2882,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-220"
+    },
+    {
+      "path": "tests/expand/test_e02_state_and_actions.py",
+      "sha": "ee4f3c7e7f02c129de85b9e6e4c5354fa89ae885",
+      "size": 7263,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-221"
+    },
+    {
+      "path": "tests/expand/test_e03_cli.py",
+      "sha": "3819fc0f3ede349b8413d104d223715d9797a839",
+      "size": 883,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-222"
+    },
+    {
+      "path": "tests/expand/test_e03_real_engine.py",
+      "sha": "5e9027db334ea0a751ed135a7b03ac59ac55a311",
+      "size": 999,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-223"
+    },
+    {
+      "path": "tests/expand/test_e03_returns_and_policy.py",
+      "sha": "cf384ca17a12a27d4fcf11e5f9bab98843484a4b",
+      "size": 3915,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-224"
+    },
+    {
+      "path": "tests/expand/test_e03_trainer.py",
+      "sha": "190e08ee85730422ea730f00ba7f4fba91e3e3ed",
+      "size": 3203,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-225"
+    },
+    {
+      "path": "tests/expand/test_e04_checkpoint.py",
+      "sha": "49836fbeb0a82f2155ad983e636edf7d5b486a08",
+      "size": 2163,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-226"
+    },
+    {
+      "path": "tests/expand/test_e04_cli.py",
+      "sha": "3855f9ce47556ae242a5b9247693124ea80edc03",
+      "size": 1169,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-227"
+    },
+    {
+      "path": "tests/expand/test_e04_holdem_mock.py",
+      "sha": "047ff8de4d58a61bf6eba247383548bfd734b027",
+      "size": 2673,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_19.md",
+      "anchor": "py-228"
+    },
+    {
+      "path": "tests/expand/test_e04_real_engine.py",
+      "sha": "75b70b607ab96e34fdae64dc4c785d025eb69480",
+      "size": 1393,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-229"
+    },
+    {
+      "path": "tests/expand/test_e04_toy_mccfr.py",
+      "sha": "a9a18e22a831df1c502e0d5b7d4cd0c63a190ca3",
+      "size": 4100,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-230"
+    },
+    {
+      "path": "tests/expand/test_e05_beliefs.py",
+      "sha": "01584c20fe897a65d5774b007dc969a440c66417",
+      "size": 1406,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-231"
+    },
+    {
+      "path": "tests/expand/test_e05_cli.py",
+      "sha": "0f4a5514e42fd45bbae35196353636d5a21aeacc",
+      "size": 595,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-232"
+    },
+    {
+      "path": "tests/expand/test_e05_continuations.py",
+      "sha": "b1adb846c3e81ea8e62cf69e9e0f994774ebfed5",
+      "size": 1417,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-233"
+    },
+    {
+      "path": "tests/expand/test_e05_evaluate.py",
+      "sha": "a80fcd07603d3c4f58a21ce2b8b0fa1759b4c8dc",
+      "size": 757,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-234"
+    },
+    {
+      "path": "tests/expand/test_e05_holdem_deck.py",
+      "sha": "3bbe41adc0b10940eb20c2e0622adbaac5e4f1f0",
+      "size": 1611,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-235"
+    },
+    {
+      "path": "tests/expand/test_e05_nested.py",
+      "sha": "14700f44656c84ed80c63e488e64304661259b61",
+      "size": 885,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-236"
+    },
+    {
+      "path": "tests/expand/test_e05_real_engine.py",
+      "sha": "1051eb0cdb66f828eb017aa23dcd3cc11ef746b0",
+      "size": 2180,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-237"
+    },
+    {
+      "path": "tests/expand/test_e05_solver.py",
+      "sha": "07ae3f973be2b48bff5249e244ae621cba6b10c9",
+      "size": 2866,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-238"
+    },
+    {
+      "path": "tests/expand/test_e06_adaptive.py",
+      "sha": "5b733c4a6ded7ea0584a70a3e68204e4d2fabeeb",
+      "size": 3226,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-239"
+    },
+    {
+      "path": "tests/expand/test_e06_bridge.py",
+      "sha": "f54c57842e482cc7cb6b599ae7ae17f0ec1460fb",
+      "size": 2084,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_20.md",
+      "anchor": "py-240"
+    },
+    {
+      "path": "tests/expand/test_e06_cli.py",
+      "sha": "c215129d87babef830400232d7a5874daf986196",
+      "size": 991,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-241"
+    },
+    {
+      "path": "tests/expand/test_e06_models.py",
+      "sha": "dff4941daf0d6b723bd62d0be6204ee2aa3389b5",
+      "size": 4350,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-242"
+    },
+    {
+      "path": "tests/expand/test_e06_persistence.py",
+      "sha": "1fe169488bf1f9b3c0b535cebec5701a6f35c4ac",
+      "size": 1702,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-243"
+    },
+    {
+      "path": "tests/expand/test_e06_real_engine.py",
+      "sha": "1367ee49057e39736e899bcbc850693f11c2cb36",
+      "size": 1922,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-244"
+    },
+    {
+      "path": "tests/expand/test_e06_router.py",
+      "sha": "4a30bbaad60b00c1e946f639fbd187bdd6b19ac2",
+      "size": 1797,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-245"
+    },
+    {
+      "path": "tests/expand/test_e06_state_bridge.py",
+      "sha": "c2e0d68de00bf2d3cd2529bc0f1bef04c7d1edda",
+      "size": 1643,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-246"
+    },
+    {
+      "path": "tests/expand/test_e07_agent.py",
+      "sha": "4221f8954d5de530d16ca860876aeca09c6ea74c",
+      "size": 3183,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-247"
+    },
+    {
+      "path": "tests/expand/test_e07_benchmark.py",
+      "sha": "c572cc6e9f115ab5e595dbd56762331b1098852b",
+      "size": 1777,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-248"
+    },
+    {
+      "path": "tests/expand/test_e07_bridges_and_cli.py",
+      "sha": "9f0cf98d2052a7e9c4801dfb95214b2332c35341",
+      "size": 2195,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-249"
+    },
+    {
+      "path": "tests/expand/test_e07_cash_bridge.py",
+      "sha": "3882cb83ec7615a6b4b8bc8e909d0d9a814352ad",
+      "size": 584,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-250"
+    },
+    {
+      "path": "tests/expand/test_e07_manifest.py",
+      "sha": "f805ce2e305669d0da8e0d29e2069e368187e94f",
+      "size": 847,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-251"
+    },
+    {
+      "path": "tests/expand/test_e07_real_engine.py",
+      "sha": "0621abe66f07e4425ec2ffef85e3ac04fd3db97a",
+      "size": 1008,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_21.md",
+      "anchor": "py-252"
+    },
+    {
+      "path": "tests/expand/test_e07_tournament.py",
+      "sha": "a710c3749c15b9752fdbf52ab2776c9b15b78f1d",
+      "size": 2716,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-253"
+    },
+    {
+      "path": "tests/test_blind_manager.py",
+      "sha": "880eab0d7c27e9f91be99f6c4a1933c05d8d5932",
+      "size": 1089,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-254"
+    },
+    {
+      "path": "tests/test_corrected_rlcard_integration.py",
+      "sha": "0c26823cc52601fe3bbf81ea2b8ea18644fd9190",
+      "size": 2786,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-255"
+    },
+    {
+      "path": "tests/test_corrected_round.py",
+      "sha": "d97b74c499c3f4c15d1a7dea69e29b581bb1f5d2",
+      "size": 3360,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-256"
+    },
+    {
+      "path": "tests/test_gui10_hunl_contract.py",
+      "sha": "29d751b3311c6677f5338f8a2f455e3486249b44",
+      "size": 7544,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-257"
+    },
+    {
+      "path": "tests/test_gui11_http_api.py",
+      "sha": "79f70fa36d6529161acca76feb49fff80806da32",
+      "size": 9066,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-258"
+    },
+    {
+      "path": "tests/test_gui12_readonly_api.py",
+      "sha": "adb3185d531a768577d1426a78859964d4b536e3",
+      "size": 2754,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-259"
+    },
+    {
+      "path": "tests/test_gui13_interactive_betting.py",
+      "sha": "b41a06a22c2563a883923c4d7d2b2f81c69b64ed",
+      "size": 4882,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-260"
+    },
+    {
+      "path": "tests/test_gui14_trained_agents.py",
+      "sha": "99322ca9844b54d2c9f4336f0f9b605931253bb9",
+      "size": 7689,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-261"
+    },
+    {
+      "path": "tests/test_gui15_session_analytics.py",
+      "sha": "eb5a5b2b170d24d501a283e71d8892b309637595",
+      "size": 8219,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-262"
+    },
+    {
+      "path": "tests/test_gui16_continuous_stack.py",
+      "sha": "2d3084bd922382e0307bb8f12e7f3be32416bc5f",
+      "size": 6973,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-263"
+    },
+    {
+      "path": "tests/test_hand_engine.py",
+      "sha": "d2a4ee6842bd0b51b9cee49db68317266b97de6f",
+      "size": 2191,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_22.md",
+      "anchor": "py-264"
+    },
+    {
+      "path": "tests/test_multi_player_engine.py",
+      "sha": "092bb6933159ea3c0ac650e5ff9635a046642b8b",
+      "size": 11045,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-265"
+    },
+    {
+      "path": "tests/test_multi_player_seats.py",
+      "sha": "3d0c353687e1181fae44f068fc7aceed8033d8e3",
+      "size": 1202,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-266"
+    },
+    {
+      "path": "tests/test_phase10_cli.py",
+      "sha": "58d51ca07621a7954e3b7e5b3466cfc4c79b3c08",
+      "size": 2073,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-267"
+    },
+    {
+      "path": "tests/test_phase10_gpu.py",
+      "sha": "1efad2978b9371a5c941c8b9e2ff7c20f4576051",
+      "size": 907,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-268"
+    },
+    {
+      "path": "tests/test_phase10_qboost.py",
+      "sha": "04c6432ef788d7c68f3b0a2779b0c485a5b089e2",
+      "size": 11558,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-269"
+    },
+    {
+      "path": "tests/test_phase11_batched.py",
+      "sha": "03a1fc44be3f4e58251c9e63f69f48f0dae5cc03",
+      "size": 3130,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-270"
+    },
+    {
+      "path": "tests/test_phase11_gpu.py",
+      "sha": "b555a5a86336b1b5ca2286087a27cf07366e5a52",
+      "size": 863,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-271"
+    },
+    {
+      "path": "tests/test_phase11_progress.py",
+      "sha": "be20c35f67e6a3f0173ec0b7d1573fe2acfe3271",
+      "size": 5397,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-272"
+    },
+    {
+      "path": "tests/test_phase11_runner.py",
+      "sha": "a148f322edd01907598778bcab496c69dea4395a",
+      "size": 4381,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-273"
+    },
+    {
+      "path": "tests/test_phase12_cli.py",
+      "sha": "68f53e62663b18e82a15607f54bea51e537a9597",
+      "size": 2673,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-274"
+    },
+    {
+      "path": "tests/test_phase12_evaluation.py",
+      "sha": "25ed721094e6970f97bd2fe63c34784502c2228f",
+      "size": 5558,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-275"
+    },
+    {
+      "path": "tests/test_phase12_gpu.py",
+      "sha": "a11264ca66c51d273ea70cee5ff41b097cafab32",
+      "size": 667,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_23.md",
+      "anchor": "py-276"
+    },
+    {
+      "path": "tests/test_phase13_gpu.py",
+      "sha": "65a1da0f6a4920ecfadd062ecc3022c36d4e24f7",
+      "size": 800,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-277"
+    },
+    {
+      "path": "tests/test_phase13_scaling.py",
+      "sha": "806fde41a3ebbfa6386d199ba8da1d7a792c769b",
+      "size": 9177,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-278"
+    },
+    {
+      "path": "tests/test_phase14_gpu.py",
+      "sha": "54eda8d142a2d19a131617d3c630ead0099f24f8",
+      "size": 1124,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-279"
+    },
+    {
+      "path": "tests/test_phase14_study.py",
+      "sha": "85db053dff0e41f43e93fdab8567476a30cd2db1",
+      "size": 5973,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-280"
+    },
+    {
+      "path": "tests/test_phase15_critic_diagnostics.py",
+      "sha": "f74c4f18b35431e0e9810a78a053028c7871547a",
+      "size": 6084,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-281"
+    },
+    {
+      "path": "tests/test_phase15_gpu.py",
+      "sha": "a1a2816440eafd97651bc0cb23addb49892fa5b3",
+      "size": 1352,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-282"
+    },
+    {
+      "path": "tests/test_phase15_initial_policy_comparison.py",
+      "sha": "fa5ca09fc89d8c94bbdf1c94e824e8abc8458253",
+      "size": 6925,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-283"
+    },
+    {
+      "path": "tests/test_phase15_longrun.py",
+      "sha": "9278d2829c17a4e9e2feefffe7c3e3ef5c27a0b6",
+      "size": 9764,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-284"
+    },
+    {
+      "path": "tests/test_phase15_policy_audit.py",
+      "sha": "d9ad37186493e543810e6d842637f53176c4e1aa",
+      "size": 3422,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-285"
+    },
+    {
+      "path": "tests/test_phase15_preflop_sequence_audit.py",
+      "sha": "c732cbf270a5dae267d17013033fa073b7f70ae2",
+      "size": 5009,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-286"
+    },
+    {
+      "path": "tests/test_phase15_safety_phase3.py",
+      "sha": "14084273c8b145051a97fd7d02ed3c95e0610334",
+      "size": 2072,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-287"
+    },
+    {
+      "path": "tests/test_phase15_terminal_reward_audit.py",
+      "sha": "79308df938907860e5652a93a8b98f792194e1b1",
+      "size": 5242,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_24.md",
+      "anchor": "py-288"
+    },
+    {
+      "path": "tests/test_phase16_cli.py",
+      "sha": "d049328372ddbfa85eaa10dd45ff1e76e8d643df",
+      "size": 2192,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-289"
+    },
+    {
+      "path": "tests/test_phase16_diagnostics.py",
+      "sha": "e857adaef64d7fee0104717cc5fbb554c7608fd5",
+      "size": 3119,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-290"
+    },
+    {
+      "path": "tests/test_phase16_evaluation.py",
+      "sha": "e916b432c2f4525936f81f264f61768055d76233",
+      "size": 3714,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-291"
+    },
+    {
+      "path": "tests/test_phase16_opponents.py",
+      "sha": "7263b79951c3edd90c5b1fa2dcca4ed90da22e50",
+      "size": 1570,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-292"
+    },
+    {
+      "path": "tests/test_phase16_ppo_ablation.py",
+      "sha": "84ac169a69b5ed53bffdd74e2d0c1edee63c0d67",
+      "size": 7515,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-293"
+    },
+    {
+      "path": "tests/test_phase16_ppo_stress.py",
+      "sha": "c0108d4ac755da9211472d966214c93b386efa5b",
+      "size": 9100,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25A.md",
+      "anchor": "py-294"
+    },
+    {
+      "path": "tests/test_phase17_continuous_stack.py",
+      "sha": "bb7feea9bf9e053cc9e3af296511cb9e8087548a",
+      "size": 7905,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-295"
+    },
+    {
+      "path": "tests/test_phase17_gpu_retrain.py",
+      "sha": "b23e431ab5da1b6834e615bdaffe59f64fd7a992",
+      "size": 7873,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-296"
+    },
+    {
+      "path": "tests/test_phase5_betting.py",
+      "sha": "da76a1e32f6daccc4d94ba97cd47972539938b7a",
+      "size": 3059,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-297"
+    },
+    {
+      "path": "tests/test_phase5_numpy_json.py",
+      "sha": "21e7b962751ffdbd96f40147564dd75f7227ab0b",
+      "size": 2125,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-298"
+    },
+    {
+      "path": "tests/test_phase5_rewards.py",
+      "sha": "26a57ad41d9d47f6aa9ad7ccaae6462d0067cf27",
+      "size": 1406,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-299"
+    },
+    {
+      "path": "tests/test_phase5_rlcard_adapter.py",
+      "sha": "2320576e7001317750ee1cd779145da02ca33f0a",
+      "size": 5089,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_25B.md",
+      "anchor": "py-300"
+    },
+    {
+      "path": "tests/test_phase5_schema_policy.py",
+      "sha": "dfc15b89f0ce9a0cc2290cf845316b207b6deb32",
+      "size": 3631,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-301"
+    },
+    {
+      "path": "tests/test_phase5_self_play.py",
+      "sha": "4749c0e868a95dacdd924ca05161ef34b7e2b27f",
+      "size": 3544,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-302"
+    },
+    {
+      "path": "tests/test_phase6_benchmark.py",
+      "sha": "51da1f9d7eacfc94e4152432cd2ed05f54f5c59b",
+      "size": 640,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-303"
+    },
+    {
+      "path": "tests/test_phase6_hunl_adapter.py",
+      "sha": "00c6ec681a0cba9fff1a286a85e77151628098c6",
+      "size": 6125,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-304"
+    },
+    {
+      "path": "tests/test_phase7_encoding.py",
+      "sha": "43670306f3d1c5aff325e96594131171ae9718dc",
+      "size": 6764,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-305"
+    },
+    {
+      "path": "tests/test_phase7_rollout.py",
+      "sha": "6a721709872d5d970b46cf244d598057a5782cec",
+      "size": 1772,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-306"
+    },
+    {
+      "path": "tests/test_phase7_tensors_actions.py",
+      "sha": "2645d2e166d890ff6cfbbc9580340c45339ddbfa",
+      "size": 3709,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-307"
+    },
+    {
+      "path": "tests/test_phase8_gpu.py",
+      "sha": "57cc87145356b3191515ac42a8a48ecc7b3a3eb9",
+      "size": 1530,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-308"
+    },
+    {
+      "path": "tests/test_phase8_networks.py",
+      "sha": "fb362ac9e506fa1668e3bb94d816b8d8fbd5203b",
+      "size": 9837,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_26.md",
+      "anchor": "py-309"
+    },
+    {
+      "path": "tests/test_phase9_cli.py",
+      "sha": "7bdaaea529975e624fce569893e411e032b94ef3",
+      "size": 1112,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-310"
+    },
+    {
+      "path": "tests/test_phase9_gpu.py",
+      "sha": "dfb598cd5b7c92cabd55a4bd63b2f326ce131a54",
+      "size": 1296,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-311"
+    },
+    {
+      "path": "tests/test_phase9_ppo.py",
+      "sha": "5b01675a9713dfa9d591f61d1f31f1d2b2fd99bf",
+      "size": 8613,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-312"
+    },
+    {
+      "path": "tests/test_player_manager.py",
+      "sha": "d896603affbea9ede8c6a95dead9554051e975cb",
+      "size": 1675,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-313"
+    },
+    {
+      "path": "tests/test_rewards_tournament.py",
+      "sha": "c14482c7de7aea35e85e22fd7fab240974a282d0",
+      "size": 836,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-314"
+    },
+    {
+      "path": "tests/test_rlcard_integration.py",
+      "sha": "da63c2efad6610101967f83772ec80162f13133e",
+      "size": 543,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-315"
+    },
+    {
+      "path": "tests/test_rlcard_rules_integration.py",
+      "sha": "6f96b54a7210d04d7cef04f2ae6e9aba05148f24",
+      "size": 1036,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-316"
+    },
+    {
+      "path": "tests/test_rules_audit.py",
+      "sha": "f6849bbdf5a054d099e640b3aac5a8b529f010da",
+      "size": 881,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-317"
+    },
+    {
+      "path": "tests/test_tournament_env.py",
+      "sha": "b0595166a158b3ed35e6906e45379e2dc9a369ed",
+      "size": 8761,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_27.md",
+      "anchor": "py-318"
+    },
+    {
+      "path": "tests/test_tournament_env131_aggression.py",
+      "sha": "64898cf766c4023f1268c14686e7af8952e993a3",
+      "size": 2720,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-319"
+    },
+    {
+      "path": "tests/test_tournament_env13_improved_bots.py",
+      "sha": "17824f1e1f225e4a96b44209b6ca456be26550a3",
+      "size": 5331,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-320"
+    },
+    {
+      "path": "tests/test_tournament_env14_trained_actor.py",
+      "sha": "39b95826af5e6e1d3fbb5fadb1b0b8c93bc7df65",
+      "size": 7407,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-321"
+    },
+    {
+      "path": "tests/test_tournament_env15_progress.py",
+      "sha": "680a2eca93be0d1b8317d8a8e1984a4b0c121e07",
+      "size": 4064,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-322"
+    },
+    {
+      "path": "tests/test_tournament_env161_showdown.py",
+      "sha": "d7c8c1e343f1c46b541a29def1668b58feb36dbe",
+      "size": 7741,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-323"
+    },
+    {
+      "path": "tests/test_tournament_env16_persistence.py",
+      "sha": "f0655533d21cd7fa537b46f7e20756328c58f41c",
+      "size": 6901,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-324"
+    },
+    {
+      "path": "tests/test_tournament_env17_integration.py",
+      "sha": "8b2d67739f8b9a9d047967e9167a8a0c2f954a3a",
+      "size": 4731,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-325"
+    },
+    {
+      "path": "tests/test_tournament_env17_release_audit.py",
+      "sha": "b43f19dd17020a68391721429e3dc5185b0863e0",
+      "size": 2253,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-326"
+    },
+    {
+      "path": "tests/test_tournament_env1_api.py",
+      "sha": "342cd89e5a4dd719d99a5a1ff0f5d897ae6a6d30",
+      "size": 10183,
+      "kind": "py",
+      "archive_path": "docs/technical_sources/PYTHON_SOURCE_28.md",
+      "anchor": "py-327"
+    },
+    {
+      "path": "README.md",
+      "sha": "111e91de2c90f6c8e891473ffd3bea1d334c1438",
+      "size": 6673,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-001"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_1_3_1.md",
+      "sha": "9ddd521e1ec07b255cfe6cc29f272a479b1e0ba7",
+      "size": 399,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-002"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_2_1.md",
+      "sha": "91461348ec47921984049311d9cdd9202f0e9dc8",
+      "size": 1058,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-003"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_3.md",
+      "sha": "da54f4a530afded59cdef46d15fc4ef87646e422",
+      "size": 610,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-004"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_4.md",
+      "sha": "4ab726862cb8a0591a063d24e92da15db33e9271",
+      "size": 1193,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-005"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_5.md",
+      "sha": "6ed216eca53b9fa45c06996ca0b11d3a319be162",
+      "size": 1320,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-006"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_6.md",
+      "sha": "6d51be0a3157f3cdc1cade936009dc453997c005",
+      "size": 1074,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-007"
+    },
+    {
+      "path": "README_TOURNAMENT_ENV_PHASE_1_6_1.md",
+      "sha": "3c980c3cc62b1b9f1d464d6e6ff3352c8a51ae6a",
+      "size": 1310,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-008"
+    },
+    {
+      "path": "TOURNAMENT_ENV_PHASE_1_1_README.md",
+      "sha": "e8210483c9b90bef9415496b23fcfbc1bbe16a14",
+      "size": 1469,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-009"
+    },
+    {
+      "path": "TOURNAMENT_ENV_PHASE_1_2_README.md",
+      "sha": "a9106f003428131c3dc2bb13021bc9efdd986575",
+      "size": 2642,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-010"
+    },
+    {
+      "path": "TOURNAMENT_ENV_PHASE_1_7_README.md",
+      "sha": "abdef5e2d2de3b3015f23718ac5ecfcb71d7f5ee",
+      "size": 1091,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_07.md",
+      "anchor": "md-011"
+    },
+    {
+      "path": "docs/AGENT_DEVELOPMENT_TECHNICAL_REPORT_2026-10-13.md",
+      "sha": "f7a6f0ba1eade50fb252572a243c558bf72089d8",
+      "size": 93299,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-012"
+    },
+    {
+      "path": "docs/EXPAND_MASTER_DESIGN_6MAX_v1_0.md",
+      "sha": "1b605f8ef601a450922059fe6653609313b838bf",
+      "size": 50610,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-013"
+    },
+    {
+      "path": "docs/EXPAND_PHASE01_DESIGN.md",
+      "sha": "91ca1d88c526ee961f660690ef89a7f08e41648d",
+      "size": 12011,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-014"
+    },
+    {
+      "path": "docs/EXPAND_PHASE01_TO_07_INTEGRATED_TECHNICAL_REPORT.md",
+      "sha": "c9df096164fbd3a3200f1a93dfcaff4af3099617",
+      "size": 31992,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-015"
+    },
+    {
+      "path": "docs/EXPAND_PHASE02_INFORMATION_AND_ENCODING.md",
+      "sha": "851a18da34b6dcc51c3616f8454e06181245ab68",
+      "size": 15623,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-016"
+    },
+    {
+      "path": "docs/EXPAND_PHASE03_MULTIAGENT_PPO.md",
+      "sha": "29844dc36e183337d393e493e82ca3c3a1373cb0",
+      "size": 15621,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-017"
+    },
+    {
+      "path": "docs/EXPAND_PHASE04_MCCFR_BLUEPRINT.md",
+      "sha": "39e55dbcf6860edd71a4202945defdf10d0b1d36",
+      "size": 14494,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-018"
+    },
+    {
+      "path": "docs/EXPAND_PHASE05_SUBGAME_SEARCH.md",
+      "sha": "b193f157f3ab7ca621319fcff388fd7d578dd85c",
+      "size": 15379,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-019"
+    },
+    {
+      "path": "docs/EXPAND_PHASE06_OPPONENT_MODELING.md",
+      "sha": "0b1df4a06eb72889aa8a3c87b94b2cd40d4013b9",
+      "size": 16222,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-020"
+    },
+    {
+      "path": "docs/EXPAND_PHASE07_INTEGRATION_TOURNAMENT_BENCHMARK.md",
+      "sha": "cdd5daec6e134258c373b61508198ef703b4080f",
+      "size": 20388,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-021"
+    },
+    {
+      "path": "docs/GUI_1_0_HUNL_CONTRACT.md",
+      "sha": "6fa6c26cf6b9d442ef4943e1bc6ae1b00196e506",
+      "size": 7076,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-022"
+    },
+    {
+      "path": "docs/GUI_1_1_FASTAPI.md",
+      "sha": "0b4ede0298912e8676fd35b7c3ad6fd3bdd85474",
+      "size": 6246,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-023"
+    },
+    {
+      "path": "docs/GUI_1_2_REACT_TABLE.md",
+      "sha": "5e340db3319e2b97059a1e0c6519a848801a4751",
+      "size": 4148,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-024"
+    },
+    {
+      "path": "docs/GUI_1_3_INTERACTIVE_BETTING.md",
+      "sha": "971b06d6e7bba302b0bd2092e4c079ea3e603a57",
+      "size": 6003,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-025"
+    },
+    {
+      "path": "docs/GUI_1_4_TRAINED_AGENT.md",
+      "sha": "8ecf0335053978f7e17c29b68801dbbf46d8b540",
+      "size": 6531,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-026"
+    },
+    {
+      "path": "docs/GUI_1_5_PERFORMANCE_DASHBOARD.md",
+      "sha": "46f69c44b511bed24e9dc0e4b9bbb3408d14fd2c",
+      "size": 6040,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-027"
+    },
+    {
+      "path": "docs/GUI_1_6_CONTINUOUS_STACK.md",
+      "sha": "a2e8a890fa6e07ba327b2e1b9575bba3e278b288",
+      "size": 7436,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-028"
+    },
+    {
+      "path": "docs/GUI_TRAINED_CHECKPOINT_SETUP.md",
+      "sha": "b5c6cdd16391bd4508572f01fbd5e4e15ab07074",
+      "size": 5914,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-029"
+    },
+    {
+      "path": "docs/PHASE10_QBOOST_PPO.md",
+      "sha": "4cf6a06aa529540ee8b19d34c1aebc3413ef1e57",
+      "size": 9382,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-030"
+    },
+    {
+      "path": "docs/PHASE11_FIVE_HOUR_TRAINING.md",
+      "sha": "301c3c879039e52d7d9bacbf318441c73f9b34f9",
+      "size": 11162,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-031"
+    },
+    {
+      "path": "docs/PHASE11_PROGRESS.md",
+      "sha": "332852a9115e9283137c226466f0862b30115990",
+      "size": 3865,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-032"
+    },
+    {
+      "path": "docs/PHASE12_EVALUATION.md",
+      "sha": "aff99548aa3ab2c1794ac4c793b4345c1586c3b3",
+      "size": 8509,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-033"
+    },
+    {
+      "path": "docs/PHASE13_BATCH_SCALING.md",
+      "sha": "20147311636b06e0132923466bec69f3cae4e71e",
+      "size": 9451,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-034"
+    },
+    {
+      "path": "docs/PHASE14_CONTROLLED_STUDY.md",
+      "sha": "3a0fd210542ddb109dcb5c082b9d1e318cab7723",
+      "size": 9315,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-035"
+    },
+    {
+      "path": "docs/PHASE15_CRITIC_DIAGNOSIS.md",
+      "sha": "1fda4dcb7a19748df71426459b31e43da74bbccd",
+      "size": 4914,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-036"
+    },
+    {
+      "path": "docs/PHASE15_EXPERIMENT_REPORT_2026-10-13.md",
+      "sha": "d231a20f52cd109a752451524a9891a771780011",
+      "size": 16335,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-037"
+    },
+    {
+      "path": "docs/PHASE15_LONG_RUN_TRAINING.md",
+      "sha": "f950834d4fd8ae0f61007cd2ac77b09e00abbf6c",
+      "size": 11248,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-038"
+    },
+    {
+      "path": "docs/PHASE15_PHASE3_SAFETY_TELEMETRY.md",
+      "sha": "2d8cefa707ca49e2007d1e524bf2280be85f6f75",
+      "size": 3626,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-039"
+    },
+    {
+      "path": "docs/PHASE15_PREFLOP_SEQUENCE_AUDIT.md",
+      "sha": "df3c4d6044d174788975c5a9ada10f1b1e778e2e",
+      "size": 3345,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_03.md",
+      "anchor": "md-040"
+    },
+    {
+      "path": "docs/PHASE15_TERMINAL_REWARD_AUDIT.md",
+      "sha": "a0bac55cc794db1f442b1fc9c0f389b25935bac4",
+      "size": 4206,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-041"
+    },
+    {
+      "path": "docs/PHASE15_THREE_POLICY_COMPARISON.md",
+      "sha": "8824c060b8ce7ef01852809fa00bdde489a4d174",
+      "size": 3940,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-042"
+    },
+    {
+      "path": "docs/PHASE16_LONG_STRESS_TEST.md",
+      "sha": "1d283f7fa49d15ea2c80b4a44acc7326da9212f9",
+      "size": 9005,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-043"
+    },
+    {
+      "path": "docs/PHASE16_OPPONENT_POOL_AND_STRATEGY.md",
+      "sha": "fed9a3b8906193aebc0899ce4966fff5c9a1ed38",
+      "size": 8643,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-044"
+    },
+    {
+      "path": "docs/PHASE16_PPO_ABLATION.md",
+      "sha": "508e9b335a7a64c2ff31ade25e9b68b86f1fbe10",
+      "size": 8324,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-045"
+    },
+    {
+      "path": "docs/PHASE17_CONTINUOUS_STACK_EVALUATION.md",
+      "sha": "596dacd13bcbce6e9a54e8027fbf45c221b29f23",
+      "size": 8630,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-046"
+    },
+    {
+      "path": "docs/PHASE17_FIVE_HOUR_GPU_RETRAIN.md",
+      "sha": "330433ec78d33411571c6beb0b8a9c4792df7561",
+      "size": 7944,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-047"
+    },
+    {
+      "path": "docs/PHASE5_AGENT_INTERFACE.md",
+      "sha": "b4bd03f362049d11ecd8864a7aaa595a872eb7bf",
+      "size": 11848,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-048"
+    },
+    {
+      "path": "docs/PHASE6_HUNL200_INTEGRATION.md",
+      "sha": "b9b45d9c8a10ea3ae02f1cdd524b01986771feed",
+      "size": 6229,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-049"
+    },
+    {
+      "path": "docs/PHASE7_VRPO_LITE_ENCODING.md",
+      "sha": "fbb83cd3ddf41d230cd5eebd6d2c285ef33a0b3b",
+      "size": 7323,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-050"
+    },
+    {
+      "path": "docs/PHASE8_VRPO_LITE_NETWORKS.md",
+      "sha": "58fb0b05bddb8362cfa71b55ca34d51d76d8abfe",
+      "size": 6923,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-051"
+    },
+    {
+      "path": "docs/PHASE9_PPO_BASELINE.md",
+      "sha": "2171a73abb056d33428a883967917b5829945dea",
+      "size": 8515,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-052"
+    },
+    {
+      "path": "docs/PHASE_VERIFIED_PYTHON_CODE_REFERENCE.md",
+      "sha": "3ede1ff95bf622264d3be0b6c296bbf7bbe9eabf",
+      "size": 14753,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-053"
+    },
+    {
+      "path": "docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md",
+      "sha": "120aeaa740695dc3889e697b2b3c28c85b993bd7",
+      "size": 24744,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-054"
+    },
+    {
+      "path": "docs/PROJECT_PROGRESS_GUI16_PHASE17.md",
+      "sha": "3cb8d12d81f341fdccbf41a9e2bb4eb39436e052",
+      "size": 16132,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-055"
+    },
+    {
+      "path": "docs/PROJECT_REPORT.md",
+      "sha": "e405d3c1f5f8e84c6d4f5135ab85dce2a2c9ab5d",
+      "size": 28236,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-056"
+    },
+    {
+      "path": "docs/ROADMAP_PHASE12_TO_16.md",
+      "sha": "1e536aab637a1540dd4317b6e9371b604858565e",
+      "size": 3492,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-057"
+    },
+    {
+      "path": "docs/TECH_REPORT.md",
+      "sha": "b477ee10aeeaf55abb25c1f2fb181f3958b8ebe8",
+      "size": 2369,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-058"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE1_FULL_TECHNICAL_REPORT.md",
+      "sha": "f0b72d9bc86e8238c44a63f52a59547c534be4a8",
+      "size": 52111,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-059"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_1.md",
+      "sha": "71bd90a540b0fb51334f748f55487b44b8feeacf",
+      "size": 6122,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06A.md",
+      "anchor": "md-060"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_1_KO.md",
+      "sha": "939c874554e64c4f986ca2b8fba865ac57283de3",
+      "size": 4487,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_05.md",
+      "anchor": "md-061"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_2.md",
+      "sha": "2fa9b318a01bb524ff488b9754c9a18cdcdc589c",
+      "size": 4703,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06A.md",
+      "anchor": "md-062"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_3.md",
+      "sha": "049e22b4cbace791b251f0cd278672cfc36ce0cc",
+      "size": 5192,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06A.md",
+      "anchor": "md-063"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_3_1_AGGRESSION_FIX.md",
+      "sha": "09efde46ffac27d0a5f39356d20c26f5cda950a5",
+      "size": 3715,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06A.md",
+      "anchor": "md-064"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_4.md",
+      "sha": "6f4f4df8fe7bbbab4df3a85ef073a0c54350c483",
+      "size": 6534,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06A.md",
+      "anchor": "md-065"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_5.md",
+      "sha": "c8ab128bf34226ccaf0284f575abce9351b11655",
+      "size": 7204,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-066"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_6.md",
+      "sha": "017a110414d33503c9a734346ba2e2781d495cf4",
+      "size": 6756,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-067"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_6_1_SHOWDOWN.md",
+      "sha": "00d7761c462b6e686b41980210e700b87ea265e7",
+      "size": 4890,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-068"
+    },
+    {
+      "path": "docs/TOURNAMENT_ENV_PHASE_1_7_FINAL.md",
+      "sha": "d74fc8e95137a3732ce48a4bbba462970fdb61f3",
+      "size": 10078,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_06B.md",
+      "anchor": "md-069"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha": "0578cd874748b556a888925a7f3672b0e3f9a1f9",
+      "size": 601,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-070"
+    },
+    {
+      "path": "docs/archive/INTEGRATED_SOURCE_SNAPSHOT_01.md",
+      "sha": "32deaae54133ee6c596c1722367024164b7f4f4f",
+      "size": 298011,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_01.md",
+      "anchor": "md-071"
+    },
+    {
+      "path": "docs/phase1_rlcard.md",
+      "sha": "3f606d9b89d0616cfbe00361e3f2d5a414e58691",
+      "size": 1393,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_02.md",
+      "anchor": "md-072"
+    },
+    {
+      "path": "docs/phase2_1_correction.md",
+      "sha": "c371132babdb894207b6b05a25e3cd007ce920a8",
+      "size": 2474,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-073"
+    },
+    {
+      "path": "docs/phase2_rule_validation.md",
+      "sha": "742adda19602030e3650fd568ccd3718ad95a41a",
+      "size": 3369,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-074"
+    },
+    {
+      "path": "docs/phase3_multiplayer.md",
+      "sha": "54412e7aca492b3865d1dc222586483c0dae107c",
+      "size": 3006,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-075"
+    },
+    {
+      "path": "docs/phase4_tournament.md",
+      "sha": "db65736ec017c7fe7de7b38f45fd2a9327687117",
+      "size": 2638,
+      "kind": "md",
+      "archive_path": "docs/report_sources/ORIGINAL_REPORTS_04.md",
+      "anchor": "md-076"
+    }
+  ]
+}

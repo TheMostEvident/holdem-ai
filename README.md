@@ -1,134 +1,107 @@
 # holdem-ai
 
-**Research software for Heads-Up No-Limit Hold'em (HUNL), dynamic 2–6-player cash poker, and 6-max tournament play.**
-
-This repository separates two responsibilities:
-
-- **Environment:** cards, legal actions, positions, bets, side pots, showdown, chip accounting, tournament progression, and GUI-facing state.
-- **Agent:** information-state encoding, masked decisions, on-policy PPO, experimental QBoost, multi-seat PPO, MCCFR/search prototypes, diagnostics, and evaluation.
-
-> **Research status:** Experimental systems and test infrastructure; **not a solved HUNL game, verified GTO agent, replicated Pluribus, or a proven tournament-optimal policy**.
-
-## Read first
-
-**[Final integrated technical report — equations, purpose and technical operation of every Phase](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md)**
-
-The technical report is the primary overview. Original granular development documents remain in \`docs/\` while their source-level evidence is preserved. A concise synthesis is not permission to delete the original reports before full lossless archiving.
-
-## The mathematical contract
-
-Let the complete hand state be $s_t$, legal action $a_t$, and randomized chance event $\omega_t$:
-
 $$
-s_{t+1}=T(s_t,a_t,\omega_t),\qquad a_t\in\mathcal A_{\rm legal}(s_t).
+\boxed{s_{t+1}=T(s_t,a_t,\omega_t)}
+\qquad
+\boxed{a_t\sim\pi_\theta(\cdot\mid I_{i,t}),\ a_t\in A_{\mathrm{legal}}(s_t)}
 $$
 
-The actor uses its own information state $I_{i,t}$ rather than the omniscient engine state:
+**Environment는 게임 규칙을 실행하고, Agent는 자신에게 보이는 정보로 행동을 결정한다.** 이 저장소는 Heads-Up No-Limit Hold'em, 동적 2–6인 Cash Game, 6인 Knockout Tournament의 시뮬레이션·학습·평가·GUI를 구현하는 연구 프로젝트다.
 
-$$
-\pi_\theta(a\mid I_{i,t})=
-\frac{\mathbf1[a\in\mathcal A(I_{i,t})]e^{\ell_\theta(I_{i,t},a)}}
-{\sum_{b\in\mathcal A(I_{i,t})}e^{\ell_\theta(I_{i,t},b)}}.
-$$
+가장 먼저 [최종 통합 기술보고서](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md)를 읽는다. Phase별 목적과 효용, 수식, 실제 Python 코드, 실행 과정, 검증 결과와 남은 문제를 한곳에서 연결한다. [TECH REPORT](docs/TECH_REPORT.md)는 목적별 읽기 경로와 검증 기준을 제공한다.
 
-Chip conservation and return, assuming no rake and no mid-hand external funding:
+## Project와 Phase
 
-$$
-\sum_iS_{i,t}^{behind}+P_t=C_t,\qquad
-R_{i,h}^{BB}=\frac{S_{i,h}^{final}-S_{i,h}^{initial}}{BB_h},\qquad
-\widehat{bb/100}=\frac{100}{H}\sum_h R_{i,h}^{BB}.
-$$
-
-## Project map
-
-| Workstream | Phases | Deliverable |
+| Project | Phase | 제공하는 기능 |
 |---|---|---|
-| Base Environment | 0–4 | RLCard baseline/corrections; 2–6-player native engine; tournament game rules |
-| HUNL Agent | 5–14 | Seven-action HUNL200 neural Actor, PPO/QBoost, batching and seeded evaluation |
-| HUNL research | 15–17 | Critic/collapse diagnostics, stability ablation, continuous-stack evaluation, GPU retraining |
-| Expand | E1–E7 | Dynamic cash table, multi-seat encoding/PPO, research MCCFR/search/opponent adaptation |
-| HUNL GUI | 1.0–1.6 | Human interaction, FastAPI/React, checkpoint inference, match analytics and stack carry |
-| Tournament ENV | 1.1–1.7 | Six-seat UI, improved opponents, E3 PPO inference bridge, SQLite/replay, showdown reveal |
+| Base Environment | P0–P4 | RLCard 기준 환경·Heads-up 순서 보정·독립 2–6인 엔진·Side Pot·토너먼트 진행 |
+| HUNL Agent | P5–P10 | 정보집합·합법 행동·Transformer Actor/Q Critic·PPO·실험적 QBoost |
+| HUNL 학습·평가 | P11–P17 | Batch·Resume·Seed-Blocked 평가·Critic/Policy 진단·Ablation·연속 스택·GPU Retrain |
+| Expand | E1–E7 | 동적 다인 Table·다인 PPO·MCCFR Blueprint·제한 Search·상대 모델·통합 라우팅 |
+| HUNL GUI | G1.0–G1.6 | Human–Agent 경기·FastAPI/React·Checkpoint 선택·통계·연속 스택 |
+| Tournament ENV | T1.1–T1.7 | 6인 GUI·Improved Bots·다인 Frozen Actor·블라인드/순위·SQLite·Replay·Showdown 공개 |
 
-**Important distinctions:** P17 continuous-stack evaluation and P17 five-hour PPO retraining are different experiments. Base P17 HUNL weights and Expand E3 multi-seat weights are incompatible by default. Expand E3 is cash-game trained infrastructure; Tournament-specific PPO is a future training track.
+HUNL Actor와 Expand Actor는 모델·관측·Checkpoint 계약이 다르다. Expand E3의 Cash-Game 학습 모델을 Tournament에 연결하는 기능과 Tournament 전용 정책 학습을 구분한다. MCCFR/Search는 연구 구현이며, 현재 기록만으로 HUNL 해결·GTO·Pluribus 재현·Tournament 최적 정책을 입증하지 않는다.
 
-## Install and test
+## 정확성의 기준
 
-Python 3.11 and [uv](https://docs.astral.sh/uv/) are the reference package workflow.
+$$
+\sum_i S_{i,t}^{\mathrm{behind}}+P_t=C_h,
+\qquad R_{i,h}^{BB}=\frac{S_{i,h}^{\mathrm{final}}-S_{i,h}^{\mathrm{start}}}{BB_h}
+$$
 
-\`\`\`powershell
+핸드 내부의 칩 보존과 정산을 먼저 확인한다. $R^{BB}$는 칩 손익을 Big Blind로 나눈 값이다. 순위 보상·상금 효용은 별도의 목적함수다. 합법 행동 Mask와 Actor의 비공개 정보 경계도 모든 학습·평가·GUI에 동일하게 적용한다.
+
+$$
+\widehat{bb/100}=\frac{100}{H}\sum_{h=1}^{H}R_h^{BB}
+$$
+
+성능 비교에는 Seed별 짝지은 Deck·Seat·Button 조건과 신뢰구간을 사용한다. 같은 Deck을 재사용한 경기들을 독립 표본으로 세지 않는다. Validation으로 Checkpoint를 선택한 결과와 최종 Held-Out Test를 구별한다.
+
+## 설치와 기본 실행
+
+`pyproject.toml`의 Python 요구조건은 **3.10 이상**이다. Windows의 기존 실행 기준은 Python 3.11이며, Frontend의 Node 요구조건은 **20.19.0 이상**이다.
+
+```powershell
 git clone https://github.com/TheMostEvident/holdem-ai.git
 cd holdem-ai
 uv sync --extra dev
-uv run --extra dev python -m pytest -q
-\`\`\`
+uv run python main.py --hands 100 --seed 42
+```
 
-For GUI/GPU dependencies on an appropriate CUDA host:
+Windows에서 GUI·PyTorch 학습 기능까지 사용할 경우:
 
-\`\`\`powershell
+```powershell
 uv sync --extra dev --extra gui --extra gpu
 uv run --extra dev --extra gui --extra gpu python -m pytest -q
+```
+
+GPU Extra의 현재 PyTorch 설정은 Windows 및 Python 3.14 미만에 조건부로 적용된다. 다른 운영체제의 PyTorch 환경은 별도로 맞춰야 한다. 위 명령은 실행 절차이며, 이번 문서 정리에서 전체 게임·학습 테스트를 다시 실행했다는 뜻은 아니다.
+
+## GUI 실행
+
+Repository 루트의 터미널에서 Backend를 실행한다.
+
+```powershell
+.\scripts\start_gui_with_models.ps1
+```
+
+다른 터미널에서 Frontend를 실행한다.
+
+```powershell
 cd frontend
 npm.cmd ci
+npm.cmd run typecheck
 npm.cmd test
 npm.cmd run build
 npm.cmd run dev
-\`\`\`
+```
 
-These are execution instructions rather than newly certified passing tests. GPU device and driver compatibility must be verified locally.
+실제 학습 모델을 지정하려면 로컬의 해당 모델 계열 `best.pt`를 전달한다.
 
-Run a corrected HUNL baseline from the repository root:
+```powershell
+.\scripts\start_gui_with_models.ps1 `
+  -PpoCheckpoint ".\runs\my_hunl_run\best.pt" `
+  -TournamentCheckpoint ".\runs\my_expand_run\best.pt" `
+  -Device cpu `
+  -PolicyMode sampled
+```
 
-\`\`\`powershell
-uv run python main.py --hands 100 --seed 42
-\`\`\`
+`my_hunl_run`과 `my_expand_run`은 실제 로컬 실행 폴더로 바꾼다. 체크포인트 파일은 저장소에 포함되지 않는다. 모델을 변경하면 Backend를 재시작하고 새 세션을 생성한다. 시작 스크립트는 명시 경로·환경변수·후보 폴더 순서로 파일을 찾으며, `last.pt`/`latest.pt` 입력은 같은 Run의 `best.pt`로 연결한다. 모델 호환성은 실제 게임 시작 시 검사된다.
 
-### Trained GUI checkpoints
+## 전체 원문과 개발 자료
 
-HUNL trained PPO, experimental QBoost, and Expand E3 multi-seat PPO are **different model families** with different files and action contracts. A real locally available, trusted and compatible \`best.pt\` is required for trained-policy inference. Files inside \`runs/\` are generally excluded from Git. Use [checkpoint setup](docs/GUI_TRAINED_CHECKPOINT_SETUP.md) for local paths and \`scripts/start_gui_with_models.ps1\`; ensure the backend restarts and creates a fresh session after changing weights.
+| 자료 | 범위 | 읽는 곳 |
+|---|---|---|
+| 최종 통합 본문 | 모든 Project·Phase의 수식·구현·실행 설명 | [통합 기술보고서](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md) |
+| Python 원문 부록 | **327개 전체 파일**, CLI·패키지·테스트 포함 | 보고서의 Python 원문 색인 및 `docs/technical_sources/` |
+| 기존 문서 원문 부록 | **76개 전체 문서**, 코드·수식·로그 포함 | 보고서의 Markdown 원문 색인 및 `docs/report_sources/` |
+| 원문 검증 명세 | 파일 경로·SHA·바이트 수·부록 위치 | [lossless_source_manifest.json](docs/lossless_source_manifest.json) |
 
-## Evaluation standards
+기준 커밋 `6a8ae368ddc02f814140d3770bc5993eaf9a15e4`의 전체 원문은 **Python 327/327, Markdown 76/76** Git Blob SHA로 검증했다. 기존 독립 보고서 73개는 내용을 이 최종보고서의 부록으로 통합한 뒤 삭제했다. 실행 코드·설정·Frontend 파일은 문서 정리 대상에 포함하지 않았다.
 
-Use paired seed-blocked seat/button configurations and statistical uncertainty, not a single high score:
+## 현재 실험 결과를 해석하는 기준
 
-$$
-X_k=\frac14\sum_{j=1}^{4}R_{k,j}^{BB},\qquad
-\widehat J_{bb/100}=\frac{100}{K}\sum_{k=1}^K X_k.
-$$
+P17 GPU Retrain의 당시 기록은 **5,000 accepted updates / 640,000 hands / 12,743.274 active seconds**다. 18,000초 목표 전에 `max_updates_ceiling`으로 종료했으며 `complete=false`였다. 이는 독립 Held-Out 성능이나 5시간 학습 완료를 증명하지 않는다.
 
-Deck seed groups, not the four games within each group, are independent replicates. Keep validation checkpoint selection separate from a sealed held-out final test.
-
-## Recorded milestone and limitations
-
-The historical Phase17 PPO retrain recorded **5,000 accepted updates and 640,000 training hands**. It stopped at **12,743.274 active seconds**, before its 18,000-second target (\`complete=false\`, \`max_updates_ceiling\`). A repeated-validation best score does **not** prove independent game strength. Phase15/16 preflop and critic calibration issues and Expand native-engine/search acceptance remain research tasks.
-
-## Repository structure
-
-\`\`\`text
-src/holdem_ai/
-  environment/       # Hand engine, game rules, HUNL200, tournaments
-  core/              # InformationState and policy contracts
-  encoding/          # Tokenization, masks, tensors
-  models/            # Transformer Actor / Q Critic
-  training/          # PPO, QBoost, batched self-play
-  experiments/       # Reproducible studies and long runs
-  evaluation/        # Seed blocked, opponent pool, diagnostics
-  expand/            # Dynamic 2-6 player research stack
-  game_service/      # HUNL human GUI services
-  tournament_service/# Six-seat tournament services
-backend/             # FastAPI HTTP contract
-frontend/            # React interface
-scripts/             # Audits, smoke tests, train/evaluate CLI
-tests/               # Regression, privacy and behavior tests
-docs/                # Canonical report + original phase reports
-\`\`\`
-
-## Engineering priorities
-
-1. Prove poker rule invariants and actor privacy with real-engine end-to-end tests.
-2. Investigate preflop policy concentration and critic calibration before interpreting training duration as improvement.
-3. Reproduce independent, position-balanced, multi-seed validation and held-out results.
-4. Verify Expand E3 checkpoint compatibility and train a **tournament-specific PPO** separately.
-5. Preserve original phase reports until an exact-content archived copy has been checked against every original Git blob.
-
-See the [integrated technical report](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md) for the phase-by-phase mathematical treatment, implementation map, evidence boundaries and original references.
+다음 개발 판단은 실제 엔진의 규칙·정보 경계, PPO의 학습 안정성, 독립 평가, Expand의 실제 다인 엔진 연결, Tournament 전용 학습을 각각 검증하면서 진행한다. 자세한 판단 근거와 Phase별 코드는 최종 기술보고서에 있다.

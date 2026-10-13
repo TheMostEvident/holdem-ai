@@ -6,6 +6,8 @@ Part of [integrated report](../POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md). I
 
 Blob `1f9bd6f584feadde7710ce8e4c2f767daba960b0` · 8671 bytes.
 
+<a id="py-073"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/encoding/observation.py" sha="1f9bd6f584feadde7710ce8e4c2f767daba960b0" -->
 
 ````````python
@@ -209,6 +211,8 @@ def encode_critic(state: CriticState, *, big_blind: int = 100, max_tokens: int =
 
 Blob `c49183bfc82b32709ef4a333150f0339dbab4c04` · 2352 bytes.
 
+<a id="py-074"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/encoding/tensors.py" sha="c49183bfc82b32709ef4a333150f0339dbab4c04" -->
 
 ````````python
@@ -284,6 +288,8 @@ def batch_critics(rows: Sequence[EncodedCritic], *, device='cpu') -> CriticBatch
 
 Blob `24ebedf3aaa273b53eff63fc70f110748e0d9ac9` · 1074 bytes.
 
+<a id="py-075"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/encoding/vocabulary.py" sha="24ebedf3aaa273b53eff63fc70f110748e0d9ac9" -->
 
 ````````python
@@ -334,6 +340,8 @@ def seat_id(seat: int) -> int:
 
 Blob `d3cec59006cfffd5a6fdf42f3080c9102bc7788c` · 46 bytes.
 
+<a id="py-076"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/__init__.py" sha="d3cec59006cfffd5a6fdf42f3080c9102bc7788c" -->
 
 ````````python
@@ -346,6 +354,8 @@ Blob `d3cec59006cfffd5a6fdf42f3080c9102bc7788c` · 46 bytes.
 ## src/holdem_ai/environment/actions.py
 
 Blob `a9081ef6a3c46c7c186f09801a004be4a880e827` · 3395 bytes.
+
+<a id="py-077"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/actions.py" sha="a9081ef6a3c46c7c186f09801a004be4a880e827" -->
 
@@ -450,6 +460,8 @@ def legal_basic_actions(ctx: BetContext) -> tuple[str, ...]:
 ## src/holdem_ai/environment/bet_abstraction.py
 
 Blob `732e91e5c725553f6c71ba42d593df6e16e48273` · 5821 bytes.
+
+<a id="py-078"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/bet_abstraction.py" sha="732e91e5c725553f6c71ba42d593df6e16e48273" -->
 
@@ -594,6 +606,8 @@ def abstract_bet_actions(ctx: NoLimitBetContext) -> DiscreteBetActions:
 
 Blob `1cfc0bffb3a2c9411296d5a85d32930ecc8ff586` · 2482 bytes.
 
+<a id="py-079"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/blind_manager.py" sha="1cfc0bffb3a2c9411296d5a85d32930ecc8ff586" -->
 
 ````````python
@@ -669,6 +683,8 @@ class BlindManager:
 ## src/holdem_ai/environment/corrected_game.py
 
 Blob `a3dcc0506cafc433f4d4b97e0e039213f2403fdb` · 5690 bytes.
+
+<a id="py-080"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/corrected_game.py" sha="a3dcc0506cafc433f4d4b97e0e039213f2403fdb" -->
 
@@ -804,6 +820,8 @@ def make_corrected_rlcard_env(*, starting_stack=200, seed=42, button=0, allow_st
 ## src/holdem_ai/environment/corrected_round.py
 
 Blob `cfa15eaf85fdc2f240a7df349e804b21188538ed` · 5593 bytes.
+
+<a id="py-081"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/corrected_round.py" sha="cfa15eaf85fdc2f240a7df349e804b21188538ed" -->
 
@@ -945,6 +963,8 @@ class HeadsUpBettingRound:
 
 Blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` · 0 bytes.
 
+<a id="py-082"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/game_state.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -956,6 +976,8 @@ Blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` · 0 bytes.
 ## src/holdem_ai/environment/hand_engine.py
 
 Blob `c03e1ac3f67a9782f7c805a44c08e412faaa544f` · 4869 bytes.
+
+<a id="py-083"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/hand_engine.py" sha="c03e1ac3f67a9782f7c805a44c08e412faaa544f" -->
 
@@ -1095,6 +1117,8 @@ class HandEngine:
 ## src/holdem_ai/environment/hand_evaluator.py
 
 Blob `10c593213a90c118dab2e6a8666cf5431843be40` · 3274 bytes.
+
+<a id="py-084"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/environment/hand_evaluator.py" sha="10c593213a90c118dab2e6a8666cf5431843be40" -->
 

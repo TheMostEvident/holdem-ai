@@ -6,6 +6,8 @@
 
 Original blob `91461348ec47921984049311d9cdd9202f0e9dc8` (1058 bytes).
 
+<a id="md-003"></a>
+
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_2_1.md" sha="91461348ec47921984049311d9cdd9202f0e9dc8" -->
 
 ````````markdown
@@ -45,6 +47,8 @@ Expected: Human's two hole cards show rank (A/K/Q/J/T or 2-9) and suit; no clipp
 
 Original blob `da54f4a530afded59cdef46d15fc4ef87646e422` (610 bytes).
 
+<a id="md-004"></a>
+
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_3.md" sha="da54f4a530afded59cdef46d15fc4ef87646e422" -->
 
 ````````markdown
@@ -66,6 +70,8 @@ See `docs/TOURNAMENT_ENV_PHASE_1_3.md` for setup, exact roles, limitations and c
 ## README_TOURNAMENT_ENV_PHASE_1_4.md
 
 Original blob `4ab726862cb8a0591a063d24e92da15db33e9271` (1193 bytes).
+
+<a id="md-005"></a>
 
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_4.md" sha="4ab726862cb8a0591a063d24e92da15db33e9271" -->
 
@@ -96,6 +102,8 @@ See `docs/TOURNAMENT_ENV_PHASE_1_4.md`.
 ## README_TOURNAMENT_ENV_PHASE_1_5.md
 
 Original blob `6ed216eca53b9fa45c06996ca0b11d3a319be162` (1320 bytes).
+
+<a id="md-006"></a>
 
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_5.md" sha="6ed216eca53b9fa45c06996ca0b11d3a319be162" -->
 
@@ -140,6 +148,8 @@ npm.cmd run test
 
 Original blob `3c980c3cc62b1b9f1d464d6e6ff3352c8a51ae6a` (1310 bytes).
 
+<a id="md-008"></a>
+
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_6_1.md" sha="3c980c3cc62b1b9f1d464d6e6ff3352c8a51ae6a" -->
 
 ````````markdown
@@ -173,6 +183,8 @@ Fold한 플레이어의 카드와 정산 전 상대 카드 정보는 **절대 �
 ## README_TOURNAMENT_ENV_PHASE_1_6.md
 
 Original blob `6d51be0a3157f3cdc1cade936009dc453997c005` (1074 bytes).
+
+<a id="md-007"></a>
 
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_PHASE_1_6.md" sha="6d51be0a3157f3cdc1cade936009dc453997c005" -->
 
@@ -209,6 +221,8 @@ Do not push `.local` history DBs or exported actor JSONL files to GitHub.
 ## README.md
 
 Original blob `111e91de2c90f6c8e891473ffd3bea1d334c1438` (6673 bytes).
+
+<a id="md-001"></a>
 
 <!-- BEGIN_MD_SOURCE path="README.md" sha="111e91de2c90f6c8e891473ffd3bea1d334c1438" -->
 
@@ -356,6 +370,8 @@ See the [integrated technical report](docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_R
 
 Original blob `e8210483c9b90bef9415496b23fcfbc1bbe16a14` (1469 bytes).
 
+<a id="md-009"></a>
+
 <!-- BEGIN_MD_SOURCE path="TOURNAMENT_ENV_PHASE_1_1_README.md" sha="e8210483c9b90bef9415496b23fcfbc1bbe16a14" -->
 
 ````````markdown
@@ -404,6 +420,8 @@ Full API contract and math: `docs/TOURNAMENT_ENV_PHASE_1_1.md`.
 ## TOURNAMENT_ENV_PHASE_1_2_README.md
 
 Original blob `a9106f003428131c3dc2bb13021bc9efdd986575` (2642 bytes).
+
+<a id="md-010"></a>
 
 <!-- BEGIN_MD_SOURCE path="TOURNAMENT_ENV_PHASE_1_2_README.md" sha="a9106f003428131c3dc2bb13021bc9efdd986575" -->
 
@@ -471,6 +489,8 @@ Detailed Obsidian-readable contract: `docs/TOURNAMENT_ENV_PHASE_1_2.md`.
 ## TOURNAMENT_ENV_PHASE_1_7_README.md
 
 Original blob `abdef5e2d2de3b3015f23718ac5ecfcb71d7f5ee` (1091 bytes).
+
+<a id="md-011"></a>
 
 <!-- BEGIN_MD_SOURCE path="TOURNAMENT_ENV_PHASE_1_7_README.md" sha="abdef5e2d2de3b3015f23718ac5ecfcb71d7f5ee" -->
 

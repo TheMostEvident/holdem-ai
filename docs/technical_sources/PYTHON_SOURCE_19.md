@@ -6,6 +6,8 @@
 
 Original blob `db06a5084523584c1ccad775f0854a246e7200d1` (9209 bytes).
 
+<a id="py-217"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e01_table_unit.py" sha="db06a5084523584c1ccad775f0854a246e7200d1" -->
 
 ````````python
@@ -264,6 +266,8 @@ def test_raise_to_is_total_street_wager_and_replayable(tmp_path):
 
 Original blob `ad72a612293b51780854faef45df1b785b5b484d` (3925 bytes).
 
+<a id="py-218"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e02_adapter_fake.py" sha="ad72a612293b51780854faef45df1b785b5b484d" -->
 
 ````````python
@@ -386,6 +390,8 @@ def test_e02_attaching_midhand_rejected():
 
 Original blob `76f96314b3ebbbefafddc48f57f24e6730e5c68c` (2999 bytes).
 
+<a id="py-219"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e02_policy.py" sha="76f96314b3ebbbefafddc48f57f24e6730e5c68c" -->
 
 ````````python
@@ -472,6 +478,8 @@ def test_e02_public_history_affects_policy_and_trains_gru():
 
 Original blob `d423a12726bde3afcdc68930c833c109c68bf890` (2882 bytes).
 
+<a id="py-220"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e02_real_engine.py" sha="d423a12726bde3afcdc68930c833c109c68bf890" -->
 
 ````````python
@@ -547,6 +555,8 @@ def test_e02_all_legal_action_translations_accepted_by_real_engine():
 ## tests/expand/test_e02_state_and_actions.py
 
 Original blob `ee4f3c7e7f02c129de85b9e6e4c5354fa89ae885` (7263 bytes).
+
+<a id="py-221"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e02_state_and_actions.py" sha="ee4f3c7e7f02c129de85b9e6e4c5354fa89ae885" -->
 
@@ -734,6 +744,8 @@ def test_e02_table_occupancy_status_are_separate_and_consistent():
 
 Original blob `3819fc0f3ede349b8413d104d223715d9797a839` (883 bytes).
 
+<a id="py-222"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e03_cli.py" sha="3819fc0f3ede349b8413d104d223715d9797a839" -->
 
 ````````python
@@ -766,6 +778,8 @@ def test_e03_custom_curriculum():
 ## tests/expand/test_e03_real_engine.py
 
 Original blob `5e9027db334ea0a751ed135a7b03ac59ac55a311` (999 bytes).
+
+<a id="py-223"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e03_real_engine.py" sha="5e9027db334ea0a751ed135a7b03ac59ac55a311" -->
 
@@ -800,6 +814,8 @@ def test_e03_full_hands_real_base_engine(n):
 ## tests/expand/test_e03_returns_and_policy.py
 
 Original blob `cf384ca17a12a27d4fcf11e5f9bab98843484a4b` (3915 bytes).
+
+<a id="py-224"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e03_returns_and_policy.py" sha="cf384ca17a12a27d4fcf11e5f9bab98843484a4b" -->
 
@@ -892,6 +908,8 @@ def test_deterministic_rollout_with_frozen_policy():
 
 Original blob `190e08ee85730422ea730f00ba7f4fba91e3e3ed` (3203 bytes).
 
+<a id="py-225"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e03_trainer.py" sha="190e08ee85730422ea730f00ba7f4fba91e3e3ed" -->
 
 ````````python
@@ -968,6 +986,8 @@ def test_e03_checkpoint_tamper_rejected(tmp_path):
 
 Original blob `49836fbeb0a82f2155ad983e636edf7d5b486a08` (2163 bytes).
 
+<a id="py-226"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e04_checkpoint.py" sha="49836fbeb0a82f2155ad983e636edf7d5b486a08" -->
 
 ````````python
@@ -1040,6 +1060,8 @@ def test_checkpoint_incompatible_actions_rejected(tmp_path):
 
 Original blob `3855f9ce47556ae242a5b9247693124ea80edc03` (1169 bytes).
 
+<a id="py-227"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e04_cli.py" sha="3855f9ce47556ae242a5b9247693124ea80edc03" -->
 
 ````````python
@@ -1080,6 +1102,8 @@ def test_cli_budget_limit_saves_empty_model(tmp_path):
 ## tests/expand/test_e04_holdem_mock.py
 
 Original blob `047ff8de4d58a61bf6eba247383548bfd734b027` (2673 bytes).
+
+<a id="py-228"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e04_holdem_mock.py" sha="047ff8de4d58a61bf6eba247383548bfd734b027" -->
 

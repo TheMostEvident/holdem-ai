@@ -6,6 +6,8 @@
 
 Original SHA `a0bac55cc794db1f442b1fc9c0f389b25935bac4` (4206 bytes).
 
+<a id="md-041"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_TERMINAL_REWARD_AUDIT.md" sha="a0bac55cc794db1f442b1fc9c0f389b25935bac4" -->
 
 ````````markdown
@@ -105,6 +107,8 @@ Each policy's independent sample uses the same deck-seed range, but different sa
 
 Original SHA `8824c060b8ce7ef01852809fa00bdde489a4d174` (3940 bytes).
 
+<a id="md-042"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE15_THREE_POLICY_COMPARISON.md" sha="8824c060b8ce7ef01852809fa00bdde489a4d174" -->
 
 ````````markdown
@@ -195,6 +199,8 @@ Do not impose arbitrary All-in penalties or constraints from this audit. Uniform
 ## docs/PHASE16_LONG_STRESS_TEST.md
 
 Original SHA `1d283f7fa49d15ea2c80b4a44acc7326da9212f9` (9005 bytes).
+
+<a id="md-043"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE16_LONG_STRESS_TEST.md" sha="1d283f7fa49d15ea2c80b4a44acc7326da9212f9" -->
 
@@ -371,6 +377,8 @@ $a0, $a3 | Format-List
 ## docs/PHASE16_OPPONENT_POOL_AND_STRATEGY.md
 
 Original SHA `fed9a3b8906193aebc0899ce4966fff5c9a1ed38` (8643 bytes).
+
+<a id="md-044"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE16_OPPONENT_POOL_AND_STRATEGY.md" sha="fed9a3b8906193aebc0899ce4966fff5c9a1ed38" -->
 
@@ -587,6 +595,8 @@ An observed positive bb/100 only measures performance against the selected oppon
 
 Original SHA `508e9b335a7a64c2ff31ade25e9b68b86f1fbe10` (8324 bytes).
 
+<a id="md-045"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE16_PPO_ABLATION.md" sha="508e9b335a7a64c2ff31ade25e9b68b86f1fbe10" -->
 
 ````````markdown
@@ -736,6 +746,8 @@ $table | Format-Table -AutoSize
 ## docs/PHASE17_CONTINUOUS_STACK_EVALUATION.md
 
 Original SHA `596dacd13bcbce6e9a54e8027fbf45c221b29f23` (8630 bytes).
+
+<a id="md-046"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE17_CONTINUOUS_STACK_EVALUATION.md" sha="596dacd13bcbce6e9a54e8027fbf45c221b29f23" -->
 
@@ -931,6 +943,8 @@ Existing nonempty directories are rejected rather than overwritten, preserving i
 
 Original SHA `330433ec78d33411571c6beb0b8a9c4792df7561` (7944 bytes).
 
+<a id="md-047"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE17_FIVE_HOUR_GPU_RETRAIN.md" sha="330433ec78d33411571c6beb0b8a9c4792df7561" -->
 
 ````````markdown
@@ -1100,6 +1114,8 @@ Do NOT assume stable HUNL strategy if the 5-hour run finishes. Compare several s
 
 Original SHA `c371132babdb894207b6b05a25e3cd007ce920a8` (2474 bytes).
 
+<a id="md-073"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/phase2_1_correction.md" sha="c371132babdb894207b6b05a25e3cd007ce920a8" -->
 
 ````````markdown
@@ -1151,6 +1167,8 @@ uv run python main.py --hands 5 --seed 42
 ## docs/phase2_rule_validation.md
 
 Original SHA `742adda19602030e3650fd568ccd3718ad95a41a` (3369 bytes).
+
+<a id="md-074"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/phase2_rule_validation.md" sha="742adda19602030e3650fd568ccd3718ad95a41a" -->
 
@@ -1244,6 +1262,8 @@ rules are validated; otherwise it can learn exploits of incorrectly modeled rule
 
 Original SHA `54412e7aca492b3865d1dc222586483c0dae107c` (3006 bytes).
 
+<a id="md-075"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/phase3_multiplayer.md" sha="54412e7aca492b3865d1dc222586483c0dae107c" -->
 
 ````````markdown
@@ -1305,6 +1325,8 @@ Standard raise/betting references:
 ## docs/phase4_tournament.md
 
 Original SHA `db65736ec017c7fe7de7b38f45fd2a9327687117` (2638 bytes).
+
+<a id="md-076"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/phase4_tournament.md" sha="db65736ec017c7fe7de7b38f45fd2a9327687117" -->
 

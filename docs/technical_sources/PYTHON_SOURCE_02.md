@@ -6,6 +6,8 @@ Verbatim code from commit `6a8ae368ddc02f814140d3770bc5993eaf9a15e4`, part of [i
 
 Original Git blob `f688e356adf933519d8000191757cae61adfff99`, 4124 bytes.
 
+<a id="py-013"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase02_smoke.py" sha="f688e356adf933519d8000191757cae61adfff99" -->
 
 ````````python
@@ -107,6 +109,8 @@ if __name__=='__main__':
 
 Original Git blob `faec9d885323bfd171b50a01f15be468999272cd`, 1497 bytes.
 
+<a id="py-014"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase03_evaluate.py" sha="faec9d885323bfd171b50a01f15be468999272cd" -->
 
 ````````python
@@ -148,6 +152,8 @@ if __name__=='__main__':main()
 ## PY-015 — `scripts/expand_phase03_train.py`
 
 Original Git blob `431bc859a0904230b4e443b291b811b9305285eb`, 4063 bytes.
+
+<a id="py-015"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase03_train.py" sha="431bc859a0904230b4e443b291b811b9305285eb" -->
 
@@ -237,6 +243,8 @@ if __name__=='__main__':main()
 
 Original Git blob `5b5354690b37121c1a4d76c5879aeb1f836e84b4`, 1280 bytes.
 
+<a id="py-016"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase04_evaluate.py" sha="5b5354690b37121c1a4d76c5879aeb1f836e84b4" -->
 
 ````````python
@@ -280,6 +288,8 @@ if __name__=='__main__':main()
 ## PY-017 — `scripts/expand_phase04_mccfr.py`
 
 Original Git blob `a95f2d2b51fc74fab52472a385f11b145b7a8054`, 5062 bytes.
+
+<a id="py-017"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase04_mccfr.py" sha="a95f2d2b51fc74fab52472a385f11b145b7a8054" -->
 
@@ -397,6 +407,8 @@ if __name__=='__main__':main()
 
 Original Git blob `e0e25f10bf9f204cf0b2211ba8395147d9410eef`, 4121 bytes.
 
+<a id="py-018"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase05_evaluate.py" sha="e0e25f10bf9f204cf0b2211ba8395147d9410eef" -->
 
 ````````python
@@ -497,6 +509,8 @@ if __name__=='__main__':main()
 
 Original Git blob `3b8b3f9924ac01c42fbefc595fe8609567e331c5`, 3918 bytes.
 
+<a id="py-019"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase05_search.py" sha="3b8b3f9924ac01c42fbefc595fe8609567e331c5" -->
 
 ````````python
@@ -584,6 +598,8 @@ if __name__=='__main__':main()
 ## PY-020 — `scripts/expand_phase06_benchmark.py`
 
 Original Git blob `c8c542d15b20b4c022ca10ddebd6f6ad10f12764`, 6571 bytes.
+
+<a id="py-020"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase06_benchmark.py" sha="c8c542d15b20b4c022ca10ddebd6f6ad10f12764" -->
 
@@ -727,6 +743,8 @@ if __name__=='__main__':main()
 
 Original Git blob `6dd304f84ed92463211fa38ef53dceda6c0bdd2c`, 5102 bytes.
 
+<a id="py-021"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/expand_phase07_benchmark.py" sha="6dd304f84ed92463211fa38ef53dceda6c0bdd2c" -->
 
 ````````python
@@ -818,6 +836,8 @@ if __name__=='__main__':main()
 
 Original Git blob `05cd34d3902fafa95336ffe078b70e4e74301a0c`, 1820 bytes.
 
+<a id="py-022"></a>
+
 <!-- BEGIN_PY_SOURCE path="scripts/gui10_smoke.py" sha="05cd34d3902fafa95336ffe078b70e4e74301a0c" -->
 
 ````````python
@@ -874,6 +894,8 @@ if __name__ == "__main__":
 ## PY-023 — `scripts/gui11_smoke.py`
 
 Original Git blob `d85e3a52faf3baf37588f7b3a6f69fa858bfcb41`, 2129 bytes.
+
+<a id="py-023"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/gui11_smoke.py" sha="d85e3a52faf3baf37588f7b3a6f69fa858bfcb41" -->
 
@@ -938,6 +960,8 @@ if __name__ == "__main__":
 ## PY-024 — `scripts/gui14_smoke.py`
 
 Original Git blob `16be506b341abd2ab0d86aab8adede228057b5a7`, 2785 bytes.
+
+<a id="py-024"></a>
 
 <!-- BEGIN_PY_SOURCE path="scripts/gui14_smoke.py" sha="16be506b341abd2ab0d86aab8adede228057b5a7" -->
 

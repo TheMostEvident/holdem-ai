@@ -6,6 +6,8 @@
 
 Original blob `9e264e857fe9f5c8bbe45f7c8a46b6e76a9df4f6` (3127 bytes).
 
+<a id="py-193"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/global_rollout.py" sha="9e264e857fe9f5c8bbe45f7c8a46b6e76a9df4f6" -->
 
 ````````python
@@ -93,6 +95,8 @@ def collect_global_episode(
 ## src/holdem_ai/training/ppo_session.py
 
 Original blob `2fc6468a18acd81ef604c12929f00992c43080d9` (5241 bytes).
+
+<a id="py-195"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/ppo_session.py" sha="2fc6468a18acd81ef604c12929f00992c43080d9" -->
 
@@ -219,6 +223,8 @@ def format_report(report: dict) -> str:
 ## src/holdem_ai/training/ppo.py
 
 Original blob `bf6cc749ca20183b507adbc1df8687dc2b41f142` (15577 bytes).
+
+<a id="py-194"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/ppo.py" sha="bf6cc749ca20183b507adbc1df8687dc2b41f142" -->
 
@@ -542,6 +548,8 @@ def evaluate_vs_random(actor: TransformerActor, *, hands: int = 40,
 
 Original blob `0cca5ab85493a816374d491c0bd41aa26d3702b4` (5741 bytes).
 
+<a id="py-197"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/qboost_session.py" sha="0cca5ab85493a816374d491c0bd41aa26d3702b4" -->
 
 ````````python
@@ -680,6 +688,8 @@ def train_qboost_updates(session: QBoostSession, *, updates: int,
 ## src/holdem_ai/training/qboost.py
 
 Original blob `be748dd8a609718276646aa2fc2595a3f56ab39a` (11179 bytes).
+
+<a id="py-196"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/qboost.py" sha="be748dd8a609718276646aa2fc2595a3f56ab39a" -->
 
@@ -902,6 +912,8 @@ def optimize_qboost(actor: TransformerActor, critic: CentralizedQCritic,
 
 Original blob `7216d7bbce7dc495cc7acc9636350aa5e5cd8917` (1937 bytes).
 
+<a id="py-198"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/reward_models.py" sha="7216d7bbce7dc495cc7acc9636350aa5e5cd8917" -->
 
 ````````python
@@ -961,6 +973,8 @@ class WinnerTakeAllReward:
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
+<a id="py-199"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/self_play.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
 ````````python
@@ -972,6 +986,8 @@ Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 ## src/holdem_ai/training/trainer.py
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
+
+<a id="py-200"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/training/trainer.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 
@@ -985,6 +1001,8 @@ Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
 
 Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 
+<a id="py-201"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/utils/__init__.py" sha="c45dbcdd525a3fadb2abb368e5264f09bb51e773" -->
 
 ````````python
@@ -997,6 +1015,8 @@ Original blob `c45dbcdd525a3fadb2abb368e5264f09bb51e773` (39 bytes).
 ## src/holdem_ai/utils/progress.py
 
 Original blob `00dbb59f0a6153bc3acce146fe30eed7c5176775` (9411 bytes).
+
+<a id="py-202"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/utils/progress.py" sha="00dbb59f0a6153bc3acce146fe30eed7c5176775" -->
 
@@ -1214,6 +1234,8 @@ class TrainingProgress:
 
 Original blob `9e359decefae168acdc4f76606dbc141f674c20b` (776 bytes).
 
+<a id="py-203"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/utils/snapshot.py" sha="9e359decefae168acdc4f76606dbc141f674c20b" -->
 
 ````````python
@@ -1247,6 +1269,8 @@ def snapshot(environment: T) -> T:
 ## tests/__init__.py
 
 Original blob `e69de29bb2d1d6434b8b29ae775ad8c2e48c5391` (0 bytes).
+
+<a id="py-204"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/__init__.py" sha="e69de29bb2d1d6434b8b29ae775ad8c2e48c5391" -->
 

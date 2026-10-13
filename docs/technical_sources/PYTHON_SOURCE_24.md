@@ -6,6 +6,8 @@
 
 Original blob `65a1da0f6a4920ecfadd062ecc3022c36d4e24f7` (800 bytes).
 
+<a id="py-277"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase13_gpu.py" sha="65a1da0f6a4920ecfadd062ecc3022c36d4e24f7" -->
 
 ````````python
@@ -37,6 +39,8 @@ def test_phase13_cuda_optimization(tmp_path):
 ## tests/test_phase13_scaling.py
 
 Original blob `806fde41a3ebbfa6386d199ba8da1d7a792c769b` (9177 bytes).
+
+<a id="py-278"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase13_scaling.py" sha="806fde41a3ebbfa6386d199ba8da1d7a792c769b" -->
 
@@ -235,6 +239,8 @@ def test_phase13_compare_reports_and_rejects_unmatched(tmp_path):
 
 Original blob `54eda8d142a2d19a131617d3c630ead0099f24f8` (1124 bytes).
 
+<a id="py-279"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase14_gpu.py" sha="54eda8d142a2d19a131617d3c630ead0099f24f8" -->
 
 ````````python
@@ -269,6 +275,8 @@ def test_phase14_cuda_smoke(tmp_path):
 ## tests/test_phase14_study.py
 
 Original blob `85db053dff0e41f43e93fdab8567476a30cd2db1` (5973 bytes).
+
+<a id="py-280"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase14_study.py" sha="85db053dff0e41f43e93fdab8567476a30cd2db1" -->
 
@@ -417,6 +425,8 @@ def test_resumable_partial_study(tmp_path, monkeypatch):
 ## tests/test_phase15_critic_diagnostics.py
 
 Original blob `f74c4f18b35431e0e9810a78a053028c7871547a` (6084 bytes).
+
+<a id="py-281"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_critic_diagnostics.py" sha="f74c4f18b35431e0e9810a78a053028c7871547a" -->
 
@@ -594,6 +604,8 @@ def test_three_rollout_protocol_uses_single_shared_reference(monkeypatch):
 
 Original blob `a1a2816440eafd97651bc0cb23addb49892fa5b3` (1352 bytes).
 
+<a id="py-282"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_gpu.py" sha="a1a2816440eafd97651bc0cb23addb49892fa5b3" -->
 
 ````````python
@@ -632,6 +644,8 @@ def test_cuda_one_update(tmp_path):
 ## tests/test_phase15_initial_policy_comparison.py
 
 Original blob `fa5ca09fc89d8c94bbdf1c94e824e8abc8458253` (6925 bytes).
+
+<a id="py-283"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_initial_policy_comparison.py" sha="fa5ca09fc89d8c94bbdf1c94e824e8abc8458253" -->
 
@@ -811,6 +825,8 @@ def test_end_to_end_three_policy_comparison_two_real_hands_cpu(tmp_path):
 ## tests/test_phase15_longrun.py
 
 Original blob `9278d2829c17a4e9e2feefffe7c3e3ef5c27a0b6` (9764 bytes).
+
+<a id="py-284"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_longrun.py" sha="9278d2829c17a4e9e2feefffe7c3e3ef5c27a0b6" -->
 
@@ -1057,6 +1073,8 @@ def test_selected_checkpoint_hash_verified_before_resume(tmp_path):
 
 Original blob `d9ad37186493e543810e6d842637f53176c4e1aa` (3422 bytes).
 
+<a id="py-285"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_policy_audit.py" sha="d9ad37186493e543810e6d842637f53176c4e1aa" -->
 
 ````````python
@@ -1156,6 +1174,8 @@ def test_optimizer_metric_audit_rejects_nonfinite(tmp_path):
 ## tests/test_phase15_preflop_sequence_audit.py
 
 Original blob `c732cbf270a5dae267d17013033fa073b7f70ae2` (5009 bytes).
+
+<a id="py-286"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_preflop_sequence_audit.py" sha="c732cbf270a5dae267d17013033fa073b7f70ae2" -->
 
@@ -1301,6 +1321,8 @@ def test_invalid_sampling_configuration(kwargs):
 
 Original blob `14084273c8b145051a97fd7d02ed3c95e0610334` (2072 bytes).
 
+<a id="py-287"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_safety_phase3.py" sha="14084273c8b145051a97fd7d02ed3c95e0610334" -->
 
 ````````python
@@ -1359,6 +1381,8 @@ def test_reward_diagnostics_fold_and_payoff():
 ## tests/test_phase15_terminal_reward_audit.py
 
 Original blob `79308df938907860e5652a93a8b98f792194e1b1` (5242 bytes).
+
+<a id="py-288"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase15_terminal_reward_audit.py" sha="79308df938907860e5652a93a8b98f792194e1b1" -->
 

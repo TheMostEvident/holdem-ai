@@ -7,6 +7,8 @@
 
 Original Blob SHA `f7a6f0ba1eade50fb252572a243c558bf72089d8`, 93299 bytes.
 
+<a id="md-012"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/AGENT_DEVELOPMENT_TECHNICAL_REPORT_2026-10-13.md" sha="f7a6f0ba1eade50fb252572a243c558bf72089d8" -->
 
 ````````markdown
@@ -1683,6 +1685,8 @@ npm.cmd run dev
 
 Original Blob SHA `0578cd874748b556a888925a7f3672b0e3f9a1f9`, 601 bytes.
 
+<a id="md-070"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/architecture.md" sha="0578cd874748b556a888925a7f3672b0e3f9a1f9" -->
 
 ````````markdown
@@ -1712,6 +1716,8 @@ UI          -> sanitized game view, action input, replay
 ## MD-003 — docs/archive/INTEGRATED_SOURCE_SNAPSHOT_01.md
 
 Original Blob SHA `32deaae54133ee6c596c1722367024164b7f4f4f`, 298011 bytes.
+
+<a id="md-071"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/archive/INTEGRATED_SOURCE_SNAPSHOT_01.md" sha="32deaae54133ee6c596c1722367024164b7f4f4f" -->
 
@@ -7717,6 +7723,8 @@ The project remains **HUNL only** for this GUI effort. The existing 6-Max and to
 
 Original Blob SHA `1b605f8ef601a450922059fe6653609313b838bf`, 50610 bytes.
 
+<a id="md-013"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_MASTER_DESIGN_6MAX_v1_0.md" sha="1b605f8ef601a450922059fe6653609313b838bf" -->
 
 ````````markdown
@@ -8822,6 +8830,8 @@ CLI 옵션은 해당 Phase 구현 시 상세 확정. 위 명령은 **파일 네�
 
 Original Blob SHA `91ca1d88c526ee961f660690ef89a7f08e41648d`, 12011 bytes.
 
+<a id="md-014"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE01_DESIGN.md" sha="91ca1d88c526ee961f660690ef89a7f08e41648d" -->
 
 ````````markdown
@@ -9087,6 +9097,8 @@ git status
 ## MD-006 — docs/EXPAND_PHASE01_TO_07_INTEGRATED_TECHNICAL_REPORT.md
 
 Original Blob SHA `c9df096164fbd3a3200f1a93dfcaff4af3099617`, 31992 bytes.
+
+<a id="md-015"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE01_TO_07_INTEGRATED_TECHNICAL_REPORT.md" sha="c9df096164fbd3a3200f1a93dfcaff4af3099617" -->
 
@@ -9765,6 +9777,8 @@ Slumbot은 기본적으로 HUNL(2인)에 적합하다. 연구용 외부 HUNL 평
 
 Original Blob SHA `851a18da34b6dcc51c3616f8454e06181245ab68`, 15623 bytes.
 
+<a id="md-016"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE02_INFORMATION_AND_ENCODING.md" sha="851a18da34b6dcc51c3616f8454e06181245ab68" -->
 
 ````````markdown
@@ -10116,6 +10130,8 @@ settlement = env.settle_hand()
 
 Original Blob SHA `29844dc36e183337d393e493e82ca3c3a1373cb0`, 15621 bytes.
 
+<a id="md-017"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE03_MULTIAGENT_PPO.md" sha="29844dc36e183337d393e493e82ca3c3a1373cb0" -->
 
 ````````markdown
@@ -10411,6 +10427,8 @@ E3가 통과할 때까지 E4 작업은 독립적으로 개발 가능하지만, *
 ## MD-009 — docs/EXPAND_PHASE04_MCCFR_BLUEPRINT.md
 
 Original Blob SHA `39e55dbcf6860edd71a4202945defdf10d0b1d36`, 14494 bytes.
+
+<a id="md-018"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE04_MCCFR_BLUEPRINT.md" sha="39e55dbcf6860edd71a4202945defdf10d0b1d36" -->
 
@@ -10735,6 +10753,8 @@ runs/expand_phase04_kuhn_main/
 
 Original Blob SHA `b193f157f3ab7ca621319fcff388fd7d578dd85c`, 15379 bytes.
 
+<a id="md-019"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE05_SUBGAME_SEARCH.md" sha="b193f157f3ab7ca621319fcff388fd7d578dd85c" -->
 
 ````````markdown
@@ -11043,6 +11063,8 @@ Phase 6 Opponent Modeling에서는 `opponent_likelihood(...)`가 학습된 상�
 ## MD-011 — docs/EXPAND_PHASE06_OPPONENT_MODELING.md
 
 Original Blob SHA `0b1df4a06eb72889aa8a3c87b94b2cd40d4013b9`, 16222 bytes.
+
+<a id="md-020"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/EXPAND_PHASE06_OPPONENT_MODELING.md" sha="0b1df4a06eb72889aa8a3c87b94b2cd40d4013b9" -->
 

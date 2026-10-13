@@ -6,6 +6,8 @@
 
 Original SHA `b4bd03f362049d11ecd8864a7aaa595a872eb7bf` (11848 bytes).
 
+<a id="md-048"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE5_AGENT_INTERFACE.md" sha="b4bd03f362049d11ecd8864a7aaa595a872eb7bf" -->
 
 ````````markdown
@@ -235,6 +237,8 @@ git push
 
 Original SHA `b9b45d9c8a10ea3ae02f1cdd524b01986771feed` (6229 bytes).
 
+<a id="md-049"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE6_HUNL200_INTEGRATION.md" sha="b9b45d9c8a10ea3ae02f1cdd524b01986771feed" -->
 
 ````````markdown
@@ -374,6 +378,8 @@ Phase 7 must match the paper's token observation and Base-16 bet encoding to app
 ## docs/PHASE7_VRPO_LITE_ENCODING.md
 
 Original SHA `fbb83cd3ddf41d230cd5eebd6d2c285ef33a0b3b` (7323 bytes).
+
+<a id="md-050"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE7_VRPO_LITE_ENCODING.md" sha="fbb83cd3ddf41d230cd5eebd6d2c285ef33a0b3b" -->
 
@@ -527,6 +533,8 @@ The Smoke Test performs **real Phase 6 HUNL200 random-policy episodes**, actor/c
 ## docs/PHASE8_VRPO_LITE_NETWORKS.md
 
 Original SHA `58fb0b05bddb8362cfa71b55ca34d51d76d8abfe` (6923 bytes).
+
+<a id="md-051"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PHASE8_VRPO_LITE_NETWORKS.md" sha="58fb0b05bddb8362cfa71b55ca34d51d76d8abfe" -->
 
@@ -712,6 +720,8 @@ git push origin main
 
 Original SHA `2171a73abb056d33428a883967917b5829945dea` (8515 bytes).
 
+<a id="md-052"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PHASE9_PPO_BASELINE.md" sha="2171a73abb056d33428a883967917b5829945dea" -->
 
 ````````markdown
@@ -892,6 +902,8 @@ Do **not** `git add .` while extracted ZIP folders and `.pt` model checkpoints a
 ## docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md
 
 Original SHA `120aeaa740695dc3889e697b2b3c28c85b993bd7` (24744 bytes).
+
+<a id="md-054"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/POKER_AI_FINAL_INTEGRATED_TECHNICAL_REPORT.md" sha="120aeaa740695dc3889e697b2b3c28c85b993bd7" -->
 
@@ -1305,6 +1317,8 @@ For every future phase, document (1) Objective, (2) mathematical specification, 
 
 Original SHA `3cb8d12d81f341fdccbf41a9e2bb4eb39436e052` (16132 bytes).
 
+<a id="md-055"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/PROJECT_PROGRESS_GUI16_PHASE17.md" sha="3cb8d12d81f341fdccbf41a9e2bb4eb39436e052" -->
 
 ````````markdown
@@ -1579,6 +1593,8 @@ v_{\mathrm{checkpoint}}, \mathrm{match\_id})\right\}.
 ## docs/PROJECT_REPORT.md
 
 Original SHA `e405d3c1f5f8e84c6d4f5135ab85dce2a2c9ab5d` (28236 bytes).
+
+<a id="md-056"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/PROJECT_REPORT.md" sha="e405d3c1f5f8e84c6d4f5135ab85dce2a2c9ab5d" -->
 
@@ -2071,6 +2087,8 @@ This English integrated report is a **consolidated technical rendition** of the 
 
 Original SHA `1e536aab637a1540dd4317b6e9371b604858565e` (3492 bytes).
 
+<a id="md-057"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/ROADMAP_PHASE12_TO_16.md" sha="1e536aab637a1540dd4317b6e9371b604858565e" -->
 
 ````````markdown
@@ -2114,6 +2132,8 @@ This package does not modify Phase11. An evaluation performed repeatedly during 
 ## docs/TECH_REPORT.md
 
 Original SHA `b477ee10aeeaf55abb25c1f2fb181f3958b8ebe8` (2369 bytes).
+
+<a id="md-058"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TECH_REPORT.md" sha="b477ee10aeeaf55abb25c1f2fb181f3958b8ebe8" -->
 
@@ -2168,6 +2188,8 @@ For commands and phase-specific test matrices refer to the linked source reports
 ## docs/TOURNAMENT_ENV_PHASE_1_1_KO.md
 
 Original SHA `939c874554e64c4f986ca2b8fba865ac57283de3` (4487 bytes).
+
+<a id="md-061"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_1_KO.md" sha="939c874554e64c4f986ca2b8fba865ac57283de3" -->
 

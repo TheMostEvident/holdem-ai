@@ -6,6 +6,8 @@
 
 Original blob `75b70b607ab96e34fdae64dc4c785d025eb69480` (1393 bytes).
 
+<a id="py-229"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e04_real_engine.py" sha="75b70b607ab96e34fdae64dc4c785d025eb69480" -->
 
 ````````python
@@ -55,6 +57,8 @@ def test_actual_engine_six_player_guard_not_silent():
 ## tests/expand/test_e04_toy_mccfr.py
 
 Original blob `a9a18e22a831df1c502e0d5b7d4cd0c63a190ca3` (4100 bytes).
+
+<a id="py-230"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e04_toy_mccfr.py" sha="a9a18e22a831df1c502e0d5b7d4cd0c63a190ca3" -->
 
@@ -173,6 +177,8 @@ def test_depth_budget_is_safe():
 
 Original blob `01584c20fe897a65d5774b007dc969a440c66417` (1406 bytes).
 
+<a id="py-231"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_beliefs.py" sha="01584c20fe897a65d5774b007dc969a440c66417" -->
 
 ````````python
@@ -217,6 +223,8 @@ def test_reject_impossible_trace():
 
 Original blob `0f4a5514e42fd45bbae35196353636d5a21aeacc` (595 bytes).
 
+<a id="py-232"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_cli.py" sha="0f4a5514e42fd45bbae35196353636d5a21aeacc" -->
 
 ````````python
@@ -242,6 +250,8 @@ def test_cli_toy_json_and_no_overwrite(tmp_path):
 ## tests/expand/test_e05_continuations.py
 
 Original blob `b1adb846c3e81ea8e62cf69e9e0f994774ebfed5` (1417 bytes).
+
+<a id="py-233"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_continuations.py" sha="b1adb846c3e81ea8e62cf69e9e0f994774ebfed5" -->
 
@@ -285,6 +295,8 @@ def test_invalid_probabilities_rejected(bad):
 
 Original blob `a80fcd07603d3c4f58a21ce2b8b0fa1759b4c8dc` (757 bytes).
 
+<a id="py-234"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_evaluate.py" sha="a80fcd07603d3c4f58a21ce2b8b0fa1759b4c8dc" -->
 
 ````````python
@@ -315,6 +327,8 @@ def test_evaluation_not_modifying_checkpoint(tmp_path):
 ## tests/expand/test_e05_holdem_deck.py
 
 Original blob `3bbe41adc0b10940eb20c2e0622adbaac5e4f1f0` (1611 bytes).
+
+<a id="py-235"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_holdem_deck.py" sha="3bbe41adc0b10940eb20c2e0622adbaac5e4f1f0" -->
 
@@ -364,6 +378,8 @@ def test_card_collisions_and_bad_hole_rejected():
 
 Original blob `14700f44656c84ed80c63e488e64304661259b61` (885 bytes).
 
+<a id="py-236"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_nested.py" sha="14700f44656c84ed80c63e488e64304661259b61" -->
 
 ````````python
@@ -393,6 +409,8 @@ def test_reject_bad_off_tree_size():
 ## tests/expand/test_e05_real_engine.py
 
 Original blob `1051eb0cdb66f828eb017aa23dcd3cc11ef746b0` (2180 bytes).
+
+<a id="py-237"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_real_engine.py" sha="1051eb0cdb66f828eb017aa23dcd3cc11ef746b0" -->
 
@@ -447,6 +465,8 @@ def test_replay_midstreet_offtree_raise():
 ## tests/expand/test_e05_solver.py
 
 Original blob `07ae3f973be2b48bff5249e244ae621cba6b10c9` (2866 bytes).
+
+<a id="py-238"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e05_solver.py" sha="07ae3f973be2b48bff5249e244ae621cba6b10c9" -->
 
@@ -526,6 +546,8 @@ def test_abstraction_mismatch_uses_only_valid_actions():
 ## tests/expand/test_e06_adaptive.py
 
 Original blob `5b733c4a6ded7ea0584a70a3e68204e4d2fabeeb` (3226 bytes).
+
+<a id="py-239"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_adaptive.py" sha="5b733c4a6ded7ea0584a70a3e68204e4d2fabeeb" -->
 
@@ -613,6 +635,8 @@ def test_hero_legal_and_opponent_legal_may_differ():
 ## tests/expand/test_e06_bridge.py
 
 Original blob `f54c57842e482cc7cb6b599ae7ae17f0ec1460fb` (2084 bytes).
+
+<a id="py-240"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_bridge.py" sha="f54c57842e482cc7cb6b599ae7ae17f0ec1460fb" -->
 

@@ -6,6 +6,8 @@
 
 Git Blob `bb7feea9bf9e053cc9e3af296511cb9e8087548a` (7905 bytes).
 
+<a id="py-295"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase17_continuous_stack.py" sha="bb7feea9bf9e053cc9e3af296511cb9e8087548a" -->
 
 ````````python
@@ -211,6 +213,8 @@ def test_cli_invalid_stacks_rejected(tmp_path):
 
 Git Blob `b23e431ab5da1b6834e615bdaffe59f64fd7a992` (7873 bytes).
 
+<a id="py-296"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase17_gpu_retrain.py" sha="b23e431ab5da1b6834e615bdaffe59f64fd7a992" -->
 
 ````````python
@@ -414,6 +418,8 @@ def test_final_eval_after_time_budget_only(tmp_path):
 
 Git Blob `da76a1e32f6daccc4d94ba97cd47972539938b7a` (3059 bytes).
 
+<a id="py-297"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_betting.py" sha="da76a1e32f6daccc4d94ba97cd47972539938b7a" -->
 
 ````````python
@@ -511,6 +517,8 @@ def test_all_in_action_not_created_if_not_allowed():
 
 Git Blob `21e7b962751ffdbd96f40147564dd75f7227ab0b` (2125 bytes).
 
+<a id="py-298"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_numpy_json.py" sha="21e7b962751ffdbd96f40147564dd75f7227ab0b" -->
 
 ````````python
@@ -587,6 +595,8 @@ def test_nan_public_value_still_rejected():
 
 Git Blob `26a57ad41d9d47f6aa9ad7ccaae6462d0067cf27` (1406 bytes).
 
+<a id="py-299"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_rewards.py" sha="26a57ad41d9d47f6aa9ad7ccaae6462d0067cf27" -->
 
 ````````python
@@ -640,6 +650,8 @@ def test_invalid_winner(winner, players):
 ## tests/test_phase5_rlcard_adapter.py
 
 Git Blob `2320576e7001317750ee1cd779145da02ca33f0a` (5089 bytes).
+
+<a id="py-300"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase5_rlcard_adapter.py" sha="2320576e7001317750ee1cd779145da02ca33f0a" -->
 

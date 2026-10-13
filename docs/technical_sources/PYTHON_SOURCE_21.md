@@ -6,6 +6,8 @@
 
 Original blob `c215129d87babef830400232d7a5874daf986196` (991 bytes).
 
+<a id="py-241"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_cli.py" sha="c215129d87babef830400232d7a5874daf986196" -->
 
 ````````python
@@ -42,6 +44,8 @@ def test_determinism(tmp_path):
 ## tests/expand/test_e06_models.py
 
 Original blob `dff4941daf0d6b723bd62d0be6204ee2aa3389b5` (4350 bytes).
+
+<a id="py-242"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_models.py" sha="dff4941daf0d6b723bd62d0be6204ee2aa3389b5" -->
 
@@ -158,6 +162,8 @@ def test_model_does_not_contain_opponent_private_cards():
 
 Original blob `1fe169488bf1f9b3c0b535cebec5701a6f35c4ac` (1702 bytes).
 
+<a id="py-243"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_persistence.py" sha="1fe169488bf1f9b3c0b535cebec5701a6f35c4ac" -->
 
 ````````python
@@ -200,6 +206,8 @@ def test_checkpoint_contains_no_card_or_deck(tmp_path):
 ## tests/expand/test_e06_real_engine.py
 
 Original blob `1367ee49057e39736e899bcbc850693f11c2cb36` (1922 bytes).
+
+<a id="py-244"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_real_engine.py" sha="1367ee49057e39736e899bcbc850693f11c2cb36" -->
 
@@ -253,6 +261,8 @@ def test_public_event_hook_with_real_hand_engine():
 
 Original blob `4a30bbaad60b00c1e946f639fbd187bdd6b19ac2` (1797 bytes).
 
+<a id="py-245"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_router.py" sha="4a30bbaad60b00c1e946f639fbd187bdd6b19ac2" -->
 
 ````````python
@@ -302,6 +312,8 @@ def test_router_uncertain_fallback():
 
 Original blob `c2e0d68de00bf2d3cd2529bc0f1bef04c7d1edda` (1643 bytes).
 
+<a id="py-246"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e06_state_bridge.py" sha="c2e0d68de00bf2d3cd2529bc0f1bef04c7d1edda" -->
 
 ````````python
@@ -342,6 +354,8 @@ def test_public_projection_ignores_private_hole():
 ## tests/expand/test_e07_agent.py
 
 Original blob `4221f8954d5de530d16ca860876aeca09c6ea74c` (3183 bytes).
+
+<a id="py-247"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_agent.py" sha="4221f8954d5de530d16ca860876aeca09c6ea74c" -->
 
@@ -431,6 +445,8 @@ def test_e07_neural_fallback_reserved_after_two_failed_optional_sources():
 
 Original blob `c572cc6e9f115ab5e595dbd56762331b1098852b` (1777 bytes).
 
+<a id="py-248"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_benchmark.py" sha="c572cc6e9f115ab5e595dbd56762331b1098852b" -->
 
 ````````python
@@ -480,6 +496,8 @@ def test_e07_invalid_groups():
 ## tests/expand/test_e07_bridges_and_cli.py
 
 Original blob `9f0cf98d2052a7e9c4801dfb95214b2332c35341` (2195 bytes).
+
+<a id="py-249"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_bridges_and_cli.py" sha="9f0cf98d2052a7e9c4801dfb95214b2332c35341" -->
 
@@ -544,6 +562,8 @@ def test_e07_cli_completes_fake_cash_with_manifest(tmp_path,monkeypatch):
 
 Original blob `3882cb83ec7615a6b4b8bc8e909d0d9a814352ad` (584 bytes).
 
+<a id="py-250"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_cash_bridge.py" sha="3882cb83ec7615a6b4b8bc8e909d0d9a814352ad" -->
 
 ````````python
@@ -568,6 +588,8 @@ def test_e07_e1_e2_e6_accepts_public_actions():
 ## tests/expand/test_e07_manifest.py
 
 Original blob `f805ce2e305669d0da8e0d29e2069e368187e94f` (847 bytes).
+
+<a id="py-251"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_manifest.py" sha="f805ce2e305669d0da8e0d29e2069e368187e94f" -->
 
@@ -598,6 +620,8 @@ def test_e07_manifest_checkpoint_hash_and_no_overwrite(tmp_path):
 ## tests/expand/test_e07_real_engine.py
 
 Original blob `0621abe66f07e4425ec2ffef85e3ac04fd3db97a` (1008 bytes).
+
+<a id="py-252"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/expand/test_e07_real_engine.py" sha="0621abe66f07e4425ec2ffef85e3ac04fd3db97a" -->
 

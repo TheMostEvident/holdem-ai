@@ -6,6 +6,8 @@
 
 Original blob `71bd90a540b0fb51334f748f55487b44b8feeacf` (6122 bytes).
 
+<a id="md-060"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_1.md" sha="71bd90a540b0fb51334f748f55487b44b8feeacf" -->
 
 ````````markdown
@@ -133,6 +135,8 @@ For now, all sessions are local in-memory. Server restart loses active tournamen
 
 Original blob `2fa9b318a01bb524ff488b9754c9a18cdcdc589c` (4703 bytes).
 
+<a id="md-062"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_2.md" sha="2fa9b318a01bb524ff488b9754c9a18cdcdc589c" -->
 
 ````````markdown
@@ -240,6 +244,8 @@ npm.cmd run dev
 
 Original blob `09efde46ffac27d0a5f39356d20c26f5cda950a5` (3715 bytes).
 
+<a id="md-064"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_3_1_AGGRESSION_FIX.md" sha="09efde46ffac27d0a5f39356d20c26f5cda950a5" -->
 
 ````````markdown
@@ -313,6 +319,8 @@ Start new backend and a **new tournament**; existing running sessions preserve t
 ## docs/TOURNAMENT_ENV_PHASE_1_3.md
 
 Original blob `049e22b4cbace791b251f0cd278672cfc36ce0cc` (5192 bytes).
+
+<a id="md-063"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_3.md" sha="049e22b4cbace791b251f0cd278672cfc36ce0cc" -->
 
@@ -435,6 +443,8 @@ Open `http://127.0.0.1:5173`, switch to 6-Max, and start a **new** tournament; a
 ## docs/TOURNAMENT_ENV_PHASE_1_4.md
 
 Original blob `6f4f4df8fe7bbbab4df3a85ef073a0c54350c483` (6534 bytes).
+
+<a id="md-065"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_4.md" sha="6f4f4df8fe7bbbab4df3a85ef073a0c54350c483" -->
 

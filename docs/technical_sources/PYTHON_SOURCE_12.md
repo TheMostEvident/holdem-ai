@@ -6,6 +6,8 @@
 
 Original SHA `4350626ed7f40434e89fb59101b34a9afd004dbe` (2055 bytes).
 
+<a id="py-133"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/manifest.py" sha="4350626ed7f40434e89fb59101b34a9afd004dbe" -->
 
 ````````python
@@ -69,6 +71,8 @@ def write_new_json(path: str|Path, record: Mapping) -> None:
 
 Original SHA `889f28dd20f20843e255fbdf84624eb4d76a2819` (2477 bytes).
 
+<a id="py-134"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/source_bridges.py" sha="889f28dd20f20843e255fbdf84624eb4d76a2819" -->
 
 ````````python
@@ -124,6 +128,8 @@ def from_e05_solver(solver, *, verified_root_belief:Callable[[InformationState],
 ## src/holdem_ai/expand/integration/tournament.py
 
 Original SHA `40ba6c58a98e71246bb4009056cf34549e877959` (12012 bytes).
+
+<a id="py-135"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/integration/tournament.py" sha="40ba6c58a98e71246bb4009056cf34549e877959" -->
 
@@ -396,6 +402,8 @@ class SingleTableTournament:
 
 Original SHA `0781f89737e471d844d38978b8b5c066e8266799` (948 bytes).
 
+<a id="py-136"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/__init__.py" sha="0781f89737e471d844d38978b8b5c066e8266799" -->
 
 ````````python
@@ -418,6 +426,8 @@ __all__=['PublicDecision','public_decision_from_state','spr_bin','OpponentConfig
 ## src/holdem_ai/expand/opponent/adaptive.py
 
 Original SHA `3051fef7434e35b8e11b9aa5aaa7e8b38733a661` (5634 bytes).
+
+<a id="py-137"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/adaptive.py" sha="3051fef7434e35b8e11b9aa5aaa7e8b38733a661" -->
 
@@ -555,6 +565,8 @@ class SafeAdaptivePolicy:
 
 Original SHA `4b2526201ee399b4013557420e8e797fee2c1742` (4284 bytes).
 
+<a id="py-138"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/bridge.py" sha="4b2526201ee399b4013557420e8e797fee2c1742" -->
 
 ````````python
@@ -652,6 +664,8 @@ class PublicOpponentTracker:
 ## src/holdem_ai/expand/opponent/model.py
 
 Original SHA `058f1f471dc675c56cd74aee29784015ca6dab2c` (9149 bytes).
+
+<a id="py-139"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/model.py" sha="058f1f471dc675c56cd74aee29784015ca6dab2c" -->
 
@@ -870,6 +884,8 @@ class OpponentRegistry:
 
 Original SHA `f57069dbc8a2abdb18729f26203ddf18f6a5a6e8` (5976 bytes).
 
+<a id="py-140"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/persistence.py" sha="f57069dbc8a2abdb18729f26203ddf18f6a5a6e8" -->
 
 ````````python
@@ -989,6 +1005,8 @@ def load_registry(path:str|Path)->OpponentRegistry:
 
 Original SHA `712aebfe46d84e8854a56ddc7d20aa188339face` (2247 bytes).
 
+<a id="py-141"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/router.py" sha="712aebfe46d84e8854a56ddc7d20aa188339face" -->
 
 ````````python
@@ -1049,6 +1067,8 @@ class StyleExpertRouter:
 ## src/holdem_ai/expand/opponent/schema.py
 
 Original SHA `670e6e55f25527d02b601548caaace7d49b66a76` (4004 bytes).
+
+<a id="py-142"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/opponent/schema.py" sha="670e6e55f25527d02b601548caaace7d49b66a76" -->
 
@@ -1147,6 +1167,8 @@ def public_decision_from_state(state: InformationState, *, player_id: str,
 
 Original SHA `5edd06d348b06035af6eaccb95c812469f2491df` (73 bytes).
 
+<a id="py-143"></a>
+
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/__init__.py" sha="5edd06d348b06035af6eaccb95c812469f2491df" -->
 
 ````````python
@@ -1159,6 +1181,8 @@ Original SHA `5edd06d348b06035af6eaccb95c812469f2491df` (73 bytes).
 ## src/holdem_ai/expand/pluribus/abstraction/__init__.py
 
 Original SHA `eff43e43b9ff875c6ff887d87cd530b56b28add7` (111 bytes).
+
+<a id="py-144"></a>
 
 <!-- BEGIN_PY_SOURCE path="src/holdem_ai/expand/pluribus/abstraction/__init__.py" sha="eff43e43b9ff875c6ff887d87cd530b56b28add7" -->
 

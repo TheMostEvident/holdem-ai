@@ -6,6 +6,8 @@
 
 Original blob `c8ab128bf34226ccaf0284f575abce9351b11655` (7204 bytes).
 
+<a id="md-066"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_5.md" sha="c8ab128bf34226ccaf0284f575abce9351b11655" -->
 
 ````````markdown
@@ -154,6 +156,8 @@ uv run --extra gui --extra gpu python -m backend.main
 
 Original blob `00d7761c462b6e686b41980210e700b87ea265e7` (4890 bytes).
 
+<a id="md-068"></a>
+
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_6_1_SHOWDOWN.md" sha="00d7761c462b6e686b41980210e700b87ea265e7" -->
 
 ````````markdown
@@ -270,6 +274,8 @@ Frontend는 Vite dev 서버가 이미 실행 중이라면 변경 사항이 자�
 ## docs/TOURNAMENT_ENV_PHASE_1_6.md
 
 Original blob `017a110414d33503c9a734346ba2e2781d495cf4` (6756 bytes).
+
+<a id="md-067"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_6.md" sha="017a110414d33503c9a734346ba2e2781d495cf4" -->
 
@@ -418,6 +424,8 @@ Backend를 **체크포인트 환경변수를 설정한 동일한 PowerShell에�
 ## docs/TOURNAMENT_ENV_PHASE_1_7_FINAL.md
 
 Original blob `d74fc8e95137a3732ce48a4bbba462970fdb61f3` (10078 bytes).
+
+<a id="md-069"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE_1_7_FINAL.md" sha="d74fc8e95137a3732ce48a4bbba462970fdb61f3" -->
 
@@ -656,6 +664,8 @@ git rev-parse origin/main
 ## docs/TOURNAMENT_ENV_PHASE1_FULL_TECHNICAL_REPORT.md
 
 Original blob `f0b72d9bc86e8238c44a63f52a59547c534be4a8` (52111 bytes).
+
+<a id="md-059"></a>
 
 <!-- BEGIN_MD_SOURCE path="docs/TOURNAMENT_ENV_PHASE1_FULL_TECHNICAL_REPORT.md" sha="f0b72d9bc86e8238c44a63f52a59547c534be4a8" -->
 
@@ -1462,6 +1472,8 @@ Tournament ENV Phase 1에서 가장 중요한 설계 결정은 **기존 정확�
 ## README_TOURNAMENT_ENV_1_3_1.md
 
 Original blob `9ddd521e1ec07b255cfe6cc29f272a479b1e0ba7` (399 bytes).
+
+<a id="md-002"></a>
 
 <!-- BEGIN_MD_SOURCE path="README_TOURNAMENT_ENV_1_3_1.md" sha="9ddd521e1ec07b255cfe6cc29f272a479b1e0ba7" -->
 

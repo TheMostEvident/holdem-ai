@@ -6,6 +6,8 @@
 
 Git Blob `d049328372ddbfa85eaa10dd45ff1e76e8d643df` (2192 bytes).
 
+<a id="py-289"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_cli.py" sha="d049328372ddbfa85eaa10dd45ff1e76e8d643df" -->
 
 ````````python
@@ -67,6 +69,8 @@ def test_cli_named_checkpoint_and_invalid_spec(tmp_path):
 ## tests/test_phase16_diagnostics.py
 
 Git Blob `e857adaef64d7fee0104717cc5fbb554c7608fd5` (3119 bytes).
+
+<a id="py-290"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_diagnostics.py" sha="e857adaef64d7fee0104717cc5fbb554c7608fd5" -->
 
@@ -151,6 +155,8 @@ def test_entropy_uses_only_actor_information():
 ## tests/test_phase16_evaluation.py
 
 Git Blob `e916b432c2f4525936f81f264f61768055d76233` (3714 bytes).
+
+<a id="py-291"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_evaluation.py" sha="e916b432c2f4525936f81f264f61768055d76233" -->
 
@@ -257,6 +263,8 @@ def test_cuda_only_when_available(net):
 
 Git Blob `7263b79951c3edd90c5b1fa2dcca4ed90da22e50` (1570 bytes).
 
+<a id="py-292"></a>
+
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_opponents.py" sha="7263b79951c3edd90c5b1fa2dcca4ed90da22e50" -->
 
 ````````python
@@ -313,6 +321,8 @@ def test_factory_rejects_unknown():
 ## tests/test_phase16_ppo_ablation.py
 
 Git Blob `84ac169a69b5ed53bffdd74e2d0c1edee63c0d67` (7515 bytes).
+
+<a id="py-293"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_ppo_ablation.py" sha="84ac169a69b5ed53bffdd74e2d0c1edee63c0d67" -->
 
@@ -530,6 +540,8 @@ def test_a3_rejected_update_restores_actor_and_keeps_source(tmp_path, monkeypatc
 ## tests/test_phase16_ppo_stress.py
 
 Git Blob `c0108d4ac755da9211472d966214c93b386efa5b` (9100 bytes).
+
+<a id="py-294"></a>
 
 <!-- BEGIN_PY_SOURCE path="tests/test_phase16_ppo_stress.py" sha="c0108d4ac755da9211472d966214c93b386efa5b" -->
 
