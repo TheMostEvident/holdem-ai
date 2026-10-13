@@ -330,6 +330,9 @@ def _one_update(session, cfg: StressConfig) -> dict:
     )
     kl = exact_policy_kl(
         session.actor, rows, old_probs=old, device=cfg.device)
+    if not all(math.isfinite(float(x)) for x in stats.values()
+               if isinstance(x, (float, int))) :
+        raise FloatingPointError("nonfinite PPO diagnostic metric")
     if not math.isfinite(kl):
         raise FloatingPointError("nonfinite post-update KL")
     rejected = cfg.variant == "a3" and kl > cfg.max_post_kl
@@ -407,6 +410,12 @@ def run_stress(cfg: StressConfig) -> dict:
         latest = root / "latest.pt"
         spec = _settings(cfg)
         if cfg.resume:
+            if (root / "hard_stop.json").is_file():
+                raise RuntimeError("A0 hard-stop is active; do not resume before review")
+            # A previous process may have died while writing an uncommitted temporary file.
+            stale_tmp = latest.with_suffix(latest.suffix + ".tmp")
+            if stale_tmp.exists():
+                stale_tmp.unlink()
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
             if manifest.get("settings") != spec:
                 raise ValueError("resume configuration differs from run manifest")
@@ -473,13 +482,20 @@ def run_stress(cfg: StressConfig) -> dict:
                 snapshot.parent.mkdir(parents=True, exist_ok=True)
                 if snapshot.exists():
                     raise FileExistsError(f"snapshot already exists: {snapshot}")
-                # Immutable full state for earlier checkpoints.
-                with snapshot.open("xb") as f:
-                    with latest.open("rb") as src:
-                        while part := src.read(1024 * 1024):
-                            f.write(part)
-                    f.flush()
-                    os.fsync(f.fileno())
+                # Snapshot is immutable and atomically published. A process
+                # crash can leave only a disposable .tmp, never a partial .pt.
+                tmp_snapshot = snapshot.with_suffix(".pt.tmp")
+                try:
+                    with tmp_snapshot.open("wb") as f:
+                        with latest.open("rb") as src:
+                            while part := src.read(1024 * 1024):
+                                f.write(part)
+                        f.flush()
+                        os.fsync(f.fileno())
+                    os.replace(tmp_snapshot, snapshot)
+                finally:
+                    if tmp_snapshot.exists():
+                        tmp_snapshot.unlink()
             _mirrors(root, records=records, validations=validations,
                      start_update=start_update, target_updates=cfg.updates)
             print(
