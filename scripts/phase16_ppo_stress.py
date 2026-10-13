@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import argparse
 import json
-from dataclasses import replace
 from pathlib import Path
 
 from holdem_ai.experiments.ppo_stress import (
@@ -120,7 +119,12 @@ def main():
     if all(summaries[arm]["completed"] for arm in ("a0", "a3")):
         compared = compare_stress_runs(campaign / "a0", campaign / "a3")
         result_path = campaign / "paired_comparison.json"
-        _save_comparison(result_path, compared)
+        if result_path.exists():
+            existing = json.loads(result_path.read_text(encoding="utf-8"))
+            if existing != compared:
+                raise ValueError("existing paired comparison differs; refuse overwrite")
+        else:
+            _save_comparison(result_path, compared)
         print(json.dumps({"campaign": str(campaign),
                           "paired_report": str(result_path),
                           "paired_validation": compared["paired_validations"]},
