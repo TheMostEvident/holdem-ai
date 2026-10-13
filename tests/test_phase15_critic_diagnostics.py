@@ -128,3 +128,37 @@ def test_critic_audit_never_exposes_privileged_state_to_actor():
     summary = diagnose_critic_on_rows(_rows(), _HalfHalfActor(), _KnownCritic())
     assert summary["decisions"] == 2
     assert summary["v_reference_policy"]["street:preflop"]["decisions"] == 2
+
+
+def test_three_rollout_protocol_uses_single_shared_reference(monkeypatch):
+    from holdem_ai.evaluation import critic_diagnostics as mod
+
+    net = NetworkConfig(embed_dim=8, attention_heads=2, transformer_layers=1,
+                        ff_dim=16, hidden_dim=16)
+    ppo = PPOConfig(seed=19)
+    sessions = {
+        "ref": mod.CriticCheckpoint(_HalfHalfActor(), _KnownCritic(), net, ppo, 104),
+        "best": mod.CriticCheckpoint(_HalfHalfActor(), _KnownCritic(), net, ppo, 125),
+        "latest": mod.CriticCheckpoint(_HalfHalfActor(), _KnownCritic(), net, ppo, 204),
+    }
+    collected_with = []
+
+    def fake_collect(actor, config, *, iteration, device, env_batch_size):
+        collected_with.append((actor, config.seed, config.hands_per_update))
+        return _rows()
+
+    monkeypatch.setattr(mod, "load_ppo_critic_checkpoint",
+                        lambda path, *, device: sessions[str(path)])
+    monkeypatch.setattr(mod, "collect_batched_self_play", fake_collect)
+    result = mod.run_critic_audit(
+        reference_checkpoint="ref", before_checkpoint="best",
+        after_checkpoint="latest", hands=2, on_policy_hands=2,
+        seed=570000000, env_batch_size=2)
+    assert len(collected_with) == 3
+    assert collected_with[0][0] is sessions["ref"].actor
+    assert collected_with[1][0] is sessions["best"].actor
+    assert collected_with[2][0] is sessions["latest"].actor
+    assert collected_with[0][1] == 570000000
+    assert collected_with[1][1] == collected_with[2][1] == 571000000
+    assert result["completed_updates"] == {"before": 125, "after": 204}
+    assert result["shared_reference"]["results"]["before"]["q_taken"]["overall"]["rmse_bb"] == 0.
