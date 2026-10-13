@@ -1,0 +1,15 @@
+/* First-run environment selection: no default game is opened. */
+.environment-landing{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:36px 20px;background:radial-gradient(ellipse at 50% 30%,#254237 0%,#0a1210 65%)}
+.environment-landing-head{text-align:center;max-width:660px}
+.environment-landing-head .eyebrow{font-size:11px;color:#d5bf8a;letter-spacing:.25em}
+.environment-landing-head h1{font:700 clamp(38px,6vw,66px) 'Space Grotesk',sans-serif;letter-spacing:-.055em;margin:15px 0}
+.environment-landing-head p{color:#a4bbae;font-size:14px;line-height:1.8}
+.environment-landing-options{width:min(100%,900px);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.environment-option{display:flex;flex-direction:column;align-items:flex-start;gap:15px;text-align:left;padding:32px;min-height:290px;background:linear-gradient(145deg,#1e3229,#111c19);border:1px solid #54715b;border-radius:18px;color:#edf4ec;transition:transform .15s,border-color .15s,box-shadow .15s}
+.environment-option:hover,.environment-option:focus-visible{transform:translateY(-3px);border-color:#e0c78d;box-shadow:0 12px 38px #0008}
+.environment-option .option-icon{font-size:32px;color:#ebc989}
+.environment-option strong{font:700 30px 'Space Grotesk',sans-serif}
+.environment-option small{color:#b8cabc;font-size:14px;line-height:1.6}
+.environment-option .option-detail{font-size:11px;color:#dabf83;margin-top:auto;letter-spacing:.05em}
+.environment-landing-footnote{max-width:700px;text-align:center;color:#84998b;font-size:12px;line-height:1.6}
+@media(max-width:650px){.environment-landing-options{grid-template-columns:1fr}.environment-option{min-height:205px;padding:25px}.environment-landing{gap:20px;padding:30px 16px}}
