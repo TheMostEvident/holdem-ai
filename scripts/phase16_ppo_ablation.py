@@ -53,6 +53,8 @@ def main():
             "critic_ev": results["critic_holdout"]["explained_variance"],
             "critic_rmse_bb": results["critic_holdout"]["rmse_bb"],
             "max_exact_post_kl": results["post_kl_max"],
+            "preflop_all_in_fraction": results["on_policy_behavior"]["preflop_explicit_allin_fraction"],
+            "flop_decision_hand_fraction": results["on_policy_behavior"]["postflop_decision_hand_fraction"],
             "rejected_updates": results["rejected_updates"],
             "vs_phase14_paired_delta_bb100": results["evaluation"]["frozen_phase14"]["paired_change_from_source"]["delta_mean_bb100"],
             "vs_phase14_delta_ci95_bb100": [
