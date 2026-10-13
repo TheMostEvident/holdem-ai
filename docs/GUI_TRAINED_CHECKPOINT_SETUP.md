@@ -59,6 +59,20 @@ Invoke-RestMethod http://127.0.0.1:8000/api/v1/tournament/agent-status | Format-
 
 HUNL `available: true` and Tournament `file_found: true` indicate **file presence, not model compatibility**. The loader validates the trusted local model **on game creation**. An incompatible checkpoint produces an explicit error. No training occurs in the GUI.
 
+## Revert a GUI bot from last.pt/latest.pt to best.pt
+
+The GUI backend reads its model path from a PowerShell environment variable at **server start**, not from the browser. Stop the existing FastAPI server first. The launcher now recognizes an old environment variable or argument ending in `last.pt` or `latest.pt` and redirects to the **sibling** `best.pt` in that SAME run directory. If that sibling is missing, it aborts instead of silently loading last or a different run.
+
+To set a specific known-good best model explicitly:
+
+```powershell
+.\scripts\start_gui_with_models.ps1 `
+  -PpoCheckpoint ".\runs\phase14_main\seed_52\ppo\best.pt" `
+  -TournamentCheckpoint ".\runs\expand_phase03_pilot\best.pt"
+```
+
+If it was your Q-Boost slot using last.pt, supply `-QBoostCheckpoint "ACTUAL_RUN_DIRECTORY\best.pt"` too. All paths must exist locally. Restarting the browser alone does not update the running Backend's cached Actor. **Switching checkpoints affects new games only**; already-started sessions keep their frozen policy instance.
+
 ## Troubleshooting
 
 - **Trained choice clickable, but session creation fails:** Ensure the matching file exists; check the two status APIs; stop and restart the Backend with the proper variables. The error message will identify which variable or model format is required.
