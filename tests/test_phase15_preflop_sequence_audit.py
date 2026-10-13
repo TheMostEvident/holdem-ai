@@ -52,7 +52,7 @@ def test_preflop_sequences_exact_actions_and_first_allin():
     assert report["immediately_before_first_allin"] == {"raise_pot": 1}
     assert report["allin_with_prior_raise_head_count"] == 1
     assert report["first_actions"] == {"call": 1, "fold": 1, "raise_pot": 1}
-    assert report["preflop_decisions_per_hand"]["mean"] == 5 / 3
+    assert report["preflop_decisions_per_hand"]["mean"] == pytest.approx(5 / 3, abs=1e-6)
     assert report["most_common_prefixes_through_first_allin"] == [
         {"sequence": "raise_pot > all_in", "count": 1},
     ]
