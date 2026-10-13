@@ -62,6 +62,10 @@ def test_preflop_exit_and_payoff_tail_exact_counts():
     assert dist["signed_full_stack"]["win"] == 0
     assert dist["signed_full_stack"]["loss"] == 1
     assert report["full_stack_settlements"]["hand_count"] == 1
+    assert report["payoff_by_exit_group"]["preflop:showdown"]["near_full_stack_fraction"] == 1.0
+    assert report["payoff_by_exit_group"]["preflop:fold"]["near_full_stack_fraction"] == 0.0
+    assert report["preflop"]["last_action_counts"]["call"] == 1
+    assert report["preflop"]["last_action_counts"]["fold"] == 1
     assert report["actor_decision_weighted_return"]["count"] == 9
 
 
