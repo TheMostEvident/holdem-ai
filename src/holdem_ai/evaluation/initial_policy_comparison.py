@@ -10,7 +10,6 @@ it is not a poker strength or causal exploitability comparison.
 """
 from __future__ import annotations
 
-import math
 from collections import Counter
 from pathlib import Path
 
@@ -145,8 +144,6 @@ def compare_three_agent_policies(*, trained_checkpoint: str | Path,
             or seed < 0 or type(env_batch_size) is not int
             or not 1 <= env_batch_size <= hands):
         raise ValueError("invalid hands/seed/env_batch_size")
-    if not math.isfinite(float(seed + hands)):
-        raise ValueError("nonfinite seed range")
     trained = load_actor(trained_checkpoint, device=device)
     net = trained.config
     if net.dropout != 0:
@@ -155,7 +152,7 @@ def compare_three_agent_policies(*, trained_checkpoint: str | Path,
         init = load_actor(initial_checkpoint, device=device)
         if init.config != net:
             raise ValueError("initial checkpoint architecture differs from trained checkpoint")
-        initial_type = "actual_saved_checkpoint"
+        initial_type = "user_supplied_checkpoint_not_verified_untrained"
     else:
         init = build_untrained_actor(net, seed=init_seed, device=device)
         initial_type = "synthetic_random_initialization_NOT_verified_phase14_start"
