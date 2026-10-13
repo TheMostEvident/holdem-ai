@@ -1,5 +1,5 @@
 """Phase 15 phase-3 safety and reward diagnostics regression tests."""
-import pytest
+from types import SimpleNamespace
 
 from holdem_ai.experiments.ppo_safety import safety_assessment
 from holdem_ai.evaluation.reward_diagnostics import summarize_rollout_rewards
@@ -33,7 +33,9 @@ def test_legacy_entropy_stop_can_be_preserved():
 def test_reward_diagnostics_fold_and_payoff():
     # Constructor invariants require aligned one-decision-per-hand fake rows.
     rows = TrajectoryRows(
-        actors=(None, None), critics=(None, None),
+        actors=(SimpleNamespace(legal_action_mask=(True, False, False, False, False, False, False)),
+                SimpleNamespace(legal_action_mask=(False, False, True, False, False, False, False))),
+        critics=(None, None),
         actions=(0, 2), acting_seats=(0, 1),
         returns_bb=(-0.5, 0.5), hands=2,
         hand_rewards=((-0.5, 0.5), (-1.5, 1.5)),
