@@ -34,7 +34,7 @@ function Resolve-TrustedCheckpoint {
         if (-not (Test-Path -LiteralPath $best -PathType Leaf)) {
             throw "$EnvironmentName points to last.pt/latest.pt, but its sibling best.pt is missing: $best. Supply an existing -...Checkpoint best.pt path."
         }
-        Write-Host "$EnvironmentName: switching last/latest checkpoint to sibling best.pt."
+        Write-Host "${EnvironmentName}: switching last/latest checkpoint to sibling best.pt."
         $value = $best
     }
     if ($value) {
